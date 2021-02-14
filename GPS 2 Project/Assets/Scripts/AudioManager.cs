@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager Instance = null;
 
+
     private void Awake()
     {
         if (Instance == null)
@@ -26,14 +27,20 @@ public class AudioManager : MonoBehaviour
 
     public void Play(AudioClip clip)
     {
-        EffectsSource.clip = clip;
-        EffectsSource.Play();
+        if (PlayerPrefs.GetInt("BGM") == 1)
+        {
+            EffectsSource.clip = clip;
+            EffectsSource.Play();
+        }
     }
 
     public void PlayMusic(AudioClip clip)
     {
-        MusicSource.clip = clip;
-        MusicSource.Play();
+        if (PlayerPrefs.GetInt("SFX") == 1)
+        {
+            MusicSource.clip = clip;
+            MusicSource.Play();
+        }
     }
 
     public void RandomSoundEffect(params AudioClip[] clips)
