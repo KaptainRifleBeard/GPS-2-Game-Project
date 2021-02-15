@@ -27,19 +27,27 @@ public class AudioManager : MonoBehaviour
 
     public void Play(AudioClip clip)
     {
-        if (PlayerPrefs.GetInt("BGM") == 1)
+        if (PlayerPrefs.GetInt("SFX") == 1)
         {
             EffectsSource.clip = clip;
             EffectsSource.Play();
+        }
+        else if (PlayerPrefs.GetInt("SFX")==0)
+        {
+            EffectsSource.Stop();
         }
     }
 
     public void PlayMusic(AudioClip clip)
     {
-        if (PlayerPrefs.GetInt("SFX") == 1)
+        if (PlayerPrefs.GetInt("BGM") == 1)
         {
             MusicSource.clip = clip;
             MusicSource.Play();
+        }
+        else if (PlayerPrefs.GetInt("BGM") == 0)
+        {
+            MusicSource.Stop();
         }
     }
 
