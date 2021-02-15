@@ -6,11 +6,59 @@ using UnityEngine;
 public class InteractableItem : MonoBehaviour
 {
     [SerializeField] private string interactableTag = "Interactable";
+    public GameObject player;
+    [SerializeField]private GameObject item;
+    public float range = 0.1f;
+
+    private Color originalColor;
+    private Color interactColor;
+
+    Vector3 touchPosWorld;
+    TouchPhase touchPhase = TouchPhase.Ended;
+
+    private void Start()
+    {
+        item = GameObject.FindGameObjectWithTag(interactableTag);
+    }
+
+
+    public void Update()
+    {
+        /*
+        if (Vector3.Distance(player.transform.position, item.transform.position) < range)
+        {
+            Debug.Log("player is near " + item.name);
+        }
+        */
+
+        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                //OR with Tag
+                if (hit.collider.CompareTag("Interactable"))
+                {
+                    Debug.Log( " clicked");
+                    Debug.Log(hit.collider.name + " clicked");
+                }
+            }
+        }
+    }
+}   
+
+
+
+/*
+ * 
+ *  
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
 
     private Transform currSelected;
-    public GameObject player;
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -22,6 +70,10 @@ public class InteractableItem : MonoBehaviour
 
     public void Update()
     {
+        //Touch interactable item
+       
+
+
         //Deselect item
         if (currSelected != null)
         {
@@ -42,7 +94,6 @@ public class InteractableItem : MonoBehaviour
                 var selectionRenderer = selection.GetComponent<Renderer>();
                 if (selectionRenderer != null)
                 {
-                    Debug.Log(highlightMaterial);
                     selectionRenderer.material = highlightMaterial;
                 }
                 currSelected = selection;
@@ -50,6 +101,7 @@ public class InteractableItem : MonoBehaviour
         }
 
     }
-}
+
+*/
 
    

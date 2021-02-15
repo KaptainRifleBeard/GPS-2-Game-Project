@@ -16,12 +16,6 @@ public class ScrollAndPinch : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        
-    }
-
-
     void Update()
     {
         if(Input.touchCount >= 1)
