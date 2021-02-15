@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ProrgessBar : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform text;
+    public Transform progressBar;
 
-    // Update is called once per frame
+    [SerializeField] private float currentTime;
+    [SerializeField] private float speed;
+    public float time;
+
     void Update()
     {
-        
+        if (currentTime < GameObject.Find("SelectedManager").GetComponent<InteractableItem>().prorgessTime)
+        {
+            currentTime += speed * Time.deltaTime;
+            text.GetComponent<Text>().text = ((int)currentTime).ToString();
+        }
+        progressBar.GetComponent<Image>().fillAmount = currentTime / GameObject.Find("SelectedManager").GetComponent<InteractableItem>().prorgessTime;
     }
 }
