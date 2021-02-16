@@ -35,7 +35,16 @@ public class InteractableItem : MonoBehaviour
                     item = GameObject.Find("Wardrobe").transform;
                     progressTime = 5f;
                 }
-
+                if (hit.collider.name == "Study Desk")
+                {
+                    item = GameObject.Find("Study Desk").transform;
+                    progressTime = 5f;
+                }
+                if (hit.collider.name == "Nightstand")
+                {
+                    item = GameObject.Find("Nightstand").transform;
+                    progressTime = 5f;
+                }
             }
         }
 
