@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ProrgessBar : MonoBehaviour
 {
+    public bool showWindow;
+
     public Transform text;
     public Transform progressBar;
     public Transform player;
@@ -13,6 +15,7 @@ public class ProrgessBar : MonoBehaviour
     [SerializeField] private float currentTime;
     [SerializeField] private float speed;
 
+    
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -31,6 +34,7 @@ public class ProrgessBar : MonoBehaviour
 
             }
             progressBar.GetComponent<Image>().fillAmount = currentTime / GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime;
+            showWindow = true;
         }
 
 
@@ -39,6 +43,7 @@ public class ProrgessBar : MonoBehaviour
             currentTime = 0;
             //text.GetComponent<Text>().text = ((int)currentTime).ToString();
             progressBar.GetComponent<Image>().fillAmount = 0;
+            showWindow = true;
         }
 
     }

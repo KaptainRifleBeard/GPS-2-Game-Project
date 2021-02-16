@@ -5,36 +5,29 @@ using UnityEngine.UI;
 
 public class InventoryItemDisplay : MonoBehaviour
 {
+    public GameObject SearchableObjectWindow;
+
     public Text textName;
     public Image sprite;
 
-    public InventoryItem item;
-
-    public void Init(InventoryItem item)
-    {
-        this.item = item;
-        if(textName != null)
-        {
-            textName.text = item.displayName;
-        }
-        if (sprite != null)
-        {
-            sprite.sprite = item.sprite;
-        }
-    }
+    public string[] itemName;
+   
 
     void Start()
     {
-        if(item != null)
-        {
-            Init(item);
-        }
+        
     }
 
 
     void Update()
     {
 
-
+        if(GetComponent<ProrgessBar>().showWindow == true)
+        {
+            SearchableObjectWindow.SetActive(true);
+            string name = itemName[Random.Range(0, itemName.Length - 1)];
+            textName.text = name.ToString();
+        }
+       
     }
 }
