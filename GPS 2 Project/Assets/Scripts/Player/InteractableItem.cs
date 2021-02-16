@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class InteractableItem : MonoBehaviour
 {
     public float progressTime = 0f;
@@ -13,6 +12,8 @@ public class InteractableItem : MonoBehaviour
 
     public bool clickOnObject;
 
+    //show Progress bar
+    public GameObject bar;
 
     public void Update()
     {
@@ -29,7 +30,6 @@ public class InteractableItem : MonoBehaviour
                     item = GameObject.Find("Bed").transform;
                     progressTime = 6f;
                 }
-                
                 if (hit.collider.name == "Wardrobe")
                 {
                     item = GameObject.Find("Wardrobe").transform;
@@ -39,13 +39,18 @@ public class InteractableItem : MonoBehaviour
             }
         }
 
+
         if (Vector3.Distance(player.position, item.position) < 2f)
         {
+            bar.SetActive(true);
             clickOnObject = true;
         }
         else
         {
+            item = GameObject.Find("Default (to avoid error msg)").transform;
             clickOnObject = false;
+            bar.SetActive(false);
+
         }
     }
 }

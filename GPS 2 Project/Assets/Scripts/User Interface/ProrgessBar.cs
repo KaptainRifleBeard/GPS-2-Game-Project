@@ -23,6 +23,7 @@ public class ProrgessBar : MonoBehaviour
         //CheckDistance.nearPlayer == true
         if (GameObject.Find("SelectedManager").GetComponent<InteractableItem>().clickOnObject == true)
         {
+            gameObject.SetActive(true);
             if (currentTime <= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
             {
                 currentTime += speed * Time.deltaTime;
@@ -35,7 +36,6 @@ public class ProrgessBar : MonoBehaviour
 
         if (GameObject.Find("SelectedManager").GetComponent<InteractableItem>().clickOnObject == false)
         {
-            GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime = 0f;
             currentTime = 0;
             text.GetComponent<Text>().text = ((int)currentTime).ToString();
             progressBar.GetComponent<Image>().fillAmount = 0;
