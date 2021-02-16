@@ -27,7 +27,7 @@ public class ProrgessBar : MonoBehaviour
             if (currentTime <= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
             {
                 currentTime += speed * Time.deltaTime;
-                text.GetComponent<Text>().text = ((int)currentTime).ToString();
+                //text.GetComponent<Text>().text = ((int)currentTime).ToString();
 
             }
             progressBar.GetComponent<Image>().fillAmount = currentTime / GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime;
@@ -37,7 +37,7 @@ public class ProrgessBar : MonoBehaviour
         if (GameObject.Find("SelectedManager").GetComponent<InteractableItem>().clickOnObject == false)
         {
             currentTime = 0;
-            text.GetComponent<Text>().text = ((int)currentTime).ToString();
+            //text.GetComponent<Text>().text = ((int)currentTime).ToString();
             progressBar.GetComponent<Image>().fillAmount = 0;
         }
 
