@@ -5,30 +5,26 @@ using UnityEngine;
 public class CheckDistance : MonoBehaviour
 {
     public Transform player;
-    public static bool nearPlayer;
 
-    void Awake()
-    {
-        nearPlayer = this;
-    }
+    //To highlight object
+    public Material highlightMat;
+    public Material defaultMat;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
+        defaultMat = GetComponent<Renderer>().material;
     }
 
     void Update()
     {
-       
-        if (Vector3.Distance(player.position, gameObject.transform.position) < 2f &&
-            GameObject.Find("SelectedManager").GetComponent<InteractableItem>().item != null)
+        if (Vector3.Distance(player.position, gameObject.transform.position) < 2f)
         {
-            nearPlayer = true;
+            gameObject.GetComponent<Renderer>().material = highlightMat;
         }
         if (Vector3.Distance(player.position, gameObject.transform.position) > 2f)
         {
-            nearPlayer = false;
+            gameObject.GetComponent<Renderer>().material = defaultMat;
 
         }
     }

@@ -15,8 +15,10 @@ public class InteractableItem : MonoBehaviour
     //show Progress bar
     public GameObject bar;
 
+
     public void Update()
     {
+        
         if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
