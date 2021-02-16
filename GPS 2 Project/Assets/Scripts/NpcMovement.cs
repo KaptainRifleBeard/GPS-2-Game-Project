@@ -1,88 +1,62 @@
-using UnityEngine;
-using UnityEngine.AI;
 using System.Collections;
-
+using System.Collections.Generic;
+using UnityEngine;
 
 public class NpcMovement : MonoBehaviour
 {
-
-    public Transform[] points;
-    public float idleTime;
-    static public bool sus = false;
-    private int destPoint = 0;
-    private NavMeshAgent agent;
-
-    enum EnemyStates
-    {
-        Patrolling,
-        Chasing
-    }
-
-    [SerializeField] EnemyStates currentState;
+    // Start is called before the first frame update
+    public Transform[] Waypoints;
+    public Transform spawnPoint;
+    public Transform triggerPoint;
+    public Transform visionCone;
+    public float moveSpeed = 3f;
+    public float delayTimer = 2f;
+    public int CurrentPoint = 0;
+    bool moved = false;
+    public int waypointTable;
+    // -1 and 0 are to do nothing, rest are dedicated towards waypoints.
+    float delay;
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        transform.position = spawnPoint.position;
+        triggerPoint.position = transform.position;
+        visionCone.position = transform.position;
+        Time.timeScale = 1f;
 
-        agent.autoBraking = false;
-        currentState = EnemyStates.Patrolling;
-        agent.SetDestination(points[Random.Range(0, points.Length)].position);
-        if (currentState == EnemyStates.Patrolling)
-        {
-            InvokeRepeating("GotoNextPoint", 1f, idleTime);
-        }
-        
 
     }
-
-
-    void GotoNextPoint()
-    {
-
-        if (Vector3.Distance(transform.position, points[destPoint].position) < 0.6f)
-        {
-            //destPoint++;
-            //if (destPoint == points.Length)
-            //{
-            //    destPoint = 0;
-            //}
-            destPoint = Random.Range(0, points.Length);
-        }
-        agent.SetDestination(points[destPoint].position);
-    }
-
-
     void Update()
     {
-        int layerMask = 1 << 3;
-       
-        
-
-        RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3, layerMask))
+        if (moved == false)
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 3, Color.red);
-            if(sus == true)
-            {
-                agent.SetDestination(hit.point);
-            }
+            // if no current movement behaviour, initiate randomizer.
+            Random.Range(-1, Waypoints.Length);
+
+
+
+            // checking if rand
+        }
+
+
+        if (transform.position == Waypoints[CurrentPoint].transform.position)
+        {
             
-            Debug.Log("Did Hit");
+            CurrentPoint += 1;
         }
-        else
+
+        else if (transform.position != Waypoints[CurrentPoint].transform.position)
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 3, Color.white);
-            //Debug.Log("Did not Hit");
+            transform.position = Vector3.MoveTowards(transform.position, Waypoints[CurrentPoint].transform.position, moveSpeed* Time.timeScale);
+            triggerPoint.position = Vector3.MoveTowards(triggerPoint.position, Waypoints[CurrentPoint].transform.position, moveSpeed * Time.timeScale);
+            visionCone.position = Vector3.MoveTowards(triggerPoint.position, Waypoints[CurrentPoint].transform.position, moveSpeed* Time.timeScale);
         }
 
-        
-
+        if (CurrentPoint >= Waypoints.Length)
+        {
+            CurrentPoint = 0;
+        }
     }
+    // incomplete, requires further work.
 
-    //IEnumerator Patrol()
-    //{
-    //    yield return new WaitForSeconds(idleTime);
-    //    GotoNextPoint();
-    //}
 }
