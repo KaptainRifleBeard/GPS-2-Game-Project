@@ -8,18 +8,38 @@ public class ProrgessBar : MonoBehaviour
 {
     public Transform text;
     public Transform progressBar;
+    public Transform player;
 
     [SerializeField] private float currentTime;
     [SerializeField] private float speed;
-    public float time;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     void Update()
     {
-        if (currentTime < GameObject.Find("SelectedManager").GetComponent<InteractableItem>().prorgessTime)
+        //CheckDistance.nearPlayer == true
+        if (GameObject.Find("SelectedManager").GetComponent<InteractableItem>().clickOnObject == true)
         {
-            currentTime += speed * Time.deltaTime;
-            text.GetComponent<Text>().text = ((int)currentTime).ToString();
+            if (currentTime <= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
+            {
+                currentTime += speed * Time.deltaTime;
+                text.GetComponent<Text>().text = ((int)currentTime).ToString();
+
+            }
+            progressBar.GetComponent<Image>().fillAmount = currentTime / GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime;
         }
-        progressBar.GetComponent<Image>().fillAmount = currentTime / GameObject.Find("SelectedManager").GetComponent<InteractableItem>().prorgessTime;
+
+
+        if (GameObject.Find("SelectedManager").GetComponent<InteractableItem>().clickOnObject == false)
+        {
+            GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime = 0f;
+            currentTime = 0;
+            text.GetComponent<Text>().text = ((int)currentTime).ToString();
+            progressBar.GetComponent<Image>().fillAmount = 0;
+        }
+
     }
 }

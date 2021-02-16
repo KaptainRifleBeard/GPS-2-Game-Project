@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
 
         int min = Mathf.FloorToInt(startTime / 60);
         int sec = Mathf.FloorToInt(startTime % 60);
-        textBox.GetComponent<UnityEngine.UI.Text>().text = min.ToString("00") + ":" + sec.ToString("00");
+        textBox.GetComponent<Text>().text = min.ToString("00") + ":" + sec.ToString("00");
 
     }
 }

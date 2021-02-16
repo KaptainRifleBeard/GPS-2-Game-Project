@@ -5,52 +5,47 @@ using UnityEngine;
 
 public class InteractableItem : MonoBehaviour
 {
-    public float prorgessTime = 0f;
+    public float progressTime = 0f;
+    public float range = 3f;
+
     public Transform player;
     public Transform item;
 
+    public bool clickOnObject;
+
+
     public void Update()
     {
-        
         if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
             RaycastHit hit;
 
-            
             if (Physics.Raycast(ray, out hit))
             {
                 //set item wait time
-                if(hit.collider.name == "Bed")
+                if (hit.collider.name == "Bed")
                 {
                     item = GameObject.Find("Bed").transform;
-                    if (Vector3.Distance(player.position, item.position) < 1.0f)
-                    {
-                        prorgessTime = 6f;
-                    }
-
+                    progressTime = 6f;
                 }
+                
                 if (hit.collider.name == "Wardrobe")
                 {
                     item = GameObject.Find("Wardrobe").transform;
-                    if (Vector3.Distance(player.position, item.position) < 1.0f)
-                    {
-                        prorgessTime = 5f;
-                    }
-
+                    progressTime = 5f;
                 }
 
-
-
-
-                //check hit what
-                if (hit.collider.CompareTag("Interactable"))
-                {
-                    Debug.Log(hit.collider.name + " clicked");
-
-
-                }
             }
+        }
+
+        if (Vector3.Distance(player.position, item.position) < 2f)
+        {
+            clickOnObject = true;
+        }
+        else
+        {
+            clickOnObject = false;
         }
     }
 }
