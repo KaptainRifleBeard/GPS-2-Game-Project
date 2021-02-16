@@ -16,6 +16,8 @@ public class AudioManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+
+            
         }
         else if (Instance != this)
         {
@@ -27,12 +29,12 @@ public class AudioManager : MonoBehaviour
 
     public void Play(AudioClip clip)
     {
-        if (PlayerPrefs.GetInt("SFX") == 1)
+        if (PlayerPrefs.GetInt("SFX") == 1 || PlayerPrefs.GetInt("SFX") == 0)
         {
             EffectsSource.clip = clip;
             EffectsSource.Play();
         }
-        else if (PlayerPrefs.GetInt("SFX")==0)
+        else if (PlayerPrefs.GetInt("SFX")== -1)
         {
             EffectsSource.Stop();
         }
@@ -40,12 +42,12 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic(AudioClip clip)
     {
-        if (PlayerPrefs.GetInt("BGM") == 1)
+        if (PlayerPrefs.GetInt("BGM") == 1 || PlayerPrefs.GetInt("BGM") ==0)
         {
             MusicSource.clip = clip;
             MusicSource.Play();
         }
-        else if (PlayerPrefs.GetInt("BGM") == 0)
+        else if (PlayerPrefs.GetInt("BGM") == -1)
         {
             MusicSource.Stop();
         }
