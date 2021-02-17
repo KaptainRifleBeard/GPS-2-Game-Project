@@ -60,19 +60,24 @@ public class NpcMovement : MonoBehaviour
 
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3, layerMask))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(0.5f, 0, 1), out hit, 5, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(-0.5f, 0, 1), out hit, 5, layerMask))
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 3, Color.red);
-            if(sus == true)
+            
+            if (sus == true)
             {
                 agent.SetDestination(hit.point);
             }
             
             Debug.Log("Did Hit");
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 3, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 3, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 3, Color.red);
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 3, Color.white);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 3, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 3, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 3, Color.yellow);
             //Debug.Log("Did not Hit");
         }
 
