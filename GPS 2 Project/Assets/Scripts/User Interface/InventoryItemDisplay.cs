@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class InventoryItemDisplay : MonoBehaviour
 {
-    public GameObject SearchableObjectWindow;
+    //public Text textName;
+    public Text spaceCount;
 
-    public Text textName;
-    public Image sprite;
+    //public Image sprite;
 
-    public string[] itemName;
-   
+    //public string[] itemName;
+    public ProrgessBar bar;
+
+    private int maxPocket = 5;
+    private int spaceUsedPocket;
 
     void Start()
     {
@@ -21,12 +24,12 @@ public class InventoryItemDisplay : MonoBehaviour
 
     void Update()
     {
-
-        if(GetComponent<ProrgessBar>().showWindow == true)
+        if(bar.showWindow == true)
         {
-            SearchableObjectWindow.SetActive(true);
-            string name = itemName[Random.Range(0, itemName.Length - 1)];
-            textName.text = name.ToString();
+            //string name = itemName[Random.Range(0, itemName.Length - 1)];
+            //textName.text = name.ToString();
+
+            spaceCount.GetComponent<Text>().text = spaceUsedPocket.ToString() + " / " + maxPocket.ToString();
         }
        
     }

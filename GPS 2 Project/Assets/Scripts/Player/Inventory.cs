@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<InventoryItem> items = new List<InventoryItem>();
+    Rigidbody rb;
 
     void Start()
     {
@@ -14,6 +15,6 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 }

@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class ProrgessBar : MonoBehaviour
 {
-    public bool showWindow;
+    public GameObject SearchableObjectWindow;
+    public bool showWindow = false;
+    public bool stopFilling = false;
 
     public Transform text;
     public Transform progressBar;
@@ -15,36 +17,61 @@ public class ProrgessBar : MonoBehaviour
     [SerializeField] private float currentTime;
     [SerializeField] private float speed;
 
-    
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
     void Update()
     {
-        //CheckDistance.nearPlayer == true
-        if (GameObject.Find("SelectedManager").GetComponent<InteractableItem>().clickOnObject == true)
+        if(stopFilling == false)
         {
-            gameObject.SetActive(true);
-            if (currentTime <= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
+            //CheckDistance.nearPlayer == true
+            if (GameObject.Find("SelectedManager").GetComponent<InteractableItem>().clickOnObject == true)
             {
-                currentTime += speed * Time.deltaTime;
-                //text.GetComponent<Text>().text = ((int)currentTime).ToString();
+                gameObject.SetActive(true);
+                if (currentTime <= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
+                {
+                    currentTime += speed * Time.deltaTime;
+                    //text.GetComponent<Text>().text = ((int)currentTime).ToString();
+
+                }
+                progressBar.GetComponent<Image>().fillAmount = currentTime / GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime;
+
+                if (currentTime >= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
+                {
+                    stopFilling = true;
+                    showWindow = true;
+
+                    SearchableObjectWindow.SetActive(true);
+
+                }
 
             }
-            progressBar.GetComponent<Image>().fillAmount = currentTime / GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime;
-            showWindow = true;
+
+            if (GameObject.Find("SelectedManager").GetComponent<InteractableItem>().clickOnObject == false)
+            {
+                currentTime = 0;
+                //text.GetComponent<Text>().text = ((int)currentTime).ToString();
+                progressBar.GetComponent<Image>().fillAmount = 0;
+            }
+
         }
+        
+
+    }
 
 
-        if (GameObject.Find("SelectedManager").GetComponent<InteractableItem>().clickOnObject == false)
-        {
-            currentTime = 0;
-            //text.GetComponent<Text>().text = ((int)currentTime).ToString();
-            progressBar.GetComponent<Image>().fillAmount = 0;
-            showWindow = true;
-        }
 
+    public void SearchableObjectWindow_ExitButton()
+    {
+        print(SearchableObjectWindow.activeSelf ? "Active" : "Inactive");
+        showWindow = false;
+        stopFilling = false;
+        currentTime = 0;
+
+        SearchableObjectWindow.SetActive(false);
     }
 }
