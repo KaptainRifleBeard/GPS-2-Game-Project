@@ -17,6 +17,11 @@ public class ProrgessBar : MonoBehaviour
     [SerializeField] private float currentTime;
     [SerializeField] private float speed;
 
+    IEnumerator stopBoolean()
+    {
+        yield return new WaitForSeconds(0.01f);
+        showWindow = false;
+    }
 
     private void Start()
     {
@@ -35,7 +40,7 @@ public class ProrgessBar : MonoBehaviour
                 if (currentTime <= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
                 {
                     currentTime += speed * Time.deltaTime;
-                    //text.GetComponent<Text>().text = ((int)currentTime).ToString();
+                    text.GetComponent<Text>().text = ((int)currentTime).ToString();
 
                 }
                 progressBar.GetComponent<Image>().fillAmount = currentTime / GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime;
@@ -47,6 +52,7 @@ public class ProrgessBar : MonoBehaviour
 
                     SearchableObjectWindow.SetActive(true);
 
+                    StartCoroutine(stopBoolean());
                 }
 
             }
