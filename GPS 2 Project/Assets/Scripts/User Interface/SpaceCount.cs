@@ -14,7 +14,7 @@ public class SpaceCount : MonoBehaviour
     
     void Update()
     {
-        spaceCount.text = SearchWindow.total.ToString();
+        spaceCount.text = SearchWindow.total.ToString() + " / " + SearchWindow.maxPocket.ToString();
 
     }
 

@@ -12,7 +12,6 @@ public class SearchWindow : MonoBehaviour
 
     public ProrgessBar bar;
     public static int maxPocket = 5;
-    public Text maxSpace;
 
     public static int total;
 
@@ -24,8 +23,9 @@ public class SearchWindow : MonoBehaviour
     [Space(50)]
     public List<WindowManager> windowManage = new List<WindowManager>();
    
+    
 
-    private void Start()
+    void Start()
     {
 
     }
@@ -35,8 +35,6 @@ public class SearchWindow : MonoBehaviour
 
         if (bar.showWindow == true)
         {
-            maxSpace.text = " / " +  maxPocket.ToString();
-
             //! check level int to determine rand value, each level have diff amount
             //! SET setSctive to limit panel amount show
             int rand = Random.Range(1, windowManage.Count);
@@ -47,7 +45,7 @@ public class SearchWindow : MonoBehaviour
                 value.text = windowManage[i].itemValue;
 
                 num = windowManage[i].spaceNeed;
-                space.text = windowManage[i].spaceNeed.ToString();
+                space.text = "Space used:  " +  windowManage[i].spaceNeed.ToString();
 
             }
 
