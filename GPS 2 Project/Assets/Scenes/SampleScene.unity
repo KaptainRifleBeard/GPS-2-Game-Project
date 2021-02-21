@@ -1290,6 +1290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EffectsSource: {fileID: 1022569643}
   MusicSource: {fileID: 1022569642}
+  AlarmSource: {fileID: 0}
   LowPitchRange: 0.95
   HighPitchRange: 1.05
 --- !u!82 &1022569642
@@ -1957,3 +1958,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39c6db87d866732488e8ff51a17a1b81, type: 3}
+--- !u!4 &4485176312482161294 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1411737712174656513, guid: 39c6db87d866732488e8ff51a17a1b81, type: 3}
+  m_PrefabInstance: {fileID: 4485176312482161293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6184700038542830096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4485176312482161294}
+    m_Modifications:
+    - target: {fileID: 729558943495215055, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 729558943495215055, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 729558943495215055, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 729558943495215055, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 729558943495215055, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 729558943495215055, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 729558943495215055, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 729558943495215055, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 729558943495215055, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 729558943495215055, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 729558943495215055, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042315528251664653, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
+      propertyPath: m_Name
+      value: AlarmNoise
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d8c7421609d785c47928fa7684b536e3, type: 3}
