@@ -38,19 +38,18 @@ public class SearchWindow : MonoBehaviour
     {
         if (bar.showWindow == true)
         {
-            rand = Random.Range(1, itemName.Length - 1);
-            AboutValue();
 
-            /*
+            AboutValue();
+            //AboutSpace();
+
             for (int i = 0; i < rand; i++)
             {
-                n.text = windowManage[i].itemName;
-                AboutSpace();
+                //n.text = windowManage[i].itemName;
 
-                value.text = windowManage[i].itemValue;
-                space.text = "Space used:  " + num.ToString();
+                //value.text = windowManage[i].itemValue;
+                //space.text = "Space used:  " + num.ToString();
             }
-            */
+            
         }
 
 
@@ -97,7 +96,9 @@ public class SearchWindow : MonoBehaviour
 
     public void AboutValue()
     {
-        
+        rand = Random.Range(1, itemName.Length);
+
+
         if (rand == 1)
         {
             n.text = "Wrist Watch";

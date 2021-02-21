@@ -8,13 +8,11 @@ public class ButtonValue : MonoBehaviour
     public Text n;
     public Text value;
     public Text space;
-    int num;
+    bool openButton;
 
     public Text pocketName;
     public Text pocketValue;
     public Text pocketSpace;
-
-    public GameObject[] column;
 
     public void TakeButton(Button button)
     {
@@ -52,25 +50,32 @@ public class ButtonValue : MonoBehaviour
 
         }
 
+
+        if (n.text == " ")
+        {
+            button.interactable = false;
+        }
+        if (n.text != " ")
+        {
+            button.interactable = true;
+        }
+
+
         if (SearchWindow.totalSafeCount + SearchWindow.num <= SearchWindow.maxSafeCount)
         {
             pocketName.text = n.text;
             pocketValue.text = value.text;
             pocketSpace.text = space.text;
 
-            button.interactable = false;
-            n.text = null;
-            value.text = null;
-            space.text = null;
-
+            n.text = " ";
+            value.text = " ";
+            space.text = " ";
+            
             Debug.Log("Button : " + SearchWindow.num);
             SearchWindow.totalSafeCount += SearchWindow.num;
         }
-        else
-        {
-            button.interactable = true;
-        }
 
+        
     }
 
     public void PutButton()
@@ -78,62 +83,54 @@ public class ButtonValue : MonoBehaviour
         if(SearchWindow.totalSafeCount > 0)
         {
             AboutSpace();
-            if (SearchWindow.totalSafeCount < 0)
-            {
-                SearchWindow.totalSafeCount = 0;
-            }
+
+            n.text = pocketName.text;
+            value.text = pocketValue.text;
+            space.text = pocketSpace.text;
+
+            pocketName.text = " ";
+            pocketValue.text = " ";
+            pocketSpace.text = " ";
 
         }
-        
+        if (SearchWindow.totalSafeCount < 0)
+        {
+            SearchWindow.totalSafeCount = 0;
+        }
     }
 
     public void AboutSpace()
     {
         //Debug.Log("Button : " + num);
 
-        if (n.text == "Wrist Watch" || n.text == "Wedding Diamond Ring" || n.text == "Crystal gem studded hanging earring" ||
-           n.text == "Silver pocket watch" || n.text == "Gold and Jade Necklace")
+        if (pocketName.text == "Wrist Watch" || pocketName.text == "Wedding Diamond Ring" || pocketName.text == "Crystal gem studded hanging earring" ||
+           pocketName.text == "Silver pocket watch" || pocketName.text == "Gold and Jade Necklace")
         {
             SearchWindow.totalSafeCount -= 1;
-            pocketName.text = null;
-            pocketValue.text = null;
-            pocketSpace.text = null;
         }
 
-        if (n.text == "Designer sunglasses" || n.text == "Cashmere designer pink shawl" || n.text == "Pendant locket necklace" ||
-           n.text == "Gold and diamond  bracelet" || n.text == "Mobile Phone" || n.text == "Antique intricately engraved large pocket watch")
+        if (pocketName.text == "Designer sunglasses" || pocketName.text == "Cashmere designer pink shawl" || pocketName.text == "Pendant locket necklace" ||
+           pocketName.text == "Gold and diamond  bracelet" || pocketName.text == "Mobile Phone" || pocketName.text == "Antique intricately engraved large pocket watch")
         {
             SearchWindow.totalSafeCount -= 2;
-            pocketName.text = null;
-            pocketValue.text = null;
-            pocketSpace.text = null;
         }
 
-        if (n.text == "Gold ceramic cigar tray" || n.text == "Designer female tote bag" || n.text == "Small wooden antique clock" ||
-           n.text == "Double crystal drinking glass" || n.text == "Antique Malaysian wooden smoking pipe")
+        if (pocketName.text == "Gold ceramic cigar tray" || pocketName.text == "Designer female tote bag" || pocketName.text == "Small wooden antique clock" ||
+           pocketName.text == "Double crystal drinking glass" || pocketName.text == "Antique Malaysian wooden smoking pipe")
         {
             SearchWindow.totalSafeCount -= 3;
-            pocketName.text = null;
-            pocketValue.text = null;
-            pocketSpace.text = null;
         }
 
-        if (n.text == "Antique golden candle holder" || n.text == "Small abstract glass male and female sculpture" || n.text == "Female hand painted porcelain figurine" ||
-           n.text == "Golden diamond encrusted wedding tiara")
+        if (pocketName.text == "Antique golden candle holder" || pocketName.text == "Small abstract glass male and female sculpture" || pocketName.text == "Female hand painted porcelain figurine" ||
+           pocketName.text == "Golden diamond encrusted wedding tiara")
         {
             SearchWindow.totalSafeCount -= 4;
-            pocketName.text = null;
-            pocketValue.text = null;
-            pocketSpace.text = null;
         }
 
-        if (n.text == "High end Laptop" || n.text == "Antique decorative plate" || n.text == "Antique Silver gold encrusted teapot" ||
-           n.text == "Golden Dragon Statue")
+        if (pocketName.text == "High end Laptop" || pocketName.text == "Antique decorative plate" || pocketName.text == "Antique Silver gold encrusted teapot" ||
+           pocketName.text == "Golden Dragon Statue")
         {
             SearchWindow.totalSafeCount -= 5;
-            pocketName.text = null;
-            pocketValue.text = null;
-            pocketSpace.text = null;
         }
     }
 

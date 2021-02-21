@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SearchDisplay : MonoBehaviour
 {
@@ -16,14 +17,6 @@ public class SearchDisplay : MonoBehaviour
     void Start()
     {
         y = SceneManager.sceneCount;
-        rand = Random.Range(0, itemList.Length);
-        Active();
-
-        for (int i = 0; i < rand; i++)
-        {
-            itemList[i].SetActive(true);
-
-        }
         Active();
 
     }
@@ -31,21 +24,13 @@ public class SearchDisplay : MonoBehaviour
 
     void Update()
     {
-        if (y == 1 && bar.showWindow == true)
+
+        if (bar.showWindow == true)
         {            
-            rand = Random.Range(0, itemList.Length);
             Active();
 
-            Debug.Log("list: " + rand);
-            if(rand < SearchWindow.totalSafeCount)
-            {
-                for (int i = 0; i < rand; i++)
-                {
-                    itemList[i].SetActive(true);
+            Debug.Log(rand);
 
-                }
-            }
-            
         }
 
 
@@ -53,6 +38,8 @@ public class SearchDisplay : MonoBehaviour
 
     void Active()
     {
+        rand = Random.Range(0, itemList.Length);
+
         if (rand == 0)
         {
             itemList[0].SetActive(false);
@@ -69,6 +56,8 @@ public class SearchDisplay : MonoBehaviour
             itemList[2].SetActive(false);
             itemList[3].SetActive(false);
             itemList[4].SetActive(false);
+
+           
 
         }
         if (rand == 2)
