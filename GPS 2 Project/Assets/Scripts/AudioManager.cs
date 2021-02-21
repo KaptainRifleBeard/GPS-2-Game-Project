@@ -4,6 +4,10 @@ public class AudioManager : MonoBehaviour
 {
     public AudioSource EffectsSource;
     public AudioSource MusicSource;
+    public AudioClip AlarmSource;
+
+    public static bool IsTriggered = false;
+    // need to replace with a global GameLost Trigger, game lost trigger will have to be returned to false after menu pops up
 
     public float LowPitchRange = .95f;
     public float HighPitchRange = 1.05f;
@@ -17,7 +21,7 @@ public class AudioManager : MonoBehaviour
         {
             Instance = this;
 
-            
+            PlayAlarm(AlarmSource);
         }
         else if (Instance != this)
         {
@@ -39,6 +43,24 @@ public class AudioManager : MonoBehaviour
             EffectsSource.Stop();
         }
     }
+
+    public void PlayAlarm(AudioClip clip)
+    {
+        
+
+        if (IsTriggered == true)
+        {
+            MusicSource.clip = clip;
+            MusicSource.Play();
+        }
+        else if (IsTriggered == false && MusicSource.isPlaying == true)
+        {
+            MusicSource.Stop();
+        }
+            
+        
+    }
+
 
     public void PlayMusic(AudioClip clip)
     {
