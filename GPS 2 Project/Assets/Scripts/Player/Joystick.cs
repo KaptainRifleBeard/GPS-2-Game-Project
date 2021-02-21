@@ -61,7 +61,7 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
             if (moveDirection != Vector3.zero)
             {
                 //Rotate player facing direction
-                player.rotation = Quaternion.Slerp(player.rotation, Quaternion.LookRotation(moveDirection), 5 * Time.deltaTime);
+                //player.rotation = Quaternion.Slerp(player.rotation, Quaternion.LookRotation(moveDirection), 5 * Time.deltaTime);
             }
             yield return null;
             
@@ -69,10 +69,14 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
         
     }
 
+    void start()
+    {
+
+    }
 
     void Update()
     {
-       if(stop == true)
+        if (stop == true)
         {
             StopAllCoroutines();
         }

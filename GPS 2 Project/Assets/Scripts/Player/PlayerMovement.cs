@@ -5,6 +5,27 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Rigidbody rb;
+
+    void start()
+    {
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+    }
+
+    void Update()
+    {
+        float inputZ = Input.GetAxis("Horizontal");
+        float inputX = -Input.GetAxis("Vertical");
+
+        Vector3 lookDirection = new Vector3(inputX, 0, inputZ);
+        Quaternion lookRotation = Quaternion.LookRotation(lookDirection, Vector3.up);
+
+        float step = 5 * Time.deltaTime;
+        transform.rotation = Quaternion.RotateTowards(lookRotation, transform.rotation, step);
+
+       
+
+    }
     /*
     public float moveSpeed = 0.5f;
     public float drag = 0.5f;
