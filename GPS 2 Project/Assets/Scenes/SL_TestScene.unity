@@ -1287,9 +1287,9 @@ RectTransform:
   m_Father: {fileID: 1054189258}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -517.1593}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103694381
@@ -1463,9 +1463,9 @@ RectTransform:
   m_Father: {fileID: 1054189258}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -456.25824}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &141117584
@@ -1734,9 +1734,9 @@ RectTransform:
   m_Father: {fileID: 1920335915}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -456.25824}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &196055674
@@ -1831,9 +1831,9 @@ RectTransform:
   m_Father: {fileID: 1920335915}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -151.75275}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &226738037
@@ -2135,8 +2135,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1587931187}
-        m_TargetAssemblyTypeName: SearchWindow, Assembly-CSharp
+      - m_Target: {fileID: 1587931188}
+        m_TargetAssemblyTypeName: ButtonValue, Assembly-CSharp
         m_MethodName: TakeButton
         m_Mode: 1
         m_Arguments:
@@ -2219,9 +2219,9 @@ RectTransform:
   m_Father: {fileID: 1054189258}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -212.65385}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280201199
@@ -2486,13 +2486,14 @@ GameObject:
   m_Component:
   - component: {fileID: 374788209}
   - component: {fileID: 374788210}
+  - component: {fileID: 374788211}
   m_Layer: 5
   m_Name: Display 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &374788209
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2533,17 +2534,16 @@ MonoBehaviour:
   value: {fileID: 1180327632}
   space: {fileID: 587385030}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
-  - itemName: Gold and Jade Necklace
+  - itemName: Wrist Watch
+    itemValue: RM 300
+    spaceNeed: 1
+  - itemName: Wedding Diamond Ring
+    itemValue: RM 595
+    spaceNeed: 1
+  - itemName: Crystal gem studded hanging earring
     itemValue: RM 895
     spaceNeed: 1
-  - itemName: Antique intricately engraved large pocket watch
-    itemValue: RM 1,989
-    spaceNeed: 2
-  - itemName: Antique Malaysian wooden smoking pipe
-    itemValue: RM 2,495
-    spaceNeed: 3
   - itemName: Silver pocket watch
     itemValue: RM 901
     spaceNeed: 1
@@ -2595,6 +2595,35 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  - itemName: Gold and Jade Necklace
+    itemValue: RM 895
+    spaceNeed: 1
+  - itemName: Antique intricately engraved large pocket watch
+    itemValue: RM 1,989
+    spaceNeed: 2
+  - itemName: Antique Malaysian wooden smoking pipe
+    itemValue: RM 2,495
+    spaceNeed: 3
+  - itemName: Golden diamond encrusted wedding tiara
+    itemValue: RM 3,982
+    spaceNeed: 4
+  - itemName: Golden Dragon Statue
+    itemValue: RM 5,145
+    spaceNeed: 5
+  itemName: []
+--- !u!114 &374788211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374788208}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f483dc7ca344ac4796dd2b8ab1bb229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 1780375862}
 --- !u!1 &404003415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,7 +2736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: 12}
+  m_AnchoredPosition: {x: -307, y: 330}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &421338745
@@ -2825,7 +2854,6 @@ MonoBehaviour:
   value: {fileID: 502679424}
   space: {fileID: 1332721146}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
   - itemName: Gold and Jade Necklace
     itemValue: RM 895
@@ -2887,6 +2915,7 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  itemName: []
 --- !u!1 &465599080
 GameObject:
   m_ObjectHideFlags: 0
@@ -3177,7 +3206,6 @@ MonoBehaviour:
   value: {fileID: 2011087270}
   space: {fileID: 1553425631}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
   - itemName: Gold and Jade Necklace
     itemValue: RM 895
@@ -3239,6 +3267,7 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  itemName: []
 --- !u!1 &502679423
 GameObject:
   m_ObjectHideFlags: 0
@@ -4805,9 +4834,9 @@ RectTransform:
   m_Father: {fileID: 1920335915}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -90.851654}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &662907365
@@ -4951,8 +4980,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2124058795}
-        m_TargetAssemblyTypeName: SearchWindow, Assembly-CSharp
+      - m_Target: {fileID: 2124058796}
+        m_TargetAssemblyTypeName: ButtonValue, Assembly-CSharp
         m_MethodName: TakeButton
         m_Mode: 1
         m_Arguments:
@@ -5084,8 +5113,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 374788210}
-        m_TargetAssemblyTypeName: SearchWindow, Assembly-CSharp
+      - m_Target: {fileID: 374788211}
+        m_TargetAssemblyTypeName: ButtonValue, Assembly-CSharp
         m_MethodName: TakeButton
         m_Mode: 1
         m_Arguments:
@@ -5168,9 +5197,9 @@ RectTransform:
   m_Father: {fileID: 1054189258}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -334.45605}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726593317
@@ -5241,13 +5270,14 @@ GameObject:
   m_Component:
   - component: {fileID: 739331020}
   - component: {fileID: 739331021}
+  - component: {fileID: 739331022}
   m_Layer: 5
   m_Name: Display 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &739331020
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5288,17 +5318,16 @@ MonoBehaviour:
   value: {fileID: 2026390842}
   space: {fileID: 855718565}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
-  - itemName: Gold and Jade Necklace
+  - itemName: Wrist Watch
+    itemValue: RM 300
+    spaceNeed: 1
+  - itemName: Wedding Diamond Ring
+    itemValue: RM 595
+    spaceNeed: 1
+  - itemName: Crystal gem studded hanging earring
     itemValue: RM 895
     spaceNeed: 1
-  - itemName: Antique intricately engraved large pocket watch
-    itemValue: RM 1,989
-    spaceNeed: 2
-  - itemName: Antique Malaysian wooden smoking pipe
-    itemValue: RM 2,495
-    spaceNeed: 3
   - itemName: Silver pocket watch
     itemValue: RM 901
     spaceNeed: 1
@@ -5350,6 +5379,60 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  - itemName: Gold and Jade Necklace
+    itemValue: RM 895
+    spaceNeed: 1
+  - itemName: Antique intricately engraved large pocket watch
+    itemValue: RM 1,989
+    spaceNeed: 2
+  - itemName: Antique Malaysian wooden smoking pipe
+    itemValue: RM 2,495
+    spaceNeed: 3
+  - itemName: Golden diamond encrusted wedding tiara
+    itemValue: RM 3,982
+    spaceNeed: 4
+  - itemName: Golden Dragon Statue
+    itemValue: RM 5,145
+    spaceNeed: 5
+  itemName:
+  - Wrist Watch
+  - Wedding Diamond Ring
+  - Crystal gem studded hanging earring
+  - Silver pocket watch
+  - Designer sunglasses
+  - Cashmere designer pink shawl
+  - Pendant locket necklace
+  - Gold and diamond  bracelet
+  - Mobile Phone
+  - Gold ceramic cigar tray
+  - Designer female tote bag
+  - Small wooden antique clock
+  - Double crystal drinking glass
+  - Small Chinese motif porcelain vase
+  - Antique golden candle holder
+  - Small abstract glass male and female sculpture
+  - Female hand painted porcelain figurine
+  - High end Laptop
+  - Antique decorative plate
+  - Antique Silver gold encrusted teapot
+  - Gold and Jade Necklace
+  - Antique intricately engraved large pocket watch
+  - Antique Malaysian wooden smoking pipe
+  - Golden diamond encrusted wedding tiara
+  - Golden Dragon Statue
+--- !u!114 &739331022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739331019}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f483dc7ca344ac4796dd2b8ab1bb229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 2094961425}
 --- !u!1 &743296011
 GameObject:
   m_ObjectHideFlags: 0
@@ -5537,7 +5620,6 @@ MonoBehaviour:
   value: {fileID: 819425384}
   space: {fileID: 2076649641}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
   - itemName: Gold and Jade Necklace
     itemValue: RM 895
@@ -5599,6 +5681,7 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  itemName: []
 --- !u!1 &758704588
 GameObject:
   m_ObjectHideFlags: 0
@@ -5741,13 +5824,14 @@ GameObject:
   m_Component:
   - component: {fileID: 763362996}
   - component: {fileID: 763362997}
+  - component: {fileID: 763362998}
   m_Layer: 5
   m_Name: Display 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &763362996
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5788,17 +5872,16 @@ MonoBehaviour:
   value: {fileID: 1007654997}
   space: {fileID: 2003646416}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
-  - itemName: Gold and Jade Necklace
+  - itemName: Wrist Watch
+    itemValue: RM 300
+    spaceNeed: 1
+  - itemName: Wedding Diamond Ring
+    itemValue: RM 595
+    spaceNeed: 1
+  - itemName: Crystal gem studded hanging earring
     itemValue: RM 895
     spaceNeed: 1
-  - itemName: Antique intricately engraved large pocket watch
-    itemValue: RM 1,989
-    spaceNeed: 2
-  - itemName: Antique Malaysian wooden smoking pipe
-    itemValue: RM 2,495
-    spaceNeed: 3
   - itemName: Silver pocket watch
     itemValue: RM 901
     spaceNeed: 1
@@ -5850,6 +5933,35 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  - itemName: Gold and Jade Necklace
+    itemValue: RM 895
+    spaceNeed: 1
+  - itemName: Antique intricately engraved large pocket watch
+    itemValue: RM 1,989
+    spaceNeed: 2
+  - itemName: Antique Malaysian wooden smoking pipe
+    itemValue: RM 2,495
+    spaceNeed: 3
+  - itemName: Golden diamond encrusted wedding tiara
+    itemValue: RM 3,982
+    spaceNeed: 4
+  - itemName: Golden Dragon Statue
+    itemValue: RM 5,145
+    spaceNeed: 5
+  itemName: []
+--- !u!114 &763362998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763362995}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f483dc7ca344ac4796dd2b8ab1bb229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 1127439839}
 --- !u!1 &765128365
 GameObject:
   m_ObjectHideFlags: 0
@@ -6406,9 +6518,9 @@ RectTransform:
   m_Father: {fileID: 1920335915}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -395.35715}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &821096382
@@ -6631,7 +6743,6 @@ MonoBehaviour:
   value: {fileID: 1674585397}
   space: {fileID: 7811837}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
   - itemName: Gold and Jade Necklace
     itemValue: RM 895
@@ -6693,6 +6804,7 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  itemName: []
 --- !u!1 &855007666
 GameObject:
   m_ObjectHideFlags: 0
@@ -6938,8 +7050,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1549817564}
-        m_TargetAssemblyTypeName: SearchWindow, Assembly-CSharp
+      - m_Target: {fileID: 1549817563}
+        m_TargetAssemblyTypeName: ButtonValue, Assembly-CSharp
         m_MethodName: TakeButton
         m_Mode: 1
         m_Arguments:
@@ -7101,9 +7213,9 @@ RectTransform:
   m_Father: {fileID: 1920335915}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -578.0604}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &965591862
@@ -8073,6 +8185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1043813033}
   - component: {fileID: 1043813034}
+  - component: {fileID: 1043813035}
   m_Layer: 5
   m_Name: Display 2
   m_TagString: Untagged
@@ -8120,17 +8233,16 @@ MonoBehaviour:
   value: {fileID: 1124082763}
   space: {fileID: 1915886735}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
-  - itemName: Gold and Jade Necklace
+  - itemName: Wrist Watch
+    itemValue: RM 300
+    spaceNeed: 1
+  - itemName: Wedding Diamond Ring
+    itemValue: RM 595
+    spaceNeed: 1
+  - itemName: Crystal gem studded hanging earring
     itemValue: RM 895
     spaceNeed: 1
-  - itemName: Antique intricately engraved large pocket watch
-    itemValue: RM 1,989
-    spaceNeed: 2
-  - itemName: Antique Malaysian wooden smoking pipe
-    itemValue: RM 2,495
-    spaceNeed: 3
   - itemName: Silver pocket watch
     itemValue: RM 901
     spaceNeed: 1
@@ -8182,6 +8294,60 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  - itemName: Gold and Jade Necklace
+    itemValue: RM 895
+    spaceNeed: 1
+  - itemName: Antique intricately engraved large pocket watch
+    itemValue: RM 1,989
+    spaceNeed: 2
+  - itemName: Antique Malaysian wooden smoking pipe
+    itemValue: RM 2,495
+    spaceNeed: 3
+  - itemName: Golden diamond encrusted wedding tiara
+    itemValue: RM 3,982
+    spaceNeed: 4
+  - itemName: Golden Dragon Statue
+    itemValue: RM 5,145
+    spaceNeed: 5
+  itemName:
+  - Wrist Watch
+  - Wedding Diamond Ring
+  - Crystal gem studded hanging earring
+  - Silver pocket watch
+  - Designer sunglasses
+  - Cashmere designer pink shawl
+  - Pendant locket necklace
+  - Gold and diamond  bracelet
+  - Mobile Phone
+  - Gold ceramic cigar tray
+  - Designer female tote bag
+  - Small wooden antique clock
+  - Double crystal drinking glass
+  - Small Chinese motif porcelain vase
+  - Antique golden candle holder
+  - Small abstract glass male and female sculpture
+  - Female hand painted porcelain figurine
+  - High end Laptop
+  - Antique decorative plate
+  - Antique Silver gold encrusted teapot
+  - Gold and Jade Necklace
+  - Antique intricately engraved large pocket watch
+  - Antique Malaysian wooden smoking pipe
+  - Golden diamond encrusted wedding tiara
+  - Golden Dragon Statue
+--- !u!114 &1043813035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043813032}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f483dc7ca344ac4796dd2b8ab1bb229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 1190857912}
 --- !u!1 &1044183942
 GameObject:
   m_ObjectHideFlags: 0
@@ -8265,8 +8431,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 739331021}
-        m_TargetAssemblyTypeName: SearchWindow, Assembly-CSharp
+      - m_Target: {fileID: 739331022}
+        m_TargetAssemblyTypeName: ButtonValue, Assembly-CSharp
         m_MethodName: TakeButton
         m_Mode: 1
         m_Arguments:
@@ -8372,7 +8538,6 @@ MonoBehaviour:
   value: {fileID: 509911679}
   space: {fileID: 1450102483}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
   - itemName: Gold and Jade Necklace
     itemValue: RM 895
@@ -8434,6 +8599,7 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  itemName: []
 --- !u!1 &1054189257
 GameObject:
   m_ObjectHideFlags: 0
@@ -8480,8 +8646,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00047302246, y: -75.16}
-  m_SizeDelta: {x: -0.00094604, y: 150.32}
+  m_AnchoredPosition: {x: 0.00047302246, y: -233.66595}
+  m_SizeDelta: {x: -0.0009, y: 467.3323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054189259
 MonoBehaviour:
@@ -8554,12 +8720,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054189257}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 595ac203d79d33b429e5e29cb3e7f357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 421338745}
+  SearchableObjectWindow: {fileID: 1799583490}
   itemList:
   - {fileID: 1549817561}
   - {fileID: 1043813032}
@@ -8749,7 +8916,6 @@ MonoBehaviour:
   value: {fileID: 1612597620}
   space: {fileID: 1236632735}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
   - itemName: Gold and Jade Necklace
     itemValue: RM 895
@@ -8811,6 +8977,7 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  itemName: []
 --- !u!1 &1106429805
 GameObject:
   m_ObjectHideFlags: 0
@@ -8826,7 +8993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1106429806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8903,6 +9070,7 @@ MonoBehaviour:
   item: {fileID: 545055047}
   clickOnObject: 0
   bar: {fileID: 421338743}
+  Progressbar: {fileID: 421338745}
 --- !u!1 &1110036242
 GameObject:
   m_ObjectHideFlags: 0
@@ -9212,9 +9380,9 @@ RectTransform:
   m_Father: {fileID: 1054189258}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -578.0604}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138242921
@@ -9531,8 +9699,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2047322238}
-        m_TargetAssemblyTypeName: SearchWindow, Assembly-CSharp
+      - m_Target: {fileID: 2047322239}
+        m_TargetAssemblyTypeName: ButtonValue, Assembly-CSharp
         m_MethodName: TakeButton
         m_Mode: 1
         m_Arguments:
@@ -10084,9 +10252,9 @@ RectTransform:
   m_Father: {fileID: 1054189258}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -29.95055}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219520270
@@ -10615,13 +10783,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1254462926}
   - component: {fileID: 1254462927}
+  - component: {fileID: 1254462928}
   m_Layer: 5
   m_Name: Display 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1254462926
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10662,17 +10831,16 @@ MonoBehaviour:
   value: {fileID: 1832377253}
   space: {fileID: 1729155502}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
-  - itemName: Gold and Jade Necklace
+  - itemName: Wrist Watch
+    itemValue: RM 300
+    spaceNeed: 1
+  - itemName: Wedding Diamond Ring
+    itemValue: RM 595
+    spaceNeed: 1
+  - itemName: Crystal gem studded hanging earring
     itemValue: RM 895
     spaceNeed: 1
-  - itemName: Antique intricately engraved large pocket watch
-    itemValue: RM 1,989
-    spaceNeed: 2
-  - itemName: Antique Malaysian wooden smoking pipe
-    itemValue: RM 2,495
-    spaceNeed: 3
   - itemName: Silver pocket watch
     itemValue: RM 901
     spaceNeed: 1
@@ -10724,6 +10892,35 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  - itemName: Gold and Jade Necklace
+    itemValue: RM 895
+    spaceNeed: 1
+  - itemName: Antique intricately engraved large pocket watch
+    itemValue: RM 1,989
+    spaceNeed: 2
+  - itemName: Antique Malaysian wooden smoking pipe
+    itemValue: RM 2,495
+    spaceNeed: 3
+  - itemName: Golden diamond encrusted wedding tiara
+    itemValue: RM 3,982
+    spaceNeed: 4
+  - itemName: Golden Dragon Statue
+    itemValue: RM 5,145
+    spaceNeed: 5
+  itemName: []
+--- !u!114 &1254462928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254462925}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f483dc7ca344ac4796dd2b8ab1bb229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 15870945}
 --- !u!1 &1258386265
 GameObject:
   m_ObjectHideFlags: 0
@@ -11096,8 +11293,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 763362997}
-        m_TargetAssemblyTypeName: SearchWindow, Assembly-CSharp
+      - m_Target: {fileID: 763362998}
+        m_TargetAssemblyTypeName: ButtonValue, Assembly-CSharp
         m_MethodName: TakeButton
         m_Mode: 1
         m_Arguments:
@@ -12404,9 +12601,9 @@ RectTransform:
   m_Father: {fileID: 1920335915}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -273.55496}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503182278
@@ -12706,8 +12903,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1254462927}
-        m_TargetAssemblyTypeName: SearchWindow, Assembly-CSharp
+      - m_Target: {fileID: 1254462928}
+        m_TargetAssemblyTypeName: ButtonValue, Assembly-CSharp
         m_MethodName: TakeButton
         m_Mode: 1
         m_Arguments:
@@ -12790,7 +12987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.4, y: -176.63339}
+  m_AnchoredPosition: {x: -72, y: -176}
   m_SizeDelta: {x: 91.256, y: 24.0286}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1545261999
@@ -12924,6 +13121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1549817562}
   - component: {fileID: 1549817564}
+  - component: {fileID: 1549817563}
   m_Layer: 5
   m_Name: Display
   m_TagString: Untagged
@@ -12955,6 +13153,19 @@ RectTransform:
   m_AnchoredPosition: {x: 192.23529, y: -27.013996}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1549817563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549817561}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f483dc7ca344ac4796dd2b8ab1bb229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 336825745}
 --- !u!114 &1549817564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12971,17 +13182,16 @@ MonoBehaviour:
   value: {fileID: 1563982033}
   space: {fileID: 560466541}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
-  - itemName: Gold and Jade Necklace
+  - itemName: Wrist Watch
+    itemValue: RM 300
+    spaceNeed: 1
+  - itemName: Wedding Diamond Ring
+    itemValue: RM 595
+    spaceNeed: 1
+  - itemName: Crystal gem studded hanging earring
     itemValue: RM 895
     spaceNeed: 1
-  - itemName: Antique intricately engraved large pocket watch
-    itemValue: RM 1,989
-    spaceNeed: 2
-  - itemName: Antique Malaysian wooden smoking pipe
-    itemValue: RM 2,495
-    spaceNeed: 3
   - itemName: Silver pocket watch
     itemValue: RM 901
     spaceNeed: 1
@@ -13033,6 +13243,47 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  - itemName: Gold and Jade Necklace
+    itemValue: RM 895
+    spaceNeed: 1
+  - itemName: Antique intricately engraved large pocket watch
+    itemValue: RM 1,989
+    spaceNeed: 2
+  - itemName: Antique Malaysian wooden smoking pipe
+    itemValue: RM 2,495
+    spaceNeed: 3
+  - itemName: Golden diamond encrusted wedding tiara
+    itemValue: RM 3,982
+    spaceNeed: 4
+  - itemName: Golden Dragon Statue
+    itemValue: RM 5,145
+    spaceNeed: 5
+  itemName:
+  - Wrist Watch
+  - Wedding Diamond Ring
+  - Crystal gem studded hanging earring
+  - Silver pocket watch
+  - Designer sunglasses
+  - Cashmere designer pink shawl
+  - Pendant locket necklace
+  - Gold and diamond  bracelet
+  - Mobile Phone
+  - Gold ceramic cigar tray
+  - Designer female tote bag
+  - Small wooden antique clock
+  - Double crystal drinking glass
+  - Small Chinese motif porcelain vase
+  - Antique golden candle holder
+  - Small abstract glass male and female sculpture
+  - Female hand painted porcelain figurine
+  - High end Laptop
+  - Antique decorative plate
+  - Antique Silver gold encrusted teapot
+  - Gold and Jade Necklace
+  - Antique intricately engraved large pocket watch
+  - Antique Malaysian wooden smoking pipe
+  - Golden diamond encrusted wedding tiara
+  - Golden Dragon Statue
 --- !u!1 &1553425630
 GameObject:
   m_ObjectHideFlags: 0
@@ -13437,13 +13688,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1587931186}
   - component: {fileID: 1587931187}
+  - component: {fileID: 1587931188}
   m_Layer: 5
   m_Name: Display 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1587931186
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13484,17 +13736,16 @@ MonoBehaviour:
   value: {fileID: 855007667}
   space: {fileID: 2060696375}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
-  - itemName: Gold and Jade Necklace
+  - itemName: Wrist Watch
+    itemValue: RM 300
+    spaceNeed: 1
+  - itemName: Wedding Diamond Ring
+    itemValue: RM 595
+    spaceNeed: 1
+  - itemName: Crystal gem studded hanging earring
     itemValue: RM 895
     spaceNeed: 1
-  - itemName: Antique intricately engraved large pocket watch
-    itemValue: RM 1,989
-    spaceNeed: 2
-  - itemName: Antique Malaysian wooden smoking pipe
-    itemValue: RM 2,495
-    spaceNeed: 3
   - itemName: Silver pocket watch
     itemValue: RM 901
     spaceNeed: 1
@@ -13546,6 +13797,35 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  - itemName: Gold and Jade Necklace
+    itemValue: RM 895
+    spaceNeed: 1
+  - itemName: Antique intricately engraved large pocket watch
+    itemValue: RM 1,989
+    spaceNeed: 2
+  - itemName: Antique Malaysian wooden smoking pipe
+    itemValue: RM 2,495
+    spaceNeed: 3
+  - itemName: Golden diamond encrusted wedding tiara
+    itemValue: RM 3,982
+    spaceNeed: 4
+  - itemName: Golden Dragon Statue
+    itemValue: RM 5,145
+    spaceNeed: 5
+  itemName: []
+--- !u!114 &1587931188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587931185}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f483dc7ca344ac4796dd2b8ab1bb229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 645713851}
 --- !u!1 &1590700726
 GameObject:
   m_ObjectHideFlags: 0
@@ -13787,9 +14067,9 @@ RectTransform:
   m_Father: {fileID: 1920335915}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -212.65385}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606812720
@@ -14302,7 +14582,6 @@ MonoBehaviour:
   value: {fileID: 610704322}
   space: {fileID: 136531599}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
   - itemName: Gold and Jade Necklace
     itemValue: RM 895
@@ -14364,6 +14643,7 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  itemName: []
 --- !u!1 &1629970461
 GameObject:
   m_ObjectHideFlags: 0
@@ -14421,7 +14701,6 @@ MonoBehaviour:
   value: {fileID: 43967680}
   space: {fileID: 1627415107}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
   - itemName: Gold and Jade Necklace
     itemValue: RM 895
@@ -14483,6 +14762,7 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  itemName: []
 --- !u!1 &1637955755
 GameObject:
   m_ObjectHideFlags: 0
@@ -14517,9 +14797,9 @@ RectTransform:
   m_Father: {fileID: 1920335915}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -334.45605}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637955757
@@ -15257,9 +15537,9 @@ RectTransform:
   m_Father: {fileID: 1920335915}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -517.1593}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691377894
@@ -15953,7 +16233,6 @@ MonoBehaviour:
   value: {fileID: 1959354068}
   space: {fileID: 2085129891}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
   - itemName: Gold and Jade Necklace
     itemValue: RM 895
@@ -16015,6 +16294,7 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  itemName: []
 --- !u!1 &1765206868
 GameObject:
   m_ObjectHideFlags: 0
@@ -16124,9 +16404,9 @@ RectTransform:
   m_Father: {fileID: 1054189258}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -395.35715}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768169863
@@ -16349,8 +16629,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2017095369}
-        m_TargetAssemblyTypeName: SearchWindow, Assembly-CSharp
+      - m_Target: {fileID: 2017095370}
+        m_TargetAssemblyTypeName: ButtonValue, Assembly-CSharp
         m_MethodName: TakeButton
         m_Mode: 1
         m_Arguments:
@@ -16416,7 +16696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1799583491
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16477,6 +16757,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799583490}
   m_CullTransparentMesh: 1
+--- !u!1 &1808646728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1808646732}
+  - component: {fileID: 1808646731}
+  - component: {fileID: 1808646730}
+  - component: {fileID: 1808646729}
+  m_Layer: 0
+  m_Name: Hiding Spot
+  m_TagString: Hiding Spot
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1808646729
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808646728}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1808646730
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808646728}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1808646731
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808646728}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1808646732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808646728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3400002, y: -2.87, z: 7.14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1820392687
 GameObject:
   m_ObjectHideFlags: 0
@@ -16983,9 +17358,9 @@ RectTransform:
   m_Father: {fileID: 1054189258}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -151.75275}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834717463
@@ -17155,9 +17530,9 @@ RectTransform:
   m_Father: {fileID: 1920335915}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -29.95055}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1865157968
@@ -17403,9 +17778,9 @@ RectTransform:
   m_Father: {fileID: 1054189258}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -90.851654}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1878560961
@@ -17920,8 +18295,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00047302246, y: -75.16}
-  m_SizeDelta: {x: -0.00094604, y: 150.32}
+  m_AnchoredPosition: {x: 0.00047302246, y: -251.73788}
+  m_SizeDelta: {x: -0.0009, y: 503.4757}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1920335916
 MonoBehaviour:
@@ -18893,13 +19268,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2017095368}
   - component: {fileID: 2017095369}
+  - component: {fileID: 2017095370}
   m_Layer: 5
   m_Name: Display 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2017095368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18940,17 +19316,16 @@ MonoBehaviour:
   value: {fileID: 2107964333}
   space: {fileID: 2037299386}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
-  - itemName: Gold and Jade Necklace
+  - itemName: Wrist Watch
+    itemValue: RM 300
+    spaceNeed: 1
+  - itemName: Wedding Diamond Ring
+    itemValue: RM 595
+    spaceNeed: 1
+  - itemName: Crystal gem studded hanging earring
     itemValue: RM 895
     spaceNeed: 1
-  - itemName: Antique intricately engraved large pocket watch
-    itemValue: RM 1,989
-    spaceNeed: 2
-  - itemName: Antique Malaysian wooden smoking pipe
-    itemValue: RM 2,495
-    spaceNeed: 3
   - itemName: Silver pocket watch
     itemValue: RM 901
     spaceNeed: 1
@@ -19002,6 +19377,35 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  - itemName: Gold and Jade Necklace
+    itemValue: RM 895
+    spaceNeed: 1
+  - itemName: Antique intricately engraved large pocket watch
+    itemValue: RM 1,989
+    spaceNeed: 2
+  - itemName: Antique Malaysian wooden smoking pipe
+    itemValue: RM 2,495
+    spaceNeed: 3
+  - itemName: Golden diamond encrusted wedding tiara
+    itemValue: RM 3,982
+    spaceNeed: 4
+  - itemName: Golden Dragon Statue
+    itemValue: RM 5,145
+    spaceNeed: 5
+  itemName: []
+--- !u!114 &2017095370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017095367}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f483dc7ca344ac4796dd2b8ab1bb229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 777033708}
 --- !u!1 &2019955412
 GameObject:
   m_ObjectHideFlags: 0
@@ -19085,8 +19489,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1043813034}
-        m_TargetAssemblyTypeName: SearchWindow, Assembly-CSharp
+      - m_Target: {fileID: 1043813035}
+        m_TargetAssemblyTypeName: ButtonValue, Assembly-CSharp
         m_MethodName: TakeButton
         m_Mode: 1
         m_Arguments:
@@ -19348,7 +19752,6 @@ MonoBehaviour:
   value: {fileID: 1893586192}
   space: {fileID: 1934297636}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
   - itemName: Gold and Jade Necklace
     itemValue: RM 895
@@ -19410,6 +19813,7 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  itemName: []
 --- !u!1 &2037299385
 GameObject:
   m_ObjectHideFlags: 0
@@ -19574,9 +19978,9 @@ RectTransform:
   m_Father: {fileID: 1054189258}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 134.5567, y: -273.55496}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 269.1134, y: 59.9011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2045800950
@@ -19647,13 +20051,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2047322237}
   - component: {fileID: 2047322238}
+  - component: {fileID: 2047322239}
   m_Layer: 5
   m_Name: Display 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2047322237
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19694,17 +20099,16 @@ MonoBehaviour:
   value: {fileID: 1014837976}
   space: {fileID: 476452310}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
-  - itemName: Gold and Jade Necklace
+  - itemName: Wrist Watch
+    itemValue: RM 300
+    spaceNeed: 1
+  - itemName: Wedding Diamond Ring
+    itemValue: RM 595
+    spaceNeed: 1
+  - itemName: Crystal gem studded hanging earring
     itemValue: RM 895
     spaceNeed: 1
-  - itemName: Antique intricately engraved large pocket watch
-    itemValue: RM 1,989
-    spaceNeed: 2
-  - itemName: Antique Malaysian wooden smoking pipe
-    itemValue: RM 2,495
-    spaceNeed: 3
   - itemName: Silver pocket watch
     itemValue: RM 901
     spaceNeed: 1
@@ -19756,6 +20160,35 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  - itemName: Gold and Jade Necklace
+    itemValue: RM 895
+    spaceNeed: 1
+  - itemName: Antique intricately engraved large pocket watch
+    itemValue: RM 1,989
+    spaceNeed: 2
+  - itemName: Antique Malaysian wooden smoking pipe
+    itemValue: RM 2,495
+    spaceNeed: 3
+  - itemName: Golden diamond encrusted wedding tiara
+    itemValue: RM 3,982
+    spaceNeed: 4
+  - itemName: Golden Dragon Statue
+    itemValue: RM 5,145
+    spaceNeed: 5
+  itemName: []
+--- !u!114 &2047322239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047322236}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f483dc7ca344ac4796dd2b8ab1bb229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 998388882}
 --- !u!1 &2060696374
 GameObject:
   m_ObjectHideFlags: 0
@@ -20427,13 +20860,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2124058794}
   - component: {fileID: 2124058795}
+  - component: {fileID: 2124058796}
   m_Layer: 5
   m_Name: Display 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2124058794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20474,17 +20908,16 @@ MonoBehaviour:
   value: {fileID: 227131387}
   space: {fileID: 22038755}
   bar: {fileID: 421338745}
-  num: 0
   windowManage:
-  - itemName: Gold and Jade Necklace
+  - itemName: Wrist Watch
+    itemValue: RM 300
+    spaceNeed: 1
+  - itemName: Wedding Diamond Ring
+    itemValue: RM 595
+    spaceNeed: 1
+  - itemName: Crystal gem studded hanging earring
     itemValue: RM 895
     spaceNeed: 1
-  - itemName: Antique intricately engraved large pocket watch
-    itemValue: RM 1,989
-    spaceNeed: 2
-  - itemName: Antique Malaysian wooden smoking pipe
-    itemValue: RM 2,495
-    spaceNeed: 3
   - itemName: Silver pocket watch
     itemValue: RM 901
     spaceNeed: 1
@@ -20536,6 +20969,35 @@ MonoBehaviour:
   - itemName: Antique Silver gold encrusted teapot
     itemValue: RM 5,645
     spaceNeed: 5
+  - itemName: Gold and Jade Necklace
+    itemValue: RM 895
+    spaceNeed: 1
+  - itemName: Antique intricately engraved large pocket watch
+    itemValue: RM 1,989
+    spaceNeed: 2
+  - itemName: Antique Malaysian wooden smoking pipe
+    itemValue: RM 2,495
+    spaceNeed: 3
+  - itemName: Golden diamond encrusted wedding tiara
+    itemValue: RM 3,982
+    spaceNeed: 4
+  - itemName: Golden Dragon Statue
+    itemValue: RM 5,145
+    spaceNeed: 5
+  itemName: []
+--- !u!114 &2124058796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124058793}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f483dc7ca344ac4796dd2b8ab1bb229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 817286537}
 --- !u!1001 &567081566745978124
 PrefabInstance:
   m_ObjectHideFlags: 0

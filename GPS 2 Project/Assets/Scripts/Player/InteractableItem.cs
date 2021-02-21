@@ -14,6 +14,7 @@ public class InteractableItem : MonoBehaviour
 
     //show Progress bar
     public GameObject bar;
+    public ProrgessBar Progressbar;
 
 
     public void Update()
@@ -49,6 +50,12 @@ public class InteractableItem : MonoBehaviour
                 }
             }
         }
+
+        if (Progressbar.showWindow == true)
+        {
+            clickOnObject = false;
+        }
+
 
 
         if (Vector3.Distance(player.position, item.position) < 2f)
