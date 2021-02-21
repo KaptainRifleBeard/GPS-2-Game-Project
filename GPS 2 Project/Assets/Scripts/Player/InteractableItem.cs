@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InteractableItem : MonoBehaviour
 {
-    public GameObject HidingSpotWindow;
 
     public float progressTime = 0f;
     public float range = 3f;
@@ -18,10 +17,10 @@ public class InteractableItem : MonoBehaviour
     public GameObject bar;
     public ProrgessBar Progressbar;
 
-
     public void Update()
     {
         
+
         if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
@@ -50,32 +49,38 @@ public class InteractableItem : MonoBehaviour
                     item = GameObject.Find("Nightstand").transform;
                     progressTime = 5f;
                 }
-                if (hit.collider.name == "Hiding Spot")
-                {
-                    HidingSpotWindow.SetActive(true);
-                }
             }
         }
 
         if (Progressbar.showWindow == true)
         {
             clickOnObject = false;
+
         }
+
+
+       
 
 
 
         if (Vector3.Distance(player.position, item.position) < 2f)
         {
+            
             bar.SetActive(true);
             clickOnObject = true;
+
         }
         else
         {
             item = GameObject.Find("Default (to avoid error msg)").transform;
             clickOnObject = false;
             bar.SetActive(false);
+
         }
+
     }
+
+    
 }
 
 

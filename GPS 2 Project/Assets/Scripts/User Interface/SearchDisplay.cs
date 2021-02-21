@@ -7,7 +7,6 @@ public class SearchDisplay : MonoBehaviour
 {
     //To check in which level and how many item to pop out
     public ProrgessBar bar;
-    public GameObject SearchableObjectWindow;
 
     public GameObject[] itemList;
     int y;
@@ -61,29 +60,15 @@ public class SearchDisplay : MonoBehaviour
             itemList[2].SetActive(false);
             itemList[3].SetActive(false);
             itemList[4].SetActive(false);
-            itemList[5].SetActive(false);
-            itemList[6].SetActive(false);
-            itemList[7].SetActive(false);
-            itemList[8].SetActive(false);
-            itemList[9].SetActive(false);
-        }
-        if (rand == 1)
-        {
-
         }
         //set active to false
-        if (rand == 0)
+        if (rand == 1)
         {
             itemList[0].SetActive(true);
             itemList[1].SetActive(false);
             itemList[2].SetActive(false);
             itemList[3].SetActive(false);
             itemList[4].SetActive(false);
-            itemList[5].SetActive(false);
-            itemList[6].SetActive(false);
-            itemList[7].SetActive(false);
-            itemList[8].SetActive(false);
-            itemList[9].SetActive(false);
 
         }
         if (rand == 2)
@@ -93,11 +78,6 @@ public class SearchDisplay : MonoBehaviour
             itemList[2].SetActive(false);
             itemList[3].SetActive(false);
             itemList[4].SetActive(false);
-            itemList[5].SetActive(false);
-            itemList[6].SetActive(false);
-            itemList[7].SetActive(false);
-            itemList[8].SetActive(false);
-            itemList[9].SetActive(false);
         }
         if (rand == 3)
         {
@@ -106,11 +86,6 @@ public class SearchDisplay : MonoBehaviour
             itemList[2].SetActive(true);
             itemList[3].SetActive(false);
             itemList[4].SetActive(false);
-            itemList[5].SetActive(false);
-            itemList[6].SetActive(false);
-            itemList[7].SetActive(false);
-            itemList[8].SetActive(false);
-            itemList[9].SetActive(false);
         }
 
         if (rand == 4)
@@ -120,11 +95,6 @@ public class SearchDisplay : MonoBehaviour
             itemList[2].SetActive(true);
             itemList[3].SetActive(true);
             itemList[4].SetActive(false);
-            itemList[5].SetActive(false);
-            itemList[6].SetActive(false);
-            itemList[7].SetActive(false);
-            itemList[8].SetActive(false);
-            itemList[9].SetActive(false);
         }
 
 
@@ -135,78 +105,7 @@ public class SearchDisplay : MonoBehaviour
             itemList[2].SetActive(true);
             itemList[3].SetActive(true);
             itemList[4].SetActive(true);
-            itemList[5].SetActive(false);
-            itemList[6].SetActive(false);
-            itemList[7].SetActive(false);
-            itemList[8].SetActive(false);
-            itemList[9].SetActive(false);
         }
 
-        if (rand == 6)
-        {
-            itemList[0].SetActive(true);
-            itemList[1].SetActive(true);
-            itemList[2].SetActive(true);
-            itemList[3].SetActive(true);
-            itemList[4].SetActive(true);
-            itemList[5].SetActive(true);
-            itemList[6].SetActive(false);
-            itemList[7].SetActive(false);
-            itemList[8].SetActive(false);
-            itemList[9].SetActive(false);
-        }
-
-        if (rand == 7)
-        {
-            itemList[0].SetActive(true);
-            itemList[1].SetActive(true);
-            itemList[2].SetActive(true);
-            itemList[3].SetActive(true);
-            itemList[4].SetActive(true);
-            itemList[5].SetActive(true);
-            itemList[6].SetActive(true);
-            itemList[7].SetActive(false);
-            itemList[8].SetActive(false);
-            itemList[9].SetActive(false);
-        }
-        if (rand == 8)
-        {
-            itemList[0].SetActive(true);
-            itemList[1].SetActive(true);
-            itemList[2].SetActive(true);
-            itemList[3].SetActive(true);
-            itemList[4].SetActive(true);
-            itemList[5].SetActive(true);
-            itemList[6].SetActive(true);
-            itemList[7].SetActive(true);
-            itemList[8].SetActive(false);
-            itemList[9].SetActive(false);
-        }
-        if (rand == 9)
-        {
-            itemList[0].SetActive(true);
-            itemList[1].SetActive(true);
-            itemList[2].SetActive(true);
-            itemList[3].SetActive(true);
-            itemList[4].SetActive(true);
-            itemList[5].SetActive(true);
-            itemList[6].SetActive(true);
-            itemList[7].SetActive(true);
-            itemList[8].SetActive(true);
-            itemList[9].SetActive(false);
-        }
-        if (rand == 10)
-        {
-            itemList[0].SetActive(true);
-            itemList[1].SetActive(true);
-            itemList[2].SetActive(true);
-            itemList[3].SetActive(true);
-            itemList[4].SetActive(true);
-            itemList[5].SetActive(true);
-            itemList[6].SetActive(true);
-            itemList[7].SetActive(true);
-            itemList[8].SetActive(true);
-            itemList[9].SetActive(true);
-        }
     }
 }

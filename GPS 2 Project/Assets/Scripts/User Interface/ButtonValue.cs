@@ -14,7 +14,9 @@ public class ButtonValue : MonoBehaviour
     public Text pocketValue;
     public Text pocketSpace;
 
-    public void TakeButton()
+    public GameObject[] column;
+
+    public void TakeButton(Button button)
     {
         if (n.text == "Wrist Watch" || n.text == "Wedding Diamond Ring" || n.text == "Crystal gem studded hanging earring" ||
               n.text == "Silver pocket watch" || n.text == "Gold and Jade Necklace")
@@ -50,16 +52,23 @@ public class ButtonValue : MonoBehaviour
 
         }
 
-
         if (SearchWindow.totalSafeCount + SearchWindow.num <= SearchWindow.maxSafeCount)
         {
             pocketName.text = n.text;
             pocketValue.text = value.text;
             pocketSpace.text = space.text;
 
-            Debug.Log("Button : " + SearchWindow.num);
+            button.interactable = false;
+            n.text = null;
+            value.text = null;
+            space.text = null;
 
+            Debug.Log("Button : " + SearchWindow.num);
             SearchWindow.totalSafeCount += SearchWindow.num;
+        }
+        else
+        {
+            button.interactable = true;
         }
 
     }

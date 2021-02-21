@@ -83,8 +83,5 @@ public class ProrgessBar : MonoBehaviour
         SearchableObjectWindow.SetActive(false);
     }
 
-    public void HidingSpotWindow_ExitButton()
-    {
-        HidingSpotWindow.SetActive(false);
-    }
+  
 }
