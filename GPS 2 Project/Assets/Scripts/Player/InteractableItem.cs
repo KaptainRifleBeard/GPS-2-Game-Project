@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractableItem : MonoBehaviour
 {
+    public GameObject HidingSpotWindow;
+
     public float progressTime = 0f;
     public float range = 3f;
 
@@ -48,6 +50,10 @@ public class InteractableItem : MonoBehaviour
                     item = GameObject.Find("Nightstand").transform;
                     progressTime = 5f;
                 }
+                if (hit.collider.name == "Hiding Spot")
+                {
+                    HidingSpotWindow.SetActive(true);
+                }
             }
         }
 
@@ -68,7 +74,6 @@ public class InteractableItem : MonoBehaviour
             item = GameObject.Find("Default (to avoid error msg)").transform;
             clickOnObject = false;
             bar.SetActive(false);
-
         }
     }
 }

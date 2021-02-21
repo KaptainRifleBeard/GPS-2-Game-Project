@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class ProrgessBar : MonoBehaviour
 {
     public GameObject SearchableObjectWindow;
+    public GameObject HidingSpotWindow;
+
     public bool showWindow = false;
     public bool stopFilling = false;
 
@@ -79,5 +81,10 @@ public class ProrgessBar : MonoBehaviour
         currentTime = 0;
 
         SearchableObjectWindow.SetActive(false);
+    }
+
+    public void HidingSpotWindow_ExitButton()
+    {
+        HidingSpotWindow.SetActive(false);
     }
 }
