@@ -11,8 +11,11 @@ public class SearchWindow : MonoBehaviour
     public Text space;
 
     public ProrgessBar bar;
+    public static int maxSafeCount = 5;
     public static int maxPocket = 5;
-    public static int total;
+
+    public static int totalSafeCount = 0;
+    int calculateSpaceUsed;
 
     int i;
     int rand;
@@ -36,7 +39,6 @@ public class SearchWindow : MonoBehaviour
         if (bar.showWindow == true)
         {
             rand = Random.Range(1, itemName.Length - 1);
-
             AboutValue();
 
             /*
@@ -95,6 +97,7 @@ public class SearchWindow : MonoBehaviour
 
     public void AboutValue()
     {
+        
         if (rand == 1)
         {
             n.text = "Wrist Watch";

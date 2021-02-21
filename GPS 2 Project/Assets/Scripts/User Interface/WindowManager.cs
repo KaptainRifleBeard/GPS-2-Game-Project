@@ -7,6 +7,7 @@ public struct WindowManager
     public string itemName;
     public string itemValue;
     public int spaceNeed;
+
 }
 
 

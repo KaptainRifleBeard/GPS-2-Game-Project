@@ -33,17 +33,20 @@ public class SearchDisplay : MonoBehaviour
     void Update()
     {
         if (y == 1 && bar.showWindow == true)
-        {
+        {            
             rand = Random.Range(0, itemList.Length);
             Active();
 
             Debug.Log("list: " + rand);
-
-            for (int i = 0; i < rand; i++)
+            if(rand < SearchWindow.totalSafeCount)
             {
-                itemList[i].SetActive(true); 
+                for (int i = 0; i < rand; i++)
+                {
+                    itemList[i].SetActive(true);
 
+                }
             }
+            
         }
 
 
