@@ -9,8 +9,9 @@ public class NpcMovement : MonoBehaviour
     public Transform[] points;
     public Transform target;
     public float idleTime;
+    static public bool isIdle = false;
     static public bool sus = false;
-    
+
     private NavMeshAgent agent;
     public float waitDuration = 5f;
     public float talkDuration = 10f;
@@ -59,29 +60,42 @@ public class NpcMovement : MonoBehaviour
 
         if(isEnemyEntered && RoomTrigger.isPlayerEntered)
         {
-            if(!hasTalked)
+            if(isIdle)
             {
-                agent.SetDestination(target.position);
-                agent.stoppingDistance = 1.5f;
+                if (!hasTalked)
+                {
+                    agent.SetDestination(target.position);
+                    agent.stoppingDistance = 1.5f;
+                }
+                else
+                {
+                    if (Vector3.Distance(transform.position, points[destPoint].position) < 0.6f)
+                    {
+                        waitTimer += Time.deltaTime;
+                        if (waitTimer > waitDuration)
+                        {
+                            waitTimer = 0;
+                            destPoint = Random.Range(0, points.Length);
+                            agent.SetDestination(points[destPoint].position);
+                        }
+
+                    }
+                }
+            }
+            
+            if(StrikeOut.sus)
+            {
+                sus = true;
             }
             else
             {
-                if (Vector3.Distance(transform.position, points[destPoint].position) < 0.6f)
-                {
-                    waitTimer += Time.deltaTime;
-                    if (waitTimer > waitDuration)
-                    {
-                        waitTimer = 0;
-                        destPoint = Random.Range(0, points.Length);
-                        agent.SetDestination(points[destPoint].position);
-                    }
-
-                }
+                sus = false;
             }
 
         }
         else
         {
+            agent.SetDestination(points[destPoint].position);
             if (Vector3.Distance(transform.position, points[destPoint].position) < 0.6f)
             {
                 waitTimer += Time.deltaTime;
@@ -105,14 +119,18 @@ public class NpcMovement : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 2, Color.red);
             Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 2, Color.red);
             Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 2, Color.red);
-            if (!hasTalked)
+            if (isIdle)
             {
-                talkTimer += Time.deltaTime;
-                if (talkTimer > talkDuration)
+                if(!hasTalked)
                 {
-                    talkTimer = 0;
-                    hasTalked = true;
-                    agent.SetDestination(points[destPoint].position);
+                    talkTimer += Time.deltaTime;
+                    if (talkTimer > talkDuration)
+                    {
+                        talkTimer = 0;
+                        hasTalked = true;
+                        agent.SetDestination(points[destPoint].position);
+                    }
+
                 }
 
             }
@@ -124,6 +142,11 @@ public class NpcMovement : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 2, Color.yellow);
             Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 2, Color.yellow);
             //Debug.Log("Did not Hit");
+            if (!hasTalked)
+            {
+                 talkTimer = 0;
+                 agent.SetDestination(points[destPoint].position);
+            }
         }
 
         
