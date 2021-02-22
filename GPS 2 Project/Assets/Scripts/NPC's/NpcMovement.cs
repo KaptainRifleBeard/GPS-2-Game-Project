@@ -17,7 +17,12 @@ public class NpcMovement : MonoBehaviour
     public float talkDuration = 10f;
     public float waitTimer;
     public float talkTimer;
-    static public bool isEnemyEntered = false;
+    static public bool isEnemyEnteredBR = false;
+    static public bool isEnemyEnteredBRT = false;
+    static public bool isEnemyEnteredTR = false;
+    static public bool isEnemyEnteredSR = false;
+    static public bool isEnemyEnteredS = false;
+    static public bool isEnemyEnteredLR = false;
     public bool hasTalked = false;
     public int destPoint = 0;
 
@@ -36,21 +41,84 @@ public class NpcMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Room"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Bedroom"))
         {
-            isEnemyEntered = true;
-            Debug.Log("Enemy Entered");
+            isEnemyEnteredBR = true;
+            Debug.Log("Enemy Entered Bedroom");
         }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("BedroomToilet"))
+        {
+            isEnemyEnteredBRT = true;
+            Debug.Log("Enemy Entered BedroomToilet");
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("TeenRoom"))
+        {
+            isEnemyEnteredTR = true;
+            Debug.Log("Enemy Entered TeenRoom");
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("ShowerRoom"))
+        {
+            isEnemyEnteredSR = true;
+            Debug.Log("Enemy Entered ShowerRoom");
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Store"))
+        {
+            isEnemyEnteredS = true;
+            Debug.Log("Enemy Entered Store");
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("LivingRoom"))
+        {
+            isEnemyEnteredLR = true;
+            Debug.Log("Enemy Entered LivingRoom");
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Room"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Bedroom"))
         {
-            isEnemyEntered = false;
-            Debug.Log("Enemy left");
+            isEnemyEnteredBR = false;
+            Debug.Log("Enemy left Bedroom");
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("BedroomToilet"))
+        {
+            isEnemyEnteredBRT = false;
+            Debug.Log("Enemy left BedroomToilet");
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("TeenRoom"))
+        {
+            isEnemyEnteredTR = false;
+            Debug.Log("Enemy left TeenRoom");
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("ShowerRoom"))
+        {
+            isEnemyEnteredSR = false;
+            Debug.Log("Enemy left ShowerRoom");
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Store"))
+        {
+            isEnemyEnteredS = false;
+            Debug.Log("Enemy left Store");
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("LivingRoom"))
+        {
+            isEnemyEnteredLR = false;
+            Debug.Log("Enemy left LivingRoom");
         }
     }
+
+
 
     void Update()
     {
@@ -58,7 +126,8 @@ public class NpcMovement : MonoBehaviour
 
         
 
-        if(isEnemyEntered && RoomTrigger.isPlayerEntered)
+        if((isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
+            || (isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR))
         {
             if(isIdle)
             {
@@ -134,7 +203,16 @@ public class NpcMovement : MonoBehaviour
                 }
 
             }
-            
+
+            if (StrikeOut.sus)
+            {
+                sus = true;
+            }
+            else
+            {
+                sus = false;
+            }
+
         }
         else
         {
