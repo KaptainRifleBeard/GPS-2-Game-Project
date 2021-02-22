@@ -33,7 +33,7 @@ public class n_ItemsList : MonoBehaviour
 
     void Update()
     {
-        
+       
     }
 
     public void RefreshDisplay()

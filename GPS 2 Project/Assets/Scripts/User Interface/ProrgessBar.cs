@@ -12,16 +12,18 @@ public class ProrgessBar : MonoBehaviour
 
     [SerializeField] private float currentTime;
     [SerializeField] private float speed;
-    public bool showWindow;
+
+    public bool showWindow; 
+    public GameObject SearchableObjectWindow;
+
 
     IEnumerator stopBoolean()
     {
         yield return new WaitForSeconds(0.01f);
         showWindow = false;
-
-        yield return new WaitForSeconds(3f);
-        currentTime = 0;
     }
+
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -36,12 +38,22 @@ public class ProrgessBar : MonoBehaviour
             if (currentTime <= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
             {
                 currentTime += speed * Time.deltaTime;
-                //text.GetComponent<Text>().text = ((int)currentTime).ToString();
+                text.GetComponent<Text>().text = ((int)currentTime).ToString();
                 StrikeOut.sus = true;
             }
             progressBar.GetComponent<Image>().fillAmount = currentTime / GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime;
             showWindow = true;
+
             StartCoroutine(stopBoolean());
+
+        }
+
+        if (currentTime >= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
+        {            
+            showWindow = true;
+
+            SearchableObjectWindow.SetActive(true);
+
         }
 
 
@@ -52,5 +64,17 @@ public class ProrgessBar : MonoBehaviour
             progressBar.GetComponent<Image>().fillAmount = 0;
         }
 
+
+
+
+    }
+
+    public void SearchableObjectWindow_ExitButton()
+    {
+        print(SearchableObjectWindow.activeSelf ? "Active" : "Inactive");
+        showWindow = false;
+        currentTime = 0;
+
+        SearchableObjectWindow.SetActive(false);
     }
 }

@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 2504ebb81e295ef42b5dfd3475e0173b, type: 2}
---- !u!54 &907292 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 8347959287644499598, guid: 7706bcb81b65aec4a94ea9590c2ff706, type: 3}
-  m_PrefabInstance: {fileID: 8347959287644223122}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3663243
 GameObject:
   m_ObjectHideFlags: 0
@@ -20035,10 +20030,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a50b63baa7be9345b4e8568ed7e0c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 543450653699129330}
-  rb: {fileID: 907292}
-  moveSpeed: 2
-  pad: {fileID: 2104760740}
+  joystick: {fileID: 0}
+  joystickBG: {fileID: 0}
+  joystickPos: {x: 0, y: 0}
 --- !u!114 &1452701130
 MonoBehaviour:
   m_ObjectHideFlags: 0

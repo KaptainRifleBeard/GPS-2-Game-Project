@@ -94,6 +94,9 @@ public class InteractableItem : MonoBehaviour
                 }
                 if (hit.collider.name == "Compartmental_Coffee_Table")
                 {
+                    Debug.Log("clicked");
+                    Debug.Log(hit.collider.name);
+
                     item = GameObject.Find("Compartmental_Coffee_Table").transform;
                     progressTime = 5f;
                 }
@@ -102,6 +105,7 @@ public class InteractableItem : MonoBehaviour
                     item = GameObject.Find("TV_Cabinet").transform;
                     progressTime = 5f;
                 }
+
             }
         }
 
@@ -112,12 +116,9 @@ public class InteractableItem : MonoBehaviour
         }
 
 
-       
-
-
-
-        if (Vector3.Distance(player.position, item.position) < 2f)
+        if (Vector3.Distance(player.position, item.position) < 150f)
         {
+            Debug.Log("show bar");
             bar.SetActive(true);
             clickOnObject = true;
 
@@ -129,6 +130,8 @@ public class InteractableItem : MonoBehaviour
             bar.SetActive(false);
 
         }
+
+
 
     }
 
