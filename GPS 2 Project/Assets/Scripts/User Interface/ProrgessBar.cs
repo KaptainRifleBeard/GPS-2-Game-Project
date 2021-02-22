@@ -12,7 +12,16 @@ public class ProrgessBar : MonoBehaviour
 
     [SerializeField] private float currentTime;
     [SerializeField] private float speed;
+    public bool showWindow;
 
+    IEnumerator stopBoolean()
+    {
+        yield return new WaitForSeconds(0.01f);
+        showWindow = false;
+
+        yield return new WaitForSeconds(3f);
+        currentTime = 0;
+    }
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -31,6 +40,8 @@ public class ProrgessBar : MonoBehaviour
                 StrikeOut.sus = true;
             }
             progressBar.GetComponent<Image>().fillAmount = currentTime / GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime;
+            showWindow = true;
+            StartCoroutine(stopBoolean());
         }
 
 
