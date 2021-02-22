@@ -17,7 +17,7 @@ public class HidingSpotWindow : MonoBehaviour
 
     void Update()
     {
-        currentCap.text = currCapacity.ToString() + " / " + maxCapacity.ToString();
+        //currentCap.text = currCapacity.ToString() + " / " + maxCapacity.ToString();
 
     }
 }

@@ -9,7 +9,7 @@ public class HidingSpot : MonoBehaviour
     public GameObject hidingSpot;
 
     public Transform player;
-    public bool hidingOpen = true;
+    public bool hidingOpen = false;
     void Start()
     {
         

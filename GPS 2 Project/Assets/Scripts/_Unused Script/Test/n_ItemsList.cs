@@ -14,6 +14,8 @@ public class n_Item
 
 public class n_ItemsList : MonoBehaviour
 {
+    public ProrgessBar bar;
+    public HidingSpot hide;
 
     public List<n_Item> itemList;
     public Transform contentPanel;
@@ -44,8 +46,9 @@ public class n_ItemsList : MonoBehaviour
     public void AddButton()
     {
         int rand = Random.Range(0, 5);
-        for (int j = 0; j < rand; j++)
+        for (int j = 0; j < itemList.Count; j++)
         {
+
             n_Item item = itemList[j];
             GameObject newButton = buttonItemPool.GetItem();
             newButton.transform.SetParent(contentPanel);
@@ -53,7 +56,6 @@ public class n_ItemsList : MonoBehaviour
             n_ButtonItem button = newButton.GetComponent<n_ButtonItem>();
             button.SetUp(item, this);
         }
-
     }
 
     public void RemoveButton()
@@ -83,11 +85,11 @@ public class n_ItemsList : MonoBehaviour
 
     public void PutItemToOtherWindow(n_Item item)
     {
-        if(otherShop.space >= item._space)
+        if (otherShop.space >= item._space)
         {
             space += item._space;
             otherShop.space -= item._space;
-             
+
             AddItem(item, otherShop);
             RemoveItem(item, this); //remove item from this window
 
@@ -95,6 +97,5 @@ public class n_ItemsList : MonoBehaviour
             otherShop.RefreshDisplay();
 
         }
-
     }
 }
