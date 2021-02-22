@@ -65,7 +65,6 @@ public class InteractableItem : MonoBehaviour
 
         if (Vector3.Distance(player.position, item.position) < 2f)
         {
-            
             bar.SetActive(true);
             clickOnObject = true;
 

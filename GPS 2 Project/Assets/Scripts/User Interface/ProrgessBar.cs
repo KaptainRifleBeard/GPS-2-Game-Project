@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ProrgessBar : MonoBehaviour
 {
+    public GameObject window;
+
     public GameObject SearchableObjectWindow;
     public GameObject HidingSpotWindow;
 
@@ -16,7 +18,7 @@ public class ProrgessBar : MonoBehaviour
     public Transform progressBar;
     public Transform player;
 
-    [SerializeField] private float currentTime;
+    public float currentTime;
     [SerializeField] private float speed;
 
     IEnumerator stopBoolean()
@@ -52,6 +54,7 @@ public class ProrgessBar : MonoBehaviour
                     stopFilling = true;
                     showWindow = true;
 
+                    window.SetActive(true);
                     SearchableObjectWindow.SetActive(true);
 
                     StartCoroutine(stopBoolean());
@@ -80,6 +83,7 @@ public class ProrgessBar : MonoBehaviour
         stopFilling = false;
         currentTime = 0;
 
+        window.SetActive(false);
         SearchableObjectWindow.SetActive(false);
     }
 

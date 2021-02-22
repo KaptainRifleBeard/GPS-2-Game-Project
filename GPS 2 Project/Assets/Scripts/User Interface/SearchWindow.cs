@@ -15,9 +15,6 @@ public class SearchWindow : MonoBehaviour
     public static int maxPocket = 5;
 
     public static int totalSafeCount = 0;
-    int calculateSpaceUsed;
-
-    int i;
     int rand;
 
     [SerializeField ]public static int num;
@@ -31,11 +28,11 @@ public class SearchWindow : MonoBehaviour
 
     public void Start()
     {
-        AboutSpace();
+        //AboutSpace();
     }
 
     public void Update()
-    {
+    {/*
         if (bar.showWindow == true)
         {
 
@@ -51,10 +48,10 @@ public class SearchWindow : MonoBehaviour
             }
             
         }
-
+        */
 
     }
-
+    /*
     public void AboutSpace()
     {
         //Debug.Log("Button : " + num);
@@ -330,6 +327,6 @@ public class SearchWindow : MonoBehaviour
 
         }
     }
-
+    */
 
 }

@@ -83,14 +83,14 @@ public class ButtonValue : MonoBehaviour
         if(SearchWindow.totalSafeCount > 0)
         {
             AboutSpace();
+            pocketName.text = " ";
+            pocketValue.text = " ";
+            pocketSpace.text = " ";
 
             n.text = pocketName.text;
             value.text = pocketValue.text;
             space.text = pocketSpace.text;
 
-            pocketName.text = " ";
-            pocketValue.text = " ";
-            pocketSpace.text = " ";
 
         }
         if (SearchWindow.totalSafeCount < 0)

@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HidingSpot : MonoBehaviour
 {
     public GameObject HidingSpotWindow;
-    public Transform player;
+    public GameObject hidingSpot;
 
+    public Transform player;
+    public bool hidingOpen = true;
     void Start()
     {
         
@@ -27,13 +30,8 @@ public class HidingSpot : MonoBehaviour
                     Debug.Log("show");
 
                     HidingSpotWindow.SetActive(true);
-
-
-                }
-                else
-                {
-                    HidingSpotWindow.SetActive(false);
-
+                    hidingSpot.SetActive(true);
+                    hidingOpen = true;
 
                 }
             }
@@ -46,6 +44,8 @@ public class HidingSpot : MonoBehaviour
     {
         Debug.Log("tap");
         HidingSpotWindow.SetActive(false);
+        hidingSpot.SetActive(false);
+
 
     }
 }

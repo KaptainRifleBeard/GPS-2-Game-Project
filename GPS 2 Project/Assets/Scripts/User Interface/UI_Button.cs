@@ -5,11 +5,20 @@ using UnityEngine.UI;
 
 public class UI_Button : MonoBehaviour
 {
-    public GameObject SearchableObjectWindow;
+    public GameObject windowClose;
+    public GameObject safe;
+    public GameObject hide;
 
-    public void SearchableObjectWindow_ExitButton()
+    public void Safe_ExitButton()
     {
         Debug.Log("button click");
-        SearchableObjectWindow.SetActive(false);
+        safe.SetActive(false);
+        windowClose.SetActive(false);
+    }
+    public void Hide_ExitButton()
+    {
+        Debug.Log("button click");
+        hide.SetActive(false);
+        windowClose.SetActive(false);
     }
 }
