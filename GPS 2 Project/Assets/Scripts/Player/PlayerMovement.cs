@@ -5,27 +5,29 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody rb;
+    public Joystick joystick;
+    public float speed;
+    public  Rigidbody rb;
 
-    void start()
+     void Start()
     {
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        rb.GetComponent<Rigidbody>();
+
     }
 
-    void Update()
+     void Update()
     {
-        float inputZ = Input.GetAxis("Horizontal");
-        float inputX = -Input.GetAxis("Vertical");
-
-        Vector3 lookDirection = new Vector3(inputX, 0, inputZ);
-        Quaternion lookRotation = Quaternion.LookRotation(lookDirection, Vector3.up);
-
-        float step = 5 * Time.deltaTime;
-        transform.rotation = Quaternion.RotateTowards(lookRotation, transform.rotation, step);
-
-       
-
+        if(joystick.joystickPos.y != 0)
+        {
+            rb.velocity = new Vector3(joystick.joystickPos.x * speed, 0, joystick.joystickPos.y * speed);
+        }
+        else
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
+
+
     /*
     public float moveSpeed = 0.5f;
     public float drag = 0.5f;

@@ -4,9 +4,59 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+public class Joystick : MonoBehaviour
+{
+    public GameObject joystick;
+    public GameObject joystickBG;
 
+    public Vector2 joystickPos;
+    private Vector2 joystickTouchPos;
+    private Vector2 joystickOriginalPos;
+    private float joystickRadius;
+
+    private void Start()
+    {
+        joystickOriginalPos = joystickBG.transform.position;
+        joystickRadius = joystickBG.GetComponent<RectTransform>().sizeDelta.y / 1;
+    }
+
+    public void OnPointerDown()
+    {
+        joystick.transform.position = Input.mousePosition;
+        joystickBG.transform.position = Input.mousePosition;
+        joystickTouchPos = Input.mousePosition;
+    }
+
+    public void OnDrag(BaseEventData baseEvent)
+    {
+        PointerEventData pointerEvent = baseEvent as PointerEventData;
+        Vector2 dragPos = pointerEvent.position;
+        joystickPos = (dragPos - joystickTouchPos).normalized;
+
+        float joystickDist = Vector2.Distance(dragPos, joystickTouchPos);
+        if(joystickDist < joystickRadius)
+        {
+            joystick.transform.position = joystickTouchPos + joystickPos * joystickDist;
+        }
+        else
+        {
+            joystick.transform.position = joystickTouchPos + joystickPos * joystickRadius;
+
+        }
+    }
+
+    public void OnPointerUp()
+    {
+        joystickPos = Vector2.zero;
+        joystick.transform.position = joystickOriginalPos;
+        joystickBG.transform.position = joystickOriginalPos;
+    }
+}
+/*
 public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
 {
+
+    
     //Player Movement
     public Transform player;
     public Rigidbody rb;
@@ -56,8 +106,7 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     {
         while (true)
         {
-            player.Translate(moveSpeed * moveDirection * Time.deltaTime, Space.World);
-
+            //player.Translate(moveSpeed * moveDirection * Time.deltaTime, Space.World);
             if (moveDirection != Vector3.zero)
             {
                 //Rotate player facing direction
@@ -84,3 +133,4 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     }
 
 }
+*/
