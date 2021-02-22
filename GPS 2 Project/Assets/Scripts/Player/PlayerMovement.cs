@@ -8,17 +8,19 @@ public class PlayerMovement : MonoBehaviour
     public Joystick joystick;
     public float speed;
     public  Rigidbody rb;
+    private float rotationSpeed = 2f;
 
-     void Start()
+    void Start()
     {
         rb.GetComponent<Rigidbody>();
-
     }
 
-     void Update()
+     void FixedUpdate()
     {
         if(joystick.joystickPos.y != 0)
         {
+           
+            //rb.rotation = rb.rotation * Quaternion.AngleAxis(joystick.joystickPos.x * rotationSpeed, Vector3.forward);
             rb.velocity = new Vector3(joystick.joystickPos.x * speed, 0, joystick.joystickPos.y * speed);
         }
         else

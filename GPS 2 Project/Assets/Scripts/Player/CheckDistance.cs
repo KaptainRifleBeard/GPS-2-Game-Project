@@ -18,11 +18,12 @@ public class CheckDistance : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(player.position, gameObject.transform.position) < 2f)
+        if (Vector3.Distance(player.position, gameObject.transform.position) < 150f)
         {
+            Debug.Log("playernear");
             gameObject.GetComponent<Renderer>().material = highlightMat;
         }
-        if (Vector3.Distance(player.position, gameObject.transform.position) > 2f)
+        if (Vector3.Distance(player.position, gameObject.transform.position) > 150f)
         {
             gameObject.GetComponent<Renderer>().material = defaultMat;
 
