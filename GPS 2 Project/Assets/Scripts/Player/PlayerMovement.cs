@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(joystick.joystickPos.y != 0)
         {
-            //rb.rotation = rb.rotation * Quaternion.AngleAxis(joystick.joystickPos.x * rotationSpeed, Vector3.forward);
+            rb.rotation = rb.rotation * Quaternion.AngleAxis(joystick.joystickPos.x * rotationSpeed, Vector3.forward);
 
             rb.velocity = new Vector3(joystick.joystickPos.x * speed, 0, joystick.joystickPos.y * speed);
         }
