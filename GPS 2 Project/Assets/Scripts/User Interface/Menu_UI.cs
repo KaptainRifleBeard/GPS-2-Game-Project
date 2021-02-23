@@ -24,4 +24,9 @@ public class Menu_UI : MonoBehaviour
     {
         SceneManager.LoadScene("Level 1");
     }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

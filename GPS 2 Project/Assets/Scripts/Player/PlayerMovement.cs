@@ -10,14 +10,16 @@ public class PlayerMovement : MonoBehaviour
     public  Rigidbody rb;
     private float rotationSpeed = 2f;
 
-
-
+ 
     void Start()
     {
         rb.GetComponent<Rigidbody>();
+        transform.rotation = Quaternion.identity;
+
+
     }
 
-     void FixedUpdate()
+    void FixedUpdate()
     {
         if(joystick.joystickPos.y != 0)
         {
