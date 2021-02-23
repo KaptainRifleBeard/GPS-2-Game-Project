@@ -8,7 +8,6 @@ public class NpcMovement : MonoBehaviour
 
     public Transform[] points;
     public Transform target;
-    public float idleTime;
     static public bool isIdle = false;
     static public bool sus = false;
 
