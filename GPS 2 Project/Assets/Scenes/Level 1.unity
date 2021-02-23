@@ -4294,8 +4294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb783eb37134b54c83cb6a746d12daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 0}
-  hide: {fileID: 0}
+  bar: {fileID: 7778029112224019326}
+  hide: {fileID: 857174376}
   itemList:
   - _name: Hat
     _value: 0
@@ -4689,7 +4689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseScreen: {fileID: 429649363}
-  retryLevelScreen: {fileID: 0}
 --- !u!114 &429649365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14337,8 +14336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb783eb37134b54c83cb6a746d12daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 0}
-  hide: {fileID: 0}
+  bar: {fileID: 7778029112224019326}
+  hide: {fileID: 857174376}
   itemList:
   - _name: Wrist Watch
     _value: 300
@@ -16880,8 +16879,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb783eb37134b54c83cb6a746d12daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 0}
-  hide: {fileID: 0}
+  bar: {fileID: 7778029112224019326}
+  hide: {fileID: 857174376}
   itemList:
   - _name: Your key
     _value: 0
@@ -17636,7 +17635,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseScreen: {fileID: 429649363}
-  retryLevelScreen: {fileID: 1792925185}
 --- !u!114 &1792925188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22189,7 +22187,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7778029112224019327}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f6a08b4206e99d44878b71ff13f4a89, type: 3}
   m_Name: 

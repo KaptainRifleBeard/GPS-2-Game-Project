@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InteractableItem : MonoBehaviour
 {
-
     public float progressTime = 0f;
     public float range = 3f;
 
@@ -76,12 +75,12 @@ public class InteractableItem : MonoBehaviour
                 {
                     item = GameObject.Find("Floating Shelf").transform;
                     progressTime = 3f;
-                }
+                }   
                 if (hit.collider.name == "Floating Shelf 2")
                 {
                     item = GameObject.Find("Floating Shelf 2").transform;
                     progressTime = 3f;
-                }
+                }   
                 if (hit.collider.name == "Safe Vault")
                 {
                     item = GameObject.Find("Safe Vault").transform;
@@ -94,7 +93,6 @@ public class InteractableItem : MonoBehaviour
                 }
                 if (hit.collider.name == "Compartmental_Coffee_Table")
                 {
-                    Debug.Log("clicked");
                     Debug.Log(hit.collider.name);
 
                     item = GameObject.Find("Compartmental_Coffee_Table").transform;
@@ -115,9 +113,9 @@ public class InteractableItem : MonoBehaviour
 
         }
 
-        if (Vector3.Distance(player.position, item.position) < 150f)
+        if (Vector3.Distance(player.position, item.position) < 150f && item.name != "Default (to avoid error msg)")
         {
-
+            Debug.Log(item.name);
             bar.SetActive(true);
             clickOnObject = true;
 
