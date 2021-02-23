@@ -10,10 +10,11 @@ public class ProrgessBar : MonoBehaviour
     public Transform progressBar;
     public Transform player;
 
-    [SerializeField] private float currentTime;
+    [HideInInspector] public float currentTime;
     [SerializeField] private float speed;
 
-    public bool showWindow; 
+    public bool showWindow;
+    public bool showItemList;
     public GameObject SearchableObjectWindow;
 
 
@@ -31,10 +32,12 @@ public class ProrgessBar : MonoBehaviour
 
     void Update()
     {
+
         //CheckDistance.nearPlayer == true
         if (GameObject.Find("SelectedManager").GetComponent<InteractableItem>().clickOnObject == true)
         {
             gameObject.SetActive(true);
+
             if (currentTime <= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
             {
                 currentTime += speed * Time.deltaTime;
@@ -48,24 +51,13 @@ public class ProrgessBar : MonoBehaviour
 
         }
 
-        if (currentTime >= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
-        {            
-            showWindow = true;
 
+        if (currentTime >= GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime)
+        {
+            showItemList = true;
             SearchableObjectWindow.SetActive(true);
 
         }
-
-
-        if (GameObject.Find("SelectedManager").GetComponent<InteractableItem>().clickOnObject == false)
-        {
-            currentTime = 0;
-            //text.GetComponent<Text>().text = ((int)currentTime).ToString();
-            progressBar.GetComponent<Image>().fillAmount = 0;
-        }
-
-
-
 
     }
 

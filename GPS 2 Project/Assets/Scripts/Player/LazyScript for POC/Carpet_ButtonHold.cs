@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class ButtonHold : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
+
+public class Carpet_ButtonHold : MonoBehaviour
 {
     public GameObject TaskWindow;
 
@@ -39,13 +41,13 @@ public class ButtonHold : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     }
 
 
-    
+
 
     void Update()
     {
         if (holdButton)
         {
-            if(holdButtonTime < pickUpTime)
+            if (holdButtonTime < pickUpTime)
             {
                 text.text = "Cleaning......";
 
@@ -59,11 +61,5 @@ public class ButtonHold : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
                 TaskWindow.SetActive(false);
             }
         }
-        else
-        {
-            Reset();
-        }
-
-
     }
 }

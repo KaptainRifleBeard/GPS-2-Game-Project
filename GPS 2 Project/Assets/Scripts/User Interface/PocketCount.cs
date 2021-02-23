@@ -6,15 +6,19 @@ using UnityEngine.UI;
 public class PocketCount : MonoBehaviour
 {
     public Text pocketCount;
+    public n_ItemsList item;
+
+    int space;
+
     void Start()
     {
-
+        space = item.space;
     }
 
     // Update is called once per frame
     void Update()
     {
-        pocketCount.text = SearchWindow.totalSafeCount.ToString() + " / " + SearchWindow.maxPocket.ToString();
+        pocketCount.text = item.space.ToString();
 
 
     }

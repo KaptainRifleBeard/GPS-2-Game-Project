@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Interactable
   - Hiding Spot
+  - ProgressBarPosition
+  - SearchableObjectWindow
+  - CleanDiningTable
+  - CleanWindow
+  - VacuumLivingrooom
   layers:
   - Default
   - TransparentFX

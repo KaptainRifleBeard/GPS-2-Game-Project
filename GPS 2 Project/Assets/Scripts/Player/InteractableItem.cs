@@ -115,7 +115,6 @@ public class InteractableItem : MonoBehaviour
 
         }
 
-
         if (Vector3.Distance(player.position, item.position) < 150f)
         {
             Debug.Log("show bar");

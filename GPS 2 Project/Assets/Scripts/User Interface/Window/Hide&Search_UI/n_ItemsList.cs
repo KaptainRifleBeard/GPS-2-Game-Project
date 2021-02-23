@@ -22,6 +22,7 @@ public class n_ItemsList : MonoBehaviour
     public n_ItemsList otherShop;
 
     public Text spaceDisplay;
+
     public n_ButtonItemPool buttonItemPool;
     public int space = 5;
 
