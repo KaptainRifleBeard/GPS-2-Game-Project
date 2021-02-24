@@ -13,6 +13,6 @@ public class NpcRotate : MonoBehaviour
 
     void Update()
     {
-
+        transform.rotation = Quaternion.Euler(-90f, -90f, -90f);
     }
 }
