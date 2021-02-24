@@ -5,9 +5,9 @@ using UnityEngine.EventSystems;
 
 public class n_ItemInteract : MonoBehaviour
 {
-    public string myName;
-
     public GameObject searchableObjectWindow;
+    public GameObject slider;
+
     public GameObject player;
 
     public n_PorgressBar progressBar;
@@ -15,6 +15,7 @@ public class n_ItemInteract : MonoBehaviour
     public float myCurrentTime;
 
     private int speed = 1;
+    bool start;
 
     void Start()
     {
@@ -25,45 +26,53 @@ public class n_ItemInteract : MonoBehaviour
 
     public void InProgress(float time)
     {
-        if (Vector3.Distance(player.transform.position, transform.position) < 120f)
+        myCurrentTime -= speed * Time.deltaTime;
+        progressBar.SetProgressTime(myCurrentTime, myProgressTime);
+
+        if (myCurrentTime <= 0)
         {
-            myCurrentTime -= speed * Time.deltaTime;
-
-            progressBar.SetProgressTime(myCurrentTime, myProgressTime);
-
-            if (myCurrentTime <= myProgressTime)
-            {
-                searchableObjectWindow.SetActive(true);
-                myCurrentTime = 0;
-            }
+            searchableObjectWindow.SetActive(true);
+            start = false;
         }
-    }
 
-    public void OnPointerDown()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (hit.collider.gameObject.name == gameObject.name)
-            {
-                Debug.Log(hit.collider.gameObject.name);
-                if (Vector3.Distance(player.transform.position, transform.position) < 120f)
-                {
-                    InProgress(myProgressTime);
-                }
-            }
-
-            
-        }
-        
     }
 
     private void Update()
     {
-        OnPointerDown();
+        if(start == false)
+        {
+            myCurrentTime = myProgressTime;
+
+            if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (hit.collider != null)
+                    {
+                        start = true;
+
+                    }
+                    else
+                    {
+                        start = false;
+                    }
+                }
+            }
+        }
+        
+
+        if(start && Vector3.Distance(player.transform.position, transform.position) < 120f)
+        {
+            InProgress(myProgressTime);
+        }
+        else
+        {
+            slider.SetActive(false);
+            start = false;
+        }
 
     }
 }

@@ -1300,6 +1300,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 2.4, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0.005}
+--- !u!114 &136408213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136408211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
+--- !u!114 &136408214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136408211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea095325e06c6f34fa7c8f53c3d1b269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 769728787}
+  highlightMat: {fileID: 2100000, guid: beabe323d82c34a48bf1e315cc1c7497, type: 2}
+  defaultMat: {fileID: 0}
 --- !u!1 &143039946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,6 +1657,24 @@ MonoBehaviour:
   player: {fileID: 769728787}
   highlightMat: {fileID: 2100000, guid: d13ad5fce4a5ce24c9ce1f91d60be3f7, type: 2}
   defaultMat: {fileID: 0}
+--- !u!114 &153356617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153356614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!1 &165654133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,6 +2316,24 @@ MonoBehaviour:
   player: {fileID: 769728787}
   highlightMat: {fileID: 2100000, guid: d13ad5fce4a5ce24c9ce1f91d60be3f7, type: 2}
   defaultMat: {fileID: 0}
+--- !u!114 &207164279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207164276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!1 &208751340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,6 +2952,24 @@ MonoBehaviour:
   player: {fileID: 769728787}
   highlightMat: {fileID: 2100000, guid: d13ad5fce4a5ce24c9ce1f91d60be3f7, type: 2}
   defaultMat: {fileID: 0}
+--- !u!114 &250208441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250208438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!1 &253056901 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f18a6b335833cdb42938ef6aff7095d8, type: 3}
@@ -3880,6 +3967,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -1611644270237827686, guid: bc36d0c4f77a0c44fbfc7b56f4e61b7d, type: 3}
   m_PrefabInstance: {fileID: 1819258072}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &356580688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356580687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea095325e06c6f34fa7c8f53c3d1b269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 769728787}
+  highlightMat: {fileID: 2100000, guid: beabe323d82c34a48bf1e315cc1c7497, type: 2}
+  defaultMat: {fileID: 0}
+--- !u!114 &356580689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356580687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!65 &356580691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4333,6 +4453,24 @@ MonoBehaviour:
   player: {fileID: 769728787}
   highlightMat: {fileID: 2100000, guid: d13ad5fce4a5ce24c9ce1f91d60be3f7, type: 2}
   defaultMat: {fileID: 0}
+--- !u!114 &380058841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380058838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!1 &398244381
 GameObject:
   m_ObjectHideFlags: 0
@@ -6528,7 +6666,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619653788}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 275.2639, y: 541.563, z: 427.0241}
@@ -6541,7 +6679,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619653788}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 239.47774, y: 541.563, z: 78.15532}
@@ -6756,6 +6894,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -7556275672212240162, guid: bc36d0c4f77a0c44fbfc7b56f4e61b7d, type: 3}
   m_PrefabInstance: {fileID: 1819258072}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &666462840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666462839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea095325e06c6f34fa7c8f53c3d1b269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 769728787}
+  highlightMat: {fileID: 2100000, guid: beabe323d82c34a48bf1e315cc1c7497, type: 2}
+  defaultMat: {fileID: 0}
+--- !u!114 &666462841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666462839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!65 &666462843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8394,6 +8565,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -6334522115669559555, guid: db234999a0e779349b260dca35111d76, type: 3}
   m_PrefabInstance: {fileID: 810507954}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &791525440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791525439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea095325e06c6f34fa7c8f53c3d1b269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 769728787}
+  highlightMat: {fileID: 2100000, guid: beabe323d82c34a48bf1e315cc1c7497, type: 2}
+  defaultMat: {fileID: 0}
+--- !u!114 &791525441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791525439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!65 &791525443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9591,6 +9795,24 @@ MonoBehaviour:
   player: {fileID: 769728787}
   highlightMat: {fileID: 2100000, guid: d13ad5fce4a5ce24c9ce1f91d60be3f7, type: 2}
   defaultMat: {fileID: 0}
+--- !u!114 &947280017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947280014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!1001 &954215817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10359,6 +10581,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -7780066210683076552, guid: bc36d0c4f77a0c44fbfc7b56f4e61b7d, type: 3}
   m_PrefabInstance: {fileID: 1819258072}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1012693716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012693715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea095325e06c6f34fa7c8f53c3d1b269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 769728787}
+  highlightMat: {fileID: 2100000, guid: beabe323d82c34a48bf1e315cc1c7497, type: 2}
+  defaultMat: {fileID: 0}
+--- !u!114 &1012693717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012693715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!65 &1012693719
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10949,6 +11204,24 @@ MonoBehaviour:
   player: {fileID: 769728787}
   highlightMat: {fileID: 2100000, guid: d13ad5fce4a5ce24c9ce1f91d60be3f7, type: 2}
   defaultMat: {fileID: 0}
+--- !u!114 &1070816274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070816271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!1 &1073482341 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4123828870394559700, guid: fbd44d36da562144db7d7015ce14307f, type: 3}
@@ -12657,7 +12930,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225836085}
-  m_LocalRotation: {x: 0.33991784, y: -0.03223859, z: 0.011660055, w: 0.93983006}
+  m_LocalRotation: {x: 0.33991784, y: -0.032238636, z: 0.011660074, w: 0.93983006}
   m_LocalPosition: {x: 144.8, y: 650.6, z: -1044.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -13405,6 +13678,24 @@ MonoBehaviour:
   player: {fileID: 769728787}
   highlightMat: {fileID: 2100000, guid: d13ad5fce4a5ce24c9ce1f91d60be3f7, type: 2}
   defaultMat: {fileID: 0}
+--- !u!114 &1281262922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281262919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!1 &1284823272
 GameObject:
   m_ObjectHideFlags: 0
@@ -14064,6 +14355,24 @@ MonoBehaviour:
   player: {fileID: 769728787}
   highlightMat: {fileID: 2100000, guid: d13ad5fce4a5ce24c9ce1f91d60be3f7, type: 2}
   defaultMat: {fileID: 0}
+--- !u!114 &1363408730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363408727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!1 &1380518936
 GameObject:
   m_ObjectHideFlags: 0
@@ -14398,6 +14707,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8204880374533385131, guid: 89bdfd329bb3db349859c33b3249789f, type: 3}
   m_PrefabInstance: {fileID: 118712338}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1386666840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386666839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea095325e06c6f34fa7c8f53c3d1b269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 769728787}
+  highlightMat: {fileID: 2100000, guid: beabe323d82c34a48bf1e315cc1c7497, type: 2}
+  defaultMat: {fileID: 0}
+--- !u!114 &1386666841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386666839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!65 &1386666843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14416,6 +14758,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -7639331209684527813, guid: 89bdfd329bb3db349859c33b3249789f, type: 3}
   m_PrefabInstance: {fileID: 118712338}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1387295328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387295327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea095325e06c6f34fa7c8f53c3d1b269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 769728787}
+  highlightMat: {fileID: 2100000, guid: beabe323d82c34a48bf1e315cc1c7497, type: 2}
+  defaultMat: {fileID: 0}
+--- !u!114 &1387295329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387295327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!65 &1387295331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14474,8 +14849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Triple_Seater_Sofa
   searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
   player: {fileID: 1001492090}
   progressBar: {fileID: 603845677}
   myProgressTime: 6
@@ -15120,6 +15495,24 @@ MonoBehaviour:
   player: {fileID: 769728787}
   highlightMat: {fileID: 2100000, guid: d13ad5fce4a5ce24c9ce1f91d60be3f7, type: 2}
   defaultMat: {fileID: 0}
+--- !u!114 &1431241958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431241955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!1 &1446156239 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4793791746673898885, guid: 1afd10e5e3b840d48bba5e143218abb4, type: 3}
@@ -15538,6 +15931,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -7862391691550088030, guid: db234999a0e779349b260dca35111d76, type: 3}
   m_PrefabInstance: {fileID: 810507954}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1498398951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498398950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea095325e06c6f34fa7c8f53c3d1b269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 769728787}
+  highlightMat: {fileID: 2100000, guid: beabe323d82c34a48bf1e315cc1c7497, type: 2}
+  defaultMat: {fileID: 0}
+--- !u!114 &1498398952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498398950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!65 &1498398954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15802,6 +16228,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2372101842476191254, guid: bc36d0c4f77a0c44fbfc7b56f4e61b7d, type: 3}
   m_PrefabInstance: {fileID: 1819258072}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1545630782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545630781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea095325e06c6f34fa7c8f53c3d1b269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 769728787}
+  highlightMat: {fileID: 2100000, guid: beabe323d82c34a48bf1e315cc1c7497, type: 2}
+  defaultMat: {fileID: 0}
+--- !u!114 &1545630783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545630781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!65 &1545630785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16030,6 +16489,24 @@ MonoBehaviour:
   player: {fileID: 769728787}
   highlightMat: {fileID: 2100000, guid: d13ad5fce4a5ce24c9ce1f91d60be3f7, type: 2}
   defaultMat: {fileID: 0}
+--- !u!114 &1581036252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581036249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!1 &1583229071
 GameObject:
   m_ObjectHideFlags: 0
@@ -16856,7 +17333,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714146724}
-  m_LocalRotation: {x: 0.33991784, y: -0.03223859, z: 0.011660055, w: 0.93983006}
+  m_LocalRotation: {x: 0.33991784, y: -0.032238636, z: 0.011660074, w: 0.93983006}
   m_LocalPosition: {x: 144.8, y: 650.6, z: -1044.1}
   m_LocalScale: {x: 86.45677, y: 86.45676, z: 86.45674}
   m_Children:
@@ -19783,6 +20260,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9125750224511326099, guid: db234999a0e779349b260dca35111d76, type: 3}
   m_PrefabInstance: {fileID: 810507954}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1921301605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921301604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea095325e06c6f34fa7c8f53c3d1b269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 769728787}
+  highlightMat: {fileID: 2100000, guid: beabe323d82c34a48bf1e315cc1c7497, type: 2}
+  defaultMat: {fileID: 0}
+--- !u!114 &1921301606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921301604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!65 &1921301608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19801,6 +20311,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 52361805505633545, guid: bc36d0c4f77a0c44fbfc7b56f4e61b7d, type: 3}
   m_PrefabInstance: {fileID: 1819258072}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1946327399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946327398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea095325e06c6f34fa7c8f53c3d1b269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 769728787}
+  highlightMat: {fileID: 2100000, guid: beabe323d82c34a48bf1e315cc1c7497, type: 2}
+  defaultMat: {fileID: 0}
+--- !u!114 &1946327400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946327398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!65 &1946327402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21074,6 +21617,24 @@ MonoBehaviour:
   player: {fileID: 769728787}
   highlightMat: {fileID: 2100000, guid: d13ad5fce4a5ce24c9ce1f91d60be3f7, type: 2}
   defaultMat: {fileID: 0}
+--- !u!114 &2023799655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023799652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 555895545}
+  slider: {fileID: 235949902}
+  player: {fileID: 1001492090}
+  progressBar: {fileID: 603845677}
+  myProgressTime: 6
+  myCurrentTime: 0
 --- !u!1 &2025696341
 GameObject:
   m_ObjectHideFlags: 0
