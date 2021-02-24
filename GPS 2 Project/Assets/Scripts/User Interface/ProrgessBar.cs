@@ -28,6 +28,8 @@ public class ProrgessBar : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        currentTime = 0;
+        progressBar.GetComponent<Image>().fillAmount = 0;
     }
 
     void Update()
@@ -63,9 +65,9 @@ public class ProrgessBar : MonoBehaviour
 
     public void SearchableObjectWindow_ExitButton()
     {
-        print(SearchableObjectWindow.activeSelf ? "Active" : "Inactive");
         showWindow = false;
         currentTime = 0;
+        progressBar.GetComponent<Image>().fillAmount = 0;
 
         SearchableObjectWindow.SetActive(false);
     }

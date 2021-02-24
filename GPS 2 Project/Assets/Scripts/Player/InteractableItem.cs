@@ -126,7 +126,7 @@ public class InteractableItem : MonoBehaviour
             clickOnObject = false;
             bar.SetActive(false);
 
-        }
+        }   
 
 
 
