@@ -47,7 +47,7 @@ public class n_ItemsList : MonoBehaviour
     public void AddButton()
     {
         int rand = Random.Range(0, 5);
-        for (int j = 0; j < itemList.Count; j++)
+        for (int j = 0; j < rand; j++)
         {
 
             n_Item item = itemList[j];
