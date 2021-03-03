@@ -86,9 +86,15 @@ public class SettingsMenu : MonoBehaviour
 
     }
 
-    public void returntosettings()
+    public void subsettingNavigation(GameObject subjectCanvas)
     {
+        this.gameObject.SetActive(false);
+        subjectCanvas.SetActive(true);
+    }
 
+    public void secretsauce()
+    {
+        Debug.Log("Secret Sauce Nothing else here - M");
     }
 
 }
