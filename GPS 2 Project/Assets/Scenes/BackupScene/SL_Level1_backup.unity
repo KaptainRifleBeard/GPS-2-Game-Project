@@ -4388,7 +4388,6 @@ MonoBehaviour:
   - {fileID: 2020060244}
   - {fileID: 1437169155}
   target: {fileID: 1565293289}
-  idleTime: 2
   waitDuration: 5
   talkDuration: 10
   waitTimer: 0
@@ -7100,7 +7099,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseScreen: {fileID: 329283519}
-  retryLevelScreen: {fileID: 0}
 --- !u!114 &329283521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31707,7 +31705,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseScreen: {fileID: 329283519}
-  retryLevelScreen: {fileID: 1659290738}
 --- !u!114 &1659290741
 MonoBehaviour:
   m_ObjectHideFlags: 0
