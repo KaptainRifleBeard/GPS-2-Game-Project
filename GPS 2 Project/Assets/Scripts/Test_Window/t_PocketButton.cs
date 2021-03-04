@@ -32,16 +32,22 @@ public class t_PocketButton : MonoBehaviour
     public void HandleButtonClick()
     {
         GameObject g = GameObject.Find("Content_Safe");
-        t_itemList toHide = g.GetComponent<t_itemList>();
+        t_itemList list = g.GetComponent<t_itemList>();
 
         //itemList.PutInSafe(item.name, item.value, item.space);
         
-        if (toHide.moveToHide == true)
+        if (list.moveToHide == true)
         {
-            itemList.PutInHide(item);
-            itemList.RemovePocketItem(item, itemList);
+            if(list.hide_spacecount < 20)
+            {
 
-            Destroy(gameObject);
+                itemList.PutInHide(item);
+                itemList.RemovePocketItem(item, itemList);
+
+                Destroy(gameObject);
+
+            }
+
         }
         else
         {

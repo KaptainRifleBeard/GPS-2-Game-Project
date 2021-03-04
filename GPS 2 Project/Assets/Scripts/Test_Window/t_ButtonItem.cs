@@ -15,6 +15,7 @@ public class t_ButtonItem : MonoBehaviour
     private t_itemList itemList;
 
 
+
     void Start()
     {
         sbutton.onClick.AddListener(HandleButtonClick);
@@ -32,11 +33,20 @@ public class t_ButtonItem : MonoBehaviour
 
     public void HandleButtonClick()
     {
-        itemList.PutInPocket(item.name, item.value, item.space); //pocket to safe
-        itemList.RemoveSafeItem(item, itemList); //safe to pocket
+        GameObject g = GameObject.Find("Content_Safe");
+        t_itemList list = g.GetComponent<t_itemList>();
+
+        if(list.pocket_spacecount < 5)
+        {
+            list.pocket_spacecount += item.space;
+            list.safe_spacecount -= item.space;
 
 
-        Destroy(gameObject);
+            itemList.PutInPocket(item); //pocket to safe
+            itemList.RemoveSafeItem(item, itemList); //safe to pocket
+
+            Destroy(gameObject);
+        }
     }
 
 

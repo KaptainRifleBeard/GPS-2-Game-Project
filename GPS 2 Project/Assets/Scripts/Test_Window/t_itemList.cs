@@ -19,10 +19,16 @@ public class t_itemList : MonoBehaviour
 
     public bool moveToHide = false;
 
+    public int pocket_spacecount = 0;
+    public int hide_spacecount = 0;
+    public int safe_spacecount = 6;
+
+
     public void t_AddSafeButton() //to show random list
     {
-        int rand = Random.Range(0, 5);
-        for (int j = 0; j < item_safe.Count; j++)
+        int rand = Random.Range(0, item_safe.Count);
+
+        for (int j = 0; j < Random.Range(0, rand); j++)
         {
             t_ItemData item = item_safe[j];
             GameObject newButton = Instantiate(safeButton, transform.parent);
@@ -46,7 +52,7 @@ public class t_itemList : MonoBehaviour
         }
     }
 
-    public void RemoveHideItem(t_ItemData itemRemove, t_itemList panelList)  //to hiding spot
+    public void RemoveHideItem(t_ItemData itemRemove, t_itemList panelList) 
     {
         for (int i = panelList.item_hide.Count - 1; i >= 0; i--)
         {
@@ -57,28 +63,25 @@ public class t_itemList : MonoBehaviour
         }
     }
 
-    public void RemovePocketItem(t_ItemData itemRemove, t_itemList panelList)  //to hiding spot
+    public void RemovePocketItem(t_ItemData itemRemove, t_itemList panelList) 
     {
         for (int i = panelList.item_pocket.Count - 1; i >= 0; i--)
         {
             if (panelList.item_pocket[i] == itemRemove)
             {
                 panelList.item_pocket.RemoveAt(i);
+
             }
+
         }
     }
 
 
 
-    public void PutInPocket(string item_name, int item_val, int item_space)
+    public void PutInPocket(t_ItemData item)
     {
-        t_ItemData item = new t_ItemData();
 
         item_pocket.Add(item);
-        item_pocket[item_pocket.Count - 1].name = item_name;
-        item_pocket[item_pocket.Count - 1].space = item_val;
-        item_pocket[item_pocket.Count - 1].value = item_space;
-
 
         GameObject newButton = Instantiate(pocketButton, transform.parent);
         newButton.transform.SetParent(contentPanel_Pocket);
@@ -93,23 +96,34 @@ public class t_itemList : MonoBehaviour
 
     public void PutInSafe(t_ItemData item)
     {
+        pocket_spacecount -= item.space;
+        safe_spacecount += item.space;
+
         item_safe.Add(item);
         GameObject newButton = Instantiate(safeButton, transform.parent);
         newButton.transform.SetParent(contentPanel_Safe);
 
         t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
         button.SetUp(item, this);
+
     }
 
 
     public void PutInHide(t_ItemData item)
     {
-        item_hide.Add(item);
-        GameObject newButton = Instantiate(hideButton, transform.parent);
-        newButton.transform.SetParent(contentPanel_Hide);
+        if(hide_spacecount < 20)
+        {
+            pocket_spacecount -= item.space;
+            hide_spacecount += item.space;
 
-        t_HideButton button = newButton.GetComponent<t_HideButton>();
-        button.SetUp_Hide(item, this);
+            item_hide.Add(item);
+            GameObject newButton = Instantiate(hideButton, transform.parent);
+            newButton.transform.SetParent(contentPanel_Hide);
+
+            t_HideButton button = newButton.GetComponent<t_HideButton>();
+            button.SetUp_Hide(item, this);
+        }
+        
         
     }
 
@@ -122,7 +136,7 @@ public class t_itemList : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
 
