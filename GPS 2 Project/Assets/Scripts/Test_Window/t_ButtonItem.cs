@@ -47,6 +47,7 @@ public class t_ButtonItem : MonoBehaviour
 
             Destroy(gameObject);
         }
+
     }
 
 

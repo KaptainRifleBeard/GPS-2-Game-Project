@@ -24,6 +24,7 @@ public class t_itemList : MonoBehaviour
     public bool moveToHide = false;
     public bool showJew = false;
     public bool start = false;
+    public bool gotTheJewl = false;
 
     public int pocket_spacecount = 0;
     public int hide_spacecount = 0;
@@ -121,6 +122,7 @@ public class t_itemList : MonoBehaviour
         t_PocketButton button = newButton.GetComponent<t_PocketButton>();
         button.SetUp_Pocket(item, this);
 
+
     }
 
 
@@ -181,7 +183,14 @@ public class t_itemList : MonoBehaviour
             t_AddSafeButton();
         }
 
-       
+
+        for (int i = 0; i < item_pocket.Count; i++)
+        {
+            if (item_pocket[i].name == "Gold and Jade Necklace")
+            {
+                gotTheJewl = true;
+            }
+        }
     }
 }
 

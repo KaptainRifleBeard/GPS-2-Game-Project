@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
 
-        if (masterBathWindow.doneMBathroom == true && bathWindow.doneBathroom == true && tableWindow.doneTable == true && kitchenWindow.doneKitchen == true && itemList.showJew == true)
+        if (masterBathWindow.doneMBathroom == true && bathWindow.doneBathroom == true && tableWindow.doneTable == true && kitchenWindow.doneKitchen == true && itemList.gotTheJewl == true)
         {
             SceneManager.LoadScene("Level1_CompleteScreen");
         }
