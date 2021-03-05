@@ -23,6 +23,7 @@ public class t_itemList : MonoBehaviour
 
     public bool moveToHide = false;
     public bool showJew = false;
+    public bool start = false;
 
     public int pocket_spacecount = 0;
     public int hide_spacecount = 0;
@@ -33,13 +34,16 @@ public class t_itemList : MonoBehaviour
     public Text hideSpace;
     public Text safeSpace;
 
+
+    int i;
+
     public void t_AddSafeButton() //to show random list
     {
-        if(!showJew)
+        if (!showJew)
         {
             int rand = Random.Range(0, item_safe.Count);
 
-            for (int j = 0; j < Random.Range(0, rand); j++)
+            for (int j = 0; j < rand; j++)  
             {
                 t_ItemData item = item_safe[j];
                 GameObject newButton = Instantiate(safeButton, transform.parent);
@@ -48,23 +52,26 @@ public class t_itemList : MonoBehaviour
                 t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
                 button.SetUp(item, this);
             }
+            start = false;
         }
-        else
-        {
-            for (int j = 15; j < item_safe.Count; j++)  //jade is [16], [15] + [1] = [16]
-            {
-                t_ItemData item = item_safe[j];
-                GameObject newButton = Instantiate(safeButton, transform.parent);
-                newButton.transform.SetParent(contentPanel_Safe);
-
-                t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
-                button.SetUp(item, this);
-            }
-
-        }
-
     }
 
+    public void JewelFound()
+    {
+        if(i < 1)
+        {
+            t_ItemData item = item_safe[15];
+            GameObject newButton = Instantiate(safeButton, transform.parent);
+            newButton.transform.SetParent(contentPanel_Safe);
+
+            t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
+            button.SetUp(item, this);
+            start = false;
+
+            i++;
+        }
+       
+    }
 
 
     public void RemoveSafeItem(t_ItemData itemRemove, t_itemList panelList)
@@ -117,8 +124,6 @@ public class t_itemList : MonoBehaviour
     }
 
 
-
-
     public void PutInSafe(t_ItemData item)
     {
         pocket_spacecount -= item.space;
@@ -153,29 +158,30 @@ public class t_itemList : MonoBehaviour
     }
 
 
-
-
     void Start()
     {
-        t_AddSafeButton();
 
     }
 
 
     void Update()
     {
-        if(stop.stop == false && !showJew)
-        {
-            t_AddSafeButton();
+        GameObject g = GameObject.Find("Master Bed");
+        n_ItemInteract interact = g.GetComponent<n_ItemInteract>();
 
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.B)) //change it to recognise name "Master room"
+        if(interact.jewlFound == true && start == true && i < 1)
         {
             showJew = true;
+            JewelFound();
+
+        }
+
+        if (start == true && !showJew)
+        {
             t_AddSafeButton();
         }
+
+       
     }
 }
 

@@ -12,12 +12,15 @@ public class n_ItemInteract : MonoBehaviour
 
     public n_PorgressBar progressBar;
     public UI_Button stop;
+    public t_itemList startSpawn;
 
     public float myProgressTime;
     public float myCurrentTime;
 
     private int speed = 1;
     public bool start;
+    public bool jewlFound;
+
 
     void Start()
     {
@@ -37,6 +40,7 @@ public class n_ItemInteract : MonoBehaviour
             safeWindow.SetActive(true);
 
             start = false;
+            startSpawn.start = false;
 
         }
     }
@@ -56,7 +60,17 @@ public class n_ItemInteract : MonoBehaviour
                 {
                     if (hit.collider != null && Vector3.Distance(player.transform.position, transform.position) < 120f)
                     {
-                        start = true;
+                        
+                        if (hit.collider.name == "Master Bed")
+                        {
+                            jewlFound = true;
+                        }
+                        else
+                        {
+                            start = true;
+                            startSpawn.start = true;
+
+                        }
                     }
                 }
             }

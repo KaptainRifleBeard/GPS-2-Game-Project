@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UI_Button : MonoBehaviour
 {
+    public Transform contentPanel_Safe;
+
     public GameObject TaskBoard;
 
     public GameObject windowClose;
@@ -22,20 +24,26 @@ public class UI_Button : MonoBehaviour
 
     public void Safe_ExitButton()
     {
-        Debug.Log("button click");
         safe.SetActive(false);
         windowClose.SetActive(false);
         stop = true;
 
+        foreach (Transform child in contentPanel_Safe)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
         StartCoroutine(SetToTrue());
+
     }
+
+
     public void Hide_ExitButton()
     {
-        Debug.Log("button click");
         hide.SetActive(false);
         windowClose.SetActive(false);
 
         itemList.moveToHide = false;
+
 
     }
 

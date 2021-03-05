@@ -37,6 +37,7 @@ public class HidingSpot : MonoBehaviour
                         HidingSpotWindow.SetActive(true);
                         hidingSpot.SetActive(true);
                         hidingOpen = true;
+
                         itemList.moveToHide = true;
 
                     }
