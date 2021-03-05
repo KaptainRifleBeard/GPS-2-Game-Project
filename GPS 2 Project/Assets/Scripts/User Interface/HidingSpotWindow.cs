@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class HidingSpotWindow : MonoBehaviour
 {
-    public int maxCapacity = 20;
-    public static int currCapacity = 0;
-
     public Text currentCap;
+    public t_itemList list;
+
+
     void Start()
     {
         
@@ -17,6 +17,7 @@ public class HidingSpotWindow : MonoBehaviour
 
     void Update()
     {
+        currentCap.text = list.hide_spacecount.ToString() + " / " + 20.ToString();
         //currentCap.text = currCapacity.ToString() + " / " + maxCapacity.ToString();
 
     }

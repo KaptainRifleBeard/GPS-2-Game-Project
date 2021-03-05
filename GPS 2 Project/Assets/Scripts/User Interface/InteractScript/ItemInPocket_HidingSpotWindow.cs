@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ItemInPocket_HidingSpotWindow : MonoBehaviour
 {
+    /*
     public Text n;
     public Text value;
     public Text space;
@@ -54,4 +55,5 @@ public class ItemInPocket_HidingSpotWindow : MonoBehaviour
             HidingSpotWindow.currCapacity = 0;
         }
     }
+    */
 }

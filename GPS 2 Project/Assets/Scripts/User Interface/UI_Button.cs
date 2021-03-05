@@ -11,11 +11,22 @@ public class UI_Button : MonoBehaviour
     public GameObject safe;
     public GameObject hide;
 
+    public bool stop = false;
+
+    IEnumerator SetToTrue()
+    {
+        yield return new WaitForSeconds(0.5f);
+        stop = false;
+    }
+
     public void Safe_ExitButton()
     {
         Debug.Log("button click");
         safe.SetActive(false);
         windowClose.SetActive(false);
+        stop = true;
+
+        StartCoroutine(SetToTrue());
     }
     public void Hide_ExitButton()
     {

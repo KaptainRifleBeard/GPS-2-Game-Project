@@ -7,17 +7,17 @@ public class n_ItemInteract : MonoBehaviour
 {
     public GameObject searchableObjectWindow;
     public GameObject safeWindow;
-
     public GameObject slider;
-
     public GameObject player;
 
     public n_PorgressBar progressBar;
+    public UI_Button stop;
+
     public float myProgressTime;
     public float myCurrentTime;
 
     private int speed = 1;
-    bool start;
+    public bool start;
 
     void Start()
     {
@@ -37,8 +37,8 @@ public class n_ItemInteract : MonoBehaviour
             safeWindow.SetActive(true);
 
             start = false;
-        }
 
+        }
     }
 
     private void Update()
@@ -57,7 +57,6 @@ public class n_ItemInteract : MonoBehaviour
                     if (hit.collider != null && Vector3.Distance(player.transform.position, transform.position) < 120f)
                     {
                         start = true;
-
                     }
                 }
             }
@@ -76,5 +75,14 @@ public class n_ItemInteract : MonoBehaviour
             start = false;
         }
 
+        if(stop.stop == true)
+        {
+            slider.SetActive(false);
+            start = false;
+
+        }
+
     }
+
+
 }

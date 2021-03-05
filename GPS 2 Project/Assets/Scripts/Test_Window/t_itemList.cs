@@ -30,7 +30,6 @@ public class t_itemList : MonoBehaviour
     public Text hideSpace;
     public Text safeSpace;
 
-
     public void t_AddSafeButton() //to show random list
     {
         if(!showJew)
@@ -159,7 +158,7 @@ public class t_itemList : MonoBehaviour
 
     void Start()
     {
-
+        RefreshDisplay();
 
     }
 

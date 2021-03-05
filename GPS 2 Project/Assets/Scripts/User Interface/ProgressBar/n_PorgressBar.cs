@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class n_PorgressBar : MonoBehaviour
 {
     public Camera cam;
-
     public Slider slider;
 
     public Vector3 offset;  

@@ -21,9 +21,9 @@ public class SpaceDisplay : MonoBehaviour
         t_itemList list = g.GetComponent<t_itemList>();
 
 
-        pocketSpace.text = list.pocket_spacecount.ToString();
-        hideSpace.text = list.hide_spacecount.ToString();
-        safeSpace.text = list.safe_spacecount.ToString();
+        pocketSpace.text = "Space Used: " +  list.pocket_spacecount.ToString();
+        hideSpace.text = "Space Used: " + list.hide_spacecount.ToString();
+        safeSpace.text = "Space Used: " + list.safe_spacecount.ToString();
 
     }
 }
