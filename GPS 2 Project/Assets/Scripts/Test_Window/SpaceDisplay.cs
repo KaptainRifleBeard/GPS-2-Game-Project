@@ -9,7 +9,8 @@ public class SpaceDisplay : MonoBehaviour
     public Text hideSpace;
     public Text safeSpace;
 
-    
+    public t_itemList list;
+
     void Start()
     {
         
@@ -17,13 +18,17 @@ public class SpaceDisplay : MonoBehaviour
 
     void Update()
     {
-        GameObject g = GameObject.Find("Content_Safe");
-        t_itemList list = g.GetComponent<t_itemList>();
+        if (list.moveToHide == true)
+        {
+            pocketSpace.text = "Space Used: " + list.pocket_spacecount.ToString();
+            hideSpace.text = "Space Used: " + list.hide_spacecount.ToString();
+        }
+        else
+        {
+            pocketSpace.text = "Space Used: " + list.pocket_spacecount.ToString();
+            safeSpace.text = "Space Used: " + list.safe_spacecount.ToString();
 
-
-        pocketSpace.text = "Space Used: " +  list.pocket_spacecount.ToString();
-        hideSpace.text = "Space Used: " + list.hide_spacecount.ToString();
-        safeSpace.text = "Space Used: " + list.safe_spacecount.ToString();
+        }
 
     }
 }

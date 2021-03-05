@@ -10,42 +10,41 @@ public class HidingSpot : MonoBehaviour
 
     public Transform player;
     public bool hidingOpen = false;
+
+    public t_itemList itemList;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        if(!hidingOpen)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
+            if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
             {
-                if (Vector3.Distance(player.position, gameObject.transform.position) < 2f && hit.collider.name == "Hiding Spot")
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit))
                 {
-                    Debug.Log("show");
+                    if (Vector3.Distance(player.position, transform.position) < 120f && hit.collider != null)
+                    {
+                        Debug.Log(hit.collider);
 
-                    HidingSpotWindow.SetActive(true);
-                    hidingSpot.SetActive(true);
-                    hidingOpen = true;
+                        HidingSpotWindow.SetActive(true);
+                        hidingSpot.SetActive(true);
+                        hidingOpen = true;
+                        itemList.moveToHide = true;
 
+                    }
                 }
             }
         }
-
-        
-    }
-
-    public void HidingSpotWindow_ExitButton()
-    {
-        Debug.Log("tap");
-        HidingSpotWindow.SetActive(false);
-        hidingSpot.SetActive(false);
-
+       
 
     }
+
 }

@@ -12,6 +12,7 @@ public class UI_Button : MonoBehaviour
     public GameObject hide;
 
     public bool stop = false;
+    public t_itemList itemList;
 
     IEnumerator SetToTrue()
     {
@@ -33,7 +34,12 @@ public class UI_Button : MonoBehaviour
         Debug.Log("button click");
         hide.SetActive(false);
         windowClose.SetActive(false);
+
+        itemList.moveToHide = false;
+
     }
+
+
 
     public void OpenTaskBoard()
     {

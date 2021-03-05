@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class t_itemList : MonoBehaviour
 {
+    public UI_Button stop;
+    public HidingSpot hidingOpen;
+
     public List<t_ItemData> item_pocket;
     public List<t_ItemData> item_safe;
     public List<t_ItemData> item_hide;
@@ -151,39 +154,27 @@ public class t_itemList : MonoBehaviour
 
 
 
-    public void RefreshDisplay()
-    {
-        t_AddSafeButton();
-    }
 
     void Start()
     {
-        RefreshDisplay();
+        t_AddSafeButton();
 
     }
 
 
     void Update()
     {
-        pocketSpace.text = pocket_spacecount.ToString();
-        hideSpace.text = hide_spacecount.ToString();
-        safeSpace.text = safe_spacecount.ToString();
-
-
-        if (Input.GetKeyDown(KeyCode.Space)) //random searchable object display
+        if(stop.stop == false && !showJew)
         {
-            RefreshDisplay();
+            t_AddSafeButton();
+
         }
 
-        if (Input.GetKeyDown(KeyCode.V)) //open hiding spot
-        {
-            moveToHide = true;
-        }
 
         if (Input.GetKeyDown(KeyCode.B)) //change it to recognise name "Master room"
         {
             showJew = true;
-            RefreshDisplay();
+            t_AddSafeButton();
         }
     }
 }
