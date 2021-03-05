@@ -1,13 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class n_ItemInteract : MonoBehaviour
+public class t_ItemInteract : MonoBehaviour
 {
-    public GameObject searchableObjectWindow;
-    public GameObject safeWindow;
-
     public GameObject slider;
 
     public GameObject player;
@@ -33,9 +29,6 @@ public class n_ItemInteract : MonoBehaviour
 
         if (myCurrentTime <= 0)
         {
-            searchableObjectWindow.SetActive(true);
-            safeWindow.SetActive(true);
-
             start = false;
         }
 
@@ -43,7 +36,7 @@ public class n_ItemInteract : MonoBehaviour
 
     private void Update()
     {
-        if(start == false)
+        if (start == false)
         {
             myCurrentTime = myProgressTime;
 
@@ -54,23 +47,25 @@ public class n_ItemInteract : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.collider != null && Vector3.Distance(player.transform.position, transform.position) < 120f)
+                    if (hit.collider != null)
                     {
                         start = true;
 
                     }
+                    else
+                    {
+                        start = false;
+                    }
                 }
             }
         }
-        
 
-        if(start)
+
+        if (start && Vector3.Distance(player.transform.position, transform.position) < 120f)
         {
             InProgress(myProgressTime);
         }
-
-
-        if (start && Vector3.Distance(player.transform.position, transform.position) > 120f)
+        else
         {
             slider.SetActive(false);
             start = false;

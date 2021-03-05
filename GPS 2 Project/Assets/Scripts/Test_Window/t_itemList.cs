@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class t_itemList : MonoBehaviour
 {
@@ -18,25 +19,48 @@ public class t_itemList : MonoBehaviour
     public Transform contentPanel_Hide;
 
     public bool moveToHide = false;
+    public bool showJew = false;
 
     public int pocket_spacecount = 0;
     public int hide_spacecount = 0;
     public int safe_spacecount = 6;
 
+    //to show how much space left
+    public Text pocketSpace;
+    public Text hideSpace;
+    public Text safeSpace;
+
 
     public void t_AddSafeButton() //to show random list
     {
-        int rand = Random.Range(0, item_safe.Count);
-
-        for (int j = 0; j < Random.Range(0, rand); j++)
+        if(!showJew)
         {
-            t_ItemData item = item_safe[j];
-            GameObject newButton = Instantiate(safeButton, transform.parent);
-            newButton.transform.SetParent(contentPanel_Safe);
+            int rand = Random.Range(0, item_safe.Count);
 
-            t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
-            button.SetUp(item, this);
+            for (int j = 0; j < Random.Range(0, rand); j++)
+            {
+                t_ItemData item = item_safe[j];
+                GameObject newButton = Instantiate(safeButton, transform.parent);
+                newButton.transform.SetParent(contentPanel_Safe);
+
+                t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
+                button.SetUp(item, this);
+            }
         }
+        else
+        {
+            for (int j = 15; j < item_safe.Count; j++)  //jade is [16], [15] + [1] = [16]
+            {
+                t_ItemData item = item_safe[j];
+                GameObject newButton = Instantiate(safeButton, transform.parent);
+                newButton.transform.SetParent(contentPanel_Safe);
+
+                t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
+                button.SetUp(item, this);
+            }
+
+        }
+
     }
 
 
@@ -80,7 +104,6 @@ public class t_itemList : MonoBehaviour
 
     public void PutInPocket(t_ItemData item)
     {
-
         item_pocket.Add(item);
 
         GameObject newButton = Instantiate(pocketButton, transform.parent);
@@ -136,13 +159,19 @@ public class t_itemList : MonoBehaviour
 
     void Start()
     {
-        
+
+
     }
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) //open hiding spot
+        pocketSpace.text = pocket_spacecount.ToString();
+        hideSpace.text = hide_spacecount.ToString();
+        safeSpace.text = safe_spacecount.ToString();
+
+
+        if (Input.GetKeyDown(KeyCode.Space)) //random searchable object display
         {
             RefreshDisplay();
         }
@@ -150,6 +179,12 @@ public class t_itemList : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V)) //open hiding spot
         {
             moveToHide = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.B)) //change it to recognise name "Master room"
+        {
+            showJew = true;
+            RefreshDisplay();
         }
     }
 }

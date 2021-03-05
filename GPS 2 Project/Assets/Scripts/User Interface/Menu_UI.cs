@@ -27,6 +27,6 @@ public class Menu_UI : MonoBehaviour
 
     public void BackToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("_newMainMenu");
     }
 }

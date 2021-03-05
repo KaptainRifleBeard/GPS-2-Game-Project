@@ -40,7 +40,6 @@ public class t_PocketButton : MonoBehaviour
         {
             if(list.hide_spacecount < 20)
             {
-
                 itemList.PutInHide(item);
                 itemList.RemovePocketItem(item, itemList);
 
