@@ -11535,11 +11535,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62643c40f5b18154093b75defddc1da4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62643c40f5b18154093b75defddc1da4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: -161
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62643c40f5b18154093b75defddc1da4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13374,7 +13374,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225836085}
-  m_LocalRotation: {x: 0.41215056, y: -0.03125076, z: 0.014146564, w: 0.9104698}
+  m_LocalRotation: {x: 0.41215056, y: -0.03125078, z: 0.014146572, w: 0.9104698}
   m_LocalPosition: {x: 179, y: 761.5, z: -951.10004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -14596,6 +14596,7 @@ MonoBehaviour:
   moveToHide: 0
   showJew: 0
   start: 0
+  gotTheJewl: 0
   pocket_spacecount: 0
   hide_spacecount: 0
   safe_spacecount: 6
@@ -18010,7 +18011,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714146724}
-  m_LocalRotation: {x: 0.41215056, y: -0.03125076, z: 0.014146564, w: 0.9104698}
+  m_LocalRotation: {x: 0.41215056, y: -0.03125078, z: 0.014146572, w: 0.9104698}
   m_LocalPosition: {x: 179, y: 761.5, z: -951.10004}
   m_LocalScale: {x: 86.45677, y: 86.45676, z: 86.45674}
   m_Children:
