@@ -4,21 +4,27 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Items
+  - Interactable
+  - Hiding Spot
+  - ProgressBarPosition
+  - SearchableObjectWindow
+  - CleanDiningTable
+  - CleanWindow
+  - VacuumLivingrooom
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - Items
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bedroom
+  - BedroomToilet
+  - TeenRoom
+  - ShowerRoom
+  - Store
+  - LivingRoom
+  - Wall
   - 
   - 
   - 

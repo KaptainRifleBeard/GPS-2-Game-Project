@@ -6,16 +6,43 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 224247031146467102171f361920545026161b21630d3e3120391136f1af1120e3ea26e5e27a0c3f3c0cea721130082beb
+      value: 22424703114646680e0b0227036c7d11151c0d3a1f2b233e28662e1fddcc312ee7eb67d6e53b3c372c12a1290a371526
       flags: 0
     RecentlyUsedScenePath-1:
-      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
+      value: 22424703114646680e0b0227036c72111f192b292926237f012c0b36eeb10b1bedea26e5e22e3a0f3a10ea390a701431fb1e10
       flags: 0
     RecentlyUsedScenePath-2:
-      value: 22424703114646680e0b0227036c6c3c29231d39381b2535232c5326ece92021
+      value: 22424703114646680e0b0227036c72111f192b292926237f012c0b36eea06776f7e93ffdfe
+      flags: 0
+    RecentlyUsedScenePath-3:
+      value: 22424703114646680e0b0227036c72111f192b292926237f012c0b36eea06076f7e93ffdfe
+      flags: 0
+    RecentlyUsedScenePath-4:
+      value: 22424703114646680e0b0227036c72111f192b292926237f012c0b36eea06176f7e93ffdfe
+      flags: 0
+    RecentlyUsedScenePath-5:
+      value: 22424703114646680e0b0227036c72111f192b292926237f012c0b36eea06276f7e93ffdfe
+      flags: 0
+    RecentlyUsedScenePath-6:
+      value: 22424703114646680e0b0227036c72111f192b292926237f012c0b36eea06578c0e635e2f22a7129370bfb25
+      flags: 0
+    RecentlyUsedScenePath-7:
+      value: 22424703114646680e0b0227036c72111f192b292926237f012c0b36eea06576b0a923e7ee2e26
+      flags: 0
+    RecentlyUsedScenePath-8:
+      value: 22424703114646680e0b0227036c72111f192b292926237f012c0b36eea06576f7e93ffdfe
+      flags: 0
+    RecentlyUsedScenePath-9:
+      value: 22424703114646680e0b0227036c72111f192b292926237f012c0b36eea06676f7e93ffdfe
+      flags: 0
+    UnityRemoteCompression:
+      value: 29617121
       flags: 0
     UnityRemoteDevice:
       value: 225f4d46245b0d4902070862342649191512
+      flags: 0
+    UnityRemoteJoystickSource:
+      value: 315459091150
       flags: 0
     UnityRemoteResolution:
       value: 2d5e460b0459
