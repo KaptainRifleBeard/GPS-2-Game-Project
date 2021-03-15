@@ -92,6 +92,10 @@ public class SettingsMenu : MonoBehaviour
         subjectCanvas.SetActive(true);
     }
 
+    public void returntoGame(CanvasGroup subjectCanvas)
+    {
+        subjectCanvas.gameObject.SetActive(false);
+    }
     public void secretsauce()
     {
         Debug.Log("Secret Sauce Nothing else here - M");
