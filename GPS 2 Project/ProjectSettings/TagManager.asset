@@ -11,6 +11,12 @@ TagManager:
   - CleanDiningTable
   - CleanWindow
   - VacuumLivingrooom
+  - Bedroom
+  - BedroomToilet
+  - TeenRoom
+  - ShowerRoom
+  - Store
+  - LivingRoom
   layers:
   - Default
   - TransparentFX
@@ -25,7 +31,7 @@ TagManager:
   - Store
   - LivingRoom
   - Wall
-  - 
+  - Wayoint
   - 
   - 
   - 

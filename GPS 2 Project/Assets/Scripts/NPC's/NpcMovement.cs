@@ -9,7 +9,6 @@ public class NpcMovement : MonoBehaviour
     public Transform[] points;
     public Transform target;
     static public bool isIdle = false;
-    static public bool sus = false;
 
     private NavMeshAgent agent;
     public float waitDuration = 5f;
@@ -30,7 +29,7 @@ public class NpcMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        agent.autoBraking = false;
+        agent.autoBraking = true;
         destPoint = Random.Range(0, points.Length);
         agent.SetDestination(points[destPoint].position);
 
@@ -40,37 +39,37 @@ public class NpcMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Bedroom"))
+        if (other.gameObject.CompareTag("Bedroom"))
         {
             isEnemyEnteredBR = true;
             Debug.Log("Enemy Entered Bedroom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("BedroomToilet"))
+        if (other.gameObject.CompareTag("BedroomToilet"))
         {
             isEnemyEnteredBRT = true;
             Debug.Log("Enemy Entered BedroomToilet");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("TeenRoom"))
+        if (other.gameObject.CompareTag("TeenRoom"))
         {
             isEnemyEnteredTR = true;
             Debug.Log("Enemy Entered TeenRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("ShowerRoom"))
+        if (other.gameObject.CompareTag("ShowerRoom"))
         {
             isEnemyEnteredSR = true;
             Debug.Log("Enemy Entered ShowerRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Store"))
+        if (other.gameObject.CompareTag("Store"))
         {
             isEnemyEnteredS = true;
             Debug.Log("Enemy Entered Store");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("LivingRoom"))
+        if (other.gameObject.CompareTag("LivingRoom"))
         {
             isEnemyEnteredLR = true;
             Debug.Log("Enemy Entered LivingRoom");
@@ -80,103 +79,76 @@ public class NpcMovement : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Bedroom"))
+        if (other.gameObject.CompareTag("Bedroom"))
         {
             isEnemyEnteredBR = false;
             Debug.Log("Enemy left Bedroom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("BedroomToilet"))
+        if (other.gameObject.CompareTag("BedroomToilet"))
         {
             isEnemyEnteredBRT = false;
             Debug.Log("Enemy left BedroomToilet");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("TeenRoom"))
+        if (other.gameObject.CompareTag("TeenRoom"))
         {
             isEnemyEnteredTR = false;
             Debug.Log("Enemy left TeenRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("ShowerRoom"))
+        if (other.gameObject.CompareTag("ShowerRoom"))
         {
             isEnemyEnteredSR = false;
             Debug.Log("Enemy left ShowerRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Store"))
+        if (other.gameObject.CompareTag("Store"))
         {
             isEnemyEnteredS = false;
             Debug.Log("Enemy left Store");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("LivingRoom"))
+        if (other.gameObject.CompareTag("LivingRoom"))
         {
             isEnemyEnteredLR = false;
             Debug.Log("Enemy left LivingRoom");
         }
     }
 
-
+    
 
     void Update()
     {
         int layerMask = 1 << 3;
 
-        
 
-        if((isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
+
+        if ((isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
             || (isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR))
         {
-            if(isIdle)
+            if (isIdle)
             {
                 if (!hasTalked)
                 {
                     agent.SetDestination(target.position);
                     agent.stoppingDistance = 1.5f;
+                    StartCoroutine(talking(talkDuration));
                 }
-                else
-                {
-                    if (Vector3.Distance(transform.position, points[destPoint].position) < 0.6f)
-                    {
-                        waitTimer += Time.deltaTime;
-                        if (waitTimer > waitDuration)
-                        {
-                            waitTimer = 0;
-                            destPoint = Random.Range(0, points.Length);
-                            agent.SetDestination(points[destPoint].position);
-                        }
+            }
 
-                    }
-                }
-            }
-            
-            if(StrikeOut.sus)
-            {
-                sus = true;
-            }
-            else
-            {
-                sus = false;
-            }
 
         }
-        else
+
+
+        if (Vector3.Distance(transform.position, points[destPoint].position) < 150f)
         {
-            agent.SetDestination(points[destPoint].position);
-            if (Vector3.Distance(transform.position, points[destPoint].position) < 0.6f)
-            {
-                waitTimer += Time.deltaTime;
-                if (waitTimer > waitDuration)
-                {
-                    waitTimer = 0;
-                    destPoint = Random.Range(0, points.Length);
-                    agent.SetDestination(points[destPoint].position);
-                }
 
-            }
+            destPoint = Random.Range(0, points.Length);
+            StartCoroutine(waiting(waitDuration));
         }
-        
+
+
 
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer
@@ -184,9 +156,9 @@ public class NpcMovement : MonoBehaviour
         {
              
             Debug.Log("Did Hit");
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 2, Color.red);
-            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 2, Color.red);
-            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 2, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 100, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 100, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 100, Color.red);
             if (isIdle)
             {
                 if(!hasTalked)
@@ -203,21 +175,14 @@ public class NpcMovement : MonoBehaviour
 
             }
 
-            if (StrikeOut.sus)
-            {
-                sus = true;
-            }
-            else
-            {
-                sus = false;
-            }
+            
 
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 2, Color.yellow);
-            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 2, Color.yellow);
-            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 2, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 100, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 100, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 100, Color.yellow);
             //Debug.Log("Did not Hit");
             if (!hasTalked)
             {
@@ -228,6 +193,20 @@ public class NpcMovement : MonoBehaviour
 
         
 
+    }
+
+    private IEnumerator waiting(float waitTime)
+    {
+
+        yield return new WaitForSeconds(waitTime);
+        agent.SetDestination(points[destPoint].position);
+    }
+
+    private IEnumerator talking(float talkTime)
+    {
+
+        yield return new WaitForSeconds(talkTime);
+        agent.SetDestination(points[destPoint].position);
     }
 
 }

@@ -18,37 +18,37 @@ public class RoomTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Bedroom"))
+        if (other.gameObject.CompareTag("Bedroom"))
         {
             isPlayerEnteredBR = true;
             Debug.Log("Player Entered");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("BedroomToilet"))
+        if (other.gameObject.CompareTag("BedroomToilet"))
         {
             isPlayerEnteredBRT = true;
             Debug.Log("Player Entered BedroomToilet");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("TeenRoom"))
+        if (other.gameObject.CompareTag("TeenRoom"))
         {
             isPlayerEnteredTR = true;
             Debug.Log("Player Entered TeenRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("ShowerRoom"))
+        if (other.gameObject.CompareTag("ShowerRoom"))
         {
             isPlayerEnteredSR = true;
             Debug.Log("Player Entered ShowerRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Store"))
+        if (other.gameObject.CompareTag("Store"))
         {
             isPlayerEnteredS = true;
             Debug.Log("Player Entered Store");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("LivingRoom"))
+        if (other.gameObject.CompareTag("LivingRoom"))
         {
             isPlayerEnteredLR = true;
             Debug.Log("Player Entered LivingRoom");
@@ -57,37 +57,37 @@ public class RoomTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Bedroom"))
+        if (other.gameObject.CompareTag("Bedroom"))
         {
             isPlayerEnteredBR = false;
             Debug.Log("Player left Bedroom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("BedroomToilet"))
+        if (other.gameObject.CompareTag("BedroomToilet"))
         {
             isPlayerEnteredBRT = false;
             Debug.Log("Enemy left BedroomToilet");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("TeenRoom"))
+        if (other.gameObject.CompareTag("TeenRoom"))
         {
             isPlayerEnteredTR = false;
             Debug.Log("Enemy left TeenRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("ShowerRoom"))
+        if (other.gameObject.CompareTag("ShowerRoom"))
         {
             isPlayerEnteredSR = false;
             Debug.Log("Enemy left ShowerRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Store"))
+        if (other.gameObject.CompareTag("Store"))
         {
             isPlayerEnteredS = false;
             Debug.Log("Enemy left Store");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("LivingRoom"))
+        if (other.gameObject.CompareTag("LivingRoom"))
         {
             isPlayerEnteredLR = false;
             Debug.Log("Enemy left LivingRoom");

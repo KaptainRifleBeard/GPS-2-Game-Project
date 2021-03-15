@@ -25,10 +25,15 @@ public class StrikeOut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(NpcMovement.sus)
+        if(sus)
         {
-            currSus += 1;
-            sus = false;
+            if ((NpcMovement.isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (NpcMovement.isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (NpcMovement.isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (NpcMovement.isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
+                || (NpcMovement.isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (NpcMovement.isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR))
+            {
+                //npc only increases sus when player is in the same room
+                currSus += 1;
+                sus = false;
+            }
         }
 
         if(currSus >= maxSus)
