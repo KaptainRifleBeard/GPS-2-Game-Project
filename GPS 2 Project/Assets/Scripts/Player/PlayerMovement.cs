@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             rb.velocity = Vector3.zero;
+            NpcMovement.isIdle = true;
         }
     }
  

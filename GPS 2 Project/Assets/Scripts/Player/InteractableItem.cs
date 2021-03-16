@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractableItem : MonoBehaviour
 {
+
     public float progressTime = 0f;
     public float range = 3f;
 
@@ -30,78 +31,98 @@ public class InteractableItem : MonoBehaviour
                 {
                     item = GameObject.Find("Bed").transform;
                     progressTime = 6f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "Large Wardrobe")
+                else if (hit.collider.name == "Large Wardrobe")
                 {
                     item = GameObject.Find("Large Wardrobe").transform;
                     progressTime = 5f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "Study Desk")
+                else if (hit.collider.name == "Study Desk")
                 {
                     item = GameObject.Find("Study Desk").transform;
                     progressTime = 5f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "Nightstand")
+                else if (hit.collider.name == "Nightstand")
                 {
                     item = GameObject.Find("Nightstand").transform;
                     progressTime = 5f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "Master Bed")
+                else if (hit.collider.name == "Master Bed")
                 {
                     item = GameObject.Find("Master Bed").transform;
                     progressTime = 6f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "Nightstand 2")
+                else if (hit.collider.name == "Nightstand 2")
                 {
                     item = GameObject.Find("Nightstand 2").transform;
                     progressTime = 5f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "Small Wardrobe")
+                else if (hit.collider.name == "Small Wardrobe")
                 {
                     item = GameObject.Find("Small Wardrobe").transform;
                     progressTime = 5f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "Kitchen Cabinet")
+                else if (hit.collider.name == "Kitchen Cabinet")
                 {
                     item = GameObject.Find("Kitchen Cabinet").transform;
                     progressTime = 3f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "Kitchen Counter")
+                else if (hit.collider.name == "Kitchen Counter")
                 {
                     item = GameObject.Find("Kitchen Counter").transform;
                     progressTime = 5f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "Floating Shelf")
+                else if (hit.collider.name == "Floating Shelf")
                 {
                     item = GameObject.Find("Floating Shelf").transform;
                     progressTime = 3f;
-                }   
-                if (hit.collider.name == "Floating Shelf 2")
+                    StrikeOut.sus = true;
+                }
+                else if (hit.collider.name == "Floating Shelf 2")
                 {
                     item = GameObject.Find("Floating Shelf 2").transform;
                     progressTime = 3f;
-                }   
-                if (hit.collider.name == "Safe Vault")
+                    StrikeOut.sus = true;
+                }
+                else if (hit.collider.name == "Safe Vault")
                 {
                     item = GameObject.Find("Safe Vault").transform;
                     progressTime = 8f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "Triple_Seater_Sofa")
+                else if (hit.collider.name == "Triple_Seater_Sofa")
                 {
                     item = GameObject.Find("Triple_Seater_Sofa").transform;
                     progressTime = 6f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "Compartmental_Coffee_Table")
+                else if (hit.collider.name == "Compartmental_Coffee_Table")
                 {
+                    Debug.Log("clicked");
                     Debug.Log(hit.collider.name);
 
                     item = GameObject.Find("Compartmental_Coffee_Table").transform;
                     progressTime = 5f;
+                    StrikeOut.sus = true;
                 }
-                if (hit.collider.name == "TV_Cabinet")
+                else if (hit.collider.name == "TV_Cabinet")
                 {
                     item = GameObject.Find("TV_Cabinet").transform;
                     progressTime = 5f;
+                    StrikeOut.sus = true;
+                }
+                else
+                {
+                    StrikeOut.sus = false;
                 }
 
             }
@@ -113,9 +134,9 @@ public class InteractableItem : MonoBehaviour
 
         }
 
-        if (Vector3.Distance(player.position, item.position) < 150f && item.name != "Default (to avoid error msg)")
+        if (Vector3.Distance(player.position, item.position) < 150f)
         {
-            Debug.Log(item.name);
+            Debug.Log("show bar");
             bar.SetActive(true);
             clickOnObject = true;
 
@@ -126,7 +147,7 @@ public class InteractableItem : MonoBehaviour
             clickOnObject = false;
             bar.SetActive(false);
 
-        }   
+        }
 
 
 

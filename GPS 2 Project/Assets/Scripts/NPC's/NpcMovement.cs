@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using UnityEngine.UI;
 
 
 public class NpcMovement : MonoBehaviour
@@ -8,9 +9,13 @@ public class NpcMovement : MonoBehaviour
 
     public Transform[] points;
     public Transform target;
+    public Text dialogueText;
     static public bool isIdle = false;
-    static public bool sus = false;
+    public bool allowTalk = false;
 
+    string[] dialogue = {"Oh I'm just checking.", "How’s it going?" , "Just taking a small break."};
+    int dialogueArr;
+    public Transform textDisplay;
     private NavMeshAgent agent;
     public float waitDuration = 5f;
     public float talkDuration = 10f;
@@ -30,47 +35,47 @@ public class NpcMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        agent.autoBraking = false;
+        agent.autoBraking = true;
         destPoint = Random.Range(0, points.Length);
         agent.SetDestination(points[destPoint].position);
 
-
+        dialogueText.gameObject.SetActive(false);
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Bedroom"))
+        if (other.gameObject.CompareTag("Bedroom"))
         {
             isEnemyEnteredBR = true;
             Debug.Log("Enemy Entered Bedroom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("BedroomToilet"))
+        if (other.gameObject.CompareTag("BedroomToilet"))
         {
             isEnemyEnteredBRT = true;
             Debug.Log("Enemy Entered BedroomToilet");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("TeenRoom"))
+        if (other.gameObject.CompareTag("TeenRoom"))
         {
             isEnemyEnteredTR = true;
             Debug.Log("Enemy Entered TeenRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("ShowerRoom"))
+        if (other.gameObject.CompareTag("ShowerRoom"))
         {
             isEnemyEnteredSR = true;
             Debug.Log("Enemy Entered ShowerRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Store"))
+        if (other.gameObject.CompareTag("Store"))
         {
             isEnemyEnteredS = true;
             Debug.Log("Enemy Entered Store");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("LivingRoom"))
+        if (other.gameObject.CompareTag("LivingRoom"))
         {
             isEnemyEnteredLR = true;
             Debug.Log("Enemy Entered LivingRoom");
@@ -80,154 +85,150 @@ public class NpcMovement : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Bedroom"))
+        if (other.gameObject.CompareTag("Bedroom"))
         {
             isEnemyEnteredBR = false;
             Debug.Log("Enemy left Bedroom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("BedroomToilet"))
+        if (other.gameObject.CompareTag("BedroomToilet"))
         {
             isEnemyEnteredBRT = false;
             Debug.Log("Enemy left BedroomToilet");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("TeenRoom"))
+        if (other.gameObject.CompareTag("TeenRoom"))
         {
             isEnemyEnteredTR = false;
             Debug.Log("Enemy left TeenRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("ShowerRoom"))
+        if (other.gameObject.CompareTag("ShowerRoom"))
         {
             isEnemyEnteredSR = false;
             Debug.Log("Enemy left ShowerRoom");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Store"))
+        if (other.gameObject.CompareTag("Store"))
         {
             isEnemyEnteredS = false;
             Debug.Log("Enemy left Store");
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("LivingRoom"))
+        if (other.gameObject.CompareTag("LivingRoom"))
         {
             isEnemyEnteredLR = false;
             Debug.Log("Enemy left LivingRoom");
         }
     }
 
-
+    
 
     void Update()
     {
-        int layerMask = 1 << 3;
+        int layerMask = 3;
 
-        
+        Vector3 textDisplay = Camera.main.WorldToScreenPoint(this.textDisplay.position);
+        dialogueText.transform.position = textDisplay;
 
-        if((isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
+        if ((isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
             || (isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR))
         {
-            if(isIdle)
-            {
+            Debug.Log("Same room together");
+            //if (isIdle)
+            //{
                 if (!hasTalked)
                 {
                     agent.SetDestination(target.position);
-                    agent.stoppingDistance = 1.5f;
-                }
-                else
-                {
-                    if (Vector3.Distance(transform.position, points[destPoint].position) < 0.6f)
-                    {
-                        waitTimer += Time.deltaTime;
-                        if (waitTimer > waitDuration)
-                        {
-                            waitTimer = 0;
-                            destPoint = Random.Range(0, points.Length);
-                            agent.SetDestination(points[destPoint].position);
-                        }
+                    agent.stoppingDistance = 80f;
+                    allowTalk = true;
+                dialogueArr = Random.Range(0, dialogue.Length);
+                StartCoroutine(talking(talkDuration));
 
-                    }
-                }
             }
-            
-            if(StrikeOut.sus)
-            {
-                sus = true;
-            }
-            else
-            {
-                sus = false;
-            }
+            //}
+
 
         }
-        else
+
+
+        if (Vector3.Distance(transform.position, points[destPoint].position) < 150f)
         {
-            agent.SetDestination(points[destPoint].position);
-            if (Vector3.Distance(transform.position, points[destPoint].position) < 0.6f)
-            {
-                waitTimer += Time.deltaTime;
-                if (waitTimer > waitDuration)
-                {
-                    waitTimer = 0;
-                    destPoint = Random.Range(0, points.Length);
-                    agent.SetDestination(points[destPoint].position);
-                }
 
-            }
+            destPoint = Random.Range(0, points.Length);
+            //agent.Stop();
+            StartCoroutine(waiting(waitDuration));
         }
-        
+
+
 
         RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(0.5f, 0, 1), out hit, 5, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(-0.5f, 0, 1), out hit, 5, layerMask))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(0f, 100, 1), out hit, 50, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(0.5f, 100, 1), out hit, 50, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(-0.5f, 100, 1), out hit, 50, layerMask))
         {
-             
-            Debug.Log("Did Hit");
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 2, Color.red);
-            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 2, Color.red);
-            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 2, Color.red);
-            if (isIdle)
+
+            if (allowTalk)
             {
-                if(!hasTalked)
-                {
-                    talkTimer += Time.deltaTime;
-                    if (talkTimer > talkDuration)
-                    {
-                        talkTimer = 0;
-                        hasTalked = true;
-                        agent.SetDestination(points[destPoint].position);
-                    }
-
-                }
-
-            }
-
-            if (StrikeOut.sus)
-            {
-                sus = true;
+                dialogueText.GetComponent<Text>().text = dialogue[dialogueArr];
+                dialogueText.gameObject.SetActive(true);
             }
             else
             {
-                sus = false;
+                dialogueText.gameObject.SetActive(false);
             }
+            Debug.Log("Did Hit");
+            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0, 1) * 50, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 50, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 50, Color.red);
+            //if (isIdle)
+            //{
+            //    if(!hasTalked)
+            //    {
+            //        talkTimer += Time.deltaTime;
+            //        if (talkTimer > talkDuration)
+            //        {
+            //            talkTimer = 0;
+            //            hasTalked = true;
+            //            agent.SetDestination(points[destPoint].position);
+            //        }
+
+            //    }
+
+            //}
+
+            
 
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 2, Color.yellow);
-            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 2, Color.yellow);
-            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 2, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0, 1) * 50, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 50, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 50, Color.yellow);
             //Debug.Log("Did not Hit");
-            if (!hasTalked)
-            {
-                 talkTimer = 0;
-                 agent.SetDestination(points[destPoint].position);
-            }
+            //if (!hasTalked)
+            //{
+            //     talkTimer = 0;
+            //     agent.SetDestination(points[destPoint].position);
+            //}
+            dialogueText.gameObject.SetActive(false);
         }
 
         
 
+    }
+
+    private IEnumerator waiting(float waitTime)
+    {
+
+        yield return new WaitForSeconds(waitTime);
+        agent.SetDestination(points[destPoint].position);
+    }
+
+    private IEnumerator talking(float talkTime)
+    {
+
+        yield return new WaitForSeconds(talkTime);
+        agent.SetDestination(points[destPoint].position);
+        hasTalked = true;
     }
 
 }

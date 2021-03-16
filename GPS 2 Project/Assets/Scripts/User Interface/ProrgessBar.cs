@@ -44,7 +44,7 @@ public class ProrgessBar : MonoBehaviour
             {
                 currentTime += speed * Time.deltaTime;
                 text.GetComponent<Text>().text = ((int)currentTime).ToString();
-                StrikeOut.sus = true;
+                
             }
             progressBar.GetComponent<Image>().fillAmount = currentTime / GameObject.Find("SelectedManager").GetComponent<InteractableItem>().progressTime;
             showWindow = true;
