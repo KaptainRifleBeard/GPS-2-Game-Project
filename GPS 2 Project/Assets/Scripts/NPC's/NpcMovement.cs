@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using UnityEngine.UI;
 
 
 public class NpcMovement : MonoBehaviour
@@ -8,8 +9,13 @@ public class NpcMovement : MonoBehaviour
 
     public Transform[] points;
     public Transform target;
+    public Text dialogueText;
     static public bool isIdle = false;
+    public bool allowTalk = false;
 
+    string[] dialogue = {"Oh I'm just checking.", "How’s it going?" , "Just taking a small break."};
+    int dialogueArr;
+    public Transform textDisplay;
     private NavMeshAgent agent;
     public float waitDuration = 5f;
     public float talkDuration = 10f;
@@ -33,7 +39,7 @@ public class NpcMovement : MonoBehaviour
         destPoint = Random.Range(0, points.Length);
         agent.SetDestination(points[destPoint].position);
 
-
+        dialogueText.gameObject.SetActive(false);
     }
 
 
@@ -120,22 +126,27 @@ public class NpcMovement : MonoBehaviour
 
     void Update()
     {
-        int layerMask = 1 << 3;
+        int layerMask = 3;
 
-
+        Vector3 textDisplay = Camera.main.WorldToScreenPoint(this.textDisplay.position);
+        dialogueText.transform.position = textDisplay;
 
         if ((isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
             || (isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR))
         {
-            if (isIdle)
-            {
+            Debug.Log("Same room together");
+            //if (isIdle)
+            //{
                 if (!hasTalked)
                 {
                     agent.SetDestination(target.position);
-                    agent.stoppingDistance = 1.5f;
-                    StartCoroutine(talking(talkDuration));
-                }
+                    agent.stoppingDistance = 80f;
+                    allowTalk = true;
+                dialogueArr = Random.Range(0, dialogue.Length);
+                StartCoroutine(talking(talkDuration));
+
             }
+            //}
 
 
         }
@@ -145,50 +156,60 @@ public class NpcMovement : MonoBehaviour
         {
 
             destPoint = Random.Range(0, points.Length);
+            //agent.Stop();
             StartCoroutine(waiting(waitDuration));
         }
 
 
 
         RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(0.5f, 0, 1), out hit, 5, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(-0.5f, 0, 1), out hit, 5, layerMask))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(0f, 100, 1), out hit, 50, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(0.5f, 100, 1), out hit, 50, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(-0.5f, 100, 1), out hit, 50, layerMask))
         {
-             
-            Debug.Log("Did Hit");
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 100, Color.red);
-            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 100, Color.red);
-            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 100, Color.red);
-            if (isIdle)
+
+            if (allowTalk)
             {
-                if(!hasTalked)
-                {
-                    talkTimer += Time.deltaTime;
-                    if (talkTimer > talkDuration)
-                    {
-                        talkTimer = 0;
-                        hasTalked = true;
-                        agent.SetDestination(points[destPoint].position);
-                    }
-
-                }
-
+                dialogueText.GetComponent<Text>().text = dialogue[dialogueArr];
+                dialogueText.gameObject.SetActive(true);
             }
+            else
+            {
+                dialogueText.gameObject.SetActive(false);
+            }
+            Debug.Log("Did Hit");
+            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0, 1) * 50, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 50, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 50, Color.red);
+            //if (isIdle)
+            //{
+            //    if(!hasTalked)
+            //    {
+            //        talkTimer += Time.deltaTime;
+            //        if (talkTimer > talkDuration)
+            //        {
+            //            talkTimer = 0;
+            //            hasTalked = true;
+            //            agent.SetDestination(points[destPoint].position);
+            //        }
+
+            //    }
+
+            //}
 
             
 
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 100, Color.yellow);
-            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 100, Color.yellow);
-            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 100, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0, 1) * 50, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 50, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 50, Color.yellow);
             //Debug.Log("Did not Hit");
-            if (!hasTalked)
-            {
-                 talkTimer = 0;
-                 agent.SetDestination(points[destPoint].position);
-            }
+            //if (!hasTalked)
+            //{
+            //     talkTimer = 0;
+            //     agent.SetDestination(points[destPoint].position);
+            //}
+            dialogueText.gameObject.SetActive(false);
         }
 
         
@@ -207,6 +228,7 @@ public class NpcMovement : MonoBehaviour
 
         yield return new WaitForSeconds(talkTime);
         agent.SetDestination(points[destPoint].position);
+        hasTalked = true;
     }
 
 }
