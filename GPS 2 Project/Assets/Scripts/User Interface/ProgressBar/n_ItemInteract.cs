@@ -80,6 +80,12 @@ public class n_ItemInteract : MonoBehaviour
         if(start)
         {
             InProgress(myProgressTime);
+            StrikeOut.sus = true;
+        }
+        else
+        {
+            StrikeOut.sus = false;
+
         }
 
 

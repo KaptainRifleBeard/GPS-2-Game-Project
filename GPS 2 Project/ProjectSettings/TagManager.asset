@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Interactable
+  - Hiding Spot
+  - TeenRoom
+  - BedroomToilet
+  - LivingRoom
+  - ShowerRoom
+  - ProgressBarPosition
+  - SearchableObjectWindow
+  - Store
+  - Bedroom
+  - CleaningTaskObject
   layers:
   - Default
   - TransparentFX
