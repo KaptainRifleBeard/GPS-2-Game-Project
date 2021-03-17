@@ -13,6 +13,7 @@ public class n_ItemInteract : MonoBehaviour
     public n_PorgressBar progressBar;
     public UI_Button stop;
     public t_itemList startSpawn;
+    public n_searchButtonHold holdButton;
 
     public float myProgressTime;
     public float myCurrentTime;
@@ -43,44 +44,65 @@ public class n_ItemInteract : MonoBehaviour
             startSpawn.start = false;
 
         }
+       
     }
 
     private void Update()
     {
-        if(start == false)
-        {
-            myCurrentTime = myProgressTime;
+        //if(start == false)
+        //{
+        //    myCurrentTime = myProgressTime;
 
-            if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        //    if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        //    {
+        //        Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+        //        RaycastHit hit;
+
+        //        if (Physics.Raycast(ray, out hit))
+        //        {
+        //            if (hit.collider != null && Vector3.Distance(player.transform.position, transform.position) < 120f)
+        //            {
+
+        //                if (hit.collider.name == "Master Bed")
+        //                {
+        //                    jewlFound = true;
+        //                }
+        //                else
+        //                {
+        //                    start = true;
+        //                    startSpawn.start = true;
+
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+        if(holdButton.holdButton == true)
+        {
+
+            if (start == false)
             {
-                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-                RaycastHit hit;
+                myCurrentTime = myProgressTime;
 
-                if (Physics.Raycast(ray, out hit))
-                {
-                    if (hit.collider != null && Vector3.Distance(player.transform.position, transform.position) < 120f)
-                    {
-                        
-                        if (hit.collider.name == "Master Bed")
-                        {
-                            jewlFound = true;
-                        }
-                        else
-                        {
-                            start = true;
-                            startSpawn.start = true;
+                slider.SetActive(true);
 
-                        }
-                    }
-                }
+                start = true;
+                startSpawn.start = true;
+
             }
-        }
-        
 
-        if(start)
+        }
+       
+
+
+
+
+        if (start)
         {
+
             InProgress(myProgressTime);
             StrikeOut.sus = true;
+           
         }
         else
         {

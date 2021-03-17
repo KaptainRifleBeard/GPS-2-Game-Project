@@ -502,6 +502,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &19357252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,7 +521,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 19357250}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &19357253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1977,7 +1979,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166491106}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1de34018b3d7b2849b97b89d9c428627, type: 3}
   m_Name: 
@@ -2560,7 +2562,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 201314389}
   searchButton: {fileID: 962012327}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!114 &201314393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3052,6 +3054,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &226313990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3069,7 +3073,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 226313988}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &226313991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3553,6 +3557,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &255461928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3570,7 +3576,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 255461926}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &255461929
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3784,6 +3790,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &255920221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3801,7 +3809,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 255920219}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &255920222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4429,6 +4437,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &333721740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4446,7 +4456,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 333721738}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!1 &347516918
 GameObject:
   m_ObjectHideFlags: 0
@@ -5779,6 +5789,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &424007331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5796,7 +5808,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 424007329}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &424007332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7661,6 +7673,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &534715886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7678,7 +7692,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 534715884}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &534715887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8085,6 +8099,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &583875260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8102,7 +8118,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 583875258}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &583875261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8811,6 +8827,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &665469666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8828,7 +8846,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 665469664}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &665469667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9238,6 +9256,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &703786894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9255,7 +9275,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 703786892}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &703786895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9406,6 +9426,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &717769656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9423,7 +9445,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 717769654}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &717769657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11028,6 +11050,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &847750272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11045,7 +11069,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 847750270}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &847750273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11488,6 +11512,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &881271152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11505,7 +11531,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 881271150}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &881271153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13385,6 +13411,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1051598937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13402,7 +13430,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1051598935}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1051598938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14531,6 +14559,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1143038652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14548,7 +14578,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1143038650}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1143038653
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15701,6 +15731,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1238401373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15718,7 +15750,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1238401371}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1238401374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16824,6 +16856,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1317821002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16841,7 +16875,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1317821000}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1317821003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17256,6 +17290,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1338672347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17273,7 +17309,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1338672345}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!1 &1352523024
 GameObject:
   m_ObjectHideFlags: 0
@@ -18152,6 +18188,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1405686462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18169,7 +18207,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1405686460}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1405686463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19635,6 +19673,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1502310964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19652,7 +19692,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1502310962}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1502310965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19773,6 +19813,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1502372819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19790,7 +19832,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1502372817}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!1 &1505784257
 GameObject:
   m_ObjectHideFlags: 0
@@ -20596,6 +20638,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1555514908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20613,7 +20657,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1555514906}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1555514909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20747,6 +20791,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1559426542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20764,7 +20810,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1559426540}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1559426543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20960,6 +21006,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1564938380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20977,7 +21025,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1564938378}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1564938381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21098,6 +21146,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1565893313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21115,7 +21165,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1565893311}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1565893314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21585,6 +21635,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1590582264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21602,7 +21654,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1590582262}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1590582265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23388,7 +23440,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1685937522}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!114 &1685937524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23412,6 +23464,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!65 &1685937525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25094,6 +25148,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1870978965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25111,7 +25167,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1870978963}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!1001 &1876343244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26307,6 +26363,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &1989938310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26324,7 +26382,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 1989938308}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &1989938311
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26998,6 +27056,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &2022754818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27015,7 +27075,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 2022754816}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &2022754819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27368,6 +27428,8 @@ MonoBehaviour:
   myCurrentTime: 0
   start: 0
   jewlFound: 0
+  pickUpTime: 0
+  fillImage: {fileID: 946890772}
 --- !u!114 &2102875410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27385,7 +27447,7 @@ MonoBehaviour:
   defaultMat: {fileID: 0}
   mat: {fileID: 2102875408}
   searchButton: {fileID: 368673715}
-  cleanButton: {fileID: 0}
+  cleanButton: {fileID: 962012327}
 --- !u!65 &2102875411
 BoxCollider:
   m_ObjectHideFlags: 0
