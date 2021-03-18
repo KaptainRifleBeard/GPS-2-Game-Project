@@ -140,10 +140,10 @@ public class NpcMovement : MonoBehaviour
                 if (!hasTalked)
                 {
                     agent.SetDestination(target.position);
-                    agent.stoppingDistance = 80f;
+                    agent.stoppingDistance = 100f;
                     allowTalk = true;
                 dialogueArr = Random.Range(0, dialogue.Length);
-                StartCoroutine(talking(talkDuration));
+                
 
             }
             //}
@@ -170,6 +170,7 @@ public class NpcMovement : MonoBehaviour
             {
                 dialogueText.GetComponent<Text>().text = dialogue[dialogueArr];
                 dialogueText.gameObject.SetActive(true);
+                StartCoroutine(talking(talkDuration));
             }
             else
             {
