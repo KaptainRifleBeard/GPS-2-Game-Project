@@ -51,7 +51,16 @@ public class Joystick : MonoBehaviour
         joystick.transform.position = joystickOriginalPos;
         joystickBG.transform.position = joystickOriginalPos;
     }
+
+
+  
 }
+
+
+
+
+
+
 /*
 public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
 {

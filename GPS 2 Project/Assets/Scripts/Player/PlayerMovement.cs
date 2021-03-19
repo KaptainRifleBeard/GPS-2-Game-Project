@@ -8,20 +8,22 @@ public class PlayerMovement : MonoBehaviour
     public Joystick joystick;
     public float speed;
     public  Rigidbody rb;
-    private float rotationSpeed = 2f;
+    private float rotationSpeed = 5f;
 
-
-
+    Vector3 direction;
+    private float turnVelocity;
     void Start()
     {
         rb.GetComponent<Rigidbody>();
+
     }
 
-     void FixedUpdate()
+    void FixedUpdate()
     {
         if(joystick.joystickPos.y != 0)
         {
-            //rb.rotation = rb.rotation * Quaternion.AngleAxis(joystick.joystickPos.x * rotationSpeed, Vector3.forward);
+            float heading = Mathf.Atan2(joystick.joystickPos.x, joystick.joystickPos.y) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(-90f, -90f, heading);
 
             rb.velocity = new Vector3(joystick.joystickPos.x * speed, 0, joystick.joystickPos.y * speed);
         }
@@ -31,8 +33,7 @@ public class PlayerMovement : MonoBehaviour
             NpcMovement.isIdle = true;
         }
     }
-
-
+ 
     /*
     public float moveSpeed = 0.5f;
     public float drag = 0.5f;

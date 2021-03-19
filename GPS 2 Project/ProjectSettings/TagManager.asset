@@ -6,32 +6,30 @@ TagManager:
   tags:
   - Interactable
   - Hiding Spot
+  - TeenRoom
+  - BedroomToilet
+  - LivingRoom
+  - ShowerRoom
   - ProgressBarPosition
   - SearchableObjectWindow
-  - CleanDiningTable
-  - CleanWindow
-  - VacuumLivingrooom
-  - Bedroom
-  - BedroomToilet
-  - TeenRoom
-  - ShowerRoom
   - Store
-  - LivingRoom
+  - Bedroom
+  - CleaningTaskObject
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
-  - Bedroom
-  - BedroomToilet
-  - TeenRoom
-  - ShowerRoom
-  - Store
-  - LivingRoom
-  - Wall
-  - Wayoint
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
