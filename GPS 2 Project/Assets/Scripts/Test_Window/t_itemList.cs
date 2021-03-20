@@ -35,7 +35,6 @@ public class t_itemList : MonoBehaviour
     public Text hideSpace;
     public Text safeSpace;
 
-
     int i;
 
     public void t_AddSafeButton() //to show random list
@@ -61,7 +60,7 @@ public class t_itemList : MonoBehaviour
     {
         if(i < 1)
         {
-            t_ItemData item = item_safe[15];
+            t_ItemData item = item_safe[item_safe.Count - 1];
             GameObject newButton = Instantiate(safeButton, transform.parent);
             newButton.transform.SetParent(contentPanel_Safe);
 
@@ -162,13 +161,14 @@ public class t_itemList : MonoBehaviour
 
     void Start()
     {
+        t_AddSafeButton();
 
     }
 
 
     void Update()
     {
-        GameObject g = GameObject.Find("Master Bed");
+        GameObject g = GameObject.Find("King sized bed");
         n_ItemInteract interact = g.GetComponent<n_ItemInteract>();
 
         if(interact.jewlFound == true && start == true && i < 1)
