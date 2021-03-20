@@ -23,6 +23,14 @@ public class n_ItemInteract : MonoBehaviour
     public bool jewlFound;
 
 
+    IEnumerator waitForSec()
+    {
+        yield return new WaitForSeconds(0.1f);
+        start = false;
+
+    }
+
+
     void Start()
     {
         myCurrentTime = myProgressTime;
@@ -40,7 +48,8 @@ public class n_ItemInteract : MonoBehaviour
             searchableObjectWindow.SetActive(true);
             safeWindow.SetActive(true);
 
-            start = false;
+
+            //StartCoroutine(waitForSec());
             startSpawn.start = false;
 
         }
@@ -77,6 +86,9 @@ public class n_ItemInteract : MonoBehaviour
         //        }
         //    }
         //}
+
+
+
         if(holdButton.holdButton == true)
         {
 
