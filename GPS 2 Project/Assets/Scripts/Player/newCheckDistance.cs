@@ -25,7 +25,7 @@ public class newCheckDistance : MonoBehaviour
             {
                 Debug.Log("Task");
                 cleanButton.SetActive(true);
-
+                
             }
             else
             {
@@ -46,10 +46,15 @@ public class newCheckDistance : MonoBehaviour
     {
         searchButton.SetActive(false);
         cleanButton.SetActive(false);
-        for (int i = 0; i < mat.materials.Length; i++)
+
+        if(gameObject.tag != "CleaningTaskObject")
         {
-            mat.materials[i].color = defaultColor[i];
+            for (int i = 0; i < mat.materials.Length; i++)
+            {
+                mat.materials[i].color = defaultColor[i];
+            }
         }
+        
     }
 
     void Start()
@@ -60,14 +65,18 @@ public class newCheckDistance : MonoBehaviour
             defaultColor.Add(mat.materials[i].color);
         }
 
+        if (gameObject.tag == "CleaningTaskObject")
+        {
+            for (int i = 0; i < mat.materials.Length; i++)
+            {
+                mat.materials[i].color = highlightColor;
+            }
+        }
+
     }
 
     void Update()
     {
-        //if(gameObject.tag == "CleaningTaskObject")
-        //{
-        //    mat.material.color = Color.green;
-
-        //}
+        
     }
 }
