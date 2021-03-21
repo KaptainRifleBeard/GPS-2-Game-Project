@@ -23,13 +23,6 @@ public class n_ItemInteract : MonoBehaviour
     public bool jewlFound;
 
 
-    IEnumerator waitForSec()
-    {
-        yield return new WaitForSeconds(0.1f);
-        start = false;
-
-    }
-
 
     void Start()
     {
@@ -40,19 +33,34 @@ public class n_ItemInteract : MonoBehaviour
 
     public void InProgress(float time)
     {
-        myCurrentTime -= speed * Time.deltaTime;
-        progressBar.SetProgressTime(myCurrentTime, myProgressTime);
-
-        if (myCurrentTime <= 0)
+        if (holdButton.holding == true)
         {
-            searchableObjectWindow.SetActive(true);
-            safeWindow.SetActive(true);
+            slider.SetActive(true);
 
+            myCurrentTime -= speed * Time.deltaTime;
+            progressBar.SetProgressTime(myCurrentTime, myProgressTime);
 
-            //StartCoroutine(waitForSec());
-            startSpawn.start = false;
+            if (myCurrentTime <= 0)
+            {
+                searchableObjectWindow.SetActive(true);
+                safeWindow.SetActive(true);
 
+                start = false;
+                startSpawn.start = false;
+                slider.SetActive(false);
+
+               
+            }
         }
+        else
+        {
+            slider.SetActive(false);
+            start = false;
+
+            searchableObjectWindow.SetActive(false);
+            safeWindow.SetActive(false);
+        }
+        
        
     }
 
@@ -89,47 +97,30 @@ public class n_ItemInteract : MonoBehaviour
 
 
 
-        if(holdButton.holdButton == true)
+        if(!start)
         {
+            start = true;
+            startSpawn.start = true;
 
-            if (start == false)
-            {
-                myCurrentTime = myProgressTime;
-
-                slider.SetActive(true);
-
-                start = true;
-                startSpawn.start = true;
-
-            }
-
-        }
-       
-
-
-
-
-        if (start)
-        {
-
-            InProgress(myProgressTime);
-            StrikeOut.sus = true;
-           
-        }
-        else
-        {
+            myCurrentTime = myProgressTime;
             StrikeOut.sus = false;
 
+            
         }
-
-
-        if (start && Vector3.Distance(player.transform.position, transform.position) > 120f)
+        if (start)
         {
-            slider.SetActive(false);
-            start = false;
+            InProgress(myProgressTime);
+            StrikeOut.sus = true;
+
         }
 
-        if(stop.stop == true)
+        //if (start && Vector3.Distance(player.transform.position, transform.position) > 120f)
+        //{
+        //    slider.SetActive(false);
+        //    start = false;
+        //}
+
+        if (stop.stop == true)
         {
             slider.SetActive(false);
             start = false;

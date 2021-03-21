@@ -12,13 +12,13 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 direction;
     private float turnVelocity;
+   
     void Start()
     {
         rb.GetComponent<Rigidbody>();
-
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if(joystick.joystickPos.y != 0)
         {
