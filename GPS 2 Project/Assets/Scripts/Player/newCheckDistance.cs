@@ -15,6 +15,8 @@ public class newCheckDistance : MonoBehaviour
 
     public GameObject searchButton;
     public GameObject cleanButton;
+    public bool tutorialcheck = false;
+    public bool tutorialcheck1 = false;
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -23,6 +25,11 @@ public class newCheckDistance : MonoBehaviour
         {
             if (gameObject.tag == "CleaningTaskObject")
             {
+                if (tutorialcheck1 == false)
+                {
+                    Tutorial.tutorialTrigg2 = true;
+                    tutorialcheck1 = true;
+                }
                 Debug.Log("Task");
                 cleanButton.SetActive(true);
 
@@ -30,6 +37,13 @@ public class newCheckDistance : MonoBehaviour
             else
             {
                 searchButton.SetActive(true);
+                
+                if(tutorialcheck == false)
+                {
+                    Tutorial.tutorialTrigg = true;
+                    tutorialcheck = true;
+                }
+
                 for (int i = 0; i < mat.materials.Length; i++)
                 {
                     mat.materials[i].color = highlightColor;

@@ -17,6 +17,8 @@ public class n_ItemInteract : MonoBehaviour
 
     public float myProgressTime;
     public float myCurrentTime;
+    public float suspicionCoolDown = 2f;
+    bool ableDetect = true;
 
     private int speed = 1;
     public bool start;
@@ -28,6 +30,13 @@ public class n_ItemInteract : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         start = false;
 
+    }
+
+    private IEnumerator coolDown(float waitTime)
+    {
+
+        yield return new WaitForSeconds(waitTime);
+        ableDetect = true;
     }
 
 
@@ -100,7 +109,7 @@ public class n_ItemInteract : MonoBehaviour
 
                 start = true;
                 startSpawn.start = true;
-
+                
             }
 
         }
@@ -113,7 +122,16 @@ public class n_ItemInteract : MonoBehaviour
         {
 
             InProgress(myProgressTime);
-            StrikeOut.sus = true;
+            if(ableDetect == true)
+            {
+                StrikeOut.sus = true;
+            }
+            
+            if(StrikeOut.sus == true)
+            {
+                ableDetect = false;
+                StartCoroutine(coolDown(suspicionCoolDown));
+            }
            
         }
         else
