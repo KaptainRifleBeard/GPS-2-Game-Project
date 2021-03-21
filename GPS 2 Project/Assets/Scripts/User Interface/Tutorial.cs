@@ -70,11 +70,8 @@ public class Tutorial : MonoBehaviour
             if(counter > 6)
             {
                 tutorial1 = false;
+                Time.timeScale = 1f;
             }
-        }
-        else
-        {
-            Time.timeScale = 1f;
         }
         
         
@@ -125,11 +122,8 @@ public class Tutorial : MonoBehaviour
             {
                 tutorial2 = false;
                 phase2done = true;
+                Time.timeScale = 1f;
             }
-        }
-        else
-        {
-            Time.timeScale = 1f;
         }
 
         if (tutorialTrigg1 == true)
@@ -168,11 +162,8 @@ public class Tutorial : MonoBehaviour
             {
                 tutorial3 = false;
                 phase3done = true;
+                Time.timeScale = 1f;
             }
-        }
-        else
-        {
-            Time.timeScale = 1f;
         }
 
         if (tutorialTrigg2 == true)
@@ -201,11 +192,8 @@ public class Tutorial : MonoBehaviour
             if (counter > 13)
             {
                 tutorial4 = false;
+                Time.timeScale = 1f;
             }
-        }
-        else
-        {
-            Time.timeScale = 1f;
         }
     }
 }

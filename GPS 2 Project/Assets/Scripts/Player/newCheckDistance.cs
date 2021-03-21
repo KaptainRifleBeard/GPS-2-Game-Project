@@ -15,8 +15,8 @@ public class newCheckDistance : MonoBehaviour
 
     public GameObject searchButton;
     public GameObject cleanButton;
-    public bool tutorialcheck = false;
-    public bool tutorialcheck1 = false;
+    static public bool tutorialcheck = false;
+    static public bool tutorialcheck1 = false;
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -68,7 +68,9 @@ public class newCheckDistance : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        tutorialcheck = false;
+        tutorialcheck1 = false;
+    player = GameObject.FindGameObjectWithTag("Player").transform;
         for (int i = 0; i < mat.materials.Length; i++)
         {
             defaultColor.Add(mat.materials[i].color);
