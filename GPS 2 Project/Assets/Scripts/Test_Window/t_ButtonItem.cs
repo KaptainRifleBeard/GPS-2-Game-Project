@@ -40,13 +40,14 @@ public class t_ButtonItem : MonoBehaviour
         {
             list.pocket_spacecount += item.space;
             list.safe_spacecount -= item.space;
-
+            JobScore.currScore += item.value;
 
             itemList.PutInPocket(item); //pocket to safe
             itemList.RemoveSafeItem(item, itemList); //safe to pocket
 
             Destroy(gameObject);
         }
+      
 
     }
 

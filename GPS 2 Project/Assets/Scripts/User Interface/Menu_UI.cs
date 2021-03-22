@@ -7,6 +7,7 @@ public class Menu_UI : MonoBehaviour
 {
     public void ExitGame()
     {
+        PlayerPrefs.SetInt("HighestScore", 0);
         Application.Quit();
     }
 

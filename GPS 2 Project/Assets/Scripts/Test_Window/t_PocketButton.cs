@@ -39,7 +39,7 @@ public class t_PocketButton : MonoBehaviour
             {
                 itemList.PutInHide(item);
                 itemList.RemovePocketItem(item, itemList);
-
+            
                 Destroy(gameObject);
 
             }
@@ -49,6 +49,7 @@ public class t_PocketButton : MonoBehaviour
         {
             itemList.PutInSafe(item);
             itemList.RemovePocketItem(item, itemList);
+            JobScore.currScore -= item.value;
 
             Destroy(gameObject);
 

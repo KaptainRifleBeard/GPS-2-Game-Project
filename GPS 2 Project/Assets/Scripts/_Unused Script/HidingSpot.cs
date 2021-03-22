@@ -65,7 +65,7 @@ public class HidingSpot : MonoBehaviour
         {
             searchableObjectWindow.SetActive(true);
             hideWindow.SetActive(true);
-
+            itemList.moveToHide = true;
         }
 
         //if (Vector3.Distance(transform.position, player.transform.position) < 200 && holdButton.holdButton == true && start == false &&

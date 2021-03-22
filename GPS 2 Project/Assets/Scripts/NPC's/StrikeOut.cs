@@ -16,7 +16,7 @@ public class StrikeOut : MonoBehaviour
     public GameObject loseScreenUI;
 
     public bool GetCaught;
-    // Start is called before the first frame update
+
     void Start()
     {
         currSus = 0;

@@ -18,6 +18,7 @@ public class UI_Button : MonoBehaviour
     public GameObject[] cleanWindow;
     public cleaningTaskButton notClicked;
     public HidingSpot hideSpot;
+    public StrikeOut strikeout;
 
     IEnumerator SetToTrue()
     {
@@ -68,6 +69,12 @@ public class UI_Button : MonoBehaviour
             cleanWindow[i].SetActive(false);
             notClicked.clicked = false;
         }
+    }
+
+
+    public void StopGetCaughtBoolean()
+    {
+        strikeout.GetCaught = false;
     }
 
 }
