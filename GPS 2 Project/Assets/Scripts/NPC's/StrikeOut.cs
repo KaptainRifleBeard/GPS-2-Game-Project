@@ -15,6 +15,7 @@ public class StrikeOut : MonoBehaviour
     public Text strikeText;
     public GameObject loseScreenUI;
 
+    public bool GetCaught;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +46,8 @@ public class StrikeOut : MonoBehaviour
         {
             //SceneManager.LoadScene("LoseScreen");
             loseScreenUI.SetActive(true);
+            GetCaught = true;
+
             Time.timeScale = 0f;
         }
 

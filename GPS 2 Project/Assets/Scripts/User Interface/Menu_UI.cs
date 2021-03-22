@@ -29,4 +29,11 @@ public class Menu_UI : MonoBehaviour
     {
         SceneManager.LoadScene("_newMainMenu");
     }
+
+    public void Level1_Complete()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
+
+
 }
