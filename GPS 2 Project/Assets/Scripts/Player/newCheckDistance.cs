@@ -10,6 +10,8 @@ public class newCheckDistance : MonoBehaviour
     public Color highlightColor;
     public List<Color> defaultColor;
 
+ 
+
     public void OnTriggerEnter(Collider collision)
     {
         if (collision.tag == "Player")
@@ -36,6 +38,8 @@ public class newCheckDistance : MonoBehaviour
 
     void Start()
     {
+        
+
         for (int i = 0; i < mat.materials.Length; i++)
         {
             defaultColor.Add(mat.materials[i].color);

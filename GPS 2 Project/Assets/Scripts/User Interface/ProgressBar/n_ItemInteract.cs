@@ -24,6 +24,15 @@ public class n_ItemInteract : MonoBehaviour
     public bool jewlFound;
     public bool activeWindow;
 
+    public float suspicionCoolDown = 2f;
+    bool ableDetect = true;
+
+    private IEnumerator coolDown(float waitTime)
+    {
+
+        yield return new WaitForSeconds(waitTime);
+        ableDetect = true;
+    }
 
     public void InProgress(float time)
     {
@@ -88,6 +97,17 @@ public class n_ItemInteract : MonoBehaviour
         {
             InProgress(myProgressTime);
             StrikeOut.sus = true;
+
+            if (ableDetect == true)
+            {
+                StrikeOut.sus = true;
+            }
+
+            if (StrikeOut.sus == true)
+            {
+                ableDetect = false;
+                StartCoroutine(coolDown(suspicionCoolDown));
+            }
 
         }
         else

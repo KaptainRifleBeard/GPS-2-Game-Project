@@ -10,6 +10,10 @@ public class ButtonDisplay : MonoBehaviour
     public GameObject cleanButton;
     public GameObject hideButton;
 
+    static public bool tutorialcheck = false;
+    static public bool tutorialcheck1 = false;
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Player")
@@ -24,13 +28,21 @@ public class ButtonDisplay : MonoBehaviour
                 {
                     Debug.Log("Task");
                     cleanButton.SetActive(true);
-                    
+                    if (tutorialcheck1 == false)
+                    {
+                        Tutorial.tutorialTrigg2 = true;
+                        tutorialcheck1 = true;
+                    }
                 }
                 else
                 {
                     Debug.Log("Enter");
                     searchButton.SetActive(true);
-
+                    if (tutorialcheck == false)
+                    {
+                        Tutorial.tutorialTrigg = true;
+                        tutorialcheck = true;
+                    }
                 }
             }
         }
@@ -50,7 +62,8 @@ public class ButtonDisplay : MonoBehaviour
 
     void Start()
     {
-        
+        tutorialcheck = false;
+        tutorialcheck1 = false;
     }
 
 

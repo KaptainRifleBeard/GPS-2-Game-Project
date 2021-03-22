@@ -239,15 +239,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 6
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!23 &691249 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 074710fa277b16c45b750face9f499b6, type: 3}
@@ -265,12 +266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 691249}
   highlightColor: {r: 0.13156211, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!1 &4344219 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4123828870394559700, guid: fbd44d36da562144db7d7015ce14307f, type: 3}
@@ -293,12 +291,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 4344221}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!1 &12857228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,12 +1573,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 121826291}
   highlightColor: {r: 0, g: 1, b: 0.048797607, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &121826291 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 55d6cadcdde918b4ba234def53dd544f, type: 3}
@@ -1605,15 +1597,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 6
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1001 &123947466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2043,12 +2036,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 143993300}
   highlightColor: {r: 0.095359564, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &143993300 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 6d4bf9981e03da044b7995b45f3c11c6, type: 3}
@@ -2070,15 +2060,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 3
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &146258430 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4123828870394559700, guid: fbd44d36da562144db7d7015ce14307f, type: 3}
@@ -2101,12 +2092,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 146258432}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!1001 &148855351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3178,13 +3166,14 @@ MonoBehaviour:
   pickUpTime: 5
   fillImage: {fileID: 1706589706}
   text: {fileID: 1772241693}
-  list: {fileID: 1703848555}
+  list: {fileID: 0}
   cleanList: {fileID: 679529879}
   doneKitchen: 0
   doneTable: 0
   doneMBathroom: 0
   doneBathroom: 0
   completedCleaningTask: 0
+  number: 0
 --- !u!114 &274613292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3444,12 +3433,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 284625617}
   highlightColor: {r: 0, g: 1, b: 0.1137526, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &284625617 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 18f86d9955495584aa225492834e253c, type: 3}
@@ -3471,15 +3457,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 3
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1001 &293528395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3592,12 +3579,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 293528401}
   highlightColor: {r: 0.09392464, g: 1, b: 0, a: 1}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &293528401 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
@@ -3619,15 +3603,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1001 &295005892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5360,12 +5345,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 441868983}
   highlightColor: {r: 0.1548717, g: 1, b: 0, a: 1}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &441868983 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d4bfe5a18acb2254eb842904419febab, type: 3}
@@ -5387,15 +5369,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &448597232
 GameObject:
   m_ObjectHideFlags: 0
@@ -5786,12 +5769,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 478627468}
   highlightColor: {r: 0.09392464, g: 1, b: 0, a: 1}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &478627468 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
@@ -5813,15 +5793,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &493615310
 GameObject:
   m_ObjectHideFlags: 0
@@ -6291,12 +6272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 548589298}
   highlightColor: {r: 0.049194574, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &548589298 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 5f4f63cf4488dcd4a91b12024b3717c8, type: 3}
@@ -6318,15 +6296,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &557981936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6787,12 +6766,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 610542079}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!65 &610542078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7748,13 +7724,14 @@ MonoBehaviour:
   pickUpTime: 5
   fillImage: {fileID: 2019429768}
   text: {fileID: 128979317}
-  list: {fileID: 1703848555}
+  list: {fileID: 0}
   cleanList: {fileID: 679529879}
   doneKitchen: 0
   doneTable: 0
   doneMBathroom: 0
   doneBathroom: 0
   completedCleaningTask: 0
+  number: 0
 --- !u!114 &674285320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7870,12 +7847,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cleanList:
   - title: 'Clean the master bathroom '
+    tick: {fileID: 0}
   - title: Clean the Kitchen (counter)
+    tick: {fileID: 0}
   - title: Clean bathroom
+    tick: {fileID: 0}
   - title: 'Clean the dining table '
+    tick: {fileID: 0}
   list: {fileID: 0}
   cleanButton: {fileID: 7936199591888747435, guid: fa8706c981257a64396aa13fd51ff678, type: 3}
   contentPanel_Clean: {fileID: 679529880}
+  taskButton: {fileID: 0}
 --- !u!224 &679529880
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8278,12 +8260,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 697611046}
   highlightColor: {r: 0.16312003, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &697611046 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 3dd558ce57488794495a8442a674a95b, type: 3}
@@ -8305,15 +8284,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &706475071
 GameObject:
   m_ObjectHideFlags: 0
@@ -9512,12 +9492,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 799551647}
   highlightColor: {r: 0.16824007, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &799551647 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: f22fae1a564e57f44abe7647e62ba9a8, type: 3}
@@ -9539,15 +9516,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 6
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &803524904
 GameObject:
   m_ObjectHideFlags: 0
@@ -10514,12 +10492,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 907371871}
   highlightColor: {r: 0.084227204, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &907371871 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 639e5e6dd4ac918448e930090c84e6d7, type: 3}
@@ -10541,15 +10516,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 4
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &909602342
 GameObject:
   m_ObjectHideFlags: 0
@@ -11149,13 +11125,14 @@ MonoBehaviour:
   pickUpTime: 5
   fillImage: {fileID: 1326336252}
   text: {fileID: 1975797393}
-  list: {fileID: 1703848555}
+  list: {fileID: 0}
   cleanList: {fileID: 679529879}
   doneKitchen: 0
   doneTable: 0
   doneMBathroom: 0
   doneBathroom: 0
   completedCleaningTask: 0
+  number: 0
 --- !u!114 &939148541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11528,12 +11505,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 939848837}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!65 &939848830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11559,12 +11533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 939848840}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!65 &939848832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11590,12 +11561,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 939848843}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!65 &939848834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12186,12 +12154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 968695056}
   highlightColor: {r: 0.1548717, g: 1, b: 0, a: 1}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &968695056 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d4bfe5a18acb2254eb842904419febab, type: 3}
@@ -12213,15 +12178,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &975714378
 GameObject:
   m_ObjectHideFlags: 0
@@ -13301,12 +13267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 1068016732}
   highlightColor: {r: 0.22167897, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &1068016732 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 97f9fbc8164195a4abcfb43d2a107bba, type: 3}
@@ -13328,15 +13291,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 6
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1001 &1075733848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13441,12 +13405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 1075733854}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &1075733854 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: db481d59c70b4c745b395bbe5d98c7e7, type: 3}
@@ -15750,12 +15711,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 1220344951}
   highlightColor: {r: 0.084855914, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &1220344951 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 5aae13018c9cd36409a5c48d4968472d, type: 3}
@@ -15777,15 +15735,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &1222878380
 GameObject:
   m_ObjectHideFlags: 0
@@ -17180,12 +17139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 1308963059}
   highlightColor: {r: 0, g: 0.30960584, b: 1, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &1308963059 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: c32049f1aed11c045bebd95c56861bca, type: 3}
@@ -17203,11 +17159,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9357e23ec25aac04c830fd2dd26346d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HidingSpotWindow: {fileID: 2042588038}
-  hidingSpot: {fileID: 1084718602}
+  searchableObjectWindow: {fileID: 0}
+  hideWindow: {fileID: 0}
+  slider: {fileID: 0}
   player: {fileID: 1522844111}
-  hidingOpen: 0
+  button: {fileID: 0}
+  progressBar: {fileID: 0}
+  holdButton: {fileID: 0}
   itemList: {fileID: 803524905}
+  myProgressTime: 0
+  myCurrentTime: 0
+  start: 0
 --- !u!1 &1311945528
 GameObject:
   m_ObjectHideFlags: 0
@@ -17941,8 +17903,10 @@ MonoBehaviour:
   windowClose: {fileID: 2042588038}
   safe: {fileID: 921801769}
   hide: {fileID: 1084718602}
-  stop: 0
+  exitWindow: 0
   itemList: {fileID: 803524905}
+  cleanWindow: []
+  notClicked: {fileID: 0}
 --- !u!114 &1375350386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18312,12 +18276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 1391817682}
   highlightColor: {r: 0.095359564, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &1391817682 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 6d4bf9981e03da044b7995b45f3c11c6, type: 3}
@@ -18339,15 +18300,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 3
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &1394316314
 GameObject:
   m_ObjectHideFlags: 0
@@ -20073,11 +20035,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9357e23ec25aac04c830fd2dd26346d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HidingSpotWindow: {fileID: 2042588038}
-  hidingSpot: {fileID: 1084718602}
+  searchableObjectWindow: {fileID: 0}
+  hideWindow: {fileID: 0}
+  slider: {fileID: 0}
   player: {fileID: 1522844111}
-  hidingOpen: 0
+  button: {fileID: 0}
+  progressBar: {fileID: 0}
+  holdButton: {fileID: 0}
   itemList: {fileID: 803524905}
+  myProgressTime: 0
+  myCurrentTime: 0
+  start: 0
 --- !u!114 &1477519805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20123,12 +20091,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 1477519807}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!1 &1481697397
 GameObject:
   m_ObjectHideFlags: 0
@@ -22302,12 +22267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 1610894190}
   highlightColor: {r: 0.09392464, g: 1, b: 0, a: 1}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &1610894190 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
@@ -22329,15 +22291,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &1621753580
 GameObject:
   m_ObjectHideFlags: 0
@@ -23863,7 +23826,6 @@ MonoBehaviour:
   - {fileID: 1278614173}
   - {fileID: 1989659837}
   player: {fileID: 1522844112}
-  list: {fileID: 679529879}
   num: 0
 --- !u!4 &1703848556
 Transform:
@@ -24814,12 +24776,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 1775540711}
   highlightColor: {r: 0.09801054, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &1775540711 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
@@ -24841,15 +24800,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &1777469992
 GameObject:
   m_ObjectHideFlags: 0
@@ -26924,12 +26884,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 1948757573}
   highlightColor: {r: 0, g: 1, b: 0.016062737, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &1948757573 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: a317b866514be2442b1b34afc8f752b8, type: 3}
@@ -26951,15 +26908,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1001 &1954715847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27665,12 +27623,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 1977089440}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &1977089440 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 99ec6708aff5ccd4d849347e2a146d26, type: 3}
@@ -27692,15 +27647,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &1985663381
 GameObject:
   m_ObjectHideFlags: 0
@@ -27933,12 +27889,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 1996092697}
   highlightColor: {r: 0.03372526, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &1996092697 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d4bfe5a18acb2254eb842904419febab, type: 3}
@@ -27960,15 +27913,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 5
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &2002112549
 GameObject:
   m_ObjectHideFlags: 0
@@ -28390,12 +28344,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 2007322169}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!65 &2007322163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28421,12 +28372,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 2007322172}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!65 &2007322165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28452,12 +28400,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 2007322175}
   highlightColor: {r: 0, g: 0, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!65 &2007322167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28693,13 +28638,14 @@ MonoBehaviour:
   pickUpTime: 5
   fillImage: {fileID: 1222878381}
   text: {fileID: 1858939468}
-  list: {fileID: 1703848555}
+  list: {fileID: 0}
   cleanList: {fileID: 679529879}
   doneKitchen: 0
   doneTable: 0
   doneMBathroom: 0
   doneBathroom: 0
   completedCleaningTask: 0
+  number: 0
 --- !u!114 &2015053494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30395,12 +30341,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1522844111}
   mat: {fileID: 2135116291}
   highlightColor: {r: 0.07630873, g: 1, b: 0, a: 0}
   defaultColor: []
-  searchButton: {fileID: 2090171905}
-  cleanButton: {fileID: 459758234}
 --- !u!23 &2135116291 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 8997c1603b04daa4da6eb9b4686ee1e1, type: 3}
@@ -30422,15 +30365,16 @@ MonoBehaviour:
   safeWindow: {fileID: 803524904}
   slider: {fileID: 1966297775}
   player: {fileID: 1522844112}
+  button: {fileID: 0}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
   myProgressTime: 6
   myCurrentTime: 0
-  suspicionCoolDown: 2
   start: 0
   jewlFound: 0
+  activeWindow: 0
 --- !u!1 &2142513324
 GameObject:
   m_ObjectHideFlags: 0
