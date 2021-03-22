@@ -22,29 +22,21 @@ public class cleaningTaskButton : MonoBehaviour
             if (other.gameObject.name == "bowl 1_small")
             {
                 cleanButton.SetActive(true);
-
-                //cleaningList[0].SetActive(true);
                 num = 1;
             }
-            if (other.gameObject.name == "Kitchen Counter")
+            if (other.gameObject.name == "Cleaning_Puddle")
             {
                 cleanButton.SetActive(true);
-
-                //cleaningList[1].SetActive(true);
                 num = 2;
             }
-            if (other.gameObject.name == "bowl 1")
+            if (other.gameObject.name == "Clean Master Bedroom")
             {
                 cleanButton.SetActive(true);
-
-                //cleaningList[2].SetActive(true);
                 num = 3;
             }
             if (other.gameObject.name == "Dining_Table")
             {
                 cleanButton.SetActive(true);
-
-                //cleaningList[3].SetActive(true);
                 num = 4;
             }
         }

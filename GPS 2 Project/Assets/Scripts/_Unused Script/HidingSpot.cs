@@ -22,50 +22,72 @@ public class HidingSpot : MonoBehaviour
     public bool start;
 
 
+
+
+    public bool clicked;
+
+    public void onClick()
+    {
+        clicked = true;
+    }
+
+
+
+    //public void InProgress(float time)
+    //{
+    //    myCurrentTime -= speed * Time.deltaTime;
+    //    progressBar.SetProgressTime(myCurrentTime, myProgressTime);
+
+    //    if (myCurrentTime <= 0)
+    //    {
+    //        start = false;
+    //        holdButton.holdButton = false;
+
+    //        searchableObjectWindow.SetActive(true);
+    //        hideWindow.SetActive(true);
+    //        button.SetActive(false);
+    //    }
+    //}
+
+
     void Start()
     {
-        myCurrentTime = myProgressTime;
-        progressBar.SetProgressTime(myCurrentTime, myProgressTime);
+        //myCurrentTime = myProgressTime;
+        //progressBar.SetProgressTime(myCurrentTime, myProgressTime);
 
     }
 
-    public void InProgress(float time)
+
+
+    void Update()
     {
-        myCurrentTime -= speed * Time.deltaTime;
-        progressBar.SetProgressTime(myCurrentTime, myProgressTime);
-
-        if (myCurrentTime <= 0)
+        if(clicked)
         {
-            start = false;
-            holdButton.holdButton = false;
-
             searchableObjectWindow.SetActive(true);
             hideWindow.SetActive(true);
-            button.SetActive(false);
-        }
-    }
-
-    private void Update()
-    {
-        if (Vector3.Distance(transform.position, player.transform.position) < 200 && holdButton.holdButton == true && start == false)
-        {
-            myCurrentTime = myProgressTime;
-            start = true;
 
         }
 
-        if (holdButton.holdButton == false)
-        {
-            start = false;
-            slider.SetActive(false);
-        }
+        //if (Vector3.Distance(transform.position, player.transform.position) < 200 && holdButton.holdButton == true && start == false &&
+        //    Tutorial.tutorialTrigg2 == false && Tutorial.tutorialTrigg1 == false && Tutorial.tutorialTrigg == false)
+        //{
+        //    searchableObjectWindow.SetActive(true);
+        //    hideWindow.SetActive(true);
+
+        //}
+
+        //if (holdButton.holdButton == false)
+        //{
+        //    start = false;
+        //    slider.SetActive(false);
+        //}
 
 
-        if (start == true)
-        {
-            itemList.moveToHide = true;
-            InProgress(myProgressTime);
-        }
+        //if (start == true)
+        //{
+        //    itemList.moveToHide = true;
+        //    InProgress(myProgressTime);
+        //}
 
 
     }

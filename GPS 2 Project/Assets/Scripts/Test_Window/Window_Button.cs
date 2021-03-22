@@ -7,6 +7,8 @@ using UnityEngine.Events;
 
 public class Window_Button : MonoBehaviour
 {
+    public GameObject[] destroyGameObject;
+
     public GameObject kitchenWindow;
     public GameObject masterbathWindow;
     public GameObject bathWindow;
@@ -69,6 +71,8 @@ public class Window_Button : MonoBehaviour
                     text.text = "Done";
                     doneMBathroom = true;
                     number = number + 1;
+                    destroyGameObject[0].SetActive(false);
+
                 }
             }
 
@@ -85,6 +89,7 @@ public class Window_Button : MonoBehaviour
                     text.text = "Done";
                     doneKitchen = true;
                     number = number + 1;
+                    destroyGameObject[1].SetActive(false);
 
                 }
             }
@@ -119,6 +124,7 @@ public class Window_Button : MonoBehaviour
                     text.text = "Done";
                     doneTable = true;
                     number = number + 1;
+                    destroyGameObject[2].SetActive(false);
 
                 }
             }

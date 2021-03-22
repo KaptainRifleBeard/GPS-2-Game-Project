@@ -27,22 +27,24 @@ public class ButtonDisplay : MonoBehaviour
                 else if (gameObject.tag == "CleaningTaskObject")
                 {
                     Debug.Log("Task");
-                    cleanButton.SetActive(true);
                     if (tutorialcheck1 == false)
                     {
                         Tutorial.tutorialTrigg2 = true;
                         tutorialcheck1 = true;
                     }
+                    cleanButton.SetActive(true);
+
                 }
                 else
                 {
                     Debug.Log("Enter");
-                    searchButton.SetActive(true);
                     if (tutorialcheck == false)
                     {
                         Tutorial.tutorialTrigg = true;
                         tutorialcheck = true;
                     }
+                    searchButton.SetActive(true);
+
                 }
             }
         }

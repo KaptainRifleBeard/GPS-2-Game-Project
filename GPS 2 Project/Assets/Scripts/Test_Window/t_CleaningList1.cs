@@ -14,26 +14,26 @@ public class t_CleaningList1 : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.name == "shower1.2")
-        {
-            cleaningList[0].SetActive(true);
-            num = 1;
-        }
-        if (other.name == "Kitchen Counter")
-        {
-            cleaningList[1].SetActive(true);
-            num = 2;
-        }
-        if (other.name == "shower1.2_bathroom")
-        {
-            cleaningList[2].SetActive(true);
-            num = 3;
-        }
-        if (other.name == "Dining_Table")
-        {
-            cleaningList[3].SetActive(true);
-            num = 4;
-        }
+        //if (other.name == "shower1.2")
+        //{
+        //    //cleaningList[0].SetActive(true);
+        //    num = 1;
+        //}
+        //if (other.name == "Cleaning_Puddle")
+        //{
+        //    //cleaningList[1].SetActive(true);
+        //    num = 2;
+        //}
+        //if (other.name == "shower1.2_bathroom")
+        //{
+        //    //cleaningList[2].SetActive(true);
+        //    num = 3;
+        //}
+        //if (other.name == "Dining_Table")
+        //{
+        //    //cleaningList[3].SetActive(true);
+        //    num = 4;
+        //}
     }
 
 

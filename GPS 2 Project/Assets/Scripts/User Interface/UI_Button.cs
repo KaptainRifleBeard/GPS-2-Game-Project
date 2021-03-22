@@ -17,6 +17,7 @@ public class UI_Button : MonoBehaviour
     public t_itemList itemList;
     public GameObject[] cleanWindow;
     public cleaningTaskButton notClicked;
+    public HidingSpot hideSpot;
 
     IEnumerator SetToTrue()
     {
@@ -45,7 +46,7 @@ public class UI_Button : MonoBehaviour
         windowClose.SetActive(false);
 
         itemList.moveToHide = false;
-
+        hideSpot.clicked = false;
 
     }
 
