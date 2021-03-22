@@ -12,8 +12,6 @@ public class JobScore : MonoBehaviour
     public static int currScore = 0;
 
     public StrikeOut strikeout;
-    public LevelManager levelmanager;
-
 
     void Start()
     {
