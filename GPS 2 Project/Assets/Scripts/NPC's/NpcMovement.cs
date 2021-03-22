@@ -10,6 +10,7 @@ public class NpcMovement : MonoBehaviour
     public Transform[] points;
     public Transform target;
     public Text dialogueText;
+    public GameObject chatbox;
     static public bool isIdle = false;
     public bool allowTalk = false;
 
@@ -40,6 +41,7 @@ public class NpcMovement : MonoBehaviour
         agent.SetDestination(points[destPoint].position);
 
         dialogueText.gameObject.SetActive(false);
+        chatbox.SetActive(false);
     }
 
 
@@ -126,9 +128,10 @@ public class NpcMovement : MonoBehaviour
 
     void Update()
     {
-        int layerMask = 3;
+        int layerMask = 1 << LayerMask.NameToLayer("Player");
 
         Vector3 textDisplay = Camera.main.WorldToScreenPoint(this.textDisplay.position);
+        chatbox.transform.position = textDisplay;
         dialogueText.transform.position = textDisplay;
 
         if ((isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
@@ -163,23 +166,25 @@ public class NpcMovement : MonoBehaviour
 
 
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(0f, 100, 1), out hit, 50, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(0.5f, 100, 1), out hit, 50, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(-0.5f, 100, 1), out hit, 50, layerMask))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(0f, 0.5f, 1), out hit, 100, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(0.5f, 0.5f, 1), out hit, 100, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1), out hit, 100, layerMask))
         {
 
             if (allowTalk)
             {
                 dialogueText.GetComponent<Text>().text = dialogue[dialogueArr];
+                chatbox.SetActive(true);
                 dialogueText.gameObject.SetActive(true);
                 StartCoroutine(talking(talkDuration));
             }
             else
             {
+                chatbox.SetActive(false);
                 dialogueText.gameObject.SetActive(false);
             }
             Debug.Log("Did Hit");
-            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0, 1) * 50, Color.red);
-            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 50, Color.red);
-            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 50, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0.5f, 1) * 100, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0.5f, 1) * 100, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1) * 100, Color.red);
             //if (isIdle)
             //{
             //    if(!hasTalked)
@@ -201,9 +206,9 @@ public class NpcMovement : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0, 1) * 50, Color.yellow);
-            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0, 1) * 50, Color.yellow);
-            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0, 1) * 50, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0.5f, 1) * 100, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0.5f, 1) * 100, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1) * 100, Color.yellow);
             //Debug.Log("Did not Hit");
             //if (!hasTalked)
             //{
