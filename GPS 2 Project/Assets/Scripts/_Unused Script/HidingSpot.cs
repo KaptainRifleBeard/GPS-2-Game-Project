@@ -12,6 +12,7 @@ public class HidingSpot : MonoBehaviour
     public bool hidingOpen = false;
 
     public t_itemList itemList;
+    static public bool tutorialcheck = false;
 
     void Start()
     {
@@ -33,7 +34,11 @@ public class HidingSpot : MonoBehaviour
                     if (Vector3.Distance(player.position, transform.position) < 120f && hit.collider != null)
                     {
                         Debug.Log(hit.collider);
-
+                        if (tutorialcheck == false)
+                        {
+                            Tutorial.tutorialTrigg1 = true;
+                            tutorialcheck = true;
+                        }
                         HidingSpotWindow.SetActive(true);
                         hidingSpot.SetActive(true);
                         hidingOpen = true;
