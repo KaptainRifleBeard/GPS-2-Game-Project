@@ -10,7 +10,7 @@ public class StrikeOut : MonoBehaviour
     public int maxSus = 3;
     public int currStrike;
     public int maxStrike = 3;
-    static public bool sus = false;
+    public bool sus = false;
     public Text susText;
     public Text strikeText;
     public GameObject loseScreenUI;
@@ -25,25 +25,23 @@ public class StrikeOut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(sus)
+        if ((NpcMovement.isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (NpcMovement.isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT)
+                   || (NpcMovement.isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (NpcMovement.isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
+                   || (NpcMovement.isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (NpcMovement.isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR))
         {
-            if ((NpcMovement.isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (NpcMovement.isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (NpcMovement.isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (NpcMovement.isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
-                || (NpcMovement.isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (NpcMovement.isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR))
+            
+            if (sus)
             {
                 //npc only increases sus when player is in the same room
-                Debug.Log("in same room");
-                currSus += 1;
-                sus = false;
+                Debug.Log("check sus2222 " + sus);
+                //currSus += 1;
+                //sus = false;
             }
+
         }
+        
 
         if(currSus >= maxSus)
-        {
-            currStrike += 1;
-            currSus -= 1;
-        }
-
-        if(currStrike >= maxStrike)
         {
             //SceneManager.LoadScene("LoseScreen");
             loseScreenUI.SetActive(true);
@@ -51,7 +49,7 @@ public class StrikeOut : MonoBehaviour
         }
 
         susText.GetComponent<Text>().text = "Suspicion level: " + currSus.ToString() + "/" + maxSus.ToString();
-        strikeText.GetComponent<Text>().text = "Strike Out: " + currStrike.ToString() + "/" + maxStrike.ToString();
+        //strikeText.GetComponent<Text>().text = "Strike Out: " + currStrike.ToString() + "/" + maxStrike.ToString();
 
     }
 }

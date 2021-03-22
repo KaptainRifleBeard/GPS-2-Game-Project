@@ -26,7 +26,6 @@ public class ButtonDisplay : MonoBehaviour
                 }
                 else if (gameObject.tag == "CleaningTaskObject")
                 {
-                    Debug.Log("Task");
                     if (tutorialcheck1 == false)
                     {
                         Tutorial.tutorialTrigg2 = true;
@@ -37,7 +36,7 @@ public class ButtonDisplay : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Enter");
+
                     if (tutorialcheck == false)
                     {
                         Tutorial.tutorialTrigg = true;
@@ -54,7 +53,6 @@ public class ButtonDisplay : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            Debug.Log("player exit");
             searchButton.SetActive(false);
             cleanButton.SetActive(false);
             hideButton.SetActive(false);

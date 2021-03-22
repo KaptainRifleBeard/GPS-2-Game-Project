@@ -137,7 +137,7 @@ public class NpcMovement : MonoBehaviour
         if ((isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
             || (isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR))
         {
-            Debug.Log("Same room together");
+            //Debug.Log("Same room together");
             //if (isIdle)
             //{
                 if (!hasTalked)

@@ -10,11 +10,13 @@ public class n_ItemInteract : MonoBehaviour
     public GameObject slider;
     public GameObject player;
     public GameObject button;
+    public GameObject npc;
 
     public n_PorgressBar progressBar;
     public UI_Button stop;
     public t_itemList startSpawn;
     public n_searchButtonHold holdButton;
+    public StrikeOut strike;
 
     public float myProgressTime;
     public float myCurrentTime;
@@ -26,12 +28,13 @@ public class n_ItemInteract : MonoBehaviour
 
     public float suspicionCoolDown = 2f;
     bool ableDetect = true;
+    int i = 0;
 
     private IEnumerator coolDown(float waitTime)
     {
-
         yield return new WaitForSeconds(waitTime);
         ableDetect = true;
+        i = 0;
     }
 
     public void InProgress(float time)
@@ -62,8 +65,7 @@ public class n_ItemInteract : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) < 200 && holdButton.holdButton == true && start == false &&
-            Tutorial.tutorialTrigg2 == false && Tutorial.tutorialTrigg1 == false && Tutorial.tutorialTrigg == false)
+        if (Vector3.Distance(transform.position, player.transform.position) < 200 && holdButton.holdButton == true && start == false)
         {
             if (gameObject.name == "King sized bed")
             {
@@ -76,7 +78,6 @@ public class n_ItemInteract : MonoBehaviour
             else
             {
                 myCurrentTime = myProgressTime;
-
                 jewlFound = false;
 
                 start = true;
@@ -100,6 +101,7 @@ public class n_ItemInteract : MonoBehaviour
         }
         else
         {
+            strike.sus = false;
             myCurrentTime = myProgressTime;
         }
 
@@ -110,40 +112,33 @@ public class n_ItemInteract : MonoBehaviour
             start = false;
             startSpawn.start = false;
             activeWindow = false;
+            strike.sus = false;
 
             slider.SetActive(false);
 
         }
 
+        if((Vector3.Distance(transform.position, npc.transform.position) < 400 && start == true) || 
+            (Vector3.Distance(transform.position, npc.transform.position) < 400 && activeWindow == true))
+        {
+            if (i < 1)
+            {
+                strike.currSus += 1;
 
+                if (ableDetect == true)
+                {
+                    strike.sus = true;
+                    i++;
+                }
+            }
+            if (strike.sus == true)
+            {
+                ableDetect = false;
+                StartCoroutine(coolDown(suspicionCoolDown));
+            }
+        }
 
-
-       
-        ////for ai
-        //if (start || activeWindow)
-        //{
-        //    Debug.Log("ai sus" + StrikeOut.sus);
-
-        //    StrikeOut.sus = true;
-
-        //    if (ableDetect == true)
-        //    {
-        //        Debug.Log("ai detecting");
-        //        StrikeOut.sus = true;
-        //    }
-
-        //    if (StrikeOut.sus == true)
-        //    {
-        //        ableDetect = false;
-        //        StartCoroutine(coolDown(suspicionCoolDown));
-        //    }
-        //}
-        //else
-        //{
-        //    StrikeOut.sus = false;
-
-        //}
-
+        
 
     }
 

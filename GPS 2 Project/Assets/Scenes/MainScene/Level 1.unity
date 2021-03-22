@@ -392,50 +392,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11416710}
   m_CullTransparentMesh: 1
---- !u!1 &12857228
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 12857229}
-  - component: {fileID: 12857230}
-  m_Layer: 10
-  m_Name: Store
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &12857229
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12857228}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 30, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 385535240}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &12857230
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12857228}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 240.77243, y: 585.2146, z: 72.87816}
-  m_Center: {x: 514.0891, y: 25.292908, z: 376.4605}
 --- !u!1 &13739466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,10 +2427,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 3
   myCurrentTime: 0
   start: 0
@@ -2646,6 +2604,92 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fdcb3aa9eeddec6488c09c4eae1b0bba, type: 3}
   m_PrefabInstance: {fileID: 148855351}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &149621810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 149621811}
+  - component: {fileID: 149621815}
+  - component: {fileID: 149621814}
+  - component: {fileID: 149621813}
+  - component: {fileID: 149621812}
+  m_Layer: 0
+  m_Name: LivingRoom
+  m_TagString: LivingRoom
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &149621811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149621810}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 39, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1352920017}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &149621812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149621810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 275.2639, y: 541.563, z: 427.0241}
+  m_Center: {x: 488.04575, y: 0, z: 111.22474}
+--- !u!65 &149621813
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149621810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 239.47774, y: 541.563, z: 78.15532}
+  m_Center: {x: 479.95718, y: 0, z: 464.5492}
+--- !u!65 &149621814
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149621810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 173.98672, y: 541.563, z: 580.7843}
+  m_Center: {x: 292.49808, y: 0, z: 190.7265}
+--- !u!65 &149621815
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149621810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 541.56305, y: 585.2146, z: 95.984406}
+  m_Center: {x: 363.69397, y: 25.292908, z: 515.68164}
 --- !u!1 &158897529
 GameObject:
   m_ObjectHideFlags: 0
@@ -4542,10 +4586,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 3
   myCurrentTime: 0
   start: 0
@@ -4797,10 +4843,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -5896,55 +5944,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381090993}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &385535238
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 385535240}
-  - component: {fileID: 385535239}
-  m_Layer: 6
-  m_Name: BedroomArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &385535239
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385535238}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 375.15375, y: 585.2146, z: 260.134}
-  m_Center: {x: -5.4708476, y: 25.292908, z: -36.358105}
---- !u!4 &385535240
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385535238}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -308, y: -289, z: -344}
-  m_LocalScale: {x: 1.4632, y: 1, z: 1.7389814}
-  m_Children:
-  - {fileID: 1517616004}
-  - {fileID: 718406345}
-  - {fileID: 2045533899}
-  - {fileID: 12857229}
-  - {fileID: 810206670}
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &403610406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6911,10 +6910,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -7998,10 +7999,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -8862,10 +8865,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -9508,8 +9513,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594372225}
-  m_LocalRotation: {x: 0.3069639, y: -0.0075978376, z: 0.0024506587, w: 0.9516877}
-  m_LocalPosition: {x: 101.99153, y: 229.7, z: -601.96814}
+  m_LocalRotation: {x: 0.30696383, y: -0.007597927, z: 0.0024506869, w: 0.95168775}
+  m_LocalPosition: {x: 101.99158, y: 229.7, z: -601.96814}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10103,6 +10108,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637616141}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &639348573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639348574}
+  - component: {fileID: 639348575}
+  m_Layer: 0
+  m_Name: BedroomToilet
+  m_TagString: BedroomToilet
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &639348574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639348573}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1352920017}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &639348575
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639348573}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 375.15375, y: 585.2146, z: 124.04366}
+  m_Center: {x: -5.4708476, y: 25.292908, z: 172.25267}
 --- !u!1 &645762609
 GameObject:
   m_ObjectHideFlags: 0
@@ -10182,6 +10231,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645762609}
   m_CullTransparentMesh: 1
+--- !u!1 &652094949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652094950}
+  - component: {fileID: 652094951}
+  m_Layer: 0
+  m_Name: TeenRoom
+  m_TagString: TeenRoom
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652094950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652094949}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1352920017}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &652094951
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652094949}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 375.15375, y: 585.2146, z: 198.3537}
+  m_Center: {x: -5.4708476, y: 25.292908, z: 349.5152}
 --- !u!1 &653859149
 GameObject:
   m_ObjectHideFlags: 0
@@ -11267,10 +11360,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 6
   myCurrentTime: 0
   start: 0
@@ -11552,10 +11647,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -11837,50 +11934,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708427460}
   m_CullTransparentMesh: 1
---- !u!1 &718406344
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 718406345}
-  - component: {fileID: 718406346}
-  m_Layer: 8
-  m_Name: TeenRoom
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &718406345
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718406344}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 42, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 385535240}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &718406346
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718406344}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 375.15375, y: 585.2146, z: 198.3537}
-  m_Center: {x: -5.4708476, y: 25.292908, z: 349.5152}
 --- !u!1 &718445241 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 76990d36636f2d746a14fc9ccb15a583, type: 3}
@@ -12830,92 +12883,6 @@ MonoBehaviour:
   num: 0
   cleanButton: {fileID: 459758234}
   clicked: 0
---- !u!1 &810206669
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 810206670}
-  - component: {fileID: 810206674}
-  - component: {fileID: 810206673}
-  - component: {fileID: 810206672}
-  - component: {fileID: 810206671}
-  m_Layer: 11
-  m_Name: LivingRoom
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &810206670
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810206669}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 78, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 385535240}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &810206671
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810206669}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 275.2639, y: 541.563, z: 427.0241}
-  m_Center: {x: 488.04575, y: 0, z: 111.22474}
---- !u!65 &810206672
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810206669}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 239.47774, y: 541.563, z: 78.15532}
-  m_Center: {x: 479.95718, y: 0, z: 464.5492}
---- !u!65 &810206673
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810206669}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 173.98672, y: 541.563, z: 580.7843}
-  m_Center: {x: 292.49808, y: 0, z: 190.7265}
---- !u!65 &810206674
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810206669}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 541.56305, y: 585.2146, z: 95.984406}
-  m_Center: {x: 363.69397, y: 25.292908, z: 515.68164}
 --- !u!1001 &811935925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13200,50 +13167,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &876018440
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 876018442}
-  - component: {fileID: 876018441}
-  m_Layer: 6
-  m_Name: RoomArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &876018441
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876018440}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.1619406, y: 1.9508657, z: 3.9844894}
-  m_Center: {x: -0.7602749, y: 0.41092587, z: 3.8069477}
---- !u!4 &876018442
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876018440}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.76, y: -3.2573576, z: 8.2}
-  m_LocalScale: {x: 1.4632, y: 1, z: 1.7389814}
-  m_Children: []
-  m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &881644972 stripped
@@ -13273,10 +13196,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 6
   myCurrentTime: 0
   start: 0
@@ -14033,10 +13958,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 4
   myCurrentTime: 0
   start: 0
@@ -15601,10 +15528,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -15792,10 +15721,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 6
   myCurrentTime: 0
   start: 0
@@ -16985,10 +16916,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 6
   myCurrentTime: 0
   start: 0
@@ -17797,7 +17730,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106120095}
-  m_LocalRotation: {x: 0.28470966, y: -0.0076528676, z: 0.0022729912, w: 0.9585806}
+  m_LocalRotation: {x: 0.28470963, y: -0.007652996, z: 0.002273029, w: 0.9585806}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -18605,13 +18538,57 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142972142}
-  m_LocalRotation: {x: 0.3069639, y: -0.0075978665, z: 0.0024506683, w: 0.9516877}
+  m_LocalRotation: {x: 0.30696386, y: -0.007597926, z: 0.002450687, w: 0.9516877}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 326348024}
   m_Father: {fileID: 1918028792}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1166145549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1166145551}
+  - component: {fileID: 1166145550}
+  m_Layer: 0
+  m_Name: RoomArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1166145550
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166145549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.1619406, y: 1.9508657, z: 3.9844894}
+  m_Center: {x: -0.7602749, y: 0.41092587, z: 3.8069477}
+--- !u!4 &1166145551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166145549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.76, y: -3.2573576, z: 8.2}
+  m_LocalScale: {x: 1.4632, y: 1, z: 1.7389814}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1167398161
 GameObject:
@@ -19919,10 +19896,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -21200,7 +21179,7 @@ Transform:
   - {fileID: 1766399627}
   - {fileID: 667110523}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1291730369
 PrefabInstance:
@@ -22152,6 +22131,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346891967}
   m_CullTransparentMesh: 1
+--- !u!1 &1352920015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1352920017}
+  - component: {fileID: 1352920016}
+  m_Layer: 0
+  m_Name: BedroomArea
+  m_TagString: Bedroom
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1352920016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352920015}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 375.15375, y: 585.2146, z: 260.134}
+  m_Center: {x: -5.4708476, y: 25.292908, z: -36.358105}
+--- !u!4 &1352920017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352920015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -308, y: -289, z: -344}
+  m_LocalScale: {x: 1.4632, y: 1, z: 1.7389814}
+  m_Children:
+  - {fileID: 639348574}
+  - {fileID: 652094950}
+  - {fileID: 2053325332}
+  - {fileID: 1848827539}
+  - {fileID: 149621811}
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372568170
 GameObject:
   m_ObjectHideFlags: 0
@@ -23037,10 +23065,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 3
   myCurrentTime: 0
   start: 0
@@ -25119,50 +25149,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512959329}
   m_CullTransparentMesh: 1
---- !u!1 &1517616003
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1517616004}
-  - component: {fileID: 1517616005}
-  m_Layer: 7
-  m_Name: BedroomToilet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1517616004
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517616003}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 45, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 385535240}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1517616005
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517616003}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 375.15375, y: 585.2146, z: 124.04366}
-  m_Center: {x: -5.4708476, y: 25.292908, z: 172.25267}
 --- !u!1 &1518818607
 GameObject:
   m_ObjectHideFlags: 0
@@ -25439,7 +25425,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1527019928
 GameObject:
@@ -27518,10 +27504,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -28746,6 +28734,7 @@ MonoBehaviour:
   maxSus: 3
   currStrike: 0
   maxStrike: 3
+  sus: 0
   susText: {fileID: 372623373}
   strikeText: {fileID: 1397323085}
   loseScreenUI: {fileID: 1322256934}
@@ -28842,7 +28831,7 @@ Transform:
   - {fileID: 761171141}
   - {fileID: 1198268910}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1675173253
 PrefabInstance:
@@ -29427,7 +29416,7 @@ Transform:
   - {fileID: 1937922230}
   - {fileID: 790380422}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1706589705
 GameObject:
@@ -29649,7 +29638,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719084847}
-  m_LocalRotation: {x: 0.2623981, y: -0.007703585, z: 0.0020948802, w: 0.9649267}
+  m_LocalRotation: {x: 0.26239812, y: -0.0077036493, z: 0.0020948981, w: 0.9649267}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -30574,10 +30563,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -31087,6 +31078,50 @@ MonoBehaviour:
   mat: {fileID: 1848791957}
   highlightColor: {r: 1, g: 0.448906, b: 0, a: 1}
   defaultColor: []
+--- !u!1 &1848827538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1848827539}
+  - component: {fileID: 1848827540}
+  m_Layer: 0
+  m_Name: Store
+  m_TagString: Store
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1848827539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848827538}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1352920017}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1848827540
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848827538}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 240.77243, y: 585.2146, z: 72.87816}
+  m_Center: {x: 514.0891, y: 25.292908, z: 376.4605}
 --- !u!1 &1854128984
 GameObject:
   m_ObjectHideFlags: 0
@@ -32299,7 +32334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918028789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 101.99153, y: 229.7, z: -601.96814}
+  m_LocalPosition: {x: 101.99158, y: 229.7, z: -601.96814}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1142972144}
@@ -32866,10 +32901,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -33629,10 +33666,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -34001,10 +34040,12 @@ MonoBehaviour:
   slider: {fileID: 1966297775}
   player: {fileID: 808980739}
   button: {fileID: 2090171905}
+  npc: {fileID: 1669667276}
   progressBar: {fileID: 1375350386}
   stop: {fileID: 1375350385}
   startSpawn: {fileID: 803524905}
   holdButton: {fileID: 2090171910}
+  strike: {fileID: 1669667277}
   myProgressTime: 5
   myCurrentTime: 0
   start: 0
@@ -35547,50 +35588,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042643852}
   m_CullTransparentMesh: 1
---- !u!1 &2045533898
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2045533899}
-  - component: {fileID: 2045533900}
-  m_Layer: 9
-  m_Name: ShowerRoom
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2045533899
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045533898}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 39, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 385535240}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2045533900
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045533898}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 263.814, y: 585.2146, z: 103.87396}
-  m_Center: {x: -61.14074, y: 25.292908, z: 514.4315}
 --- !u!1 &2049356423
 GameObject:
   m_ObjectHideFlags: 0
@@ -35670,6 +35667,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049356423}
   m_CullTransparentMesh: 1
+--- !u!1 &2053325331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2053325332}
+  - component: {fileID: 2053325333}
+  m_Layer: 0
+  m_Name: ShowerRoom
+  m_TagString: ShowerRoom
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2053325332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053325331}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1352920017}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2053325333
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053325331}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 263.814, y: 585.2146, z: 103.87396}
+  m_Center: {x: -61.14074, y: 25.292908, z: 514.4315}
 --- !u!1 &2055340847
 GameObject:
   m_ObjectHideFlags: 0
@@ -36443,7 +36484,7 @@ Transform:
   - {fileID: 1589863732}
   - {fileID: 476204889}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2143287093
 PrefabInstance:
