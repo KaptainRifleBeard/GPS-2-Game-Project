@@ -58,7 +58,6 @@ public class n_ItemInteract : MonoBehaviour
     {
         myCurrentTime = myProgressTime;
         progressBar.SetProgressTime(myCurrentTime, myProgressTime);
-
     }
 
     private void Update()
@@ -66,17 +65,18 @@ public class n_ItemInteract : MonoBehaviour
         if (Vector3.Distance(transform.position, player.transform.position) < 200 && holdButton.holdButton == true && start == false &&
             Tutorial.tutorialTrigg2 == false && Tutorial.tutorialTrigg1 == false && Tutorial.tutorialTrigg == false)
         {
-            myCurrentTime = myProgressTime;
-
-
             if (gameObject.name == "King sized bed")
             {
+                myCurrentTime = myProgressTime;
+
                 jewlFound = true;
                 start = true;
 
             }
             else
             {
+                myCurrentTime = myProgressTime;
+
                 jewlFound = false;
 
                 start = true;
@@ -84,38 +84,25 @@ public class n_ItemInteract : MonoBehaviour
 
             }
 
-
         }
+        
+
 
         if (holdButton.holdButton == false)
         {
             start = false;
             slider.SetActive(false);
         }
-
-
         if (start == true)
         {
             InProgress(myProgressTime);
-            StrikeOut.sus = true;
-
-            if (ableDetect == true)
-            {
-                StrikeOut.sus = true;
-            }
-
-            if (StrikeOut.sus == true)
-            {
-                ableDetect = false;
-                StartCoroutine(coolDown(suspicionCoolDown));
-            }
-
+           
         }
         else
         {
-            StrikeOut.sus = false;
-
+            myCurrentTime = myProgressTime;
         }
+
 
 
         if (stop.exitWindow == true)
@@ -127,7 +114,35 @@ public class n_ItemInteract : MonoBehaviour
             slider.SetActive(false);
 
         }
-        
+
+
+
+
+       
+        ////for ai
+        //if (start || activeWindow)
+        //{
+        //    Debug.Log("ai sus" + StrikeOut.sus);
+
+        //    StrikeOut.sus = true;
+
+        //    if (ableDetect == true)
+        //    {
+        //        Debug.Log("ai detecting");
+        //        StrikeOut.sus = true;
+        //    }
+
+        //    if (StrikeOut.sus == true)
+        //    {
+        //        ableDetect = false;
+        //        StartCoroutine(coolDown(suspicionCoolDown));
+        //    }
+        //}
+        //else
+        //{
+        //    StrikeOut.sus = false;
+
+        //}
 
 
     }

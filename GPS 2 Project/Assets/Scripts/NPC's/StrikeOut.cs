@@ -31,6 +31,7 @@ public class StrikeOut : MonoBehaviour
                 || (NpcMovement.isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (NpcMovement.isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR))
             {
                 //npc only increases sus when player is in the same room
+                Debug.Log("in same room");
                 currSus += 1;
                 sus = false;
             }
