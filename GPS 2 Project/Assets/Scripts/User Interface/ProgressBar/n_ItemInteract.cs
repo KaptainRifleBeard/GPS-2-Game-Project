@@ -9,6 +9,7 @@ public class n_ItemInteract : MonoBehaviour
     public GameObject safeWindow;
     public GameObject slider;
     public GameObject player;
+    public GameObject button;
 
     public n_PorgressBar progressBar;
     public UI_Button stop;
@@ -21,6 +22,26 @@ public class n_ItemInteract : MonoBehaviour
     private int speed = 1;
     public bool start;
     public bool jewlFound;
+    public bool activeWindow;
+
+
+    public void InProgress(float time)
+    {
+        myCurrentTime -= speed * Time.deltaTime;
+        progressBar.SetProgressTime(myCurrentTime, myProgressTime);
+
+        if (myCurrentTime <= 0)
+        {
+            start = false;
+            holdButton.holdButton = false;
+
+            activeWindow = true;
+            searchableObjectWindow.SetActive(true);
+            safeWindow.SetActive(true);
+            button.SetActive(false);
+        }
+
+    }
 
 
 
@@ -31,103 +52,92 @@ public class n_ItemInteract : MonoBehaviour
 
     }
 
-    public void InProgress(float time)
-    {
-        if (holdButton.holding == true)
-        {
-            slider.SetActive(true);
-
-            myCurrentTime -= speed * Time.deltaTime;
-            progressBar.SetProgressTime(myCurrentTime, myProgressTime);
-
-            if (myCurrentTime <= 0)
-            {
-                searchableObjectWindow.SetActive(true);
-                safeWindow.SetActive(true);
-
-                start = false;
-                startSpawn.start = false;
-                slider.SetActive(false);
-
-               
-            }
-        }
-        else
-        {
-            slider.SetActive(false);
-            start = false;
-
-            searchableObjectWindow.SetActive(false);
-            safeWindow.SetActive(false);
-        }
-        
-       
-    }
-
     private void Update()
     {
-        //if(start == false)
-        //{
-        //    myCurrentTime = myProgressTime;
-
-        //    if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
-        //    {
-        //        Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-        //        RaycastHit hit;
-
-        //        if (Physics.Raycast(ray, out hit))
-        //        {
-        //            if (hit.collider != null && Vector3.Distance(player.transform.position, transform.position) < 120f)
-        //            {
-
-        //                if (hit.collider.name == "Master Bed")
-        //                {
-        //                    jewlFound = true;
-        //                }
-        //                else
-        //                {
-        //                    start = true;
-        //                    startSpawn.start = true;
-
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-
-
-
-        if(!start)
+        if (Vector3.Distance(transform.position, player.transform.position) < 200 && holdButton.holdButton == true && start == false)
         {
-            start = true;
-            startSpawn.start = true;
-
             myCurrentTime = myProgressTime;
-            StrikeOut.sus = false;
 
-            
+
+            if (gameObject.name == "King sized bed")
+            {
+                jewlFound = true;
+                start = true;
+
+            }
+            else
+            {
+                jewlFound = false;
+
+                start = true;
+                startSpawn.start = true;
+
+            }
+
+
         }
-        if (start)
+
+        if (holdButton.holdButton == false)
+        {
+            start = false;
+            slider.SetActive(false);
+        }
+
+
+        if (start == true)
         {
             InProgress(myProgressTime);
             StrikeOut.sus = true;
 
         }
-
-        //if (start && Vector3.Distance(player.transform.position, transform.position) > 120f)
-        //{
-        //    slider.SetActive(false);
-        //    start = false;
-        //}
-
-        if (stop.stop == true)
+        else
         {
-            slider.SetActive(false);
-            start = false;
+            StrikeOut.sus = false;
 
         }
+
+
+        if (stop.exitWindow == true)
+        {
+            start = false;
+            startSpawn.start = false;
+            activeWindow = false;
+
+            slider.SetActive(false);
+
+        }
+        
+
 
     }
 
 
 }
+//if(start == false)
+//{
+//    myCurrentTime = myProgressTime;
+
+//    if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+//    {
+//        Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+//        RaycastHit hit;
+
+//        if (Physics.Raycast(ray, out hit))
+//        {
+//            if (hit.collider != null && Vector3.Distance(player.transform.position, transform.position) < 120f)
+//            {
+
+//                if (hit.collider.name == "Master Bed")
+//                {
+//                    jewlFound = true;
+//                }
+//                else
+//                {
+//                    start = true;
+//                    startSpawn.start = true;
+
+//                }
+//            }
+//        }
+//    }
+//}

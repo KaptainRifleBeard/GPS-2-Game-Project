@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class t_CleanData
 {
     public string title;
+    public Sprite tick;
 
 }
 public class t_CleaningList : MonoBehaviour
@@ -17,6 +18,14 @@ public class t_CleaningList : MonoBehaviour
     public t_CleaningList1 list;
     public GameObject cleanButton;
     public Transform contentPanel_Clean;
+
+    public Window_Button taskButton;
+
+    public void RefreshDisplay()
+    {
+        AddCleanTask();
+    }
+
 
     public void AddCleanTask()
     {
@@ -31,7 +40,10 @@ public class t_CleaningList : MonoBehaviour
         }
 
     }
-
+    public void RemoveButton()
+    {
+       
+    }
 
     public void RemoveCleanTask(t_CleanData itemRemove, t_CleaningList panelList)
     {
@@ -44,6 +56,7 @@ public class t_CleaningList : MonoBehaviour
         }
     }
 
+
     void Start()
     {
         AddCleanTask();
@@ -52,6 +65,6 @@ public class t_CleaningList : MonoBehaviour
 
     void Update()
     {
-       
+
     }
 }

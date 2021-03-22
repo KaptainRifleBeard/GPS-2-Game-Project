@@ -14,14 +14,15 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        masterBathWindow.GetComponent<Window_Button>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (masterBathWindow.doneMBathroom == true && bathWindow.doneBathroom == true && tableWindow.doneTable == true && kitchenWindow.doneKitchen == true && itemList.gotTheJewl == true)
+        if (masterBathWindow.doneBathroom == true && bathWindow.doneMBathroom == true && tableWindow.doneTable == true 
+            && kitchenWindow.doneKitchen == true && itemList.gotTheJewl == true)
         {
             SceneManager.LoadScene("Level1_CompleteScreen");
         }

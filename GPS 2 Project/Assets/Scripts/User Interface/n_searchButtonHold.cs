@@ -7,7 +7,6 @@ using UnityEngine.Events;
 public class n_searchButtonHold : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 {
     public bool holdButton = false;
-    public bool holding = false;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -24,14 +23,6 @@ public class n_searchButtonHold : MonoBehaviour, IPointerUpHandler, IPointerDown
 
     void Update()
     {
-        if(holdButton == true)
-        {
-            holding = true;
-        }
-        if(holdButton == false)
-        {
-            holding = false;
 
-        }
     }
 }

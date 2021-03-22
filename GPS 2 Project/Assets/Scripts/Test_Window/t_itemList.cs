@@ -21,10 +21,10 @@ public class t_itemList : MonoBehaviour
     public Transform contentPanel_Pocket;
     public Transform contentPanel_Hide;
 
-    public bool moveToHide = false;
-    public bool showJew = false;
-    public bool start = false;
-    public bool gotTheJewl = false;
+    public bool moveToHide;
+    public bool showJew;
+    public bool start;
+    public bool gotTheJewl;
 
     public int pocket_spacecount = 0;
     public int hide_spacecount = 0;
@@ -39,11 +39,11 @@ public class t_itemList : MonoBehaviour
 
     public void t_AddSafeButton() //to show random list
     {
-        if (!showJew)
+        if(!showJew)
         {
-            int rand = Random.Range(0, item_safe.Count);
+            int rand = Random.Range(1, item_safe.Count - 2);
 
-            for (int j = 0; j < rand; j++)  
+            for (int j = 0; j < rand; j++)
             {
                 t_ItemData item = item_safe[j];
                 GameObject newButton = Instantiate(safeButton, transform.parent);
@@ -51,9 +51,13 @@ public class t_itemList : MonoBehaviour
 
                 t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
                 button.SetUp(item, this);
+
             }
             start = false;
+
         }
+
+
     }
 
     public void JewelFound()
@@ -66,8 +70,6 @@ public class t_itemList : MonoBehaviour
 
             t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
             button.SetUp(item, this);
-            start = false;
-
             i++;
         }
        
@@ -161,7 +163,6 @@ public class t_itemList : MonoBehaviour
 
     void Start()
     {
-        t_AddSafeButton();
 
     }
 
@@ -171,16 +172,20 @@ public class t_itemList : MonoBehaviour
         GameObject g = GameObject.Find("King sized bed");
         n_ItemInteract interact = g.GetComponent<n_ItemInteract>();
 
-        if(interact.jewlFound == true && start == true && i < 1)
+        if(interact.jewlFound == true  && i < 1)
         {
+            Debug.Log("j found");
             showJew = true;
             JewelFound();
 
         }
+        
 
         if (start == true && !showJew)
         {
+
             t_AddSafeButton();
+
         }
 
 

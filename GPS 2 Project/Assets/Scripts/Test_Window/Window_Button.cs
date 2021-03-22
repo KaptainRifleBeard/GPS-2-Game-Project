@@ -21,8 +21,7 @@ public class Window_Button : MonoBehaviour
     public Image fillImage;
     public Text text;
 
-
-    public t_CleaningList1 list;
+    public cleaningTaskButton list;
     public t_CleaningList cleanList;
 
     public bool doneKitchen;
@@ -31,6 +30,7 @@ public class Window_Button : MonoBehaviour
     public bool doneBathroom;
 
     public bool completedCleaningTask;
+    public int number = 0;
 
     public void OnPointerDown()
     {
@@ -68,6 +68,7 @@ public class Window_Button : MonoBehaviour
                 {
                     text.text = "Done";
                     doneMBathroom = true;
+                    number = number + 1;
                 }
             }
 
@@ -83,6 +84,8 @@ public class Window_Button : MonoBehaviour
                 {
                     text.text = "Done";
                     doneKitchen = true;
+                    number = number + 1;
+
                 }
             }
 
@@ -98,6 +101,8 @@ public class Window_Button : MonoBehaviour
                 {
                     text.text = "Done";
                     doneBathroom = true;
+                    number = number + 1;
+
                 }
             }
             if (list.num == 4)
@@ -113,15 +118,22 @@ public class Window_Button : MonoBehaviour
                 {
                     text.text = "Done";
                     doneTable = true;
+                    number = number + 1;
+
                 }
             }
 
         }
 
-        if(doneBathroom == true && doneKitchen == true && doneMBathroom == true && doneTable == true)
+        if(number == 4)
         {
             completedCleaningTask = true;
         }
+
+        //if(doneBathroom == true && doneKitchen == true && doneMBathroom == true && doneTable == true)
+        //{
+        //    completedCleaningTask = true;
+        //}
 
     }
 

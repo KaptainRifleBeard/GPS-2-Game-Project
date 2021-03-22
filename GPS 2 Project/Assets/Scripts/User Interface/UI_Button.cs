@@ -13,20 +13,22 @@ public class UI_Button : MonoBehaviour
     public GameObject safe;
     public GameObject hide;
 
-    public bool stop = false;
+    public bool exitWindow = false;
     public t_itemList itemList;
+    public GameObject[] cleanWindow;
+    public cleaningTaskButton notClicked;
 
     IEnumerator SetToTrue()
     {
         yield return new WaitForSeconds(0.5f);
-        stop = false;
+        exitWindow = false;
     }
 
     public void Safe_ExitButton()
     {
         safe.SetActive(false);
         windowClose.SetActive(false);
-        stop = true;
+        exitWindow = true;
 
         foreach (Transform child in contentPanel_Safe)
         {
@@ -58,6 +60,13 @@ public class UI_Button : MonoBehaviour
     {
         TaskBoard.SetActive(false);
     }
+    public void ExitCleaningWindow()
+    {
+        for(int i = 0; i < cleanWindow.Length; i++)
+        {
+            cleanWindow[i].SetActive(false);
+            notClicked.clicked = false;
+        }
+    }
 
-   
 }

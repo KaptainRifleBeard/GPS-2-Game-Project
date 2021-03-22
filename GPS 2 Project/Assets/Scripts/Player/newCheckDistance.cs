@@ -10,9 +10,9 @@ public class newCheckDistance : MonoBehaviour
     public Color highlightColor;
     public List<Color> defaultColor;
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider collision)
     {
-        if (collision.collider.tag == "Player")
+        if (collision.tag == "Player")
         {
             for (int i = 0; i < mat.materials.Length; i++)
             {
@@ -22,7 +22,7 @@ public class newCheckDistance : MonoBehaviour
     }
 
 
-    public void OnCollisionExit(Collision collision)
+    public void OnTriggerExit(Collider collision)
     {
         if(gameObject.tag != "CleaningTaskObject")
         {

@@ -4,34 +4,49 @@ using UnityEngine;
 
 public class ButtonDisplay : MonoBehaviour
 {
+    public Transform target;
+
     public GameObject searchButton;
     public GameObject cleanButton;
+    public GameObject hideButton;
 
-    public void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.tag == "Player")
+        if (other.gameObject.name == "Player")
         {
-            if (gameObject.tag == "CleaningTaskObject")
+            if (Vector3.Distance(transform.position, target.position) < 200)
             {
-                Debug.Log("Task");
-                cleanButton.SetActive(true);
+                if (gameObject.name == "Cleaning cart (Hiding spot)")
+                {
+                    hideButton.SetActive(true);
+                }
+                else if (gameObject.tag == "CleaningTaskObject")
+                {
+                    Debug.Log("Task");
+                    cleanButton.SetActive(true);
+                    
+                }
+                else
+                {
+                    Debug.Log("Enter");
+                    searchButton.SetActive(true);
 
+                }
             }
-            else
-            {
-                searchButton.SetActive(true);
-
-            }
-
         }
     }
-    public void OnCollisionExit(Collision collision)
+
+    private void OnTriggerExit(Collider other)
     {
-        searchButton.SetActive(false);
-        cleanButton.SetActive(false);
-
+        if (other.gameObject.name == "Player")
+        {
+            Debug.Log("player exit");
+            searchButton.SetActive(false);
+            cleanButton.SetActive(false);
+            hideButton.SetActive(false);
+        }
+           
     }
-
 
     void Start()
     {
@@ -41,6 +56,6 @@ public class ButtonDisplay : MonoBehaviour
 
     void Update()
     {
-        
+       
     }
 }
