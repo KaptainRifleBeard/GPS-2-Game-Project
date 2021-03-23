@@ -2783,7 +2783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641436cd6801f61429373f978ed67f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 657056968}
   searchButton: {fileID: 2090171905}
   cleanButton: {fileID: 459758234}
   hideButton: {fileID: 1377309392}
@@ -10806,8 +10806,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594372225}
-  m_LocalRotation: {x: 0.45744392, y: -0.021814652, z: 0.011226211, w: 0.88890004}
-  m_LocalPosition: {x: 145.26318, y: 403, z: -628.69904}
+  m_LocalRotation: {x: 0.4574439, y: -0.021814758, z: 0.011226266, w: 0.88890004}
+  m_LocalPosition: {x: 145.26324, y: 403, z: -628.69904}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14579,10 +14579,7 @@ MonoBehaviour:
   stop: {fileID: 1375350385}
   hidingOpen: {fileID: 1308963061}
   player_spacecount: {fileID: 611359169}
-  item_pocket:
-  - name: dfsd
-    value: 2
-    space: 3
+  item_pocket: []
   item_safe:
   - name: Antique golden candle holder
     value: 3298
@@ -14632,10 +14629,7 @@ MonoBehaviour:
   - name: Gold and Jade Necklace
     value: 895
     space: 1
-  item_hide:
-  - name: 5fgdf
-    value: 3
-    space: 2
+  item_hide: []
   safeButton: {fileID: 6409856932269631304, guid: 4e6109af8aa50c848a8be050cba05de5, type: 3}
   pocketButton: {fileID: 4867378772898075237, guid: 2f4c33a77625cd44a85eb711cfd37a27, type: 3}
   hideButton: {fileID: 6368779776693313538, guid: 041d1d68a8836214bb4b58ff3880e88a, type: 3}
@@ -19681,7 +19675,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106120095}
-  m_LocalRotation: {x: 0.44119954, y: -0.02201522, z: 0.010827543, w: 0.8970736}
+  m_LocalRotation: {x: 0.44119954, y: -0.022015298, z: 0.010827582, w: 0.8970736}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -20356,7 +20350,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142972142}
-  m_LocalRotation: {x: 0.45744386, y: -0.021814635, z: 0.011226202, w: 0.88890004}
+  m_LocalRotation: {x: 0.45744383, y: -0.021814743, z: 0.011226256, w: 0.8889001}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -27380,7 +27374,6 @@ MonoBehaviour:
   loseScreen: {fileID: 1322256934}
   winScreen: {fileID: 212445216}
   isPM: 0
-  num: 0
   levelManager: {fileID: 843749595}
 --- !u!4 &1526511547
 Transform:
@@ -31624,7 +31617,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719084847}
-  m_LocalRotation: {x: 0.42485273, y: -0.022208015, z: 0.010426371, w: 0.90493}
+  m_LocalRotation: {x: 0.4248527, y: -0.022208089, z: 0.010426406, w: 0.90493}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -34241,7 +34234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918028789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 145.26318, y: 403, z: -628.69904}
+  m_LocalPosition: {x: 145.26324, y: 403, z: -628.69904}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1142972144}
