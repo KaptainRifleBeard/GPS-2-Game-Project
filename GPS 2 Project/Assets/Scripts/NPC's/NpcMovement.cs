@@ -31,6 +31,7 @@ public class NpcMovement : MonoBehaviour
     public bool hasTalked = false;
     public int destPoint = 0;
 
+    public Animator animator;
 
     void Start()
     {
@@ -157,7 +158,6 @@ public class NpcMovement : MonoBehaviour
 
         if (Vector3.Distance(transform.position, points[destPoint].position) < 150f)
         {
-
             destPoint = Random.Range(0, points.Length);
             //agent.Stop();
             StartCoroutine(waiting(waitDuration));
@@ -185,6 +185,11 @@ public class NpcMovement : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0.5f, 1) * 100, Color.red);
             Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0.5f, 1) * 100, Color.red);
             Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1) * 100, Color.red);
+
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isWalk", false);
+
+
             //if (isIdle)
             //{
             //    if(!hasTalked)
@@ -201,11 +206,14 @@ public class NpcMovement : MonoBehaviour
 
             //}
 
-            
+
 
         }
         else
         {
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isWalk", true);
+
             Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0.5f, 1) * 100, Color.yellow);
             Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0.5f, 1) * 100, Color.yellow);
             Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1) * 100, Color.yellow);
@@ -224,7 +232,6 @@ public class NpcMovement : MonoBehaviour
 
     private IEnumerator waiting(float waitTime)
     {
-
         yield return new WaitForSeconds(waitTime);
         agent.SetDestination(points[destPoint].position);
     }
