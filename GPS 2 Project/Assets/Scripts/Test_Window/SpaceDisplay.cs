@@ -20,12 +20,12 @@ public class SpaceDisplay : MonoBehaviour
     {
         if (list.moveToHide == true)
         {
-            pocketSpace.text = "Space Used: " + list.pocket_spacecount.ToString();
+            pocketSpace.text =  list.pocket_spacecount.ToString() + " / 5";
             hideSpace.text = "Space Used: " + list.hide_spacecount.ToString();
         }
         else
         {
-            pocketSpace.text = "Space Used: " + list.pocket_spacecount.ToString();
+            pocketSpace.text = list.pocket_spacecount.ToString() + " / 5";
             safeSpace.text = "Space Used: " + list.safe_spacecount.ToString();
 
         }

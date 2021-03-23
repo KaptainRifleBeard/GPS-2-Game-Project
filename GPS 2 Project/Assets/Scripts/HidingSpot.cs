@@ -25,6 +25,7 @@ public class HidingSpot : MonoBehaviour
 
 
     public bool clicked;
+    static public bool tutorialcheck = false;
 
     public void onClick()
     {
@@ -49,7 +50,6 @@ public class HidingSpot : MonoBehaviour
     //    }
     //}
 
-
     void Start()
     {
         //myCurrentTime = myProgressTime;
@@ -57,11 +57,21 @@ public class HidingSpot : MonoBehaviour
 
     }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            if (tutorialcheck == false)
+            {
+                Tutorial.tutorialTrigg1 = true;
+                tutorialcheck = true;
+            }
+        }
+    }
 
     void Update()
     {
-        if(clicked)
+        if (clicked)
         {
             searchableObjectWindow.SetActive(true);
             hideWindow.SetActive(true);

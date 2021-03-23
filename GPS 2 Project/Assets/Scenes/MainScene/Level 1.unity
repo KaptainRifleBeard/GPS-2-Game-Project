@@ -2444,6 +2444,10 @@ PrefabInstance:
       value: Floating Shelve
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6d4bf9981e03da044b7995b45f3c11c6, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d4bf9981e03da044b7995b45f3c11c6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -4807,6 +4811,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 18f86d9955495584aa225492834e253c, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 18f86d9955495584aa225492834e253c, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -5062,6 +5070,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_Name
       value: Living room shelve (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_NavMeshLayer
@@ -7159,6 +7171,10 @@ PrefabInstance:
       value: Nightstand (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4bfe5a18acb2254eb842904419febab, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d4bfe5a18acb2254eb842904419febab, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -8414,6 +8430,10 @@ PrefabInstance:
       value: Living room shelve (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -9448,6 +9468,10 @@ PrefabInstance:
       value: Study room desk
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5f4f63cf4488dcd4a91b12024b3717c8, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5f4f63cf4488dcd4a91b12024b3717c8, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -10178,7 +10202,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594372225}
-  m_LocalRotation: {x: 0.4575647, y: 0.0076441695, z: -0.0039338265, w: 0.8891348}
+  m_LocalRotation: {x: 0.4575647, y: 0.0076442314, z: -0.0039338586, w: 0.8891348}
   m_LocalPosition: {x: 93.701645, y: 399.7, z: -601.963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -11975,6 +11999,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a245a7231e9beba428f69e4b89d49ef3, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a245a7231e9beba428f69e4b89d49ef3, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -12256,6 +12284,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3dd558ce57488794495a8442a674a95b, type: 3}
       propertyPath: m_Name
       value: small wardrobe
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3dd558ce57488794495a8442a674a95b, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3dd558ce57488794495a8442a674a95b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -13656,6 +13688,8 @@ MonoBehaviour:
   - {fileID: 1989659837}
   num: 0
   cleanButton: {fileID: 459758234}
+  CollideWithHide: 0
+  collideWithSearchObject: 0
   clicked: 0
 --- !u!1001 &811935925
 PrefabInstance:
@@ -14667,6 +14701,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 639e5e6dd4ac918448e930090c84e6d7, type: 3}
       propertyPath: m_Name
       value: Clothes drawer
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 639e5e6dd4ac918448e930090c84e6d7, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 639e5e6dd4ac918448e930090c84e6d7, type: 3}
       propertyPath: m_NavMeshLayer
@@ -16321,6 +16359,10 @@ PrefabInstance:
       value: Nightstand (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4bfe5a18acb2254eb842904419febab, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d4bfe5a18acb2254eb842904419febab, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -16501,6 +16543,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: abc470d9ce884fe4187ab437ed99e9dd, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: abc470d9ce884fe4187ab437ed99e9dd, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: abc470d9ce884fe4187ab437ed99e9dd, type: 3}
       propertyPath: m_NavMeshLayer
@@ -16689,7 +16735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 154, y: -170}
+  m_AnchoredPosition: {x: 188, y: -170}
   m_SizeDelta: {x: 238.423, y: 38.775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &976011692
@@ -17709,6 +17755,10 @@ PrefabInstance:
       value: TV cabinet
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 97f9fbc8164195a4abcfb43d2a107bba, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 97f9fbc8164195a4abcfb43d2a107bba, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -18602,7 +18652,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106120095}
-  m_LocalRotation: {x: 0.44131607, y: 0.0077145123, z: -0.0037941583, w: 0.89731055}
+  m_LocalRotation: {x: 0.44131607, y: 0.007714512, z: -0.0037941579, w: 0.89731055}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19277,7 +19327,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142972142}
-  m_LocalRotation: {x: 0.45756468, y: 0.0076441695, z: -0.0039338265, w: 0.8891348}
+  m_LocalRotation: {x: 0.45756468, y: 0.0076442314, z: -0.003933858, w: 0.8891348}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -20551,6 +20601,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5aae13018c9cd36409a5c48d4968472d, type: 3}
       propertyPath: m_Name
       value: Glass Cabinet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5aae13018c9cd36409a5c48d4968472d, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5aae13018c9cd36409a5c48d4968472d, type: 3}
       propertyPath: m_NavMeshLayer
@@ -23703,6 +23757,10 @@ PrefabInstance:
       value: Floating Shelve (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6d4bf9981e03da044b7995b45f3c11c6, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d4bf9981e03da044b7995b45f3c11c6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -26798,6 +26856,10 @@ PrefabInstance:
       value: King sized bed
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b6ac365bfbeaa80479b4c73a41954176, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b6ac365bfbeaa80479b4c73a41954176, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -27337,6 +27399,7 @@ MonoBehaviour:
   tutorial2: 0
   tutorial3: 0
   tutorial4: 0
+  playerTaskButton: {fileID: 808980749}
 --- !u!114 &1575022956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28220,6 +28283,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_Name
       value: Living room shelve (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_NavMeshLayer
@@ -30550,7 +30617,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719084847}
-  m_LocalRotation: {x: 0.42496496, y: 0.0077820523, z: -0.003653571, w: 0.905169}
+  m_LocalRotation: {x: 0.42496493, y: 0.007782029, z: -0.0036535603, w: 0.905169}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -31299,6 +31366,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_Name
       value: Living room shelve (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_NavMeshLayer
@@ -33430,6 +33501,10 @@ PrefabInstance:
       value: Large wardrobe 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a317b866514be2442b1b34afc8f752b8, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a317b866514be2442b1b34afc8f752b8, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -34482,6 +34557,10 @@ PrefabInstance:
       value: Electronic Safe 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 99ec6708aff5ccd4d849347e2a146d26, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 99ec6708aff5ccd4d849347e2a146d26, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -34850,6 +34929,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d4bfe5a18acb2254eb842904419febab, type: 3}
       propertyPath: m_Name
       value: Nightstand (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d4bfe5a18acb2254eb842904419febab, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4bfe5a18acb2254eb842904419febab, type: 3}
       propertyPath: m_NavMeshLayer

@@ -15,6 +15,7 @@ TagManager:
   - Bedroom
   - CleaningTaskObject
   - NPCs
+  - InteractableObject
   layers:
   - Default
   - TransparentFX

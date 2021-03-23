@@ -8,6 +8,11 @@ public class cleaningTaskButton : MonoBehaviour
     public int num;
     public GameObject cleanButton;
 
+    public bool CollideWithHide;
+    public bool collideWithSearchObject;
+    public bool collideWithCleaningTask;
+
+
     public bool clicked;
     public void onClick()
     {
@@ -18,6 +23,7 @@ public class cleaningTaskButton : MonoBehaviour
     {
         if (other.gameObject.tag == "CleaningTaskObject")
         {
+            collideWithCleaningTask = true;
             Debug.Log("Task");
             if (other.gameObject.name == "bowl 1_small")
             {
@@ -40,8 +46,16 @@ public class cleaningTaskButton : MonoBehaviour
                 num = 4;
             }
         }
-        
-       
+        if (other.gameObject.tag == "Hiding Spot")
+        {
+            CollideWithHide = true;
+        }
+        if (other.gameObject.tag == "InteractableObject")
+        {
+            collideWithSearchObject = true;
+        }
+
+
     }
 
 
