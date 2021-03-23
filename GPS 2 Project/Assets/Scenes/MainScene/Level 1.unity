@@ -10103,7 +10103,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594372225}
-  m_LocalRotation: {x: 0.45756468, y: 0.0076442286, z: -0.0039338567, w: 0.8891348}
+  m_LocalRotation: {x: 0.4575647, y: 0.007644143, z: -0.003933813, w: 0.8891348}
   m_LocalPosition: {x: 93.70166, y: 399.7, z: -601.963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -11631,11 +11631,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cleanList:
-  - title: 'Clean the master bathroom '
+  - title: Clean the master bedroom
     tick: {fileID: 21300000, guid: 010a6e5305fa7004f89c5d317b7b47d4, type: 3}
-  - title: Clean the Kitchen (counter)
+  - title: Clean the Kitchen
     tick: {fileID: 21300000, guid: 010a6e5305fa7004f89c5d317b7b47d4, type: 3}
-  - title: Clean bathroom
+  - title: Clean the teenager room's toilet
     tick: {fileID: 21300000, guid: 010a6e5305fa7004f89c5d317b7b47d4, type: 3}
   - title: 'Clean the dining table '
     tick: {fileID: 21300000, guid: 010a6e5305fa7004f89c5d317b7b47d4, type: 3}
@@ -18527,7 +18527,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106120095}
-  m_LocalRotation: {x: 0.44131607, y: 0.0077144615, z: -0.0037941334, w: 0.89731055}
+  m_LocalRotation: {x: 0.44131607, y: 0.0077144415, z: -0.0037941232, w: 0.89731055}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19202,7 +19202,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142972142}
-  m_LocalRotation: {x: 0.45756468, y: 0.0076441905, z: -0.003933837, w: 0.8891348}
+  m_LocalRotation: {x: 0.45756468, y: 0.0076441425, z: -0.003933813, w: 0.8891348}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -30470,8 +30470,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719084847}
-  m_LocalRotation: {x: 0.3972845, y: 0.007889363, z: -0.003415577, w: 0.9176552}
-  m_LocalPosition: {x: -0.012054443, y: -40.604614, z: -0.70129395}
+  m_LocalRotation: {x: 0.42496493, y: 0.0077820024, z: -0.0036535477, w: 0.905169}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 442077690}
