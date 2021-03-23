@@ -38,18 +38,13 @@ public class JobScore : MonoBehaviour
     }
 
 
-    public void LeaveGame()
-    {
-        //PlayerPrefs.SetInt("HighestScore", 0);
-        //highestScore -= currScore;
-        //currScore = 0;
-
-
-    }
-
     public void resetScore()
     {
         currScore = 0;
+
+        //reset time
+        Timer.startTime = 660f;
+        Timer.newStartTime = Timer.startTime;
 
         //if (PlayerPrefs.GetInt("HighestScore") < currScore)
         //{

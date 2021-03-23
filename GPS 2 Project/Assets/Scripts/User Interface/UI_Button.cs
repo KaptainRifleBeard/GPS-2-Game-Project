@@ -85,6 +85,7 @@ public class UI_Button : MonoBehaviour
     public void StopGetCaughtBoolean()
     {
         strikeout.GetCaught = false;
+        LevelManager.n = 0;
     }
 
 

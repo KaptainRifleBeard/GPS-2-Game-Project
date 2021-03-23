@@ -8,9 +8,14 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUi;
+    public GameObject LevelCompleteScreen;
 
     public void Resume()
     {
+        Debug.Log("false ui");
+
+        LevelCompleteScreen.SetActive(false);
+
         pauseMenuUi.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -26,6 +31,7 @@ public class PauseMenu : MonoBehaviour
             
     public void ToMainMenu()
     {
+        LevelManager.n = 0;
         SceneManager.LoadScene("_newMainMenu");
 
 

@@ -23,16 +23,19 @@ public class Menu_UI : MonoBehaviour
 
     public void ToLevel1()
     {
+        LevelManager.n = 0;
         SceneManager.LoadScene("Level 1");
     }
 
     public void BackToMainMenu()
     {
+        LevelManager.n = 0;
         SceneManager.LoadScene("_newMainMenu");
     }
 
     public void Level1_Complete()
     {
+        LevelManager.n = 0;
         SceneManager.LoadScene("LevelSelect");
     }
 

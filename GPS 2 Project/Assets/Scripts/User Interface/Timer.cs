@@ -13,6 +13,8 @@ public class Timer : MonoBehaviour
     public bool isPM;
     public int num = 0;
     bool start;
+    int minN;
+    int secN;
 
     public static float newStartTime = 60f;
     public LevelManager levelManager;
@@ -27,7 +29,7 @@ public class Timer : MonoBehaviour
         if(startTime < 780f)
         {
 
-            startTime += Time.deltaTime;
+            startTime += Time.deltaTime * 20;
 
             int min = Mathf.FloorToInt(startTime / 60);
             int sec = Mathf.FloorToInt(startTime % 60);
@@ -46,21 +48,27 @@ public class Timer : MonoBehaviour
             newStartTime += Time.deltaTime;
            
 
-            int minN = Mathf.FloorToInt(newStartTime / 60);
-            int secN = Mathf.FloorToInt(newStartTime % 60);
+            minN = Mathf.FloorToInt(newStartTime / 60);
+            secN = Mathf.FloorToInt(newStartTime % 60);
             textBox.GetComponent<Text>().text = minN.ToString("00") + ":" + secN.ToString("00") + " pm";
 
             
         }
 
-        if (newStartTime == 274.2f)
+        if(num < 1)
         {
-            FindObjectOfType<_AudioManager>().Play("Clock");
+            if (minN >= 4 && secN >= 46)
+            {
+                Debug.Log("Start ringing");
+                FindObjectOfType<_AudioManager>().Play("Clock");
+                num++;
+            }
         }
+        
+
 
         if (isPM == true && newStartTime > 300f) //5pm
         {
-
             loseScreen.SetActive(true);
         }
         if(newStartTime > 300f && levelManager.completedAllTask == true)
