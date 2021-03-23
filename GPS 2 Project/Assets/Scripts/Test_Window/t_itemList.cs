@@ -36,6 +36,7 @@ public class t_itemList : MonoBehaviour
     public Text safeSpace;
 
     int i;
+    int total = 6;
 
     public void t_AddSafeButton() //to show random list
     {
@@ -46,14 +47,21 @@ public class t_itemList : MonoBehaviour
             for (int j = 0; j < rand; j++)
             {
                 t_ItemData item = item_safe[j];
-                GameObject newButton = Instantiate(safeButton, transform.parent);
-                newButton.transform.SetParent(contentPanel_Safe);
+                total -= item_safe[j].space;
 
-                t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
-                button.SetUp(item, this);
+                if(total > 0)
+                {
+                    GameObject newButton = Instantiate(safeButton, transform.parent);
+                    newButton.transform.SetParent(contentPanel_Safe);
+
+                    t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
+                    button.SetUp(item, this);
+                }
+                
 
             }
             start = false;
+            Debug.Log("Total " + total);
 
         }
 
