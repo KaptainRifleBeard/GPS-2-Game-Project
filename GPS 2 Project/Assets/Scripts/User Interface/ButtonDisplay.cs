@@ -12,7 +12,7 @@ public class ButtonDisplay : MonoBehaviour
 
     static public bool tutorialcheck = false;
     static public bool tutorialcheck1 = false;
-
+    static public bool tutorialcheck3 = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +23,11 @@ public class ButtonDisplay : MonoBehaviour
                 if (gameObject.name == "Cleaning cart (Hiding spot)")
                 {
                     hideButton.SetActive(true);
+                    if (tutorialcheck3 == false)
+                    {
+                        Tutorial.tutorialTrigg1 = true;
+                        tutorialcheck3 = true;
+                    }
                 }
                 else if (gameObject.tag == "CleaningTaskObject")
                 {
