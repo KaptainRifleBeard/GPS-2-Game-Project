@@ -11,6 +11,9 @@ public class Timer : MonoBehaviour
     public GameObject winScreen;
 
     public bool isPM;
+    public int num = 0;
+    bool start;
+
     public static float newStartTime = 60f;
     public LevelManager levelManager;
     void Start()
@@ -41,19 +44,20 @@ public class Timer : MonoBehaviour
             isPM = true;
 
             newStartTime += Time.deltaTime;
+           
 
             int minN = Mathf.FloorToInt(newStartTime / 60);
             int secN = Mathf.FloorToInt(newStartTime % 60);
             textBox.GetComponent<Text>().text = minN.ToString("00") + ":" + secN.ToString("00") + " pm";
+
+            
         }
 
-       
-
-        if(isPM == true && newStartTime >= 60f) //2.55pm
+        if (newStartTime == 274.2.f)
         {
             FindObjectOfType<_AudioManager>().Play("Clock");
-
         }
+
         if (isPM == true && newStartTime > 300f) //5pm
         {
 
@@ -65,4 +69,5 @@ public class Timer : MonoBehaviour
         }
 
     }
+
 }
