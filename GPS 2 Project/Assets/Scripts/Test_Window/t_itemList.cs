@@ -45,12 +45,13 @@ public class t_itemList : MonoBehaviour
         if(!showJew)
         {
             int rand = Random.Range(1, item_safe.Count - 2);
-
             for (int j = 0; j < rand; j++)
             {
                 t_ItemData item = item_safe[j];
+                sum += item_safe[j].space;
+                Debug.Log("Sum " + sum);
 
-                if(item_safe[j].space < player_spacecount.space)
+                if (sum < player_spacecount.space)
                 {
                     GameObject newButton = Instantiate(safeButton, transform.parent);
                     newButton.transform.SetParent(contentPanel_Safe);
@@ -58,8 +59,6 @@ public class t_itemList : MonoBehaviour
                     t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
                     button.SetUp(item, this);
                 }
-
-               
             }
             start = false;
 
@@ -130,22 +129,24 @@ public class t_itemList : MonoBehaviour
 
         t_PocketButton button = newButton.GetComponent<t_PocketButton>();
         button.SetUp_Pocket(item, this);
-
-
     }
 
 
     public void PutInSafe(t_ItemData item)
     {
-        pocket_spacecount -= item.space;
-        safe_spacecount += item.space;
+        if(safe_spacecount < player_spacecount.space)
+        {
+            pocket_spacecount -= item.space;
+            safe_spacecount += item.space;
 
-        item_safe.Add(item);
-        GameObject newButton = Instantiate(safeButton, transform.parent);
-        newButton.transform.SetParent(contentPanel_Safe);
+            item_safe.Add(item);
+            GameObject newButton = Instantiate(safeButton, transform.parent);
+            newButton.transform.SetParent(contentPanel_Safe);
 
-        t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
-        button.SetUp(item, this);
+            t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
+            button.SetUp(item, this);
+        }
+        
 
     }
 

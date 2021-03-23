@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
         if(startTime < 780f)
         {
 
-            startTime += Time.deltaTime * 20;
+            startTime += Time.deltaTime;
 
             int min = Mathf.FloorToInt(startTime / 60);
             int sec = Mathf.FloorToInt(startTime % 60);

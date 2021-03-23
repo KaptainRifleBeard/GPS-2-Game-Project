@@ -36,7 +36,7 @@ public class t_ButtonItem : MonoBehaviour
         GameObject g = GameObject.Find("Content_Safe");
         t_itemList list = g.GetComponent<t_itemList>();
 
-        if(list.pocket_spacecount < 6)
+        if(list.pocket_spacecount < 5)
         {
             list.pocket_spacecount += item.space;
             list.safe_spacecount -= item.space;
@@ -47,15 +47,7 @@ public class t_ButtonItem : MonoBehaviour
 
             Destroy(gameObject);
         }
-        else
-        {
-            itemList.PutInSafe(item);
-            itemList.RemovePocketItem(item, itemList);
-            JobScore.currScore -= item.value;
 
-            Destroy(gameObject);
-
-        }
 
     }
 

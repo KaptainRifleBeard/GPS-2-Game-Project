@@ -31,6 +31,7 @@ public class UI_Button : MonoBehaviour
 
     public void Safe_ExitButton()
     {
+
         safe.SetActive(false);
         windowClose.SetActive(false);
         exitWindow = true;
@@ -39,6 +40,7 @@ public class UI_Button : MonoBehaviour
             itemList.i = 0;
         }
         itemList.showJew = false;
+        itemList.sum = 0;
 
         foreach (Transform child in contentPanel_Safe)
         {

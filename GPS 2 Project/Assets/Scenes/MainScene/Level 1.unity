@@ -5069,7 +5069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_Name
-      value: Living room shelve (3)
+      value: Living RoomShelve
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_TagString
@@ -8427,7 +8427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_Name
-      value: Living room shelve (5)
+      value: Living RoomShelve
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_TagString
@@ -10202,8 +10202,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594372225}
-  m_LocalRotation: {x: 0.4575647, y: 0.007644234, z: -0.00393386, w: 0.8891348}
-  m_LocalPosition: {x: 93.701645, y: 399.7, z: -601.963}
+  m_LocalRotation: {x: 0.4575647, y: 0.007644198, z: -0.003933842, w: 0.8891348}
+  m_LocalPosition: {x: 93.70163, y: 399.7, z: -601.963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18671,7 +18671,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106120095}
-  m_LocalRotation: {x: 0.44131607, y: 0.007714467, z: -0.0037941358, w: 0.89731055}
+  m_LocalRotation: {x: 0.44131607, y: 0.007714496, z: -0.0037941502, w: 0.89731055}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19346,7 +19346,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142972142}
-  m_LocalRotation: {x: 0.45756468, y: 0.007644234, z: -0.00393386, w: 0.8891348}
+  m_LocalRotation: {x: 0.45756468, y: 0.0076441974, z: -0.003933841, w: 0.8891348}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -23108,16 +23108,17 @@ MonoBehaviour:
   windowClose: {fileID: 2042588038}
   safe: {fileID: 921801769}
   hide: {fileID: 1084718602}
-  exitWindow: 0
-  itemList: {fileID: 803524905}
   cleanWindow:
   - {fileID: 793673729}
   - {fileID: 1278614173}
   - {fileID: 1989659837}
   - {fileID: 1190194625}
+  exitWindow: 0
+  itemList: {fileID: 803524905}
   notClicked: {fileID: 808980749}
   hideSpot: {fileID: 1308963061}
   strikeout: {fileID: 1669667277}
+  player_spacecount: {fileID: 0}
 --- !u!114 &1375350386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28300,7 +28301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_Name
-      value: Living room shelve (4)
+      value: Living RoomShelve
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_TagString
@@ -30636,8 +30637,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719084847}
-  m_LocalRotation: {x: 0.41819704, y: 0.0078090797, z: -0.0035953734, w: 0.9083157}
-  m_LocalPosition: {x: -0.051734924, y: -6.7390137, z: -3.008484}
+  m_LocalRotation: {x: 0.42496493, y: 0.0077820574, z: -0.0036535738, w: 0.905169}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 442077690}
@@ -31384,7 +31385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_Name
-      value: Living room shelve (2)
+      value: Living RoomShelve
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 54cdb0828b098ab42bc03b871fa9c11a, type: 3}
       propertyPath: m_TagString
@@ -33036,7 +33037,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918028789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 93.701645, y: 399.7, z: -601.963}
+  m_LocalPosition: {x: 93.70163, y: 399.7, z: -601.963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1142972144}
