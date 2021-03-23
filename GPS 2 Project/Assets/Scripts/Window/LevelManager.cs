@@ -25,7 +25,8 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(strikeOut.GetCaught == true && completedAllTask == false)
+        if((strikeOut.GetCaught == true && completedAllTask == false) || 
+            (completedAllTask == false && Timer.newStartTime > 300f))
         {
             PlayerPrefs.SetInt("Level1 star", 1);
         }
@@ -45,6 +46,12 @@ public class LevelManager : MonoBehaviour
             completedAllTask = true;
             PlayerPrefs.SetInt("Level1 star", 3);
 
+        }
+
+        if(masterBathWindow.doneBathroom == true && bathWindow.doneMBathroom == true && tableWindow.doneTable == true
+           && kitchenWindow.doneKitchen == true && Timer.newStartTime > 300f)
+        {
+            PlayerPrefs.SetInt("Level1 star", 2);
         }
     }
 }

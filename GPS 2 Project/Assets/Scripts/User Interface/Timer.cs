@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public static float startTime = 360f;
+    public static float startTime = 660f; //11am
     public Text textBox;
     public GameObject loseScreen;
+
+    bool isPM;
+    public static float newStartTime = 60f;
 
     void Start()
     {
@@ -17,13 +20,35 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        startTime -= Time.deltaTime;
+        if(startTime < 780f)
+        {
+            startTime += Time.deltaTime;
 
-        int min = Mathf.FloorToInt(startTime / 60);
-        int sec = Mathf.FloorToInt(startTime % 60);
-        textBox.GetComponent<Text>().text = min.ToString("00") + ":" + sec.ToString("00");
+            int min = Mathf.FloorToInt(startTime / 60);
+            int sec = Mathf.FloorToInt(startTime % 60);
+            textBox.GetComponent<Text>().text = min.ToString("00") + ":" + sec.ToString("00") + " am";
+            
+            
+            if (startTime > 720f)
+            {
+                textBox.GetComponent<Text>().text = min.ToString("00") + ":" + sec.ToString("00") + " pm";
+            }
+        }
+        else
+        {
+            isPM = true;
 
-        if(startTime < 0)
+            newStartTime += Time.deltaTime;
+
+            int minN = Mathf.FloorToInt(newStartTime / 60);
+            int secN = Mathf.FloorToInt(newStartTime % 60);
+            textBox.GetComponent<Text>().text = minN.ToString("00") + ":" + secN.ToString("00") + " pm";
+        }
+
+       
+
+
+        if (isPM == true && newStartTime > 300f) //5pm
         {
             loseScreen.SetActive(true);
         }
