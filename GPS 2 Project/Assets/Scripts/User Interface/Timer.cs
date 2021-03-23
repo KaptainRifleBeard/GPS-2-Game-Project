@@ -8,10 +8,11 @@ public class Timer : MonoBehaviour
     public static float startTime = 660f; //11am
     public Text textBox;
     public GameObject loseScreen;
+    public GameObject winScreen;
 
     bool isPM;
     public static float newStartTime = 60f;
-
+    public LevelManager levelManager;
     void Start()
     {
         textBox.text = startTime.ToString();
@@ -51,6 +52,10 @@ public class Timer : MonoBehaviour
         if (isPM == true && newStartTime > 300f) //5pm
         {
             loseScreen.SetActive(true);
+        }
+        if(newStartTime > 300f && levelManager.completedAllTask == true)
+        {
+            winScreen.SetActive(true);
         }
 
     }
