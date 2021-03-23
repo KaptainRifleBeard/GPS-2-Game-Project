@@ -53,7 +53,7 @@ public class Timer : MonoBehaviour
             
         }
 
-        if (newStartTime == 274.2.f)
+        if (newStartTime == 274.2f)
         {
             FindObjectOfType<_AudioManager>().Play("Clock");
         }
