@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour
         if (masterBathWindow.doneBathroom == true && bathWindow.doneMBathroom == true && tableWindow.doneTable == true
             && kitchenWindow.doneKitchen == true && itemList.gotTheJewl == false)
         {
-            PlayerPrefs.SetInt("Level1 star", 2);
+            //PlayerPrefs.SetInt("Level1 star", 2);
 
         }
 
