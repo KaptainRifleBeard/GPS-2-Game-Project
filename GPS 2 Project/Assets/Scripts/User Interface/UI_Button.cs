@@ -12,13 +12,16 @@ public class UI_Button : MonoBehaviour
     public GameObject windowClose;
     public GameObject safe;
     public GameObject hide;
+    public GameObject[] cleanWindow;
 
     public bool exitWindow = false;
+
+
     public t_itemList itemList;
-    public GameObject[] cleanWindow;
     public cleaningTaskButton notClicked;
     public HidingSpot hideSpot;
     public StrikeOut strikeout;
+    public ObjectSpaceCount player_spacecount;
 
     IEnumerator SetToTrue()
     {
@@ -31,6 +34,11 @@ public class UI_Button : MonoBehaviour
         safe.SetActive(false);
         windowClose.SetActive(false);
         exitWindow = true;
+        if (itemList.gotTheJewl == false && itemList.showJew == true)
+        {
+            itemList.i = 0;
+        }
+        itemList.showJew = false;
 
         foreach (Transform child in contentPanel_Safe)
         {

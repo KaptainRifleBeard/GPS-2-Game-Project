@@ -7,6 +7,7 @@ public class t_itemList : MonoBehaviour
 {
     public UI_Button stop;
     public HidingSpot hidingOpen;
+    public ObjectSpaceCount player_spacecount;
 
     public List<t_ItemData> item_pocket;
     public List<t_ItemData> item_safe;
@@ -35,9 +36,10 @@ public class t_itemList : MonoBehaviour
     public Text hideSpace;
     public Text safeSpace;
 
-    int i;
-    int total = 6;
+    public int i;
+    public int total;
 
+    public int sum;
     public void t_AddSafeButton() //to show random list
     {
         if(!showJew)
@@ -47,9 +49,8 @@ public class t_itemList : MonoBehaviour
             for (int j = 0; j < rand; j++)
             {
                 t_ItemData item = item_safe[j];
-                total -= item_safe[j].space;
 
-                if(total > 0)
+                if(item_safe[j].space < player_spacecount.space)
                 {
                     GameObject newButton = Instantiate(safeButton, transform.parent);
                     newButton.transform.SetParent(contentPanel_Safe);
@@ -57,11 +58,10 @@ public class t_itemList : MonoBehaviour
                     t_ButtonItem button = newButton.GetComponent<t_ButtonItem>();
                     button.SetUp(item, this);
                 }
-                
 
+               
             }
             start = false;
-            Debug.Log("Total " + total);
 
         }
 
@@ -152,7 +152,7 @@ public class t_itemList : MonoBehaviour
 
     public void PutInHide(t_ItemData item)
     {
-        if(hide_spacecount < 20)
+        if(hide_spacecount < 21)
         {
             pocket_spacecount -= item.space;
             hide_spacecount += item.space;

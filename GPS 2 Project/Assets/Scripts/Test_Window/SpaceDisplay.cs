@@ -10,6 +10,7 @@ public class SpaceDisplay : MonoBehaviour
     public Text safeSpace;
 
     public t_itemList list;
+    public ObjectSpaceCount player_ObjectSpace;
 
     void Start()
     {
@@ -21,12 +22,12 @@ public class SpaceDisplay : MonoBehaviour
         if (list.moveToHide == true)
         {
             pocketSpace.text =  list.pocket_spacecount.ToString() + " / 5";
-            hideSpace.text = "Space Used: " + list.hide_spacecount.ToString();
+            hideSpace.text = list.hide_spacecount.ToString() + " / 20";
         }
         else
         {
             pocketSpace.text = list.pocket_spacecount.ToString() + " / 5";
-            safeSpace.text = "Space Used: " + list.safe_spacecount.ToString();
+            safeSpace.text = list.safe_spacecount.ToString() + " / " +  player_ObjectSpace.space.ToString();
 
         }
 

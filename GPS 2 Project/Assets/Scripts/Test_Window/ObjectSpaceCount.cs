@@ -2,30 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Object
-{
-    public int space;
-}
 
 public class ObjectSpaceCount : MonoBehaviour
 {
-    public List<Object> objectSpace;
-    
     public int space;
+    public t_itemList itemlist;
 
-    void Start()
+    public void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-
-    void Update()
-    {
-        for(int i = 0; i < objectSpace.Count; i++)
+        if (other.gameObject.name == "3 seat Sofa")
         {
-            Object obj = objectSpace[i];
-
-            objectSpace[0].space = 10;
+            itemlist.safe_spacecount = 7;
+            space = 7;
+        }
+        if (other.gameObject.name == "Large wardrobe 2")
+        {
+            itemlist.safe_spacecount = 10;
+            space = 10;
         }
     }
+
 }

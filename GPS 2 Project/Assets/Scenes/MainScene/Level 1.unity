@@ -10202,7 +10202,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594372225}
-  m_LocalRotation: {x: 0.4575647, y: 0.00764417, z: -0.003933827, w: 0.8891348}
+  m_LocalRotation: {x: 0.4575647, y: 0.007644234, z: -0.00393386, w: 0.8891348}
   m_LocalPosition: {x: 93.701645, y: 399.7, z: -601.963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -13445,6 +13445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stop: {fileID: 1375350385}
   hidingOpen: {fileID: 1308963061}
+  player_spacecount: {fileID: 808980750}
   item_pocket: []
   item_safe:
   - name: Antique golden candle holder
@@ -13512,6 +13513,9 @@ MonoBehaviour:
   pocketSpace: {fileID: 975714379}
   hideSpace: {fileID: 1877798783}
   safeSpace: {fileID: 1985663382}
+  i: 0
+  total: 0
+  sum: 0
 --- !u!114 &803524906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13692,6 +13696,20 @@ MonoBehaviour:
   collideWithSearchObject: 0
   collideWithCleaningTask: 0
   clicked: 0
+--- !u!114 &808980750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808980739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711013f492cf29a4486296e52c940a3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space: 0
+  itemlist: {fileID: 803524905}
 --- !u!1001 &811935925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16700,10 +16718,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -16736,7 +16754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 188, y: -170}
+  m_AnchoredPosition: {x: 165, y: -170}
   m_SizeDelta: {x: 238.423, y: 38.775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &976011692
@@ -18653,7 +18671,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106120095}
-  m_LocalRotation: {x: 0.44131607, y: 0.0077144685, z: -0.0037941367, w: 0.89731055}
+  m_LocalRotation: {x: 0.44131607, y: 0.007714467, z: -0.0037941358, w: 0.89731055}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19328,7 +19346,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142972142}
-  m_LocalRotation: {x: 0.45756468, y: 0.0076441704, z: -0.003933827, w: 0.8891348}
+  m_LocalRotation: {x: 0.45756468, y: 0.007644234, z: -0.00393386, w: 0.8891348}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -30618,8 +30636,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719084847}
-  m_LocalRotation: {x: 0.42496493, y: 0.007782029, z: -0.0036535603, w: 0.905169}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.41819704, y: 0.0078090797, z: -0.0035953734, w: 0.9083157}
+  m_LocalPosition: {x: -0.051734924, y: -6.7390137, z: -3.008484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 442077690}
@@ -32705,6 +32723,7 @@ MonoBehaviour:
   hideSpace: {fileID: 1877798783}
   safeSpace: {fileID: 1985663382}
   list: {fileID: 803524905}
+  player_ObjectSpace: {fileID: 808980750}
 --- !u!1 &1907368363
 GameObject:
   m_ObjectHideFlags: 0
@@ -32818,8 +32837,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 89.78058, y: 29.1299}
-  m_SizeDelta: {x: 120.3498, y: 213.4957}
+  m_AnchoredPosition: {x: 116.76, y: 65.697}
+  m_SizeDelta: {x: 174.31, y: 505.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913094471
 MonoBehaviour:
@@ -34708,7 +34727,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -34744,7 +34763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 118, y: -167.61299}
+  m_AnchoredPosition: {x: 165, y: -167.61299}
   m_SizeDelta: {x: 238.423, y: 38.775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1989659837
