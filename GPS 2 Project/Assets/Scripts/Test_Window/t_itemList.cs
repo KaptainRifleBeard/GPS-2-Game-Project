@@ -198,13 +198,13 @@ public class t_itemList : MonoBehaviour
         }
 
 
-        for (int i = 0; i < item_pocket.Count; i++)
-        {
-            if (item_pocket[i].name == "Gold and Jade Necklace")
-            {
-                gotTheJewl = true;
-            }
-        }
+        //for (int i = 0; i < item_hide.Count; i++)
+        //{
+        //    if (item_hide[i].name == "Gold and Jade Necklace")
+        //    {
+        //        gotTheJewl = true;
+        //    }
+        //}
     }
 }
 

@@ -97,12 +97,12 @@ public class n_ItemInteract : MonoBehaviour
         if (start == true)
         {
             InProgress(myProgressTime);
-           
         }
         else
         {
             strike.sus = false;
             myCurrentTime = myProgressTime;
+            
         }
 
 

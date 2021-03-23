@@ -12,7 +12,9 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 direction;
     private float turnVelocity;
-   
+    public Animator animator;
+    public n_searchButtonHold holdButton;
+
     void Start()
     {
         rb.GetComponent<Rigidbody>();
@@ -23,14 +25,28 @@ public class PlayerMovement : MonoBehaviour
         if(joystick.joystickPos.y != 0)
         {
             float heading = Mathf.Atan2(joystick.joystickPos.x, joystick.joystickPos.y) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(-90f, -90f, heading);
+            transform.rotation = Quaternion.Euler(0f, heading, 0f);
 
             rb.velocity = new Vector3(joystick.joystickPos.x * speed, 0, joystick.joystickPos.y * speed);
+            animator.SetBool("isWalk", true);
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isSearch", false);
+
         }
         else
         {
             rb.velocity = Vector3.zero;
             NpcMovement.isIdle = true;
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isWalk", false);
+            animator.SetBool("isSearch", false);
+        }
+
+        if(holdButton.holdButton == true)
+        {
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isWalk", false);
+            animator.SetBool("isSearch", true);
         }
     }
  

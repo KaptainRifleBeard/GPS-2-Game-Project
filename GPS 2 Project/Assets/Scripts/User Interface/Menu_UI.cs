@@ -24,6 +24,10 @@ public class Menu_UI : MonoBehaviour
     public void ToLevel1()
     {
         LevelManager.n = 0;
+        Timer.startTime = 660f;
+        Timer.newStartTime = 60f;
+        Timer.num = 0;
+        
         SceneManager.LoadScene("Level 1");
     }
 

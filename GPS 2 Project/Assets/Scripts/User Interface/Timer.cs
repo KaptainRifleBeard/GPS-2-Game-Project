@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
     public GameObject winScreen;
 
     public bool isPM;
-    public int num = 0;
+    public static int num = 0;
     bool start;
     int minN;
     int secN;
@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
         if(startTime < 780f)
         {
 
-            startTime += Time.deltaTime * 20;
+            startTime += Time.deltaTime;
 
             int min = Mathf.FloorToInt(startTime / 60);
             int sec = Mathf.FloorToInt(startTime % 60);

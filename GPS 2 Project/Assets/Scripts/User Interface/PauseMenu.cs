@@ -31,7 +31,6 @@ public class PauseMenu : MonoBehaviour
             
     public void ToMainMenu()
     {
-        LevelManager.n = 0;
         SceneManager.LoadScene("_newMainMenu");
 
 

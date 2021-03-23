@@ -76,7 +76,8 @@ public class LevelManager : MonoBehaviour
             LevelCompleteScreen.SetActive(false);
 
             Timer.startTime = 660f;
-            Timer.newStartTime = Timer.startTime;
+            Timer.newStartTime = 60f;
+            Timer.num = 0;
 
             winScreen.SetActive(true);
             PlayerPrefs.SetInt("Level1 star", 1);

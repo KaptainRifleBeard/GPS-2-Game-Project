@@ -15,7 +15,6 @@ public class t_CleaningList : MonoBehaviour
 {
     public List<t_CleanData> cleanList;
 
-    public t_CleaningList1 list;
     public GameObject cleanButton;
     public Transform contentPanel_Clean;
 

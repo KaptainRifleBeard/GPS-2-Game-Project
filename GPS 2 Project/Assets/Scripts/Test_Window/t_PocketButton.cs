@@ -44,6 +44,10 @@ public class t_PocketButton : MonoBehaviour
 
             }
 
+            if(item.name == "Gold and Jade Necklace")
+            {
+                itemList.gotTheJewl = true;
+            }
         }
         else
         {

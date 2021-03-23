@@ -35,6 +35,7 @@ public class UI_Button : MonoBehaviour
         safe.SetActive(false);
         windowClose.SetActive(false);
         exitWindow = true;
+
         if (itemList.gotTheJewl == false && itemList.showJew == true)
         {
             itemList.i = 0;
