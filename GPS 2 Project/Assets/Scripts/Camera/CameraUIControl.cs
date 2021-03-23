@@ -10,7 +10,7 @@ namespace Test
         [SerializeField] Transform m_target;
         [SerializeField] CameraTool.thirdPersonCamera m_thridCamera;
 
-        const float DRAG_TO_ANGLE = 0.5f;
+        const float DRAG_TO_ANGLE = 0.02f;
         Vector2 m_previousPressPosition;
         float m_angleX, m_angleY;
 
