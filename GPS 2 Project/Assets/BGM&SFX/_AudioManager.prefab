@@ -58,7 +58,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Clock
     clip: {fileID: 8300000, guid: 9591610ec7c5a434cbc42d000009fd30, type: 3}
-    volumn: 0.2
+    volumn: 0.606
     pitch: 1
     loop: 1
     source: {fileID: 0}

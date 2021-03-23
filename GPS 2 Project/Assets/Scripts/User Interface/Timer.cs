@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     public GameObject loseScreen;
     public GameObject winScreen;
 
-    bool isPM;
+    public bool isPM;
     public static float newStartTime = 60f;
     public LevelManager levelManager;
     void Start()
@@ -23,7 +23,8 @@ public class Timer : MonoBehaviour
     {
         if(startTime < 780f)
         {
-            startTime += Time.deltaTime;
+
+            startTime += Time.deltaTime * 20;
 
             int min = Mathf.FloorToInt(startTime / 60);
             int sec = Mathf.FloorToInt(startTime % 60);
@@ -48,9 +49,14 @@ public class Timer : MonoBehaviour
 
        
 
+        if(isPM == true && newStartTime >= 60f) //2.55pm
+        {
+            FindObjectOfType<_AudioManager>().Play("Clock");
 
+        }
         if (isPM == true && newStartTime > 300f) //5pm
         {
+
             loseScreen.SetActive(true);
         }
         if(newStartTime > 300f && levelManager.completedAllTask == true)

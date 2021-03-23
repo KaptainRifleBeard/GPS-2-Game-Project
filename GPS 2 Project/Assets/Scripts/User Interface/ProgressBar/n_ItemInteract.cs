@@ -123,6 +123,8 @@ public class n_ItemInteract : MonoBehaviour
         {
             if (i < 1)
             {
+                FindObjectOfType<_AudioManager>().Play("StrikeOut");
+
                 strike.currSus += 1;
 
                 if (ableDetect == true)
