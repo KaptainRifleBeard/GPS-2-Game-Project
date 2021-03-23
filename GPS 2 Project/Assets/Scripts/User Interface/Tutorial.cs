@@ -130,7 +130,7 @@ public class Tutorial : MonoBehaviour
         {
             counter = 10;
             tutorial3 = true;
-            tutorialTrigg = false;
+            tutorialTrigg1 = false;
         }
 
         //phase 3 tutorial
@@ -170,7 +170,7 @@ public class Tutorial : MonoBehaviour
         {
             counter = 12;
             tutorial4 = true;
-            tutorialTrigg = false;
+            tutorialTrigg2 = false;
         }
 
         //phase 4 tutorial
