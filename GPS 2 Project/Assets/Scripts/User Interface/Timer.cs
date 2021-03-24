@@ -67,11 +67,11 @@ public class Timer : MonoBehaviour
         
 
 
-        if (isPM == true && newStartTime > 300f) //5pm
+        if (isPM == true && newStartTime > 180f) //3pm
         {
             loseScreen.SetActive(true);
         }
-        if(newStartTime > 300f && levelManager.completedAllTask == true)
+        if(newStartTime > 180f && levelManager.completedAllTask == true)
         {
             winScreen.SetActive(true);
         }

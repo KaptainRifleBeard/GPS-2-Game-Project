@@ -90,7 +90,7 @@ public class LevelManager : MonoBehaviour
 
 
         if (masterBathWindow.doneBathroom == true && bathWindow.doneMBathroom == true && tableWindow.doneTable == true
-           && kitchenWindow.doneKitchen == true && Timer.newStartTime > 300f)
+           && kitchenWindow.doneKitchen == true && Timer.newStartTime > 180)
         {
             PlayerPrefs.SetInt("Level1 star", 2);
 
