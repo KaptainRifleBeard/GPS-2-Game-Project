@@ -57,7 +57,7 @@ public class Timer : MonoBehaviour
 
         if(num < 1)
         {
-            if (minN >= 4 && secN >= 46)
+            if (minN >= 2 && secN >= 46)
             {
                 Debug.Log("Start ringing");
                 FindObjectOfType<_AudioManager>().Play("Clock");

@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour
         if(n < 1)
         {
             if (masterBathWindow.doneBathroom == true && bathWindow.doneMBathroom == true && tableWindow.doneTable == true
-          && kitchenWindow.doneKitchen == true && itemList.gotTheJewl == true)
+          && kitchenWindow.doneKitchen == true && itemList.gotTheJewl == true && Timer.newStartTime > 180f)
             {
                 LevelCompleteScreen.SetActive(true);
                 completedAllTask = true;
