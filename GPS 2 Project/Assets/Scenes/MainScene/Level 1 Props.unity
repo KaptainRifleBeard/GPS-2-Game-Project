@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c8d15a6ee8a4f448ad0d4792cda8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyGameObject: []
   kitchenWindow: {fileID: 1348790249}
   masterbathWindow: {fileID: 466030612}
   bathWindow: {fileID: 377638577}
@@ -185,13 +186,14 @@ MonoBehaviour:
   pickUpTime: 5
   fillImage: {fileID: 461960127}
   text: {fileID: 107594933}
-  list: {fileID: 1369396974}
+  list: {fileID: 0}
   cleanList: {fileID: 0}
   doneKitchen: 0
   doneTable: 0
   doneMBathroom: 0
   doneBathroom: 0
   completedCleaningTask: 0
+  number: 0
 --- !u!114 &3213140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3982,6 +3984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c8d15a6ee8a4f448ad0d4792cda8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyGameObject: []
   kitchenWindow: {fileID: 1348790249}
   masterbathWindow: {fileID: 466030612}
   bathWindow: {fileID: 377638577}
@@ -3991,13 +3994,14 @@ MonoBehaviour:
   pickUpTime: 5
   fillImage: {fileID: 2054657323}
   text: {fileID: 881040199}
-  list: {fileID: 1369396974}
+  list: {fileID: 0}
   cleanList: {fileID: 0}
   doneKitchen: 0
   doneTable: 0
   doneMBathroom: 0
   doneBathroom: 0
   completedCleaningTask: 0
+  number: 0
 --- !u!114 &358384488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4800,6 +4804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUi: {fileID: 425788056}
+  LevelCompleteScreen: {fileID: 0}
 --- !u!1001 &427792357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7205,8 +7210,13 @@ MonoBehaviour:
   windowClose: {fileID: 1524300756}
   safe: {fileID: 827235463}
   hide: {fileID: 286946914}
-  stop: 0
+  cleanWindow: []
+  exitWindow: 0
   itemList: {fileID: 1328460164}
+  notClicked: {fileID: 0}
+  hideSpot: {fileID: 0}
+  strikeout: {fileID: 0}
+  player_spacecount: {fileID: 0}
 --- !u!114 &603845677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9335,6 +9345,7 @@ MonoBehaviour:
   hideSpace: {fileID: 1957916999}
   safeSpace: {fileID: 517545263}
   list: {fileID: 1328460164}
+  player_ObjectSpace: {fileID: 0}
 --- !u!1 &809134787
 GameObject:
   m_ObjectHideFlags: 0
@@ -9374,9 +9385,11 @@ MonoBehaviour:
   maxSus: 3
   currStrike: 0
   maxStrike: 3
+  sus: 0
   susText: {fileID: 988788093}
   strikeText: {fileID: 1244648882}
   loseScreenUI: {fileID: 429649363}
+  GetCaught: 0
 --- !u!114 &809134789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9395,12 +9408,17 @@ MonoBehaviour:
   - {fileID: 99413971}
   - {fileID: 843314328}
   target: {fileID: 769728787}
+  dialogueText: {fileID: 0}
+  chatbox: {fileID: 0}
+  allowTalk: 0
+  textDisplay: {fileID: 0}
   waitDuration: 5
   talkDuration: 10
   waitTimer: 0
   talkTimer: 0
   hasTalked: 0
   destPoint: 0
+  animator: {fileID: 0}
 --- !u!195 &809134790
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9568,6 +9586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c8d15a6ee8a4f448ad0d4792cda8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyGameObject: []
   kitchenWindow: {fileID: 1348790249}
   masterbathWindow: {fileID: 466030612}
   bathWindow: {fileID: 377638577}
@@ -9577,13 +9596,14 @@ MonoBehaviour:
   pickUpTime: 5
   fillImage: {fileID: 1424633748}
   text: {fileID: 1418658225}
-  list: {fileID: 1369396974}
+  list: {fileID: 0}
   cleanList: {fileID: 0}
   doneKitchen: 0
   doneTable: 0
   doneMBathroom: 0
   doneBathroom: 0
   completedCleaningTask: 0
+  number: 0
 --- !u!114 &812069639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10210,11 +10230,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9357e23ec25aac04c830fd2dd26346d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HidingSpotWindow: {fileID: 1524300756}
-  hidingSpot: {fileID: 286946914}
+  searchableObjectWindow: {fileID: 0}
+  hideWindow: {fileID: 0}
+  slider: {fileID: 0}
   player: {fileID: 769728787}
-  hidingOpen: 0
+  button: {fileID: 0}
+  progressBar: {fileID: 0}
+  holdButton: {fileID: 0}
   itemList: {fileID: 1328460164}
+  myProgressTime: 0
+  myCurrentTime: 0
+  start: 0
+  clicked: 0
 --- !u!114 &857174377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11490,6 +11517,8 @@ MonoBehaviour:
   joystick: {fileID: 1415812307}
   speed: 200
   rb: {fileID: 769728788}
+  animator: {fileID: 0}
+  holdButton: {fileID: 0}
 --- !u!1 &1005576836
 GameObject:
   m_ObjectHideFlags: 0
@@ -11740,12 +11769,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cleanList:
   - title: 'Clean the master bathroom '
+    tick: {fileID: 0}
   - title: Clean the Kitchen (counter)
+    tick: {fileID: 0}
   - title: Clean bathroom
+    tick: {fileID: 0}
   - title: 'Clean the dining table '
-  list: {fileID: 0}
+    tick: {fileID: 0}
   cleanButton: {fileID: 7936199591888747435, guid: fa8706c981257a64396aa13fd51ff678, type: 3}
   contentPanel_Clean: {fileID: 1038031087}
+  taskButton: {fileID: 0}
 --- !u!114 &1038031089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12320,6 +12353,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBox: {fileID: 1820081236}
   loseScreen: {fileID: 429649363}
+  winScreen: {fileID: 0}
+  isPM: 0
+  levelManager: {fileID: 0}
 --- !u!4 &1104622003
 Transform:
   m_ObjectHideFlags: 0
@@ -13257,7 +13293,16 @@ MonoBehaviour:
   bathWindow: {fileID: 1902841719}
   tableWindow: {fileID: 358384487}
   kitchenWindow: {fileID: 812069638}
+  strikeOut: {fileID: 0}
+  timer: {fileID: 0}
   itemList: {fileID: 1328460164}
+  winScreen: {fileID: 0}
+  LevelCompleteScreen: {fileID: 0}
+  starImage1: {fileID: 0}
+  starImage2: {fileID: 0}
+  starImage3: {fileID: 0}
+  sStar: {fileID: 0}
+  completedAllTask: 0
 --- !u!4 &1201162882
 Transform:
   m_ObjectHideFlags: 0
@@ -13765,7 +13810,9 @@ GameObject:
   - component: {fileID: 1225836087}
   - component: {fileID: 1225836086}
   - component: {fileID: 1225836089}
-  m_Layer: 0
+  - component: {fileID: 1225836091}
+  - component: {fileID: 1225836090}
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -13871,6 +13918,83 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1225836090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225836085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 5f578a1cae480494dbe0b64cec006164, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!114 &1225836091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225836085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1225836088}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &1233403231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15040,6 +15164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stop: {fileID: 603845676}
   hidingOpen: {fileID: 857174376}
+  player_spacecount: {fileID: 0}
   item_pocket: []
   item_safe:
   - name: Antique golden candle holder
@@ -15107,6 +15232,9 @@ MonoBehaviour:
   pocketSpace: {fileID: 848893538}
   hideSpace: {fileID: 1957916999}
   safeSpace: {fileID: 517545263}
+  i: 0
+  total: 0
+  sum: 0
 --- !u!114 &1328460165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15362,7 +15490,6 @@ MonoBehaviour:
   - {fileID: 377638577}
   - {fileID: 2046480100}
   player: {fileID: 1001492090}
-  list: {fileID: 1038031088}
   num: 0
 --- !u!1 &1380518936
 GameObject:
@@ -15555,9 +15682,11 @@ MonoBehaviour:
   maxSus: 3
   currStrike: 0
   maxStrike: 3
+  sus: 0
   susText: {fileID: 988788093}
   strikeText: {fileID: 1244648882}
   loseScreenUI: {fileID: 429649363}
+  GetCaught: 0
 --- !u!114 &1385475510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15576,12 +15705,17 @@ MonoBehaviour:
   - {fileID: 99413971}
   - {fileID: 843314328}
   target: {fileID: 769728787}
+  dialogueText: {fileID: 0}
+  chatbox: {fileID: 0}
+  allowTalk: 0
+  textDisplay: {fileID: 0}
   waitDuration: 5
   talkDuration: 10
   waitTimer: 0
   talkTimer: 0
   hasTalked: 0
   destPoint: 0
+  animator: {fileID: 0}
 --- !u!195 &1385475511
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -21127,6 +21261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c8d15a6ee8a4f448ad0d4792cda8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyGameObject: []
   kitchenWindow: {fileID: 1348790249}
   masterbathWindow: {fileID: 466030612}
   bathWindow: {fileID: 377638577}
@@ -21136,13 +21271,14 @@ MonoBehaviour:
   pickUpTime: 5
   fillImage: {fileID: 543233467}
   text: {fileID: 229499920}
-  list: {fileID: 1369396974}
+  list: {fileID: 0}
   cleanList: {fileID: 0}
   doneKitchen: 0
   doneTable: 0
   doneMBathroom: 0
   doneBathroom: 0
   completedCleaningTask: 0
+  number: 0
 --- !u!114 &1902841720
 MonoBehaviour:
   m_ObjectHideFlags: 0
