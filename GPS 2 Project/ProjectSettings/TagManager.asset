@@ -4,18 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Interactable
   - Hiding Spot
-  - TeenRoom
-  - BedroomToilet
-  - LivingRoom
-  - ShowerRoom
   - ProgressBarPosition
   - SearchableObjectWindow
-  - Store
-  - Bedroom
-  - CleaningTaskObject
-  - NPCs
-  - InteractableObject
+  - CleanDiningTable
+  - CleanWindow
+  - VacuumLivingrooom
   layers:
   - Default
   - TransparentFX
@@ -23,14 +18,14 @@ TagManager:
   - Player
   - Water
   - UI
-  - Post Processing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bedroom
+  - BedroomToilet
+  - TeenRoom
+  - ShowerRoom
+  - Store
+  - LivingRoom
+  - Wall
+  - PP
   - 
   - 
   - 
