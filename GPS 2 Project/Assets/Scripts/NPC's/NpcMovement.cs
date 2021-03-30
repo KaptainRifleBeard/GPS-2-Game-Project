@@ -156,10 +156,19 @@ public class NpcMovement : MonoBehaviour
         }
 
 
-        if (Vector3.Distance(transform.position, points[destPoint].position) < 150f)
+        if (Vector3.Distance(transform.position, points[destPoint].position) < 2f)
         {
             destPoint = Random.Range(0, points.Length);
-            //agent.Stop();
+            agent.velocity = Vector3.zero;
+            agent.isStopped = true;
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isWalk", false);
+            //for checking purpose
+            waitTimer += Time.deltaTime;
+            if (waitTimer > waitDuration)
+            {
+                waitTimer = 0;
+            }
             StartCoroutine(waiting(waitDuration));
         }
 
@@ -174,7 +183,13 @@ public class NpcMovement : MonoBehaviour
                 dialogueText.GetComponent<Text>().text = dialogue[dialogueArr];
                 chatbox.SetActive(true);
                 dialogueText.gameObject.SetActive(true);
-                StartCoroutine(talking(talkDuration));
+                //for checking purpose
+                talkTimer += Time.deltaTime;
+                if (talkTimer > talkDuration)
+                {
+                    talkTimer = 0;
+                }
+                    StartCoroutine(talking(talkDuration));
             }
             else
             {
@@ -223,6 +238,7 @@ public class NpcMovement : MonoBehaviour
             //     talkTimer = 0;
             //     agent.SetDestination(points[destPoint].position);
             //}
+            chatbox.SetActive(false);
             dialogueText.gameObject.SetActive(false);
         }
 
@@ -232,8 +248,17 @@ public class NpcMovement : MonoBehaviour
 
     private IEnumerator waiting(float waitTime)
     {
+        Vector3 unpausedSpeed = Vector3.zero;
         yield return new WaitForSeconds(waitTime);
+        if (agent.isStopped)
+        {
+            agent.isStopped = false;
+            agent.velocity = unpausedSpeed;
+        }
         agent.SetDestination(points[destPoint].position);
+        unpausedSpeed = agent.velocity;
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isWalk", true);
     }
 
     private IEnumerator talking(float talkTime)
@@ -241,6 +266,8 @@ public class NpcMovement : MonoBehaviour
 
         yield return new WaitForSeconds(talkTime);
         agent.SetDestination(points[destPoint].position);
+        chatbox.SetActive(false);
+        dialogueText.gameObject.SetActive(false);
         hasTalked = true;
     }
 
