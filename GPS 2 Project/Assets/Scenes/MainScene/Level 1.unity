@@ -1484,7 +1484,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "If you want to empty your Pockets, tap on the Search Button when you\u2019re
+  m_Text: "If you want to empty your Pockets, tap on the Hide Button when you\u2019re
     near your Cleaning Cart.\r\n"
 --- !u!222 &58094569
 CanvasRenderer:
@@ -3944,11 +3944,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1964260321}
+    m_TransformParent: {fileID: 1845041034}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 97f9fbc8164195a4abcfb43d2a107bba, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97f9fbc8164195a4abcfb43d2a107bba, type: 3}
       propertyPath: m_LocalScale.x
@@ -3964,15 +3964,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97f9fbc8164195a4abcfb43d2a107bba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 677.7
+      value: 616.98596
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97f9fbc8164195a4abcfb43d2a107bba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8
+      value: 96.08899
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97f9fbc8164195a4abcfb43d2a107bba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -314.5
+      value: -238.79523
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97f9fbc8164195a4abcfb43d2a107bba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4539,7 +4539,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 62643c40f5b18154093b75defddc1da4, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62643c40f5b18154093b75defddc1da4, type: 3}
       propertyPath: m_LocalScale.x
@@ -5990,6 +5990,10 @@ MonoBehaviour:
   bathWindow: {fileID: 1278614173}
   tableWindow: {fileID: 1989659837}
   player: {fileID: 611359153}
+  masterCleanButton: {fileID: 274613290}
+  tableCleanButton: {fileID: 939148537}
+  kitchenCleanButton: {fileID: 674285316}
+  toiletCleanButton: {fileID: 2015053490}
   holdButtonTime: 0
   pickUpTime: 5
   fillImage: {fileID: 1706589706}
@@ -6884,11 +6888,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1964260321}
+    m_TransformParent: {fileID: 1845041034}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalScale.x
@@ -6904,15 +6908,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -258.6
+      value: -319.31406
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.89999
+      value: 98.78898
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -151.9
+      value: -76.19522
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6924,11 +6928,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9785,7 +9789,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 62643c40f5b18154093b75defddc1da4, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62643c40f5b18154093b75defddc1da4, type: 3}
       propertyPath: m_LocalScale.x
@@ -10194,7 +10198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &459758235
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10212,7 +10216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 259, y: -137}
+  m_AnchoredPosition: {x: 276, y: -140}
   m_SizeDelta: {x: 74.543, y: 68.6516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &459758236
@@ -10798,11 +10802,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1964260321}
+    m_TransformParent: {fileID: 1703848556}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalScale.x
@@ -10818,15 +10822,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -344.2
+      value: -478.20007
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -77.37011
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 466.6
+      value: -177.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10838,11 +10842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10859,6 +10863,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_Name
       value: toilet bowl (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
+      propertyPath: m_TagString
+      value: CleaningTaskObject
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10889,6 +10897,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6000001, y: 2.3000007, z: 4.000001}
   m_Center: {x: 0, y: -0.049999963, z: 2.0000005}
+--- !u!114 &490604174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490604172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat: {fileID: 1937922233}
+  highlightColor: {r: 1, g: 0.448906, b: 0, a: 1}
+  defaultColor: []
+--- !u!65 &490604175
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490604172}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9533849, y: 3.2330449, z: 4.494316}
+  m_Center: {x: -0.05383585, y: -1.0632999, z: 2.2471576}
+--- !u!114 &490604178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490604172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641436cd6801f61429373f978ed67f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 657056968}
+  searchButton: {fileID: 2090171905}
+  cleanButton: {fileID: 459758234}
+  hideButton: {fileID: 1377309392}
 --- !u!1001 &492923284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14402,6 +14454,10 @@ MonoBehaviour:
   bathWindow: {fileID: 1278614173}
   tableWindow: {fileID: 1989659837}
   player: {fileID: 611359153}
+  masterCleanButton: {fileID: 274613290}
+  tableCleanButton: {fileID: 939148537}
+  kitchenCleanButton: {fileID: 674285316}
+  toiletCleanButton: {fileID: 2015053490}
   holdButtonTime: 0
   pickUpTime: 5
   fillImage: {fileID: 2019429768}
@@ -16242,7 +16298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790380421}
   m_LocalRotation: {x: 0.50772285, y: 0.49215597, z: 0.4921561, w: -0.5077228}
-  m_LocalPosition: {x: -506.87378, y: -93, z: -1072.6467}
+  m_LocalPosition: {x: -490, y: -93, z: -1073}
   m_LocalScale: {x: 308.2964, y: 308.2964, z: 308.2963}
   m_Children:
   - {fileID: 1649557177}
@@ -16256,7 +16312,7 @@ Transform:
   - {fileID: 893082802}
   - {fileID: 2740238}
   m_Father: {fileID: 1703848556}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &790380423
 BoxCollider:
@@ -16267,7 +16323,7 @@ BoxCollider:
   m_GameObject: {fileID: 790380421}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.6089802, y: 0.6497846, z: 0.2880573}
   m_Center: {x: -0.024494788, y: 0.2568938, z: 0.006135512}
@@ -16966,8 +17022,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 101.321465, y: 44.29598, z: 22.712511}
-  m_Center: {x: -1.1683946, y: -26.190008, z: 11.66058}
+  m_Size: {x: 101.321465, y: 39.164867, z: 22.712511}
+  m_Center: {x: -1.1683946, y: -23.624453, z: 11.66058}
 --- !u!23 &881644978 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: b6ac365bfbeaa80479b4c73a41954176, type: 3}
@@ -18329,6 +18385,10 @@ MonoBehaviour:
   bathWindow: {fileID: 1278614173}
   tableWindow: {fileID: 1989659837}
   player: {fileID: 611359153}
+  masterCleanButton: {fileID: 274613290}
+  tableCleanButton: {fileID: 939148537}
+  kitchenCleanButton: {fileID: 674285316}
+  toiletCleanButton: {fileID: 2015053490}
   holdButtonTime: 0
   pickUpTime: 5
   fillImage: {fileID: 1326336252}
@@ -19173,7 +19233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -62, y: -45}
+  m_AnchoredPosition: {x: -147, y: -45}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &967290003
@@ -20882,7 +20942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -42, y: 82}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1075733848
@@ -22185,7 +22245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -91, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1122564158
@@ -23186,11 +23246,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1964260321}
+    m_TransformParent: {fileID: 1845041034}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0e006c1e02ccba345b2c26fe3e06f828, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e006c1e02ccba345b2c26fe3e06f828, type: 3}
       propertyPath: m_LocalScale.x
@@ -23202,19 +23262,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e006c1e02ccba345b2c26fe3e06f828, type: 3}
       propertyPath: m_LocalScale.z
-      value: 40.789158
+      value: 40.789154
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e006c1e02ccba345b2c26fe3e06f828, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 506.4
+      value: 445.68594
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e006c1e02ccba345b2c26fe3e06f828, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29
+      value: 126.88899
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e006c1e02ccba345b2c26fe3e06f828, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -494.2
+      value: -418.49524
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e006c1e02ccba345b2c26fe3e06f828, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23226,11 +23286,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e006c1e02ccba345b2c26fe3e06f828, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e006c1e02ccba345b2c26fe3e06f828, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0e006c1e02ccba345b2c26fe3e06f828, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27206,7 +27266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1377309393
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27224,7 +27284,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 277, y: -139}
+  m_AnchoredPosition: {x: 232, y: -66}
   m_SizeDelta: {x: 74.543, y: 68.6516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377309396
@@ -27430,7 +27490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22, y: -197}
+  m_AnchoredPosition: {x: 0, y: -197}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1381425483
@@ -27687,7 +27747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -69}
+  m_AnchoredPosition: {x: 0, y: -33}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1391817676
@@ -28163,7 +28223,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 510ffd0c78daf1c4885f661c2b4906c0, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 510ffd0c78daf1c4885f661c2b4906c0, type: 3}
       propertyPath: m_LocalScale.x
@@ -33231,7 +33291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -156}
+  m_AnchoredPosition: {x: 6, y: -156}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1654020210
@@ -34364,9 +34424,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1568185504}
-  - {fileID: 790380422}
   - {fileID: 1404489933}
+  - {fileID: 790380422}
   - {fileID: 1937922230}
+  - {fileID: 490604171}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -35964,6 +36025,10 @@ Transform:
   - {fileID: 1937162948}
   - {fileID: 231997874}
   - {fileID: 669188737}
+  - {fileID: 307269715}
+  - {fileID: 2064391299}
+  - {fileID: 184056883}
+  - {fileID: 1187261493}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38857,11 +38922,6 @@ Transform:
   m_LocalPosition: {x: -0.000045776367, y: -0.000030517578, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 307269715}
-  - {fileID: 490604171}
-  - {fileID: 1187261493}
-  - {fileID: 2064391299}
-  - {fileID: 184056883}
   - {fileID: 448190229}
   - {fileID: 210328478}
   m_Father: {fileID: 0}
@@ -41056,6 +41116,10 @@ MonoBehaviour:
   bathWindow: {fileID: 1278614173}
   tableWindow: {fileID: 1989659837}
   player: {fileID: 611359153}
+  masterCleanButton: {fileID: 274613290}
+  tableCleanButton: {fileID: 939148537}
+  kitchenCleanButton: {fileID: 674285316}
+  toiletCleanButton: {fileID: 2015053490}
   holdButtonTime: 0
   pickUpTime: 5
   fillImage: {fileID: 1222878381}
@@ -42175,11 +42239,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1964260321}
+    m_TransformParent: {fileID: 1845041034}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 04de0205482796245adb4d8719217647, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 04de0205482796245adb4d8719217647, type: 3}
       propertyPath: m_LocalScale.x
@@ -42195,15 +42259,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 04de0205482796245adb4d8719217647, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 668
+      value: 607.2859
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 04de0205482796245adb4d8719217647, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 41.1
+      value: 138.98898
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 04de0205482796245adb4d8719217647, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -315.5
+      value: -239.79523
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 04de0205482796245adb4d8719217647, type: 3}
       propertyPath: m_LocalRotation.w
@@ -42365,7 +42429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2090171906
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42383,7 +42447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 277, y: -139}
+  m_AnchoredPosition: {x: 191, y: -139}
   m_SizeDelta: {x: 74.543, y: 68.6516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090171907
