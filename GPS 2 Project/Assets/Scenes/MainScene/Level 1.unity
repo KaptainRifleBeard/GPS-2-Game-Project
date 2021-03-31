@@ -27158,7 +27158,7 @@ MonoBehaviour:
   itemList: {fileID: 803524905}
   notClicked: {fileID: 611359157}
   hideSpot: {fileID: 1308963061}
-  strikeout: {fileID: 0}
+  strikeout: {fileID: 1317482905}
   player_spacecount: {fileID: 611359169}
 --- !u!114 &1375350386
 MonoBehaviour:
