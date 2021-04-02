@@ -10135,7 +10135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cd2731a719ad24898164ea5852a264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 1937922233}
+  mat: {fileID: 490604176}
   highlightColor: {r: 0.98039216, g: 0.7019608, b: 0.46666667, a: 1}
   defaultColor: []
 --- !u!65 &490604175
@@ -10151,6 +10151,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.9533849, y: 3.2330449, z: 4.494316}
   m_Center: {x: -0.05383585, y: -1.0632999, z: 2.2471576}
+--- !u!23 &490604176 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
+  m_PrefabInstance: {fileID: 490604170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &490604178
 MonoBehaviour:
   m_ObjectHideFlags: 0
