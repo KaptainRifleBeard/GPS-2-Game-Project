@@ -145,10 +145,7 @@ public class Window_Button : MonoBehaviour
             completedCleaningTask = true;
         }
 
-        //if(doneBathroom == true && doneKitchen == true && doneMBathroom == true && doneTable == true)
-        //{
-        //    completedCleaningTask = true;
-        //}
+    
 
     }
 

@@ -25,7 +25,7 @@ public class cleaningTaskButton : MonoBehaviour
         {
             collideWithCleaningTask = true;
             Debug.Log("Task");
-            if (other.gameObject.name == "bowl 1_small")
+            if (other.gameObject.name == "toilet bowl (1)")
             {
                 cleanButton.SetActive(true);
                 num = 1;
