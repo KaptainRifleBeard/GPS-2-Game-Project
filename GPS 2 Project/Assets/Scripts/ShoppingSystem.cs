@@ -29,19 +29,6 @@ public class ShoppingSystem : MonoBehaviour
 
     // Update is called once per frame
 
-    public void buyItem()
-    {
-        if (PlayerPrefs.GetInt("PlayerMoney",0) >= itemPrice )
-        {
-            PlayerPrefs.SetInt("PlayerMoney", PlayerPrefs.GetInt("PlayerMoney", 0) - itemPrice);
-
-            this.gameObject.SetActive(false);
-        }
-        else
-        {
-            Debug.Log("Not Enough Money");
-        }
-    }
 
 
 
