@@ -13,6 +13,7 @@ public class NpcMovement : MonoBehaviour
     public GameObject chatbox;
     static public bool isIdle = false;
     public bool allowTalk = false;
+    public bool isReached = false;
 
     string[] dialogue = {"Oh I'm just checking.", "How’s it going?" , "Just taking a small break."};
     int dialogueArr;
@@ -36,7 +37,7 @@ public class NpcMovement : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
+        animator = GetComponent<Animator>();
         agent.autoBraking = true;
         destPoint = Random.Range(0, points.Length);
         agent.SetDestination(points[destPoint].position);
@@ -130,6 +131,7 @@ public class NpcMovement : MonoBehaviour
     void Update()
     {
         int layerMask = 1 << LayerMask.NameToLayer("Player");
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 20f, 6);
 
         Vector3 textDisplay = Camera.main.WorldToScreenPoint(this.textDisplay.position);
         chatbox.transform.position = textDisplay;
@@ -144,35 +146,63 @@ public class NpcMovement : MonoBehaviour
                 if (!hasTalked)
                 {
                     agent.SetDestination(target.position);
-                    agent.stoppingDistance = 100f;
+                    agent.stoppingDistance = 200f;
                     allowTalk = true;
-                dialogueArr = Random.Range(0, dialogue.Length);
-                
-
-            }
+                    dialogueArr = Random.Range(0, dialogue.Length);
+                }
             //}
 
 
         }
 
 
-        if (Vector3.Distance(transform.position, points[destPoint].position) < 2f)
+        if (Vector3.Distance(transform.position, points[destPoint].position) < 50f)
         {
+            
+            animator.SetInteger("walk", 0);
             destPoint = Random.Range(0, points.Length);
             agent.velocity = Vector3.zero;
             agent.isStopped = true;
-            animator.SetBool("isIdle", true);
-            animator.SetBool("isWalk", false);
-            //for checking purpose
-            waitTimer += Time.deltaTime;
-            if (waitTimer > waitDuration)
-            {
-                waitTimer = 0;
-            }
+            
+            Debug.Log("???");
+            
             StartCoroutine(waiting(waitDuration));
+            
+            
         }
+        else
+        {
+            animator.SetInteger("walk", 1);
+        }
+        
 
+        //foreach (var hitCollider in hitColliders)
+        //{
+        //    if(!isStopped)
+        //    {
+        //        destPoint = Random.Range(0, points.Length);
 
+        //        agent.velocity = Vector3.zero;
+        //        agent.isStopped = true;
+        //        Debug.Log("?????");
+        //        animator.SetBool("isIdle", true);
+        //        animator.SetBool("isWalk", false);
+
+        //        //for checking purpose
+        //        waitTimer += Time.deltaTime;
+        //        if (waitTimer > waitDuration)
+        //        {
+        //            waitTimer = 0;
+        //        }
+        //        isStopped = true;
+        //        StartCoroutine(waiting(waitDuration));
+        //    }
+        //    else
+        //    {
+        //        agent.SetDestination(points[destPoint].position);
+        //    }
+
+        //}
 
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(0f, 0.5f, 1), out hit, 100, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(0.5f, 0.5f, 1), out hit, 100, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1), out hit, 100, layerMask))
@@ -183,26 +213,34 @@ public class NpcMovement : MonoBehaviour
                 dialogueText.GetComponent<Text>().text = dialogue[dialogueArr];
                 chatbox.SetActive(true);
                 dialogueText.gameObject.SetActive(true);
+
+                agent.velocity = Vector3.zero;
+                agent.isStopped = true;
+
+                animator.SetInteger("walk", 0);
+
                 //for checking purpose
                 talkTimer += Time.deltaTime;
                 if (talkTimer > talkDuration)
                 {
                     talkTimer = 0;
                 }
-                    StartCoroutine(talking(talkDuration));
+
+                StartCoroutine(talking(talkDuration));
             }
             else
             {
+                animator.SetInteger("walk", 1);
                 chatbox.SetActive(false);
                 dialogueText.gameObject.SetActive(false);
+                //agent.SetDestination(points[destPoint].position);
             }
             Debug.Log("Did Hit");
             Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0.5f, 1) * 100, Color.red);
             Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0.5f, 1) * 100, Color.red);
             Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1) * 100, Color.red);
 
-            animator.SetBool("isIdle", true);
-            animator.SetBool("isWalk", false);
+            
 
 
             //if (isIdle)
@@ -226,8 +264,8 @@ public class NpcMovement : MonoBehaviour
         }
         else
         {
-            animator.SetBool("isIdle", false);
-            animator.SetBool("isWalk", true);
+            //animator.SetBool("isIdle", false);
+            //animator.SetBool("isWalk", true);
 
             Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0.5f, 1) * 100, Color.yellow);
             Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0.5f, 1) * 100, Color.yellow);
@@ -257,18 +295,23 @@ public class NpcMovement : MonoBehaviour
         }
         agent.SetDestination(points[destPoint].position);
         unpausedSpeed = agent.velocity;
-        animator.SetBool("isIdle", false);
-        animator.SetBool("isWalk", true);
+        animator.SetInteger("walk", 1);
     }
 
     private IEnumerator talking(float talkTime)
     {
-
+        Vector3 unpausedSpeed = Vector3.zero;
         yield return new WaitForSeconds(talkTime);
+        if (agent.isStopped)
+        {
+            agent.isStopped = false;
+            agent.velocity = unpausedSpeed;
+        }
         agent.SetDestination(points[destPoint].position);
+        unpausedSpeed = agent.velocity;
         chatbox.SetActive(false);
         dialogueText.gameObject.SetActive(false);
-        hasTalked = true;
+        allowTalk = false;
     }
 
 }
