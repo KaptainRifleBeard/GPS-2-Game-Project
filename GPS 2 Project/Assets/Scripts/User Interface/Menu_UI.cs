@@ -19,6 +19,7 @@ public class Menu_UI : MonoBehaviour
     public void LevelSelect_StartGame()
     {
         SceneManager.LoadScene("LevelSelect");
+
     }
 
     public void ToLevel1()
@@ -27,7 +28,8 @@ public class Menu_UI : MonoBehaviour
         Timer.startTime = 660f;
         Timer.newStartTime = 60f;
         Timer.num = 0;
-        
+        JobScore.currScore = 0;
+
         SceneManager.LoadScene("Level 1");
     }
 

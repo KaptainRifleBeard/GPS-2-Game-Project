@@ -25,19 +25,16 @@ public class LevelManager : MonoBehaviour
     public Sprite sStar;
     public static int n = 0;
 
-
     public bool completedAllTask;
 
     void Start()
     {
-        PlayerPrefs.SetInt("Level1 star", 0);
-
+        //PlayerPrefs.SetInt("Level1 star", 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-
         //complete all task - level complete screen
         if(n < 1)
         {
@@ -56,7 +53,8 @@ public class LevelManager : MonoBehaviour
         }
 
         //complete all task and steal more than rm2000 ( 1 star ) - win screen
-        if (completedAllTask == true && Timer.newStartTime > 180f)
+        if (masterBathWindow.doneBathroom == true && bathWindow.doneMBathroom == true && tableWindow.doneTable == true
+         && kitchenWindow.doneKitchen == true && itemList.gotTheJewl == true && Timer.newStartTime > 180f && JobScore.currScore > 2000)
         {
             //reset time
             LevelCompleteScreen.SetActive(false);
@@ -66,12 +64,14 @@ public class LevelManager : MonoBehaviour
             Timer.num = 0;
 
             winScreen.SetActive(true);
-            PlayerPrefs.SetInt("Level1 star", 1);
+            //PlayerPrefs.SetInt("Level1 star", 1);
+            StarSystem.num = 1;
 
         }
 
         //complete all task and steal more than rm10000 ( 2 star ) - win screen
-        if (completedAllTask == true && Timer.newStartTime > 180f && JobScore.currScore > 10000)
+        if (masterBathWindow.doneBathroom == true && bathWindow.doneMBathroom == true && tableWindow.doneTable == true
+         && kitchenWindow.doneKitchen == true && itemList.gotTheJewl == true && Timer.newStartTime > 180f && JobScore.currScore > 10000)
         {
             //reset time
             LevelCompleteScreen.SetActive(false);
@@ -81,13 +81,15 @@ public class LevelManager : MonoBehaviour
             Timer.num = 0;
 
             winScreen.SetActive(true);
-            PlayerPrefs.SetInt("Level1 star", 2);
+            //PlayerPrefs.SetInt("Level1 star", 2);
+            StarSystem.num = 2;
 
         }
 
 
         //complete all task and steal more than rm12000 ( 3 star ) - win screen
-        if (completedAllTask == true && Timer.newStartTime > 180f && JobScore.currScore > 12000)
+        if (masterBathWindow.doneBathroom == true && bathWindow.doneMBathroom == true && tableWindow.doneTable == true
+         && kitchenWindow.doneKitchen == true && itemList.gotTheJewl == true && Timer.newStartTime > 180f && JobScore.currScore > 12000)
         {
             //reset time
             LevelCompleteScreen.SetActive(false);
@@ -97,10 +99,12 @@ public class LevelManager : MonoBehaviour
             Timer.num = 0;
 
             winScreen.SetActive(true);
-            PlayerPrefs.SetInt("Level1 star", 3);
+            //PlayerPrefs.SetInt("Level1 star", 3);
+            StarSystem.num = 3;
+
 
         }
-
+        Debug.Log("cur job score: " + JobScore.currScore);
     }
 
 
