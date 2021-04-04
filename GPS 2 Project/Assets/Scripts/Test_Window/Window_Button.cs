@@ -77,6 +77,7 @@ public class Window_Button : MonoBehaviour
                     text.text = "Done";
                     doneMBathroom = true;
                     number = number + 1;
+                    destroyGameObject[2].SetActive(false);
                     Destroy(toiletCleanButton);
                 }
             }

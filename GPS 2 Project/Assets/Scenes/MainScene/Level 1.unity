@@ -3730,6 +3730,106 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 44.765472, y: 17.329643, z: 17.52946}
   m_Center: {x: -0.007507324, y: -0.7821475, z: 8.876038}
+--- !u!1001 &184425321
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1703848556}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1831.4869
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1521.3995
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1464.8158
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -477.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -78.17008
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -176.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_Name
+      value: dirtytoiletbowl
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+--- !u!1 &184425322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+  m_PrefabInstance: {fileID: 184425321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &184425323
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184425322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.017, y: 0.024000006, z: 0.040000003}
+  m_Center: {x: 0.0004999996, y: 0, z: 0.020000001}
+--- !u!4 &184425324 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 98ac4a8a30a7c594594e5249db896892, type: 3}
+  m_PrefabInstance: {fileID: 184425321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &187148210
 GameObject:
   m_ObjectHideFlags: 0
@@ -5680,6 +5780,7 @@ MonoBehaviour:
   - {fileID: 790380421}
   - {fileID: 1937922228}
   - {fileID: 1568185503}
+  - {fileID: 184425322}
   kitchenWindow: {fileID: 1190194625}
   masterbathWindow: {fileID: 793673729}
   bathWindow: {fileID: 1278614173}
@@ -10091,6 +10192,10 @@ PrefabInstance:
       value: toilet bowl (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33ee4453f7ade034bb589b472e3406b1, type: 3}
       propertyPath: m_TagString
       value: CleaningTaskObject
       objectReference: {fileID: 0}
@@ -13747,6 +13852,7 @@ MonoBehaviour:
   - {fileID: 790380421}
   - {fileID: 1937922228}
   - {fileID: 1568185503}
+  - {fileID: 184425322}
   kitchenWindow: {fileID: 1190194625}
   masterbathWindow: {fileID: 793673729}
   bathWindow: {fileID: 1278614173}
@@ -17462,6 +17568,7 @@ MonoBehaviour:
   - {fileID: 790380421}
   - {fileID: 1937922228}
   - {fileID: 1568185503}
+  - {fileID: 184425322}
   kitchenWindow: {fileID: 1190194625}
   masterbathWindow: {fileID: 793673729}
   bathWindow: {fileID: 1278614173}
@@ -32609,6 +32716,7 @@ Transform:
   - {fileID: 790380422}
   - {fileID: 1937922230}
   - {fileID: 490604171}
+  - {fileID: 184425324}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38149,18 +38257,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1415716682}
-        m_TargetAssemblyTypeName: JobScore, Assembly-CSharp
-        m_MethodName: resetScore
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1375350390}
         m_TargetAssemblyTypeName: Menu_UI, Assembly-CSharp
         m_MethodName: ButtonClick
@@ -38634,6 +38730,7 @@ MonoBehaviour:
   - {fileID: 790380421}
   - {fileID: 1937922228}
   - {fileID: 1568185503}
+  - {fileID: 184425322}
   kitchenWindow: {fileID: 1190194625}
   masterbathWindow: {fileID: 793673729}
   bathWindow: {fileID: 1278614173}
