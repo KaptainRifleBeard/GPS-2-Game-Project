@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.UI;
+using UnityEngine.UI;
 
 public class ShoppingSystem : MonoBehaviour
 {
@@ -8,7 +10,8 @@ public class ShoppingSystem : MonoBehaviour
     bool itemBought = false;
     public int itemPrice;
     public string itemName;
-   
+    public Text PlayerMoney;
+    public string pMoney;
 
 
     // Start is called before the first frame update
@@ -45,6 +48,13 @@ public class ShoppingSystem : MonoBehaviour
 
     void Update()
     {
+
+
+
+        PlayerMoney.text = PlayerPrefs.GetInt("PlayerMoney", 0).ToString();
+
+        
+
         if (this.itemBought == true)
         {
             this.gameObject.SetActive(false);
