@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI_Button : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class UI_Button : MonoBehaviour
     public GameObject windowClose;
     public GameObject safe;
     public GameObject hide;
+    public GameObject LoseScreen_YesNo;
+    public GameObject getCaughtScreen;
+
     public GameObject[] cleanWindow;
 
     public bool exitWindow = false;
@@ -89,5 +93,18 @@ public class UI_Button : MonoBehaviour
         LevelManager.n = 0;
     }
 
+    public void LoseScreenCheck_ToMainMenuYes()
+    {
+        LoseScreen_YesNo.SetActive(true);
+    }
 
+    public void LoseScreenCheck_ToMainMenuNo()
+    {
+        LoseScreen_YesNo.SetActive(false);
+    }
+
+    public void isRetryLevel()
+    {
+        getCaughtScreen.SetActive(false);
+    }
 }

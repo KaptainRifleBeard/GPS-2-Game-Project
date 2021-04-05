@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUi;
     public GameObject LevelCompleteScreen;
+    public GameObject SettingScreen;
 
     public void Resume()
     {
@@ -33,6 +34,18 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene("_newMainMenu");
 
+
+    }
+
+    public void ToSettingScreen()
+    {
+        SettingScreen.SetActive(true);
+
+    }
+
+    public void BackToPauseMenu()
+    {
+        SettingScreen.SetActive(false);
 
     }
 }
