@@ -1415,8 +1415,20 @@ PrefabInstance:
       value: Catalogue
       objectReference: {fileID: 0}
     - target: {fileID: 4836704011173898010, guid: 3e36d8afd6b945c439139f5c2c6697d4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -6.7447
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704011173898010, guid: 3e36d8afd6b945c439139f5c2c6697d4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 387.681
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704011173898010, guid: 3e36d8afd6b945c439139f5c2c6697d4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000922595
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836704011173898010, guid: 3e36d8afd6b945c439139f5c2c6697d4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000027837674
+      value: -0.0000055604155
       objectReference: {fileID: 0}
     - target: {fileID: 4836704011216229716, guid: 3e36d8afd6b945c439139f5c2c6697d4, type: 3}
       propertyPath: m_SizeDelta.x
