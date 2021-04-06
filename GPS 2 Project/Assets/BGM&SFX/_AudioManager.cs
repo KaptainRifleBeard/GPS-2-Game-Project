@@ -7,6 +7,8 @@ public class _AudioManager : MonoBehaviour
     public _Sound[] sounds;
     public static _AudioManager instance;
 
+    public int number;
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -38,8 +40,8 @@ public class _AudioManager : MonoBehaviour
     {
         _Sound s = Array.Find(sounds, sound => sound.name == name);
 
-
         s.source.Play();
+       
     }
 
     void Start()
@@ -47,7 +49,10 @@ public class _AudioManager : MonoBehaviour
         Play("BGM");
     }
 
-
+    void Update()
+    {
+        
+    }
 }
 
 

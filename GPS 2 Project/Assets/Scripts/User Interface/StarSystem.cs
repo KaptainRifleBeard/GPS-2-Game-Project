@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class StarSystem : MonoBehaviour
 {
-    int num;
+    public static int num = 0;
 
     public GameObject[] level1Star;
 
     void Start()
     {
+        //num = PlayerPrefs.GetInt("Level1 star");
     }
 
     void Update()
     {
-        num = PlayerPrefs.GetInt("Level1 star");
+
+        Debug.Log("In level " + num);
 
         if (num == 0)
         {
