@@ -8,8 +8,8 @@ public class SettingsMenu : MonoBehaviour
     public Button button;
     public Slider slider;
     public Text Text;
-    public CanvasGroup canvgrp1;
-    public CanvasGroup canvgrp2;
+    CanvasGroup canvgrp1;
+
 
     public void BGMbutton(Text text)
     {
@@ -92,13 +92,32 @@ public class SettingsMenu : MonoBehaviour
         subjectCanvas.SetActive(true);
     }
 
-    public void returntoGame(CanvasGroup subjectCanvas)
+    public void returntoGame()
     {
-        subjectCanvas.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
     }
     public void secretsauce()
     {
         Debug.Log("Secret Sauce Nothing else here - M");
+    }
+
+    private void Update()
+    {
+        if (this.gameObject.activeInHierarchy == false)
+        {
+            this.canvgrp1.alpha = 0;
+        }
+        if (this.gameObject.activeInHierarchy == true)
+        {
+            this.canvgrp1.alpha = 1;
+        }
+    }
+
+    private void Start()
+    {
+
+        canvgrp1 = this.gameObject.GetComponent<CanvasGroup>();
+
     }
 
 }

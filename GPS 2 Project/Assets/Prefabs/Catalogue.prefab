@@ -92,6 +92,8 @@ GameObject:
   - component: {fileID: 4836704010975661619}
   - component: {fileID: 4836704010975661618}
   - component: {fileID: 4836704010975661629}
+  - component: {fileID: 6881162804001447253}
+  - component: {fileID: 4182322469763696215}
   m_Layer: 5
   m_Name: Catalogue
   m_TagString: Untagged
@@ -196,6 +198,37 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &6881162804001447253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4836704010975661628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ec932357c39f24d863e52f75c4201c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrice: 0
+  itemName: 
+  PlayerMoney: {fileID: 1786854034555123838}
+  pMoney: 
+--- !u!114 &4182322469763696215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4836704010975661628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc826f6a6c904147ad1d69123c8b950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 0}
+  slider: {fileID: 0}
+  Text: {fileID: 0}
 --- !u!1 &4836704011173898021
 GameObject:
   m_ObjectHideFlags: 0
