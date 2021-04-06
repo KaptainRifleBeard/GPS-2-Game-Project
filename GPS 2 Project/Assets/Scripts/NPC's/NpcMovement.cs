@@ -21,6 +21,7 @@ public class NpcMovement : MonoBehaviour
     private NavMeshAgent agent;
     public float waitDuration = 5f;
     public float talkDuration = 10f;
+    public float talkCooldown = 30f;
     public float waitTimer;
     public float talkTimer;
     static public bool isEnemyEnteredBR = false;
@@ -131,7 +132,7 @@ public class NpcMovement : MonoBehaviour
     void Update()
     {
         int layerMask = 1 << LayerMask.NameToLayer("Player");
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 20f, 6);
+        //Collider[] hitColliders = Physics.OverlapSphere(transform.position, 20f, 6);
 
         Vector3 textDisplay = Camera.main.WorldToScreenPoint(this.textDisplay.position);
         chatbox.transform.position = textDisplay;
@@ -149,6 +150,7 @@ public class NpcMovement : MonoBehaviour
                     agent.stoppingDistance = 200f;
                     allowTalk = true;
                     dialogueArr = Random.Range(0, dialogue.Length);
+                StartCoroutine(talkCool(talkCooldown));
                 }
             //}
 
@@ -158,13 +160,35 @@ public class NpcMovement : MonoBehaviour
 
         if (Vector3.Distance(transform.position, points[destPoint].position) < 50f)
         {
+            if(destPoint == 0)
+            {
+                animator.SetInteger("streamer", 4);
+            }
+            else if(destPoint == 1)
+            {
+                animator.SetInteger("streamer", 3);
+            }
+            else if(destPoint == 2)
+            {
+                animator.SetInteger("streamer", 5);
+            }
+            else if(destPoint == 3)
+            {
+                animator.SetInteger("streamer", 2);
+            }
+            else if (destPoint == 4)
+            {
+                animator.SetInteger("streamer", 6);
+            }
+            else
+            {
+                animator.SetInteger("streamer", 0);
+            }
             
-            animator.SetInteger("walk", 0);
             destPoint = Random.Range(0, points.Length);
             agent.velocity = Vector3.zero;
             agent.isStopped = true;
             
-            Debug.Log("???");
             
             StartCoroutine(waiting(waitDuration));
             
@@ -172,37 +196,10 @@ public class NpcMovement : MonoBehaviour
         }
         else
         {
-            animator.SetInteger("walk", 1);
+            animator.SetInteger("streamer", 1);
         }
         
 
-        //foreach (var hitCollider in hitColliders)
-        //{
-        //    if(!isStopped)
-        //    {
-        //        destPoint = Random.Range(0, points.Length);
-
-        //        agent.velocity = Vector3.zero;
-        //        agent.isStopped = true;
-        //        Debug.Log("?????");
-        //        animator.SetBool("isIdle", true);
-        //        animator.SetBool("isWalk", false);
-
-        //        //for checking purpose
-        //        waitTimer += Time.deltaTime;
-        //        if (waitTimer > waitDuration)
-        //        {
-        //            waitTimer = 0;
-        //        }
-        //        isStopped = true;
-        //        StartCoroutine(waiting(waitDuration));
-        //    }
-        //    else
-        //    {
-        //        agent.SetDestination(points[destPoint].position);
-        //    }
-
-        //}
 
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(0f, 0.5f, 1), out hit, 100, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(0.5f, 0.5f, 1), out hit, 100, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1), out hit, 100, layerMask))
@@ -217,7 +214,7 @@ public class NpcMovement : MonoBehaviour
                 agent.velocity = Vector3.zero;
                 agent.isStopped = true;
 
-                animator.SetInteger("walk", 0);
+                animator.SetInteger("streamer", 0);
 
                 //for checking purpose
                 talkTimer += Time.deltaTime;
@@ -230,7 +227,7 @@ public class NpcMovement : MonoBehaviour
             }
             else
             {
-                animator.SetInteger("walk", 1);
+                animator.SetInteger("streamer", 1);
                 chatbox.SetActive(false);
                 dialogueText.gameObject.SetActive(false);
                 //agent.SetDestination(points[destPoint].position);
@@ -239,27 +236,6 @@ public class NpcMovement : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0.5f, 1) * 100, Color.red);
             Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0.5f, 1) * 100, Color.red);
             Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1) * 100, Color.red);
-
-            
-
-
-            //if (isIdle)
-            //{
-            //    if(!hasTalked)
-            //    {
-            //        talkTimer += Time.deltaTime;
-            //        if (talkTimer > talkDuration)
-            //        {
-            //            talkTimer = 0;
-            //            hasTalked = true;
-            //            agent.SetDestination(points[destPoint].position);
-            //        }
-
-            //    }
-
-            //}
-
-
 
         }
         else
@@ -295,7 +271,7 @@ public class NpcMovement : MonoBehaviour
         }
         agent.SetDestination(points[destPoint].position);
         unpausedSpeed = agent.velocity;
-        animator.SetInteger("walk", 1);
+        animator.SetInteger("streamer", 1);
     }
 
     private IEnumerator talking(float talkTime)
@@ -312,6 +288,15 @@ public class NpcMovement : MonoBehaviour
         chatbox.SetActive(false);
         dialogueText.gameObject.SetActive(false);
         allowTalk = false;
+    }
+
+    private IEnumerator talkCool(float cooldown)
+    {
+        yield return new WaitForSeconds(cooldown);
+        if (hasTalked)
+        {
+            hasTalked = false;
+        }
     }
 
 }
