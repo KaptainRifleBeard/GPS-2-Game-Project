@@ -141,18 +141,16 @@ public class NpcMovement : MonoBehaviour
         if ((isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
             || (isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR))
         {
-            //Debug.Log("Same room together");
-            //if (isIdle)
-            //{
-                if (!hasTalked)
-                {
-                    agent.SetDestination(target.position);
-                    agent.stoppingDistance = 200f;
-                    allowTalk = true;
-                    dialogueArr = Random.Range(0, dialogue.Length);
+            
+            if (!hasTalked)
+            {
+                agent.SetDestination(target.position);
+                agent.stoppingDistance = 200f;
+                allowTalk = true;
+                dialogueArr = Random.Range(0, dialogue.Length);
                 StartCoroutine(talkCool(talkCooldown));
-                }
-            //}
+            }
+            
 
 
         }
@@ -160,23 +158,25 @@ public class NpcMovement : MonoBehaviour
 
         if (Vector3.Distance(transform.position, points[destPoint].position) < 50f)
         {
-            if(destPoint == 0)
+            int play = destPoint;
+
+            if (play == 0)
             {
                 animator.SetInteger("streamer", 4);
             }
-            else if(destPoint == 1)
+            else if (play == 1)
             {
                 animator.SetInteger("streamer", 3);
             }
-            else if(destPoint == 2)
+            else if (play == 2)
             {
                 animator.SetInteger("streamer", 5);
             }
-            else if(destPoint == 3)
+            else if (play == 3)
             {
                 animator.SetInteger("streamer", 2);
             }
-            else if (destPoint == 4)
+            else if (play == 4)
             {
                 animator.SetInteger("streamer", 6);
             }
@@ -184,7 +184,7 @@ public class NpcMovement : MonoBehaviour
             {
                 animator.SetInteger("streamer", 0);
             }
-            
+
             destPoint = Random.Range(0, points.Length);
             agent.velocity = Vector3.zero;
             agent.isStopped = true;
