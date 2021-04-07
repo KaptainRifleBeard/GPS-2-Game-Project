@@ -15,6 +15,10 @@ public class StrikeOut : MonoBehaviour
     public Text strikeText;
     public GameObject loseScreenUI;
 
+    public GameObject sus1;
+    public GameObject sus2;
+    public GameObject sus3;
+
     public bool GetCaught;
 
     void Start()
@@ -51,7 +55,22 @@ public class StrikeOut : MonoBehaviour
             Time.timeScale = 0f;
         }
 
-        susText.GetComponent<Text>().text = "Suspicion level: " + currSus.ToString() + "/" + maxSus.ToString();
+
+        if(currSus == 1)
+        {
+            sus1.SetActive(true);
+        }
+        if (currSus == 2)
+        {
+            sus2.SetActive(true);
+        }
+        if (currSus == 3)
+        {
+            sus3.SetActive(true);
+        }
+
+
+        //susText.GetComponent<Text>().text = "Suspicion level: " + currSus.ToString() + "/" + maxSus.ToString();
         //strikeText.GetComponent<Text>().text = "Strike Out: " + currStrike.ToString() + "/" + maxStrike.ToString();
 
     }

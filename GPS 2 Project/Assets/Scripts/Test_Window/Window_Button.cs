@@ -20,6 +20,12 @@ public class Window_Button : MonoBehaviour
     public GameObject kitchenCleanButton;
     public GameObject toiletCleanButton;
 
+    public GameObject toiletTick;
+    public GameObject masterTick;
+    public GameObject kitchenTick;
+    public GameObject tableTick;
+
+
     private bool holdButton;
 
 
@@ -79,6 +85,7 @@ public class Window_Button : MonoBehaviour
                     number = number + 1;
                     destroyGameObject[2].SetActive(false);
                     Destroy(toiletCleanButton);
+                    toiletTick.SetActive(true);
                 }
             }
 
@@ -97,6 +104,7 @@ public class Window_Button : MonoBehaviour
                     number = number + 1;
                     destroyGameObject[1].SetActive(false);
                     Destroy(kitchenCleanButton);
+                    kitchenTick.SetActive(true);
 
                 }
             }
@@ -116,6 +124,7 @@ public class Window_Button : MonoBehaviour
                     number = number + 1;
                     destroyGameObject[0].SetActive(false);
                     Destroy(masterCleanButton);
+                    masterTick.SetActive(true);
 
                 }
             }
@@ -135,6 +144,7 @@ public class Window_Button : MonoBehaviour
                     number = number + 1;
                     destroyGameObject[2].SetActive(false);
                     Destroy(tableCleanButton);
+                    tableTick.SetActive(true);
 
                 }
             }
