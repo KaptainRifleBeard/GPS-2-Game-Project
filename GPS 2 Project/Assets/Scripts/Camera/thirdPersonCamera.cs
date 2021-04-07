@@ -17,8 +17,8 @@ public class thirdPersonCamera : MonoBehaviour
     bool m_isRotateing = false; //check is rotate?
     const float ANGLE_CONVERTER = Mathf.PI / 180;
 
-    const float MAX_ANGLE_Y = 80;
-    const float MIN_ANGLE_Y = 30;
+    const float MAX_ANGLE_Y = 45;
+    const float MIN_ANGLE_Y = 45;
 
     Transform m_trans;
     public Transform mineTransform

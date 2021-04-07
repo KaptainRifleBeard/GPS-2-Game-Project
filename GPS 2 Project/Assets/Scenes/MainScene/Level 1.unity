@@ -25783,9 +25783,11 @@ MonoBehaviour:
   dialogueText: {fileID: 2049356425}
   chatbox: {fileID: 1913094469}
   allowTalk: 0
+  isReached: 0
   textDisplay: {fileID: 2124231780}
   waitDuration: 5
   talkDuration: 10
+  talkCooldown: 30
   waitTimer: 0
   talkTimer: 0
   hasTalked: 0
