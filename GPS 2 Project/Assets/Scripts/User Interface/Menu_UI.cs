@@ -45,6 +45,12 @@ public class Menu_UI : MonoBehaviour
         SceneManager.LoadScene("LevelSelect");
     }
 
+    public void ToCollectionScreen()
+    {
+        SceneManager.LoadScene("CollectionScreen");
+    }
+
+
     public void ButtonClick()
     {
         FindObjectOfType<_AudioManager>().Play("ButtonClick");

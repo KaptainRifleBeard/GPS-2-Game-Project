@@ -95,16 +95,20 @@ public class UI_Button : MonoBehaviour
 
     public void LoseScreenCheck_ToMainMenuYes()
     {
+        LevelManager.n = 0;
         LoseScreen_YesNo.SetActive(true);
     }
 
     public void LoseScreenCheck_ToMainMenuNo()
     {
+        strikeout.currStrike = 0;
         LoseScreen_YesNo.SetActive(false);
     }
 
     public void isRetryLevel()
     {
+        strikeout.currStrike = 0;
+        LevelManager.n = 0;
         getCaughtScreen.SetActive(false);
     }
 }
