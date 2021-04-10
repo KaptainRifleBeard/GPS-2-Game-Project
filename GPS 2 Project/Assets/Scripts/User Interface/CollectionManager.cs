@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class CollectionManager : MonoBehaviour
 {
-   public GameObject necklaceCollection;
+    public static int num = 0;
+
+    public GameObject necklaceCollection;
 
     void Start()
     {
-        
+        num = PlayerPrefs.GetInt("Level1 star");
+
     }
 
     void Update()
     {
-        if(StarSystem.num == 1)
+        if(num == 1)
         {
             necklaceCollection.SetActive(true);
         }

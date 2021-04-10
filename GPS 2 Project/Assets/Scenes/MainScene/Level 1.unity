@@ -957,6 +957,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 35.308716, y: 30.421007, z: 68.52129}
   m_Center: {x: 0.0000051847005, y: -4.8500347, z: 34.538143}
+--- !u!114 &15808880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15808873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 2042588038}
+  safeWindow: {fileID: 921801769}
+  slider: {fileID: 1966297775}
+  player: {fileID: 611359153}
+  button: {fileID: 2090171905}
+  npc: {fileID: 1317482904}
+  progressBar: {fileID: 1375350386}
+  stop: {fileID: 1375350385}
+  startSpawn: {fileID: 803524905}
+  holdButton: {fileID: 2090171910}
+  strike: {fileID: 1317482905}
+  myProgressTime: 5
+  myCurrentTime: 0
+  start: 0
+  jewlFound: 0
+  activeWindow: 0
+  suspicionCoolDown: 2
 --- !u!1 &16438940
 GameObject:
   m_ObjectHideFlags: 0
@@ -23090,7 +23119,7 @@ RectTransform:
   m_GameObject: {fileID: 637652052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2652109, y: 1.2652109, z: 1.2652109}
   m_Children:
   - {fileID: 2083817649}
   - {fileID: 2026301474}
@@ -30793,8 +30822,9 @@ MonoBehaviour:
   winScreen: {fileID: 637652052}
   LevelCompleteScreen: {fileID: 1352449061}
   starImage1: {fileID: 1280065879}
-  starImage2: {fileID: 755694958}
-  starImage3: {fileID: 323040650}
+  wstarImage2: {fileID: 2026301475}
+  wstarImage3: {fileID: 869661129}
+  wstarImage4: {fileID: 994607726}
   sStar: {fileID: 21300000, guid: 7dfde378718a0b2408a1136c08d70c00, type: 3}
   completedAllTask: 0
 --- !u!4 &843749596
@@ -57079,7 +57109,6 @@ MonoBehaviour:
   textBox: {fileID: 56985801}
   loseScreen: {fileID: 1665203304}
   winScreen: {fileID: 637652052}
-  isPM: 0
   levelManager: {fileID: 843749595}
 --- !u!4 &1526511547
 Transform:
@@ -69256,6 +69285,35 @@ MonoBehaviour:
   searchButton: {fileID: 2090171905}
   cleanButton: {fileID: 459758234}
   hideButton: {fileID: 1377309392}
+--- !u!114 &1893481413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893481406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 2042588038}
+  safeWindow: {fileID: 921801769}
+  slider: {fileID: 1966297775}
+  player: {fileID: 611359153}
+  button: {fileID: 2090171905}
+  npc: {fileID: 1317482904}
+  progressBar: {fileID: 1375350386}
+  stop: {fileID: 1375350385}
+  startSpawn: {fileID: 803524905}
+  holdButton: {fileID: 2090171910}
+  strike: {fileID: 1317482905}
+  myProgressTime: 5
+  myCurrentTime: 0
+  start: 0
+  jewlFound: 0
+  activeWindow: 0
+  suspicionCoolDown: 2
 --- !u!1 &1893655388
 GameObject:
   m_ObjectHideFlags: 0
@@ -70707,7 +70765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4ee163824005fe479105570d4b7645a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -78.37008
+      value: -77.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4ee163824005fe479105570d4b7645a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -73838,6 +73896,35 @@ MonoBehaviour:
   searchButton: {fileID: 2090171905}
   cleanButton: {fileID: 459758234}
   hideButton: {fileID: 1377309392}
+--- !u!114 &2010687285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010687278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60baf1558ef4714f9c9dd7eb933c292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  searchableObjectWindow: {fileID: 2042588038}
+  safeWindow: {fileID: 921801769}
+  slider: {fileID: 1966297775}
+  player: {fileID: 611359153}
+  button: {fileID: 2090171905}
+  npc: {fileID: 1317482904}
+  progressBar: {fileID: 1375350386}
+  stop: {fileID: 1375350385}
+  startSpawn: {fileID: 803524905}
+  holdButton: {fileID: 2090171910}
+  strike: {fileID: 1317482905}
+  myProgressTime: 5
+  myCurrentTime: 0
+  start: 0
+  jewlFound: 0
+  activeWindow: 0
+  suspicionCoolDown: 2
 --- !u!1 &2012219106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a6821e7fb61315147a7a3f19a0a7b895, type: 3}
@@ -74745,7 +74832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f405b20d17f657c41b7388de114c8d99, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7dfde378718a0b2408a1136c08d70c00, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

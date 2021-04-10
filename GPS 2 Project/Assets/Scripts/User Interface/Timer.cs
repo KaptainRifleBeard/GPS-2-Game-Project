@@ -10,7 +10,6 @@ public class Timer : MonoBehaviour
     public GameObject loseScreen;
     public GameObject winScreen;
 
-    public bool isPM;
     public static int num = 0;
     bool start;
     int minN;
@@ -43,9 +42,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            isPM = true;
-
-            newStartTime += Time.deltaTime;
+            newStartTime += Time.deltaTime * 10f;
            
 
             minN = Mathf.FloorToInt(newStartTime / 60);
@@ -67,7 +64,7 @@ public class Timer : MonoBehaviour
         
 
 
-        if (isPM == true && newStartTime > 180f) //3pm
+        if (newStartTime > 180f && levelManager.completedAllTask == false) //3pm
         {
             loseScreen.SetActive(true);
         }
