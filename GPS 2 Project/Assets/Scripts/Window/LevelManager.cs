@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetInt("Level1 star", 0);
+
     }
 
     // Update is called once per frame
@@ -72,7 +72,6 @@ public class LevelManager : MonoBehaviour
                 wstarImage2.sprite = sStar;
                 wstarImage3.sprite = sStar;
 
-                PlayerPrefs.SetInt("Level1 star", 2);
                 winScreen.SetActive(true);
 
             }
@@ -90,7 +89,6 @@ public class LevelManager : MonoBehaviour
                 wstarImage4.sprite = sStar;
 
                 StarSystem.num = 3;
-                PlayerPrefs.SetInt("Level1 star", 3);
                 winScreen.SetActive(true);
 
             }

@@ -32,6 +32,8 @@ public class StarSystem : MonoBehaviour
         }
         if (num == 1)
         {
+            PlayerPrefs.SetInt("Level1 star", 1);
+
             star2.sprite = emptyStar;
             star3.sprite = emptyStar;
 
