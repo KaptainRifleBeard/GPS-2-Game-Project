@@ -9,7 +9,8 @@ public class SettingsMenu : MonoBehaviour
     public Slider slider;
     public Text Text;
     CanvasGroup canvgrp1;
-
+    public Sprite offbutton;
+    public Sprite onbutton;
 
     public void BGMbutton(Text text)
     {
@@ -17,13 +18,15 @@ public class SettingsMenu : MonoBehaviour
         {
 
             PlayerPrefs.SetInt("BGM", -1);
-            
+
+            this.gameObject.GetComponent<Image>().sprite = offbutton;
         }
         else if (PlayerPrefs.GetInt("BGM") == -1)
         {
 
             PlayerPrefs.SetInt("BGM", 1);
 
+            this.gameObject.GetComponent<Image>().sprite = onbutton;
         }
     }
 
@@ -33,12 +36,14 @@ public class SettingsMenu : MonoBehaviour
         {
 
             PlayerPrefs.SetInt("SFX", -1);
+            this.gameObject.GetComponent<Image>().sprite = offbutton;
 
         }
         else if (PlayerPrefs.GetInt("SFX") == -1)
         {
 
             PlayerPrefs.SetInt("SFX", 1);
+            this.gameObject.GetComponent<Image>().sprite = onbutton;
 
         }
     }
@@ -81,10 +86,6 @@ public class SettingsMenu : MonoBehaviour
         }
     }
 
-    public void soundSetting()
-    {
-
-    }
 
     public void subsettingNavigation(GameObject subjectCanvas)
     {
