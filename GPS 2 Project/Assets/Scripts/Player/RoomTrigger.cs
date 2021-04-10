@@ -10,6 +10,7 @@ public class RoomTrigger : MonoBehaviour
     static public bool isPlayerEnteredSR = false;
     static public bool isPlayerEnteredS = false;
     static public bool isPlayerEnteredLR = false;
+    static public bool isPlayerEnteredK = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +54,12 @@ public class RoomTrigger : MonoBehaviour
             isPlayerEnteredLR = true;
             Debug.Log("Player Entered LivingRoom");
         }
+
+        if (other.gameObject.CompareTag("Kitchen"))
+        {
+            isPlayerEnteredK = true;
+            Debug.Log("Player Entered Kitchen");
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -91,6 +98,12 @@ public class RoomTrigger : MonoBehaviour
         {
             isPlayerEnteredLR = false;
             Debug.Log("Enemy left LivingRoom");
+        }
+
+        if (other.gameObject.CompareTag("Kitchen"))
+        {
+            isPlayerEnteredK = false;
+            Debug.Log("Enemy left Kitchen");
         }
     }
 
