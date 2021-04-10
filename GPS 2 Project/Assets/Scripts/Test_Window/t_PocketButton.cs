@@ -9,7 +9,7 @@ public class t_PocketButton : MonoBehaviour
     public Text pnameItem;
     public Text pvalueItem;
     public Text pspaceItem;
-    //public Image iconItem;
+    public Image iconItem;
 
     private t_ItemData item;
     private t_itemList itemList;
@@ -25,6 +25,7 @@ public class t_PocketButton : MonoBehaviour
         pnameItem.text = item.name;
         pvalueItem.text = item.value.ToString();
         pspaceItem.text = item.space.ToString();
+        iconItem.sprite = item.objImage;
 
         itemList = currentList;
     }

@@ -9,7 +9,7 @@ public class t_HideButton : MonoBehaviour
     public Text hnameItem;
     public Text hvalueItem;
     public Text hspaceItem;
-    //public Image iconItem;
+    public Image iconItem;
 
     private t_ItemData item;
     private t_itemList itemList;
@@ -26,6 +26,7 @@ public class t_HideButton : MonoBehaviour
         hnameItem.text = item.name;
         hvalueItem.text = item.value.ToString();
         hspaceItem.text = item.space.ToString();
+        iconItem.sprite = item.objImage;
 
         itemList = currentList;
     }

@@ -10,6 +10,6 @@ public class t_ItemData
     public string name;
     public int value;
     public int space;
-    //public Sprite objImage;
+    public Sprite objImage;
 
 }

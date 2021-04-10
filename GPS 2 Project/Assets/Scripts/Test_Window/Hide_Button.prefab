@@ -354,7 +354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 21.9039, y: 8.185913}
+  m_AnchoredPosition: {x: 21.90393, y: 8.185913}
   m_SizeDelta: {x: 201.3129, y: 43.6339}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6368779776693313550
@@ -455,6 +455,7 @@ MonoBehaviour:
   hnameItem: {fileID: 6368779776144402023}
   hvalueItem: {fileID: 6368779776614343416}
   hspaceItem: {fileID: 6368779776475678385}
+  iconItem: {fileID: 6368779776608056158}
 --- !u!1 &6368779776890656195
 GameObject:
   m_ObjectHideFlags: 0

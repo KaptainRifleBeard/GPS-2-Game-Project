@@ -222,6 +222,7 @@ MonoBehaviour:
   snameItem: {fileID: 6409856932835352877}
   svalueItem: {fileID: 6409856932633683378}
   sspaceItem: {fileID: 6409856932503929339}
+  iconItem: {fileID: 6409856932623201300}
 --- !u!1 &6409856932340617865
 GameObject:
   m_ObjectHideFlags: 0

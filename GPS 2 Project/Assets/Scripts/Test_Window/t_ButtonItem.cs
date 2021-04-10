@@ -9,7 +9,7 @@ public class t_ButtonItem : MonoBehaviour
     public Text snameItem;
     public Text svalueItem;
     public Text sspaceItem;
-    //public Image iconItem;
+    public Image iconItem;
 
     private t_ItemData item;
     private t_itemList itemList;
@@ -27,6 +27,7 @@ public class t_ButtonItem : MonoBehaviour
         snameItem.text = item.name;
         svalueItem.text = item.value.ToString();
         sspaceItem.text = item.space.ToString();
+        iconItem.sprite = item.objImage;
 
         itemList = currentList;
     }
