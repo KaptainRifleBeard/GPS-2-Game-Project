@@ -1,36 +1,74 @@
 using System;
 using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SettingAudio : MonoBehaviour
 {
-    _Sound[] sounds;
+    public GameObject settingMenu;
 
-    public void TurnOn_SFX()
+    public static int bgmnum;
+
+    public Sprite OFF;
+    public Sprite ON;
+
+    public Image bgmImage;
+    public Image sfxImage;
+
+    public static bool onBGM, onSFX;
+
+    public void OpenSettingMenu()
     {
+        settingMenu.SetActive(true);
+    }
+    public void CloseSettingMenu()
+    {
+        settingMenu.SetActive(false);
     }
 
-    public void TurnOff_SFX()
+    public void sfxButton()
     {
-
+        if (sfxImage.sprite == ON) 
+        {
+            sfxImage.sprite = OFF;
+        }
+        else
+        {
+            sfxImage.sprite = ON;
+        }
     }
-
-    public void TurnOn_BGM()
+    public void BGMbutton()
     {
-        _Sound s = Array.Find(sounds, sound => sound.name == "BGM");
-        s.source.volume = 0.5f;
+        if (bgmImage.sprite == ON) //bgm
+        {
+            bgmnum = 0;
 
+            bgmImage.sprite = OFF;
+        }
+        else
+        {
+            bgmnum = 1;
+
+            bgmImage.sprite = ON;
+        }
     }
-    public void TurnOff_BGM()
+    void Start()
     {
-        _Sound s = Array.Find(sounds, sound => sound.name == "BGM");
-        s.source.volume = 0;
+        bgmnum = 1;
     }
-
-
     public void Update()
     {
-        
-        
+
+        if (sfxImage.sprite == ON) //sfx
+        {
+            onSFX = false;
+
+        }
+        else
+        {
+            onSFX = true;
+
+        }
+
     }
 }

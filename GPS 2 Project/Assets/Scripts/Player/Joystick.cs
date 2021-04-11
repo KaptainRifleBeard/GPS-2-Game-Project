@@ -15,6 +15,8 @@ public class Joystick : MonoBehaviour
     private float joystickRadius;
 
 
+    [SerializeField] thirdPersonCamera cam;
+
     private void Start()
     {
         joystickOriginalPos = joystickBG.transform.position;
@@ -30,7 +32,7 @@ public class Joystick : MonoBehaviour
 
     public void OnDrag(BaseEventData baseEvent)
     {
-
+       
         PointerEventData pointerEvent = baseEvent as PointerEventData;
         Vector2 dragPos = pointerEvent.position;
         joystickPos = (dragPos - joystickTouchPos).normalized;

@@ -7,7 +7,6 @@ public class CameraUIControl : MonoBehaviour, IDragHandler, IBeginDragHandler, I
 {
     [SerializeField] Transform target;
     [SerializeField] thirdPersonCamera cam;
-    public Joystick joystick;
 
     const float dragAngle = 0.07f;
 
@@ -25,17 +24,16 @@ public class CameraUIControl : MonoBehaviour, IDragHandler, IBeginDragHandler, I
     public void OnDrag(PointerEventData eventData)
     {
         angleX = (eventData.position.x - prevPosition.x) * dragAngle;
-        angleY = (eventData.position.y - prevPosition.y) * dragAngle;
-        cam.Rotate(-angleX, -angleY);
-        //target.Rotate(new Vector3(0, angleX, 0));
+        cam.Rotate(-angleX);
         prevPosition = eventData.position;
 
     }
 
     public void OnEndDrag(PointerEventData eventData)
-    {         
+    {
         //cam.EndRotate();
 
     }
+
 }
 

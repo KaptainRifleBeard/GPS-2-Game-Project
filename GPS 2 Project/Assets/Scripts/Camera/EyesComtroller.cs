@@ -30,8 +30,7 @@ public class EyesComtroller : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     public void OnDrag(PointerEventData eventData)
     {
         angleX = (eventData.position.x - prevPosition.x) * dragAngle;
-        angleY = (eventData.position.y - prevPosition.y) * dragAngle;
-        cam.Rotate(-angleX, -angleY);
+        cam.Rotate(-angleX);
         prevPosition = eventData.position;
 
     }

@@ -36,22 +36,32 @@ public class _AudioManager : MonoBehaviour
     }
 
 
-    public void Play(string name)
+    public void Play(string name, float vol)
     {
         _Sound s = Array.Find(sounds, sound => sound.name == name);
 
         s.source.Play();
-       
+        s.source.volume = vol;
+
     }
 
     void Start()
     {
-        Play("BGM");
+        Play("BGM", 0.5f);
     }
 
     void Update()
     {
-        
+        number = SettingAudio.bgmnum;
+
+        //if (number == 0)
+        //{
+        //    Play("BGM", 0.0f);
+        //}
+        //if (number == 1)
+        //{
+        //    Play("BGM", 0.5f);
+        //}
     }
 }
 

@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if(joystick.joystickPos.y != 0)
         {
-            cam.EndRotate();
 
             float heading = Mathf.Atan2(joystick.joystickPos.x, joystick.joystickPos.y) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, heading, 0f);
@@ -34,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isWalk", true);
             animator.SetBool("isIdle", false);
             animator.SetBool("isSearch", false);
+            //cam.EndRotate();
 
         }
         else

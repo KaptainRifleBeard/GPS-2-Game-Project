@@ -53,6 +53,13 @@ public class Menu_UI : MonoBehaviour
 
     public void ButtonClick()
     {
-        FindObjectOfType<_AudioManager>().Play("ButtonClick");
+        if (SettingAudio.onSFX == false)
+        {
+            FindObjectOfType<_AudioManager>().Play("ButtonClick", 0.2f);
+        }
+        else
+        {
+            FindObjectOfType<_AudioManager>().Play("ButtonClick", 0.0f);
+        }
     }
 }

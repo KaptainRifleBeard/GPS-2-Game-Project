@@ -22,6 +22,7 @@ public class thirdPersonCamera : MonoBehaviour
 
     Transform myTransform;
     GameObject myGameObject;
+    public Joystick joystick;
 
     public Transform mineTransform
     {
@@ -59,6 +60,11 @@ public class thirdPersonCamera : MonoBehaviour
         {
             CalculateOffset();
         }
+
+        if (joystick.joystickPos.y != 0)
+        {
+            EndRotate();
+        }
     }
 
     void LateUpdate()
@@ -85,18 +91,13 @@ public class thirdPersonCamera : MonoBehaviour
     }
 
 
-    public void Rotate(float x, float y)
+    public void Rotate(float x)
     {
         if (x != 0)
         {
             offsetAngle_x += x;
         }
-        if (y != 0)
-        {
-            offsetAngle_y += y;
-            offsetAngle_y = offsetAngle_y > MAX_ANGLE_Y ? MAX_ANGLE_Y : offsetAngle_y;
-            offsetAngle_y = offsetAngle_y < MIN_ANGLE_Y ? MIN_ANGLE_Y : offsetAngle_y;
-        }
+        
     }
 
     public void EndRotate(bool isNeedReset = true)

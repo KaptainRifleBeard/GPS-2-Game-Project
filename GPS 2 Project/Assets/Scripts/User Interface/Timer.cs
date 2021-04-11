@@ -56,8 +56,15 @@ public class Timer : MonoBehaviour
         {
             if (minN >= 2 && secN >= 56)
             {
-                Debug.Log("Start ringing");
-                FindObjectOfType<_AudioManager>().Play("Clock");
+                if (SettingAudio.onSFX == false)
+                {
+                    FindObjectOfType<_AudioManager>().Play("Clock", 0.4f);
+                }
+                else
+                {
+                    FindObjectOfType<_AudioManager>().Play("Clock", 0.0f);
+
+                }
                 num++;
             }
         }
