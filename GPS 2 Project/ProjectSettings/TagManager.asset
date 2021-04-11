@@ -16,6 +16,7 @@ TagManager:
   - CleaningTaskObject
   - NPCs
   - InteractableObject
+  - Kitchen
   layers:
   - Default
   - TransparentFX

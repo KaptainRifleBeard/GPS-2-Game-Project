@@ -30,6 +30,7 @@ public class NpcMovement : MonoBehaviour
     static public bool isEnemyEnteredSR = false;
     static public bool isEnemyEnteredS = false;
     static public bool isEnemyEnteredLR = false;
+    static public bool isEnemyEnteredK = false;
     public bool hasTalked = false;
     public int destPoint = 0;
 
@@ -42,7 +43,8 @@ public class NpcMovement : MonoBehaviour
         agent.autoBraking = true;
         destPoint = Random.Range(0, points.Length);
         agent.SetDestination(points[destPoint].position);
-
+        agent.updateRotation = true;
+        dialogueArr = Random.Range(0, dialogue.Length);
         dialogueText.gameObject.SetActive(false);
         chatbox.SetActive(false);
     }
@@ -86,6 +88,12 @@ public class NpcMovement : MonoBehaviour
             Debug.Log("Enemy Entered LivingRoom");
         }
 
+        if (other.gameObject.CompareTag("Kitchen"))
+        {
+            isEnemyEnteredK = true;
+            Debug.Log("Enemy Entered Kitchen");
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -125,6 +133,12 @@ public class NpcMovement : MonoBehaviour
             isEnemyEnteredLR = false;
             Debug.Log("Enemy left LivingRoom");
         }
+
+        if (other.gameObject.CompareTag("Kitchen"))
+        {
+            isEnemyEnteredK = false;
+            Debug.Log("Enemy left Kitchen");
+        }
     }
 
     
@@ -139,7 +153,7 @@ public class NpcMovement : MonoBehaviour
         dialogueText.transform.position = textDisplay;
 
         if ((isEnemyEnteredBR && RoomTrigger.isPlayerEnteredBR) || (isEnemyEnteredBRT && RoomTrigger.isPlayerEnteredBRT) || (isEnemyEnteredTR && RoomTrigger.isPlayerEnteredTR) || (isEnemyEnteredSR && RoomTrigger.isPlayerEnteredSR)
-            || (isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR))
+            || (isEnemyEnteredS && RoomTrigger.isPlayerEnteredS) || (isEnemyEnteredLR && RoomTrigger.isPlayerEnteredLR) || (isEnemyEnteredK && RoomTrigger.isPlayerEnteredK))
         {
             
             if (!hasTalked)
@@ -147,7 +161,7 @@ public class NpcMovement : MonoBehaviour
                 agent.SetDestination(target.position);
                 agent.stoppingDistance = 200f;
                 allowTalk = true;
-                dialogueArr = Random.Range(0, dialogue.Length);
+                
                 StartCoroutine(talkCool(talkCooldown));
             }
             
@@ -158,25 +172,24 @@ public class NpcMovement : MonoBehaviour
 
         if (Vector3.Distance(transform.position, points[destPoint].position) < 50f)
         {
-            int play = destPoint;
-
-            if (play == 0)
-            {
-                animator.SetInteger("streamer", 4);
-            }
-            else if (play == 1)
-            {
-                animator.SetInteger("streamer", 3);
-            }
-            else if (play == 2)
-            {
-                animator.SetInteger("streamer", 5);
-            }
-            else if (play == 3)
+            
+            if(destPoint == 0)
             {
                 animator.SetInteger("streamer", 2);
             }
-            else if (play == 4)
+            else if(destPoint == 1)
+            {
+                animator.SetInteger("streamer", 5);
+            }
+            else if (destPoint == 2)
+            {
+                animator.SetInteger("streamer", 4);
+            }
+            else if (destPoint == 3)
+            {
+                animator.SetInteger("streamer", 3);
+            }
+            else if (destPoint == 4)
             {
                 animator.SetInteger("streamer", 6);
             }
@@ -184,6 +197,7 @@ public class NpcMovement : MonoBehaviour
             {
                 animator.SetInteger("streamer", 0);
             }
+
 
             destPoint = Random.Range(0, points.Length);
             agent.velocity = Vector3.zero;
@@ -202,7 +216,7 @@ public class NpcMovement : MonoBehaviour
 
 
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(0f, 0.5f, 1), out hit, 100, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(0.5f, 0.5f, 1), out hit, 100, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1), out hit, 100, layerMask))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(0f, 0.2f, 1), out hit, 100, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(0.5f, 0.2f, 1), out hit, 100, layerMask) || Physics.Raycast(transform.position, transform.TransformDirection(-0.5f, 0.2f, 1), out hit, 100, layerMask))
         {
 
             if (allowTalk)
@@ -233,9 +247,9 @@ public class NpcMovement : MonoBehaviour
                 //agent.SetDestination(points[destPoint].position);
             }
             Debug.Log("Did Hit");
-            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0.5f, 1) * 100, Color.red);
-            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0.5f, 1) * 100, Color.red);
-            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1) * 100, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0.2f, 1) * 100, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0.2f, 1) * 100, Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0.2f, 1) * 100, Color.red);
 
         }
         else
@@ -243,9 +257,9 @@ public class NpcMovement : MonoBehaviour
             //animator.SetBool("isIdle", false);
             //animator.SetBool("isWalk", true);
 
-            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0.5f, 1) * 100, Color.yellow);
-            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0.5f, 1) * 100, Color.yellow);
-            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0.5f, 1) * 100, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0f, 0.2f, 1) * 100, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(0.5f, 0.2f, 1) * 100, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(-0.5f, 0.2f, 1) * 100, Color.yellow);
             //Debug.Log("Did not Hit");
             //if (!hasTalked)
             //{
@@ -287,6 +301,7 @@ public class NpcMovement : MonoBehaviour
         unpausedSpeed = agent.velocity;
         chatbox.SetActive(false);
         dialogueText.gameObject.SetActive(false);
+        dialogueArr = Random.Range(0, dialogue.Length);
         allowTalk = false;
     }
 
