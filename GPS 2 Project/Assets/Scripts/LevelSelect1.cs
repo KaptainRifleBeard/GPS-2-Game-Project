@@ -16,6 +16,12 @@ public class LevelSelect1 : MonoBehaviour
     public Sprite star1, star2, star3;
 
 
+    public void MenuNav(int chosen)
+    {
+        SceneManager.LoadScene(chosen);
+    }
+
+
     public void clicked(int nextLevel)
     {
         if (ThisLevel - levelCompleted >= -1)
