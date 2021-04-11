@@ -7,16 +7,17 @@ using UnityEngine.UI;
 
 public class EyesComtroller : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    [SerializeField] thirdPersonCamera m_thridCamera;
+    [SerializeField] thirdPersonCamera cam;
 
-    const float DRAG_TO_ANGLE = 0.07f;
-    Vector2 m_previousPressPosition;
-    float m_angleX, m_angleY;
-    Image m_image;
+    const float dragAngle = 0.07f;
+    Vector2 prevPosition;
+    float angleX, angleY;
+
+    Image eyeImg;
 
     void Start()
     {
-        m_image = GetComponent<Image>();
+        eyeImg = GetComponent<Image>();
     }
 
 
@@ -28,24 +29,23 @@ public class EyesComtroller : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
 
     public void OnDrag(PointerEventData eventData)
     {
-        m_angleX = (eventData.position.x - m_previousPressPosition.x) * DRAG_TO_ANGLE;
-        m_angleY = (eventData.position.y - m_previousPressPosition.y) * DRAG_TO_ANGLE;
-        m_thridCamera.Rotate(-m_angleX, -m_angleY);
-        m_previousPressPosition = eventData.position;
+        angleX = (eventData.position.x - prevPosition.x) * dragAngle;
+        angleY = (eventData.position.y - prevPosition.y) * dragAngle;
+        cam.Rotate(-angleX, -angleY);
+        prevPosition = eventData.position;
 
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        m_previousPressPosition = eventData.position;
-        m_thridCamera.StartRotate();
-        m_image.color = Color.gray;
+        prevPosition = eventData.position;
+        cam.StartRotate();
+        eyeImg.color = Color.gray;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        m_image.color = Color.white;
-        m_thridCamera.EndRotate(true);
+        cam.EndRotate(true);
     }
 }
 

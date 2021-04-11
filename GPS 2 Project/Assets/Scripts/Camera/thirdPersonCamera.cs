@@ -5,44 +5,45 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class thirdPersonCamera : MonoBehaviour
 {
-    [SerializeField] Transform m_target;
-    [SerializeField] float m_distance;
-    [SerializeField] float m_offsetAngleX;
-    [SerializeField] float m_offsetAngleY;
+    [SerializeField] Transform target;
+    [SerializeField] float distance;
+    [SerializeField] float offsetAngle_x;
+    [SerializeField] float offsetAngle_y;
 
-    Vector3 m_offsetVector;
-    float m_recordAngleX;
-    float m_recordAngleY;
+    Vector3 m_offset;
+    float xPos;
+    float yPos;
 
-    bool m_isRotateing = false; //check is rotate?
-    const float ANGLE_CONVERTER = Mathf.PI / 180;
+    bool isRotating = false; //check is rotate?
+    const float angle = Mathf.PI / 180;
 
     const float MAX_ANGLE_Y = 45;
     const float MIN_ANGLE_Y = 45;
 
-    Transform m_trans;
+    Transform myTransform;
+    GameObject myGameObject;
+
     public Transform mineTransform
     {
         get
         {
-            if (m_trans == null)
+            if (myTransform == null)
             {
-                m_trans = this.transform;
+                myTransform = this.transform;
             }
-            return m_trans;
+            return myTransform;
         }
     }
 
-    GameObject m_go;
     public GameObject mineGameObject
     {
         get
         {
-            if (m_go == null)
+            if (myGameObject == null)
             {
-                m_go = this.gameObject;
+                myGameObject = this.gameObject;
             }
-            return m_go;
+            return myGameObject;
         }
     }
 
@@ -54,7 +55,7 @@ public class thirdPersonCamera : MonoBehaviour
 
     void Update()
     {
-        if (m_isRotateing)
+        if (isRotating)
         {
             CalculateOffset();
         }
@@ -62,27 +63,25 @@ public class thirdPersonCamera : MonoBehaviour
 
     void LateUpdate()
     {
-        mineTransform.position = m_target.position + m_offsetVector;
-        mineTransform.LookAt(m_target);
+        mineTransform.position = target.position + m_offset;
+        mineTransform.LookAt(target);
     }
-
-
-
 
     void CalculateOffset()
     {
-        m_offsetVector.y = m_distance * Mathf.Sin(m_offsetAngleY * ANGLE_CONVERTER);
-        float newRadius = m_distance * Mathf.Cos(m_offsetAngleY * ANGLE_CONVERTER);
-        m_offsetVector.x = newRadius * Mathf.Sin(m_offsetAngleX * ANGLE_CONVERTER);
-        m_offsetVector.z = -newRadius * Mathf.Cos(m_offsetAngleX * ANGLE_CONVERTER);
+        m_offset.y = distance * Mathf.Sin(offsetAngle_y * angle);
+        float newRadius = distance * Mathf.Cos(offsetAngle_y * angle);
+
+        m_offset.x = newRadius * Mathf.Sin(offsetAngle_x * angle);
+        m_offset.z = -newRadius * Mathf.Cos(offsetAngle_x * angle);
     }
 
     public void StartRotate()
     {
-        m_isRotateing = true;
+        isRotating = true;
 
-        m_recordAngleX = m_offsetAngleX;
-        m_recordAngleY = m_offsetAngleY;
+        xPos = offsetAngle_x;
+        yPos = offsetAngle_y;
     }
 
 
@@ -90,24 +89,24 @@ public class thirdPersonCamera : MonoBehaviour
     {
         if (x != 0)
         {
-            m_offsetAngleX += x;
+            offsetAngle_x += x;
         }
         if (y != 0)
         {
-            m_offsetAngleY += y;
-            m_offsetAngleY = m_offsetAngleY > MAX_ANGLE_Y ? MAX_ANGLE_Y : m_offsetAngleY;
-            m_offsetAngleY = m_offsetAngleY < MIN_ANGLE_Y ? MIN_ANGLE_Y : m_offsetAngleY;
+            offsetAngle_y += y;
+            offsetAngle_y = offsetAngle_y > MAX_ANGLE_Y ? MAX_ANGLE_Y : offsetAngle_y;
+            offsetAngle_y = offsetAngle_y < MIN_ANGLE_Y ? MIN_ANGLE_Y : offsetAngle_y;
         }
     }
 
     public void EndRotate(bool isNeedReset = true)
     {
-        m_isRotateing = false;
+        isRotating = false;
 
         if (isNeedReset)
         {
-            m_offsetAngleY = m_recordAngleY;
-            m_offsetAngleX = m_recordAngleX;
+            offsetAngle_y = yPos;
+            offsetAngle_x = xPos;
             CalculateOffset();
         }
     }

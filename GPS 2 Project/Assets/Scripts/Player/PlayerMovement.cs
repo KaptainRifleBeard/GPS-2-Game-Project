@@ -8,12 +8,13 @@ public class PlayerMovement : MonoBehaviour
     public Joystick joystick;
     public float speed;
     public  Rigidbody rb;
-    private float rotationSpeed = 5f;
 
-    Vector3 direction;
-    private float turnVelocity;
+    //Vector3 direction;
+    //private float turnVelocity;
     public Animator animator;
     public n_searchButtonHold holdButton;
+
+    [SerializeField] thirdPersonCamera cam;
 
     void Start()
     {
@@ -24,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(joystick.joystickPos.y != 0)
         {
+            cam.EndRotate();
+
             float heading = Mathf.Atan2(joystick.joystickPos.x, joystick.joystickPos.y) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, heading, 0f);
 

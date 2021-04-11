@@ -5,46 +5,37 @@ using UnityEngine.EventSystems;
 
 public class CameraUIControl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    [SerializeField] Transform m_target;
-    [SerializeField] thirdPersonCamera m_thridCamera;
+    [SerializeField] Transform target;
+    [SerializeField] thirdPersonCamera cam;
+    public Joystick joystick;
 
-    const float DRAG_TO_ANGLE = 0.07f;
-    Vector2 m_previousPressPosition;
-    float m_angleX, m_angleY;
+    const float dragAngle = 0.07f;
 
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    Vector2 prevPosition;
+    float angleX, angleY;
 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        m_previousPressPosition = eventData.position;
-        m_thridCamera.StartRotate();
+        prevPosition = eventData.position;
+        cam.StartRotate();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        m_angleX = (eventData.position.x - m_previousPressPosition.x) * DRAG_TO_ANGLE;
-        m_angleY = (eventData.position.y - m_previousPressPosition.y) * DRAG_TO_ANGLE;
-        m_thridCamera.Rotate(-m_angleX, -m_angleY);
-        //m_target.Rotate(new Vector3(0, m_angleX, 0));
-        m_previousPressPosition = eventData.position;
+        angleX = (eventData.position.x - prevPosition.x) * dragAngle;
+        angleY = (eventData.position.y - prevPosition.y) * dragAngle;
+        cam.Rotate(-angleX, -angleY);
+        //target.Rotate(new Vector3(0, angleX, 0));
+        prevPosition = eventData.position;
 
     }
 
     public void OnEndDrag(PointerEventData eventData)
-    {
-        m_thridCamera.EndRotate();
+    {         
+        //cam.EndRotate();
+
     }
 }
 

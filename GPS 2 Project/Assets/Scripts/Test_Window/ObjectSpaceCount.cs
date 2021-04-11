@@ -17,7 +17,7 @@ public class ObjectSpaceCount : MonoBehaviour
             itemlist.safe_spacecount = 3;
             space = 3;
         }
-        if (other.gameObject.name == "LivingRoomShelve")
+        if (other.gameObject.name == "LivingRoomShelve" || other.gameObject.name == "Shoe cabinet")
         {
             itemlist.safe_spacecount = 4;
             space = 4;
