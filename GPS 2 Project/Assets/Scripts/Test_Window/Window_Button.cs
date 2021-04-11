@@ -46,6 +46,8 @@ public class Window_Button : MonoBehaviour
     public bool completedCleaningTask;
     public int number = 0;
 
+    public Animator anim;
+
     public void OnPointerDown()
     {
         Debug.Log(holdButton);
@@ -76,7 +78,7 @@ public class Window_Button : MonoBehaviour
                 {
                     holdButtonTime += Time.deltaTime;
                     fillImage.fillAmount = holdButtonTime / pickUpTime;
-
+                    anim.SetInteger("StartAnim", 1);
                 }
                 else
                 {
@@ -86,6 +88,8 @@ public class Window_Button : MonoBehaviour
                     destroyGameObject[3].SetActive(false);
                     Destroy(toiletCleanButton);
                     toiletTick.SetActive(true);
+                    anim.SetInteger("StartAnim", 0);
+
                 }
             }
 
@@ -95,6 +99,7 @@ public class Window_Button : MonoBehaviour
                 {
                     holdButtonTime += Time.deltaTime;
                     fillImage.fillAmount = holdButtonTime / pickUpTime;
+                    anim.SetInteger("StartAnim", 1);
 
                 }
                 else
@@ -105,6 +110,7 @@ public class Window_Button : MonoBehaviour
                     destroyGameObject[1].SetActive(false);
                     Destroy(kitchenCleanButton);
                     kitchenTick.SetActive(true);
+                    anim.SetInteger("StartAnim", 0);
 
                 }
             }
@@ -115,6 +121,7 @@ public class Window_Button : MonoBehaviour
                 {
                     holdButtonTime += Time.deltaTime;
                     fillImage.fillAmount = holdButtonTime / pickUpTime;
+                    anim.SetInteger("StartAnim", 1);
 
                 }
                 else
@@ -125,6 +132,7 @@ public class Window_Button : MonoBehaviour
                     destroyGameObject[0].SetActive(false);
                     Destroy(masterCleanButton);
                     masterTick.SetActive(true);
+                    anim.SetInteger("StartAnim", 0);
 
                 }
             }
@@ -135,6 +143,7 @@ public class Window_Button : MonoBehaviour
                 {
                     holdButtonTime += Time.deltaTime;
                     fillImage.fillAmount = holdButtonTime / pickUpTime;
+                    anim.SetInteger("StartAnim", 1);
 
                 }
                 else
@@ -145,13 +154,18 @@ public class Window_Button : MonoBehaviour
                     destroyGameObject[2].SetActive(false);
                     Destroy(tableCleanButton);
                     tableTick.SetActive(true);
+                    anim.SetInteger("StartAnim", 0);
 
                 }
             }
 
         }
+        else
+        {
+            anim.SetInteger("StartAnim", 0);
+        }
 
-        if(number == 4)
+        if (number == 4)
         {
             completedCleaningTask = true;
         }
