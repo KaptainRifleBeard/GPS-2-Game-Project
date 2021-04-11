@@ -947,6 +947,7 @@ MonoBehaviour:
   distance: 200
   offsetAngle_x: 0
   offsetAngle_y: 45
+  joystick: {fileID: 403876048}
 --- !u!81 &16438942
 AudioListener:
   m_ObjectHideFlags: 0
@@ -10642,7 +10643,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 657056968}
   cam: {fileID: 16438941}
-  joystick: {fileID: 403876048}
 --- !u!114 &288680317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13985,6 +13985,7 @@ MonoBehaviour:
   joystick: {fileID: 2042643852}
   joystickBG: {fileID: 687521231}
   joystickPos: {x: 0, y: 0}
+  cam: {fileID: 16438941}
 --- !u!114 &403876049
 MonoBehaviour:
   m_ObjectHideFlags: 0
