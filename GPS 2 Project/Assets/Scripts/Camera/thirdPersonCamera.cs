@@ -11,8 +11,8 @@ public class thirdPersonCamera : MonoBehaviour
     [SerializeField] float offsetAngle_y;
 
     Vector3 m_offset;
-    float xPos;
-    float yPos;
+     float xPos;
+    const float yPos = 45;
 
     bool isRotating = false; //check is rotate?
     const float angle = Mathf.PI / 180;
@@ -56,17 +56,12 @@ public class thirdPersonCamera : MonoBehaviour
 
     void Update()
     {
-        offsetAngle_y = MAX_ANGLE_Y;
-
         if (isRotating)
         {
             CalculateOffset();
         }
 
-        if (joystick.joystickPos != Vector2.zero)
-        {
-            //EndRotate();
-        }
+
     }
 
     void LateUpdate()
@@ -91,7 +86,6 @@ public class thirdPersonCamera : MonoBehaviour
         isRotating = true;
 
         xPos = offsetAngle_x;
-        yPos = offsetAngle_y;
     }
 
 
@@ -119,7 +113,7 @@ public class thirdPersonCamera : MonoBehaviour
 
         if (isNeedReset)
         {
-            offsetAngle_y = 45;
+            offsetAngle_y = yPos;
             offsetAngle_x = xPos;
             CalculateOffset();
         }

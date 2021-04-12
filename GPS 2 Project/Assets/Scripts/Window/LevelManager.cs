@@ -30,6 +30,8 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetInt("Collection", 0);
+        PlayerPrefs.SetInt("Level1Star", 0);
 
     }
 
@@ -47,6 +49,9 @@ public class LevelManager : MonoBehaviour
 
                 completedAllTask = true;
                 Time.timeScale = 0f;
+
+                PlayerPrefs.SetInt("Collection", 1);
+                PlayerPrefs.SetInt("Level1Star", 1);
 
                 starImage1.sprite = sStar;
                 n++;
@@ -68,9 +73,10 @@ public class LevelManager : MonoBehaviour
                 Timer.num = 0;
 
 
-                StarSystem.num = 2;
+                //StarSystem.num = 2;
                 wstarImage2.sprite = sStar;
                 wstarImage3.sprite = sStar;
+                PlayerPrefs.SetInt("Level1Star", 2);
 
                 winScreen.SetActive(true);
 
@@ -87,8 +93,9 @@ public class LevelManager : MonoBehaviour
                 wstarImage2.sprite = sStar;
                 wstarImage3.sprite = sStar;
                 wstarImage4.sprite = sStar;
+                PlayerPrefs.SetInt("Level1Star", 3);
 
-                StarSystem.num = 3;
+                //StarSystem.num = 3;
                 winScreen.SetActive(true);
 
             }

@@ -15,14 +15,11 @@ public class StarSystem : MonoBehaviour
 
     void Start()
     {
-        //num = PlayerPrefs.GetInt("Level1 star");
+        num = PlayerPrefs.GetInt("Level1Star");
     }
 
     void Update()
     {
-
-        Debug.Log("In level " + num);
-
         if (num == 0)
         {
             star1.sprite = emptyStar;
@@ -32,8 +29,6 @@ public class StarSystem : MonoBehaviour
         }
         if (num == 1)
         {
-            PlayerPrefs.SetInt("Level1 star", 1);
-
             star2.sprite = emptyStar;
             star3.sprite = emptyStar;
 
@@ -43,10 +38,13 @@ public class StarSystem : MonoBehaviour
         {
             star3.sprite = emptyStar;
 
+            level1Star[1].SetActive(true);
             level1Star[2].SetActive(true);
         }
         if (num == 3)
         {
+            level1Star[1].SetActive(true);
+            level1Star[2].SetActive(true);
             level1Star[3].SetActive(true);
         }
     }

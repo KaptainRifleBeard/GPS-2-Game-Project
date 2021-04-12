@@ -10,7 +10,7 @@ public class CollectionManager : MonoBehaviour
 
     void Start()
     {
-        num = PlayerPrefs.GetInt("Level1 star");
+        num = PlayerPrefs.GetInt("Collection");
 
     }
 

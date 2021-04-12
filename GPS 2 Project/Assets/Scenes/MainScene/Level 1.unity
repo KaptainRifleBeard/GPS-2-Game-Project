@@ -10643,6 +10643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 657056968}
   cam: {fileID: 16438941}
+  joystick: {fileID: 403876048}
 --- !u!114 &288680317
 MonoBehaviour:
   m_ObjectHideFlags: 0

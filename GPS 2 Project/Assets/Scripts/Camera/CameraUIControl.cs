@@ -13,6 +13,7 @@ public class CameraUIControl : MonoBehaviour, IDragHandler, IBeginDragHandler, I
 
     Vector2 prevPosition;
     float angleX, angleY;
+    public Joystick joystick;
 
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -26,14 +27,18 @@ public class CameraUIControl : MonoBehaviour, IDragHandler, IBeginDragHandler, I
         angleX = (eventData.position.x - prevPosition.x) * dragAngle;
         angleY = (eventData.position.y - prevPosition.y) * dragAngle;
 
-        cam.Rotate(-angleX ,angleY);
+        cam.Rotate(-angleX ,-angleY);
         prevPosition = eventData.position;
 
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //cam.EndRotate();
+
+        //if (joystick.joystickPos.y != 0)
+        //{
+        //    cam.EndRotate();
+        //}
 
     }
 
