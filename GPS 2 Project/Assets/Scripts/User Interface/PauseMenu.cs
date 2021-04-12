@@ -11,28 +11,54 @@ public class PauseMenu : MonoBehaviour
     public GameObject LevelCompleteScreen;
     public GameObject SettingScreen;
 
+    public Animator anim;
+
+    IEnumerator loadAnimOpen()
+    {
+        anim.SetInteger("Num", 1);
+
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 0f;
+    }
+
+    IEnumerator loadAnimClose()
+    {
+        anim.SetInteger("Num", 0);
+
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 1f;
+
+
+    }
+
+    IEnumerator sceneLoad(string name)
+    {
+        anim.SetTrigger("Start");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(name);
+    }
+
+
     public void Resume()
     {
-        Debug.Log("false ui");
 
-        LevelCompleteScreen.SetActive(false);
-
-        pauseMenuUi.SetActive(false);
-        Time.timeScale = 1f;
+        StartCoroutine(loadAnimClose());
         GameIsPaused = false;
+        pauseMenuUi.SetActive(false);
+
     }
 
     public void Pause()
     {
+        StartCoroutine(loadAnimOpen());
         pauseMenuUi.SetActive(true);
-        Time.timeScale = 0f;
         GameIsPaused = true;
 
     }
-            
+
     public void ToMainMenu()
     {
-        SceneManager.LoadScene("_newMainMenu");
+        StartCoroutine(sceneLoad("_newMainMenu"));
 
 
     }

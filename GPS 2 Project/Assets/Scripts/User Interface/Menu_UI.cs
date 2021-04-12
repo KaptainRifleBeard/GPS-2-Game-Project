@@ -5,20 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class Menu_UI : MonoBehaviour
 {
+    public Animator anim;
+
+    public void Start()
+    {
+    }
+
+    IEnumerator sceneLoad(string name)
+    {
+        anim.SetTrigger("Start");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(name);
+    }
+
+
     public void ExitGame()
     {
         PlayerPrefs.SetInt("HighestScore", 0);
         Application.Quit();
     }
 
-    public void SettingMenu()
-    {
-        //nothing here
-    }
+  
 
     public void LevelSelect_StartGame()
     {
-        SceneManager.LoadScene("LevelSelect");
+        StartCoroutine(sceneLoad("LevelSelect"));
+        //SceneManager.LoadScene("LevelSelect");
 
     }
 
@@ -30,24 +42,26 @@ public class Menu_UI : MonoBehaviour
         Timer.num = 0;
         JobScore.currScore = 0;
 
-        SceneManager.LoadScene("Level 1");
+        StartCoroutine(sceneLoad("Level 1"));
     }
 
     public void BackToMainMenu()
     {
         LevelManager.n = 0;
-        SceneManager.LoadScene("_newMainMenu");
+        StartCoroutine(sceneLoad("_newMainMenu"));
+
     }
 
     public void Level1_Complete()
     {
         LevelManager.n = 0;
-        SceneManager.LoadScene("LevelSelect");
+        StartCoroutine(sceneLoad("LevelSelect"));
     }
 
     public void ToCollectionScreen()
     {
-        SceneManager.LoadScene("CollectionScreen");
+        StartCoroutine(sceneLoad("CollectionScreen"));
+
     }
 
 
