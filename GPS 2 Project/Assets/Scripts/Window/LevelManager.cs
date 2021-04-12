@@ -28,6 +28,8 @@ public class LevelManager : MonoBehaviour
 
     public bool completedAllTask;
     public Animator anim, winAnim;
+    public Animator animation;
+
     IEnumerator loadAnimOpen()
     {
         anim.SetInteger("Num", 1);

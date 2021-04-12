@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene/CollectionScreen.unity
     guid: 62a8bd99822693142bbc01e0cf06d9de
   - enabled: 1
+    path: Assets/Scenes/MainScene/TrophyScreen.unity
+    guid: 54b3643618573dc408a694addb0776c2
+  - enabled: 1
     path: Assets/Scenes/MainScene/LevelSelect.unity
     guid: 828bee5e9cff3834894453cba0bf44e2
   - enabled: 1
