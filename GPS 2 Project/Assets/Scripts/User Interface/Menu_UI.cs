@@ -65,7 +65,11 @@ public class Menu_UI : MonoBehaviour
 
     }
 
+    public void ToTrophyScreen()
+    {
+        StartCoroutine(sceneLoad("TrophyScreen"));
 
+    }
     public void ButtonClick()
     {
         if (SettingAudio.onSFX == false)

@@ -9,10 +9,10 @@ public class TrophyCamera : MonoBehaviour
     public void OnMouseDrag()
     {
         float xPos = Input.GetAxis("Mouse X") * rotateSpeed * Mathf.Deg2Rad;
-        float yPos = Input.GetAxis("Mouse Y") * rotateSpeed * Mathf.Deg2Rad;
+        //float yPos = Input.GetAxis("Mouse Y") * rotateSpeed * Mathf.Deg2Rad;
 
         transform.Rotate(Vector3.up, -xPos);
-        transform.Rotate(Vector3.right, yPos);
+        //transform.Rotate(Vector3.right, yPos);
 
     }
 
