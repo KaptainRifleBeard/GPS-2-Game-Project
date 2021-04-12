@@ -511,7 +511,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1375350390}
+      - m_Target: {fileID: 809881533}
         m_TargetAssemblyTypeName: Menu_UI, Assembly-CSharp
         m_MethodName: Level1_Complete
         m_Mode: 1
@@ -29401,6 +29401,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 200040258421748372, guid: f3dd492e5c49fb147b2170e62c9b4f64, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 200040258421748372, guid: f3dd492e5c49fb147b2170e62c9b4f64, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
@@ -29419,6 +29423,10 @@ PrefabInstance:
     - target: {fileID: 200040258421748374, guid: f3dd492e5c49fb147b2170e62c9b4f64, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.1066
+      objectReference: {fileID: 0}
+    - target: {fileID: 200040258421748375, guid: f3dd492e5c49fb147b2170e62c9b4f64, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 200040258421748377, guid: f3dd492e5c49fb147b2170e62c9b4f64, type: 3}
       propertyPath: m_Layer
@@ -34100,7 +34108,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1375350390}
+      - m_Target: {fileID: 809881533}
         m_TargetAssemblyTypeName: Menu_UI, Assembly-CSharp
         m_MethodName: Level1_Complete
         m_Mode: 1
@@ -44433,7 +44441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1221274391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53308,7 +53316,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1375350390}
+      - m_Target: {fileID: 809881533}
         m_TargetAssemblyTypeName: Menu_UI, Assembly-CSharp
         m_MethodName: BackToMainMenu
         m_Mode: 1
