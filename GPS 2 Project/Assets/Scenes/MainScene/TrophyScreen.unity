@@ -1189,6 +1189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gold _ Jade Necklace
       objectReference: {fileID: 0}
+    - target: {fileID: 1417073183580620904, guid: 1e253384527a01b4ea47884404f06257, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fc2e8ba8963567e43b0d33e814adf6e3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e253384527a01b4ea47884404f06257, type: 3}
 --- !u!1 &1825278732 stripped
