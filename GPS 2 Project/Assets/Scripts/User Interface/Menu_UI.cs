@@ -32,8 +32,8 @@ public class Menu_UI : MonoBehaviour
 
     public void LevelSelect_StartGame()
     {
-        StartCoroutine(sceneLoad("LevelSelect"));
-        //SceneManager.LoadScene("LevelSelect");
+        //StartCoroutine(sceneLoad("LevelSelect"));
+        SceneManager.LoadScene("LevelSelect");
 
     }
 
@@ -45,32 +45,43 @@ public class Menu_UI : MonoBehaviour
         Timer.num = 0;
         JobScore.currScore = 0;
 
-        StartCoroutine(sceneLoad("Level 1"));
+        //StartCoroutine(sceneLoad("Level 1"));
+        SceneManager.LoadScene("Level 1");
+
     }
 
     public void BackToMainMenu()
     {
         LevelManager.n = 0;
         Time.timeScale = 1;
-        StartCoroutine(sceneLoad("_newMainMenu"));
+
+        SceneManager.LoadScene("_newMainMenu");
+
+        //StartCoroutine(sceneLoad("_newMainMenu"));
 
     }
 
     public void Level1_Complete()
     {
         LevelManager.n = 0;
-        StartCoroutine(sceneLoad("LevelSelect"));
+        SceneManager.LoadScene("LevelSelect");
+
+        //StartCoroutine(sceneLoad("LevelSelect"));
     }
 
     public void ToCollectionScreen()
     {
-        StartCoroutine(sceneLoad("CollectionScreen"));
+        SceneManager.LoadScene("CollectionScreen");
+
+        //StartCoroutine(sceneLoad("CollectionScreen"));
 
     }
 
     public void ToTrophyScreen()
     {
-        StartCoroutine(sceneLoad("TrophyScreen"));
+        SceneManager.LoadScene("TrophyScreen");
+
+        //StartCoroutine(sceneLoad("TrophyScreen"));
 
     }
     public void ButtonClick()
