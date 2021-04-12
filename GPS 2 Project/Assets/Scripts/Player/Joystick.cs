@@ -25,6 +25,7 @@ public class Joystick : MonoBehaviour
 
     public void OnPointerDown()
     {
+
         joystick.transform.position = joystickOriginalPos;
         joystickBG.transform.position = joystickOriginalPos;
         joystickTouchPos = joystickOriginalPos;
@@ -32,7 +33,7 @@ public class Joystick : MonoBehaviour
 
     public void OnDrag(BaseEventData baseEvent)
     {
-       
+        cam.EndRotate(true);
         PointerEventData pointerEvent = baseEvent as PointerEventData;
         Vector2 dragPos = pointerEvent.position;
         joystickPos = (dragPos - joystickTouchPos).normalized;

@@ -21,7 +21,6 @@ public class thirdPersonCamera : MonoBehaviour
     const float MIN_ANGLE_Y = 45;
 
     Transform myTransform;
-    GameObject myGameObject;
     public Joystick joystick;
 
     public Transform mineTransform
@@ -36,6 +35,7 @@ public class thirdPersonCamera : MonoBehaviour
         }
     }
 
+    GameObject myGameObject;
     public GameObject mineGameObject
     {
         get
@@ -56,14 +56,16 @@ public class thirdPersonCamera : MonoBehaviour
 
     void Update()
     {
+        offsetAngle_y = MAX_ANGLE_Y;
+
         if (isRotating)
         {
             CalculateOffset();
         }
 
-        if (joystick.joystickPos.y != 0)
+        if (joystick.joystickPos != Vector2.zero)
         {
-            EndRotate();
+            //EndRotate();
         }
     }
 
@@ -71,6 +73,8 @@ public class thirdPersonCamera : MonoBehaviour
     {
         mineTransform.position = target.position + m_offset;
         mineTransform.LookAt(target);
+
+        
     }
 
     void CalculateOffset()
@@ -91,13 +95,22 @@ public class thirdPersonCamera : MonoBehaviour
     }
 
 
-    public void Rotate(float x)
+    public void Rotate(float x, float y)
     {
         if (x != 0)
         {
             offsetAngle_x += x;
         }
-        
+        if (y != 0)
+        {
+            offsetAngle_y += y;
+
+            offsetAngle_y = offsetAngle_y > MAX_ANGLE_Y ? MAX_ANGLE_Y : offsetAngle_y;
+            offsetAngle_y = offsetAngle_y < MIN_ANGLE_Y ? MIN_ANGLE_Y : offsetAngle_y;
+        }
+
+
+
     }
 
     public void EndRotate(bool isNeedReset = true)
@@ -106,7 +119,7 @@ public class thirdPersonCamera : MonoBehaviour
 
         if (isNeedReset)
         {
-            offsetAngle_y = yPos;
+            offsetAngle_y = 45;
             offsetAngle_x = xPos;
             CalculateOffset();
         }

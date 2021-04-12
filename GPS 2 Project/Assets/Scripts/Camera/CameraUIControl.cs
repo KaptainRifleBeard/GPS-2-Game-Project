@@ -24,7 +24,9 @@ public class CameraUIControl : MonoBehaviour, IDragHandler, IBeginDragHandler, I
     public void OnDrag(PointerEventData eventData)
     {
         angleX = (eventData.position.x - prevPosition.x) * dragAngle;
-        cam.Rotate(-angleX);
+        angleY = (eventData.position.y - prevPosition.y) * dragAngle;
+
+        cam.Rotate(-angleX ,angleY);
         prevPosition = eventData.position;
 
     }

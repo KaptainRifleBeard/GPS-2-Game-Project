@@ -13,15 +13,11 @@ public class EyesComtroller : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     Vector2 prevPosition;
     float angleX, angleY;
 
-    Image eyeImg;
-
     void Start()
     {
-        eyeImg = GetComponent<Image>();
     }
 
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -30,7 +26,7 @@ public class EyesComtroller : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     public void OnDrag(PointerEventData eventData)
     {
         angleX = (eventData.position.x - prevPosition.x) * dragAngle;
-        cam.Rotate(-angleX);
+        cam.Rotate(-angleX, -angleY);
         prevPosition = eventData.position;
 
     }
@@ -39,7 +35,6 @@ public class EyesComtroller : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     {
         prevPosition = eventData.position;
         cam.StartRotate();
-        eyeImg.color = Color.gray;
     }
 
     public void OnEndDrag(PointerEventData eventData)
