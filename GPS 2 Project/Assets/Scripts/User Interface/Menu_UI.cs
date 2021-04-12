@@ -21,6 +21,9 @@ public class Menu_UI : MonoBehaviour
 
     public void ExitGame()
     {
+        //reset all
+        PlayerPrefs.SetInt("Collection", 0);
+        PlayerPrefs.SetInt("Level1Star", 0);
         PlayerPrefs.SetInt("HighestScore", 0);
         Application.Quit();
     }
