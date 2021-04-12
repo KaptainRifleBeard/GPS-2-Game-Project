@@ -48,6 +48,7 @@ public class Menu_UI : MonoBehaviour
     public void BackToMainMenu()
     {
         LevelManager.n = 0;
+        Time.timeScale = 1;
         StartCoroutine(sceneLoad("_newMainMenu"));
 
     }

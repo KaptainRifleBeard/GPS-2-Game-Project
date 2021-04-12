@@ -12,7 +12,6 @@ public class PauseMenu : MonoBehaviour
     public GameObject SettingScreen;
 
     public Animator anim;
-
     IEnumerator loadAnimOpen()
     {
         anim.SetInteger("Num", 1);
@@ -26,9 +25,28 @@ public class PauseMenu : MonoBehaviour
         anim.SetInteger("Num", 0);
 
         yield return new WaitForSeconds(1f);
+        pauseMenuUi.SetActive(false);
+
+
+    }
+
+    IEnumerator loadSettingOpen()
+    {
+        anim.SetInteger("Num", 2);
         Time.timeScale = 1f;
 
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 0f;
 
+    }
+
+    IEnumerator loadSettingClose()
+    {
+        anim.SetInteger("Num", 3);
+        Time.timeScale = 1f;
+
+        yield return new WaitForSeconds(1f);
+        SettingScreen.SetActive(false);
     }
 
     IEnumerator sceneLoad(string name)
@@ -41,17 +59,19 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        Time.timeScale = 1f;
+
 
         StartCoroutine(loadAnimClose());
         GameIsPaused = false;
-        pauseMenuUi.SetActive(false);
 
     }
 
     public void Pause()
     {
-        StartCoroutine(loadAnimOpen());
         pauseMenuUi.SetActive(true);
+
+        StartCoroutine(loadAnimOpen());
         GameIsPaused = true;
 
     }
@@ -66,12 +86,16 @@ public class PauseMenu : MonoBehaviour
     public void ToSettingScreen()
     {
         SettingScreen.SetActive(true);
+        StartCoroutine(loadSettingOpen());
+
 
     }
 
     public void BackToPauseMenu()
     {
-        SettingScreen.SetActive(false);
-
+        StartCoroutine(loadSettingClose());
+        Pause();
     }
+
+
 }

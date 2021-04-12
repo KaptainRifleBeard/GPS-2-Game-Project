@@ -27,6 +27,26 @@ public class UI_Button : MonoBehaviour
     public StrikeOut strikeout;
     public ObjectSpaceCount player_spacecount;
 
+    public Animator anim;
+    IEnumerator loadAnimOpen()
+    {
+        anim.SetInteger("Num", 1);
+
+        yield return new WaitForSeconds(1f);
+    }
+
+    IEnumerator loadAnimClose()
+    {
+        anim.SetInteger("Num", 0);
+
+        yield return new WaitForSeconds(1f);
+        TaskBoard.SetActive(false);
+
+
+    }
+
+
+
     IEnumerator SetToTrue()
     {
         yield return new WaitForSeconds(0.5f);
@@ -71,12 +91,19 @@ public class UI_Button : MonoBehaviour
     public void OpenTaskBoard()
     {
         TaskBoard.SetActive(true);
+        StartCoroutine(loadAnimOpen());
+
     }
 
     public void ExitTaskBoard()
     {
-        TaskBoard.SetActive(false);
+        StartCoroutine(loadAnimClose());
     }
+
+
+
+
+
     public void ExitCleaningWindow()
     {
         for(int i = 0; i < cleanWindow.Length; i++)
