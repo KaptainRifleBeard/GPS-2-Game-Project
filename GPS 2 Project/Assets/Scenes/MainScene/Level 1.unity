@@ -941,7 +941,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!1 &16438940
 GameObject:
   m_ObjectHideFlags: 0
@@ -5422,7 +5422,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &143993302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10597,7 +10597,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &284625619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11041,7 +11041,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &293528403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15593,7 +15593,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &441868985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16298,7 +16298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &459758235
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17040,7 +17040,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &478627470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19310,7 +19310,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &548589300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25001,7 +25001,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &687257302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25737,7 +25737,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &697611048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31324,7 +31324,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &881644975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32581,7 +32581,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &907371873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34973,7 +34973,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &968695058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35174,7 +35174,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!23 &970469011 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: abc470d9ce884fe4187ab437ed99e9dd, type: 3}
@@ -44355,7 +44355,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &1220344953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48045,11 +48045,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currSus: 0
   maxSus: 3
-  currStrike: 0
-  maxStrike: 3
   sus: 0
   susText: {fileID: 372623373}
-  strikeText: {fileID: 0}
   loseScreenUI: {fileID: 1665203304}
   sus1: {fileID: 745571827}
   sus2: {fileID: 115535502}
@@ -49881,7 +49878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1377309393
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50792,7 +50789,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &1391817684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58622,7 +58619,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &1608517431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58824,7 +58821,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &1610894192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64225,7 +64222,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &1775540713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67974,7 +67971,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!1 &1893655388
 GameObject:
   m_ObjectHideFlags: 0
@@ -69754,7 +69751,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &1948757575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71182,7 +71179,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &1977089442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71952,7 +71949,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!114 &1996092699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72532,7 +72529,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!1 &2012219106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a6821e7fb61315147a7a3f19a0a7b895, type: 3}
@@ -72874,7 +72871,7 @@ MonoBehaviour:
   start: 0
   jewlFound: 0
   activeWindow: 0
-  suspicionCoolDown: 2
+  suspicionCoolDown: 0.5
 --- !u!1001 &2014145444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75504,7 +75501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2090171906
 RectTransform:
   m_ObjectHideFlags: 0

@@ -133,15 +133,16 @@ public class n_ItemInteract : MonoBehaviour
 
                 }
 
+                ableDetect = true;
+               
 
-
-                strike.currSus += 1;
-
-                if (ableDetect == true)
+                if (ableDetect == true && i < 1)
                 {
                     strike.sus = true;
+                    strike.currSus += 1;
                     i++;
                 }
+
             }
             if (strike.sus == true)
             {
@@ -150,7 +151,8 @@ public class n_ItemInteract : MonoBehaviour
             }
         }
 
-        
+        Debug.Log("ableDetect " + ableDetect);
+
 
     }
 

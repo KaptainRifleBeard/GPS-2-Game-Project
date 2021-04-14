@@ -8,11 +8,9 @@ public class StrikeOut : MonoBehaviour
 {
     public int currSus;
     public int maxSus = 3;
-    public int currStrike;
-    public int maxStrike = 3;
     public bool sus = false;
+
     public Text susText;
-    public Text strikeText;
     public GameObject loseScreenUI;
 
     public GameObject sus1;
@@ -24,7 +22,6 @@ public class StrikeOut : MonoBehaviour
     void Start()
     {
         currSus = 0;
-        currStrike = 0;
     }
 
     // Update is called once per frame
@@ -38,7 +35,6 @@ public class StrikeOut : MonoBehaviour
             if (sus)
             {
                 //npc only increases sus when player is in the same room
-                Debug.Log("check sus2222 " + sus);
                 //currSus += 1;
                 //sus = false;
             }
@@ -48,7 +44,6 @@ public class StrikeOut : MonoBehaviour
 
         if(currSus >= maxSus)
         {
-            //SceneManager.LoadScene("LoseScreen");
             loseScreenUI.SetActive(true);
             GetCaught = true;
 
@@ -56,22 +51,18 @@ public class StrikeOut : MonoBehaviour
         }
 
 
-        if(currSus == 1)
+        if(currSus == 2)
         {
             sus1.SetActive(true);
         }
-        if (currSus == 2)
+        if (currSus == 4)
         {
             sus2.SetActive(true);
         }
-        if (currSus == 3)
+        if (currSus == 6)
         {
             sus3.SetActive(true);
         }
-
-
-        //susText.GetComponent<Text>().text = "Suspicion level: " + currSus.ToString() + "/" + maxSus.ToString();
-        //strikeText.GetComponent<Text>().text = "Strike Out: " + currStrike.ToString() + "/" + maxStrike.ToString();
 
     }
 }
