@@ -48044,7 +48044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currSus: 0
-  maxSus: 3
+  maxSus: 6
   sus: 0
   susText: {fileID: 372623373}
   loseScreenUI: {fileID: 1665203304}
