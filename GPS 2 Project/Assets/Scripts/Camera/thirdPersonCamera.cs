@@ -113,8 +113,8 @@ public class thirdPersonCamera : MonoBehaviour
 
         if (isNeedReset)
         {
-            offsetAngle_y = yPos;
-            offsetAngle_x = xPos;
+            offsetAngle_y = 45;
+            offsetAngle_x = 0;
             CalculateOffset();
         }
     }

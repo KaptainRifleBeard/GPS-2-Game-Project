@@ -42,7 +42,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            newStartTime += Time.deltaTime * 10f;
+            newStartTime += Time.deltaTime;
            
 
             minN = Mathf.FloorToInt(newStartTime / 60);
