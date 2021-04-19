@@ -7,6 +7,7 @@ public class CollectionManager : MonoBehaviour
     public static int num = 0;
 
     public GameObject necklaceCollection;
+    public GameObject questionmarks;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class CollectionManager : MonoBehaviour
     {
         if(num == 1)
         {
+            Destroy(questionmarks);
             necklaceCollection.SetActive(true);
         }
     }
