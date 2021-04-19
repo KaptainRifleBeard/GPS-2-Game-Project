@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
 
     public bool completedAllTask;
     public Animator anim, winAnim;
-    public Animator animation;
+    public Animator trophyAnim;
 
     IEnumerator loadAnimOpen()
     {
@@ -63,6 +63,16 @@ public class LevelManager : MonoBehaviour
 
 
     }
+
+    IEnumerator closeNotification()
+    {
+        yield return new WaitForSeconds(5f);
+        trophyAnim.SetInteger("TrophyNum", 2);
+
+
+    }
+
+
     void Start()
     {
         PlayerPrefs.SetInt("Collection", 0);
@@ -76,6 +86,14 @@ public class LevelManager : MonoBehaviour
         //complete all task - level complete screen
         if(n < 1)
         {
+
+            if(itemList.gotTheJewl == true)
+            {
+                trophyAnim.SetInteger("TrophyNum", 1);
+                StartCoroutine(closeNotification());
+            }
+
+
             if (masterBathWindow.doneBathroom == true && bathWindow.doneMBathroom == true && tableWindow.doneTable == true
           && kitchenWindow.doneKitchen == true && itemList.gotTheJewl == true)
             {
