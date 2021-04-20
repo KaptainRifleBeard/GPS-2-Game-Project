@@ -66,9 +66,10 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator closeNotification()
     {
+        winOpen();
         yield return new WaitForSeconds(5f);
+        Time.timeScale = 0f;
         trophyAnim.SetInteger("TrophyNum", 2);
-
 
     }
 
@@ -87,22 +88,17 @@ public class LevelManager : MonoBehaviour
         if(n < 1)
         {
 
-            if(itemList.gotTheJewl == true)
-            {
-                trophyAnim.SetInteger("TrophyNum", 1);
-                StartCoroutine(closeNotification());
-            }
-
+           
 
             if (masterBathWindow.doneBathroom == true && bathWindow.doneMBathroom == true && tableWindow.doneTable == true
           && kitchenWindow.doneKitchen == true && itemList.gotTheJewl == true)
             {
                 LevelCompleteScreen.SetActive(true);
-                StartCoroutine(loadAnimOpen());
                 winScreen.SetActive(false);
 
                 completedAllTask = true;
-                Time.timeScale = 0f;
+                trophyAnim.SetInteger("TrophyNum", 1);
+                StartCoroutine(closeNotification());
 
                 PlayerPrefs.SetInt("Collection", 1);
                 PlayerPrefs.SetInt("Level1Star", 1);
@@ -121,7 +117,6 @@ public class LevelManager : MonoBehaviour
             if (JobScore.currScore > 8000)
             { //reset time
                 //LevelCompleteScreen.SetActive(false);
-                StartCoroutine(loadAnimClose());
 
                 Timer.startTime = 660f;
                 Timer.newStartTime = 60f;
@@ -133,14 +128,13 @@ public class LevelManager : MonoBehaviour
                 wstarImage3.sprite = sStar;
                 PlayerPrefs.SetInt("Level1Star", 2);
 
+
                 winScreen.SetActive(true);
-                StartCoroutine(winOpen());
 
             }
             else if (JobScore.currScore > 10000)
             { //reset time
                 //LevelCompleteScreen.SetActive(false);
-                StartCoroutine(loadAnimClose());
 
                 Timer.startTime = 660f;
                 Timer.newStartTime = 60f;
@@ -154,7 +148,6 @@ public class LevelManager : MonoBehaviour
 
                 //StarSystem.num = 3;
                 winScreen.SetActive(true);
-                StartCoroutine(winOpen());
 
             }
         }

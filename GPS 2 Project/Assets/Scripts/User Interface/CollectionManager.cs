@@ -19,7 +19,7 @@ public class CollectionManager : MonoBehaviour
     {
         if(num == 1)
         {
-            Destroy(questionmarks);
+            questionmarks.SetActive(false);
             necklaceCollection.SetActive(true);
         }
     }
